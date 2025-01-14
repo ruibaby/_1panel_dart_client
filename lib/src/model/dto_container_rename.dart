@@ -11,12 +11,12 @@ part 'dto_container_rename.g.dart';
 /// DtoContainerRename
 ///
 /// Properties:
-/// * [name] 
+/// * [xname] 
 /// * [newName] 
 @BuiltValue()
 abstract class DtoContainerRename implements Built<DtoContainerRename, DtoContainerRenameBuilder> {
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'newName')
   String get newName;
@@ -46,7 +46,7 @@ class _$DtoContainerRenameSerializer implements PrimitiveSerializer<DtoContainer
   }) sync* {
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     yield r'newName';
@@ -82,7 +82,7 @@ class _$DtoContainerRenameSerializer implements PrimitiveSerializer<DtoContainer
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'newName':
           final valueDes = serializers.deserialize(

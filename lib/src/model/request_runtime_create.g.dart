@@ -20,7 +20,7 @@ class _$RequestRuntimeCreate extends RequestRuntimeCreate {
   @override
   final bool? install;
   @override
-  final String? name;
+  final String? xname;
   @override
   final BuiltMap<String, JsonObject?>? params;
   @override
@@ -45,7 +45,7 @@ class _$RequestRuntimeCreate extends RequestRuntimeCreate {
       this.exposedPorts,
       this.image,
       this.install,
-      this.name,
+      this.xname,
       this.params,
       this.port,
       this.resource,
@@ -73,7 +73,7 @@ class _$RequestRuntimeCreate extends RequestRuntimeCreate {
         exposedPorts == other.exposedPorts &&
         image == other.image &&
         install == other.install &&
-        name == other.name &&
+        xname == other.xname &&
         params == other.params &&
         port == other.port &&
         resource == other.resource &&
@@ -91,7 +91,7 @@ class _$RequestRuntimeCreate extends RequestRuntimeCreate {
     _$hash = $jc(_$hash, exposedPorts.hashCode);
     _$hash = $jc(_$hash, image.hashCode);
     _$hash = $jc(_$hash, install.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, params.hashCode);
     _$hash = $jc(_$hash, port.hashCode);
     _$hash = $jc(_$hash, resource.hashCode);
@@ -111,7 +111,7 @@ class _$RequestRuntimeCreate extends RequestRuntimeCreate {
           ..add('exposedPorts', exposedPorts)
           ..add('image', image)
           ..add('install', install)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('params', params)
           ..add('port', port)
           ..add('resource', resource)
@@ -152,9 +152,9 @@ class RequestRuntimeCreateBuilder
   bool? get install => _$this._install;
   set install(bool? install) => _$this._install = install;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   MapBuilder<String, JsonObject?>? _params;
   MapBuilder<String, JsonObject?> get params =>
@@ -195,7 +195,7 @@ class RequestRuntimeCreateBuilder
       _exposedPorts = $v.exposedPorts?.toBuilder();
       _image = $v.image;
       _install = $v.install;
-      _name = $v.name;
+      _xname = $v.xname;
       _params = $v.params?.toBuilder();
       _port = $v.port;
       _resource = $v.resource;
@@ -232,7 +232,7 @@ class RequestRuntimeCreateBuilder
             exposedPorts: _exposedPorts?.build(),
             image: image,
             install: install,
-            name: name,
+            xname: xname,
             params: _params?.build(),
             port: port,
             resource: resource,

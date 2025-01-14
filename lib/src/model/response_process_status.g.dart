@@ -12,7 +12,7 @@ class _$ResponseProcessStatus extends ResponseProcessStatus {
   @override
   final String? msg;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? status;
   @override
@@ -23,7 +23,7 @@ class _$ResponseProcessStatus extends ResponseProcessStatus {
       (new ResponseProcessStatusBuilder()..update(updates))._build();
 
   _$ResponseProcessStatus._(
-      {this.PID, this.msg, this.name, this.status, this.uptime})
+      {this.PID, this.msg, this.xname, this.status, this.uptime})
       : super._();
 
   @override
@@ -41,7 +41,7 @@ class _$ResponseProcessStatus extends ResponseProcessStatus {
     return other is ResponseProcessStatus &&
         PID == other.PID &&
         msg == other.msg &&
-        name == other.name &&
+        xname == other.xname &&
         status == other.status &&
         uptime == other.uptime;
   }
@@ -51,7 +51,7 @@ class _$ResponseProcessStatus extends ResponseProcessStatus {
     var _$hash = 0;
     _$hash = $jc(_$hash, PID.hashCode);
     _$hash = $jc(_$hash, msg.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, status.hashCode);
     _$hash = $jc(_$hash, uptime.hashCode);
     _$hash = $jf(_$hash);
@@ -63,7 +63,7 @@ class _$ResponseProcessStatus extends ResponseProcessStatus {
     return (newBuiltValueToStringHelper(r'ResponseProcessStatus')
           ..add('PID', PID)
           ..add('msg', msg)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('status', status)
           ..add('uptime', uptime))
         .toString();
@@ -82,9 +82,9 @@ class ResponseProcessStatusBuilder
   String? get msg => _$this._msg;
   set msg(String? msg) => _$this._msg = msg;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _status;
   String? get status => _$this._status;
@@ -103,7 +103,7 @@ class ResponseProcessStatusBuilder
     if ($v != null) {
       _PID = $v.PID;
       _msg = $v.msg;
-      _name = $v.name;
+      _xname = $v.xname;
       _status = $v.status;
       _uptime = $v.uptime;
       _$v = null;
@@ -130,7 +130,7 @@ class ResponseProcessStatusBuilder
         new _$ResponseProcessStatus._(
           PID: PID,
           msg: msg,
-          name: name,
+          xname: xname,
           status: status,
           uptime: uptime,
         );

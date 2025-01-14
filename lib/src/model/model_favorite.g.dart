@@ -16,7 +16,7 @@ class _$ModelFavorite extends ModelFavorite {
   @override
   final bool? isTxt;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? path;
   @override
@@ -32,7 +32,7 @@ class _$ModelFavorite extends ModelFavorite {
       this.id,
       this.isDir,
       this.isTxt,
-      this.name,
+      this.xname,
       this.path,
       this.type,
       this.updatedAt})
@@ -53,7 +53,7 @@ class _$ModelFavorite extends ModelFavorite {
         id == other.id &&
         isDir == other.isDir &&
         isTxt == other.isTxt &&
-        name == other.name &&
+        xname == other.xname &&
         path == other.path &&
         type == other.type &&
         updatedAt == other.updatedAt;
@@ -66,7 +66,7 @@ class _$ModelFavorite extends ModelFavorite {
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, isDir.hashCode);
     _$hash = $jc(_$hash, isTxt.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, path.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jc(_$hash, updatedAt.hashCode);
@@ -81,7 +81,7 @@ class _$ModelFavorite extends ModelFavorite {
           ..add('id', id)
           ..add('isDir', isDir)
           ..add('isTxt', isTxt)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('path', path)
           ..add('type', type)
           ..add('updatedAt', updatedAt))
@@ -109,9 +109,9 @@ class ModelFavoriteBuilder
   bool? get isTxt => _$this._isTxt;
   set isTxt(bool? isTxt) => _$this._isTxt = isTxt;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _path;
   String? get path => _$this._path;
@@ -136,7 +136,7 @@ class ModelFavoriteBuilder
       _id = $v.id;
       _isDir = $v.isDir;
       _isTxt = $v.isTxt;
-      _name = $v.name;
+      _xname = $v.xname;
       _path = $v.path;
       _type = $v.type;
       _updatedAt = $v.updatedAt;
@@ -166,7 +166,7 @@ class ModelFavoriteBuilder
           id: id,
           isDir: isDir,
           isTxt: isTxt,
-          name: name,
+          xname: xname,
           path: path,
           type: type,
           updatedAt: updatedAt,

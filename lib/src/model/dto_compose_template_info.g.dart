@@ -16,14 +16,14 @@ class _$DtoComposeTemplateInfo extends DtoComposeTemplateInfo {
   @override
   final int? id;
   @override
-  final String? name;
+  final String? xname;
 
   factory _$DtoComposeTemplateInfo(
           [void Function(DtoComposeTemplateInfoBuilder)? updates]) =>
       (new DtoComposeTemplateInfoBuilder()..update(updates))._build();
 
   _$DtoComposeTemplateInfo._(
-      {this.content, this.createdAt, this.description, this.id, this.name})
+      {this.content, this.createdAt, this.description, this.id, this.xname})
       : super._();
 
   @override
@@ -43,7 +43,7 @@ class _$DtoComposeTemplateInfo extends DtoComposeTemplateInfo {
         createdAt == other.createdAt &&
         description == other.description &&
         id == other.id &&
-        name == other.name;
+        xname == other.xname;
   }
 
   @override
@@ -53,7 +53,7 @@ class _$DtoComposeTemplateInfo extends DtoComposeTemplateInfo {
     _$hash = $jc(_$hash, createdAt.hashCode);
     _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -65,7 +65,7 @@ class _$DtoComposeTemplateInfo extends DtoComposeTemplateInfo {
           ..add('createdAt', createdAt)
           ..add('description', description)
           ..add('id', id)
-          ..add('name', name))
+          ..add('xname', xname))
         .toString();
   }
 }
@@ -90,9 +90,9 @@ class DtoComposeTemplateInfoBuilder
   int? get id => _$this._id;
   set id(int? id) => _$this._id = id;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   DtoComposeTemplateInfoBuilder() {
     DtoComposeTemplateInfo._defaults(this);
@@ -105,7 +105,7 @@ class DtoComposeTemplateInfoBuilder
       _createdAt = $v.createdAt;
       _description = $v.description;
       _id = $v.id;
-      _name = $v.name;
+      _xname = $v.xname;
       _$v = null;
     }
     return this;
@@ -132,7 +132,7 @@ class DtoComposeTemplateInfoBuilder
           createdAt: createdAt,
           description: description,
           id: id,
-          name: name,
+          xname: xname,
         );
     replace(_$result);
     return _$result;

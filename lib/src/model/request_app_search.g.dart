@@ -8,7 +8,7 @@ part of 'request_app_search.dart';
 
 class _$RequestAppSearch extends RequestAppSearch {
   @override
-  final String? name;
+  final String? xname;
   @override
   final int page;
   @override
@@ -27,7 +27,7 @@ class _$RequestAppSearch extends RequestAppSearch {
       (new RequestAppSearchBuilder()..update(updates))._build();
 
   _$RequestAppSearch._(
-      {this.name,
+      {this.xname,
       required this.page,
       required this.pageSize,
       this.recommend,
@@ -52,7 +52,7 @@ class _$RequestAppSearch extends RequestAppSearch {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is RequestAppSearch &&
-        name == other.name &&
+        xname == other.xname &&
         page == other.page &&
         pageSize == other.pageSize &&
         recommend == other.recommend &&
@@ -64,7 +64,7 @@ class _$RequestAppSearch extends RequestAppSearch {
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, page.hashCode);
     _$hash = $jc(_$hash, pageSize.hashCode);
     _$hash = $jc(_$hash, recommend.hashCode);
@@ -78,7 +78,7 @@ class _$RequestAppSearch extends RequestAppSearch {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'RequestAppSearch')
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('page', page)
           ..add('pageSize', pageSize)
           ..add('recommend', recommend)
@@ -93,9 +93,9 @@ class RequestAppSearchBuilder
     implements Builder<RequestAppSearch, RequestAppSearchBuilder> {
   _$RequestAppSearch? _$v;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   int? _page;
   int? get page => _$this._page;
@@ -128,7 +128,7 @@ class RequestAppSearchBuilder
   RequestAppSearchBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _name = $v.name;
+      _xname = $v.xname;
       _page = $v.page;
       _pageSize = $v.pageSize;
       _recommend = $v.recommend;
@@ -159,7 +159,7 @@ class RequestAppSearchBuilder
     try {
       _$result = _$v ??
           new _$RequestAppSearch._(
-            name: name,
+            xname: xname,
             page: BuiltValueNullFieldError.checkNotNull(
                 page, r'RequestAppSearch', 'page'),
             pageSize: BuiltValueNullFieldError.checkNotNull(

@@ -26,7 +26,7 @@ class _$RequestWebsiteProxyConfig extends RequestWebsiteProxyConfig {
   @override
   final String? modifier;
   @override
-  final String name;
+  final String xname;
   @override
   final String operate;
   @override
@@ -54,7 +54,7 @@ class _$RequestWebsiteProxyConfig extends RequestWebsiteProxyConfig {
       required this.id,
       required this.match,
       this.modifier,
-      required this.name,
+      required this.xname,
       required this.operate,
       required this.proxyHost,
       required this.proxyPass,
@@ -67,7 +67,7 @@ class _$RequestWebsiteProxyConfig extends RequestWebsiteProxyConfig {
     BuiltValueNullFieldError.checkNotNull(
         match, r'RequestWebsiteProxyConfig', 'match');
     BuiltValueNullFieldError.checkNotNull(
-        name, r'RequestWebsiteProxyConfig', 'name');
+        xname, r'RequestWebsiteProxyConfig', 'xname');
     BuiltValueNullFieldError.checkNotNull(
         operate, r'RequestWebsiteProxyConfig', 'operate');
     BuiltValueNullFieldError.checkNotNull(
@@ -98,7 +98,7 @@ class _$RequestWebsiteProxyConfig extends RequestWebsiteProxyConfig {
         id == other.id &&
         match == other.match &&
         modifier == other.modifier &&
-        name == other.name &&
+        xname == other.xname &&
         operate == other.operate &&
         proxyHost == other.proxyHost &&
         proxyPass == other.proxyPass &&
@@ -119,7 +119,7 @@ class _$RequestWebsiteProxyConfig extends RequestWebsiteProxyConfig {
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, match.hashCode);
     _$hash = $jc(_$hash, modifier.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, operate.hashCode);
     _$hash = $jc(_$hash, proxyHost.hashCode);
     _$hash = $jc(_$hash, proxyPass.hashCode);
@@ -142,7 +142,7 @@ class _$RequestWebsiteProxyConfig extends RequestWebsiteProxyConfig {
           ..add('id', id)
           ..add('match', match)
           ..add('modifier', modifier)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('operate', operate)
           ..add('proxyHost', proxyHost)
           ..add('proxyPass', proxyPass)
@@ -194,9 +194,9 @@ class RequestWebsiteProxyConfigBuilder
   String? get modifier => _$this._modifier;
   set modifier(String? modifier) => _$this._modifier = modifier;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _operate;
   String? get operate => _$this._operate;
@@ -240,7 +240,7 @@ class RequestWebsiteProxyConfigBuilder
       _id = $v.id;
       _match = $v.match;
       _modifier = $v.modifier;
-      _name = $v.name;
+      _xname = $v.xname;
       _operate = $v.operate;
       _proxyHost = $v.proxyHost;
       _proxyPass = $v.proxyPass;
@@ -282,8 +282,8 @@ class RequestWebsiteProxyConfigBuilder
             match: BuiltValueNullFieldError.checkNotNull(
                 match, r'RequestWebsiteProxyConfig', 'match'),
             modifier: modifier,
-            name: BuiltValueNullFieldError.checkNotNull(
-                name, r'RequestWebsiteProxyConfig', 'name'),
+            xname: BuiltValueNullFieldError.checkNotNull(
+                xname, r'RequestWebsiteProxyConfig', 'xname'),
             operate: BuiltValueNullFieldError.checkNotNull(
                 operate, r'RequestWebsiteProxyConfig', 'operate'),
             proxyHost: BuiltValueNullFieldError.checkNotNull(

@@ -14,7 +14,7 @@ part 'response_php_extensions_dto.g.dart';
 /// * [createdAt] 
 /// * [extensions] 
 /// * [id] 
-/// * [name] 
+/// * [xname] 
 /// * [updatedAt] 
 @BuiltValue()
 abstract class ResponsePHPExtensionsDTO implements Built<ResponsePHPExtensionsDTO, ResponsePHPExtensionsDTOBuilder> {
@@ -28,7 +28,7 @@ abstract class ResponsePHPExtensionsDTO implements Built<ResponsePHPExtensionsDT
   int? get id;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'updatedAt')
   String? get updatedAt;
@@ -77,10 +77,10 @@ class _$ResponsePHPExtensionsDTOSerializer implements PrimitiveSerializer<Respon
         specifiedType: const FullType(int),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -140,7 +140,7 @@ class _$ResponsePHPExtensionsDTOSerializer implements PrimitiveSerializer<Respon
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'updatedAt':
           final valueDes = serializers.deserialize(

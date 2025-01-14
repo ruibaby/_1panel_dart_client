@@ -11,11 +11,11 @@ part 'dto_operation_with_name.g.dart';
 /// DtoOperationWithName
 ///
 /// Properties:
-/// * [name] 
+/// * [xname] 
 @BuiltValue()
 abstract class DtoOperationWithName implements Built<DtoOperationWithName, DtoOperationWithNameBuilder> {
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   DtoOperationWithName._();
 
@@ -42,7 +42,7 @@ class _$DtoOperationWithNameSerializer implements PrimitiveSerializer<DtoOperati
   }) sync* {
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
   }
@@ -73,7 +73,7 @@ class _$DtoOperationWithNameSerializer implements PrimitiveSerializer<DtoOperati
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         default:
           unhandled.add(key);

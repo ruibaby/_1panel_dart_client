@@ -12,7 +12,7 @@ class _$RequestSupervisorProcessConfig extends RequestSupervisorProcessConfig {
   @override
   final String? dir;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? numprocs;
   @override
@@ -27,7 +27,7 @@ class _$RequestSupervisorProcessConfig extends RequestSupervisorProcessConfig {
   _$RequestSupervisorProcessConfig._(
       {this.command,
       this.dir,
-      this.name,
+      this.xname,
       this.numprocs,
       this.operate,
       this.user})
@@ -48,7 +48,7 @@ class _$RequestSupervisorProcessConfig extends RequestSupervisorProcessConfig {
     return other is RequestSupervisorProcessConfig &&
         command == other.command &&
         dir == other.dir &&
-        name == other.name &&
+        xname == other.xname &&
         numprocs == other.numprocs &&
         operate == other.operate &&
         user == other.user;
@@ -59,7 +59,7 @@ class _$RequestSupervisorProcessConfig extends RequestSupervisorProcessConfig {
     var _$hash = 0;
     _$hash = $jc(_$hash, command.hashCode);
     _$hash = $jc(_$hash, dir.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, numprocs.hashCode);
     _$hash = $jc(_$hash, operate.hashCode);
     _$hash = $jc(_$hash, user.hashCode);
@@ -72,7 +72,7 @@ class _$RequestSupervisorProcessConfig extends RequestSupervisorProcessConfig {
     return (newBuiltValueToStringHelper(r'RequestSupervisorProcessConfig')
           ..add('command', command)
           ..add('dir', dir)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('numprocs', numprocs)
           ..add('operate', operate)
           ..add('user', user))
@@ -94,9 +94,9 @@ class RequestSupervisorProcessConfigBuilder
   String? get dir => _$this._dir;
   set dir(String? dir) => _$this._dir = dir;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _numprocs;
   String? get numprocs => _$this._numprocs;
@@ -119,7 +119,7 @@ class RequestSupervisorProcessConfigBuilder
     if ($v != null) {
       _command = $v.command;
       _dir = $v.dir;
-      _name = $v.name;
+      _xname = $v.xname;
       _numprocs = $v.numprocs;
       _operate = $v.operate;
       _user = $v.user;
@@ -147,7 +147,7 @@ class RequestSupervisorProcessConfigBuilder
         new _$RequestSupervisorProcessConfig._(
           command: command,
           dir: dir,
-          name: name,
+          xname: xname,
           numprocs: numprocs,
           operate: operate,
           user: user,

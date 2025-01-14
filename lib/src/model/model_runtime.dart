@@ -19,7 +19,7 @@ part 'model_runtime.g.dart';
 /// * [id] 
 /// * [image] 
 /// * [message] 
-/// * [name] 
+/// * [xname] 
 /// * [params] 
 /// * [port] 
 /// * [resource] 
@@ -55,7 +55,7 @@ abstract class ModelRuntime implements Built<ModelRuntime, ModelRuntimeBuilder> 
   String? get message;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'params')
   String? get params;
@@ -160,10 +160,10 @@ class _$ModelRuntimeSerializer implements PrimitiveSerializer<ModelRuntime> {
         specifiedType: const FullType(String),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -307,7 +307,7 @@ class _$ModelRuntimeSerializer implements PrimitiveSerializer<ModelRuntime> {
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'params':
           final valueDes = serializers.deserialize(

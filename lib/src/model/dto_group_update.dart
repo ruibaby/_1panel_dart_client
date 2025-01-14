@@ -13,7 +13,7 @@ part 'dto_group_update.g.dart';
 /// Properties:
 /// * [id] 
 /// * [isDefault] 
-/// * [name] 
+/// * [xname] 
 /// * [type] 
 @BuiltValue()
 abstract class DtoGroupUpdate implements Built<DtoGroupUpdate, DtoGroupUpdateBuilder> {
@@ -24,7 +24,7 @@ abstract class DtoGroupUpdate implements Built<DtoGroupUpdate, DtoGroupUpdateBui
   bool? get isDefault;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'type')
   String get type;
@@ -66,10 +66,10 @@ class _$DtoGroupUpdateSerializer implements PrimitiveSerializer<DtoGroupUpdate> 
         specifiedType: const FullType(bool),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -120,7 +120,7 @@ class _$DtoGroupUpdateSerializer implements PrimitiveSerializer<DtoGroupUpdate> 
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'type':
           final valueDes = serializers.deserialize(

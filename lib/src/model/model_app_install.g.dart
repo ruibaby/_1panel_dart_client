@@ -32,7 +32,7 @@ class _$ModelAppInstall extends ModelAppInstall {
   @override
   final String? message;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? param;
   @override
@@ -60,7 +60,7 @@ class _$ModelAppInstall extends ModelAppInstall {
       this.httpsPort,
       this.id,
       this.message,
-      this.name,
+      this.xname,
       this.param,
       this.serviceName,
       this.status,
@@ -92,7 +92,7 @@ class _$ModelAppInstall extends ModelAppInstall {
         httpsPort == other.httpsPort &&
         id == other.id &&
         message == other.message &&
-        name == other.name &&
+        xname == other.xname &&
         param == other.param &&
         serviceName == other.serviceName &&
         status == other.status &&
@@ -115,7 +115,7 @@ class _$ModelAppInstall extends ModelAppInstall {
     _$hash = $jc(_$hash, httpsPort.hashCode);
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, message.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, param.hashCode);
     _$hash = $jc(_$hash, serviceName.hashCode);
     _$hash = $jc(_$hash, status.hashCode);
@@ -140,7 +140,7 @@ class _$ModelAppInstall extends ModelAppInstall {
           ..add('httpsPort', httpsPort)
           ..add('id', id)
           ..add('message', message)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('param', param)
           ..add('serviceName', serviceName)
           ..add('status', status)
@@ -204,9 +204,9 @@ class ModelAppInstallBuilder
   String? get message => _$this._message;
   set message(String? message) => _$this._message = message;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _param;
   String? get param => _$this._param;
@@ -247,7 +247,7 @@ class ModelAppInstallBuilder
       _httpsPort = $v.httpsPort;
       _id = $v.id;
       _message = $v.message;
-      _name = $v.name;
+      _xname = $v.xname;
       _param = $v.param;
       _serviceName = $v.serviceName;
       _status = $v.status;
@@ -289,7 +289,7 @@ class ModelAppInstallBuilder
             httpsPort: httpsPort,
             id: id,
             message: message,
-            name: name,
+            xname: xname,
             param: param,
             serviceName: serviceName,
             status: status,

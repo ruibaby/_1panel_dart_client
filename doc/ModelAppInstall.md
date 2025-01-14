@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **httpsPort** | **int** |  | [optional] 
 **id** | **int** |  | [optional] 
 **message** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **param** | **String** |  | [optional] 
 **serviceName** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 

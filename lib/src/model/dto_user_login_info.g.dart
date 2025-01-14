@@ -10,7 +10,7 @@ class _$DtoUserLoginInfo extends DtoUserLoginInfo {
   @override
   final String? mfaStatus;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? token;
 
@@ -18,7 +18,7 @@ class _$DtoUserLoginInfo extends DtoUserLoginInfo {
           [void Function(DtoUserLoginInfoBuilder)? updates]) =>
       (new DtoUserLoginInfoBuilder()..update(updates))._build();
 
-  _$DtoUserLoginInfo._({this.mfaStatus, this.name, this.token}) : super._();
+  _$DtoUserLoginInfo._({this.mfaStatus, this.xname, this.token}) : super._();
 
   @override
   DtoUserLoginInfo rebuild(void Function(DtoUserLoginInfoBuilder) updates) =>
@@ -33,7 +33,7 @@ class _$DtoUserLoginInfo extends DtoUserLoginInfo {
     if (identical(other, this)) return true;
     return other is DtoUserLoginInfo &&
         mfaStatus == other.mfaStatus &&
-        name == other.name &&
+        xname == other.xname &&
         token == other.token;
   }
 
@@ -41,7 +41,7 @@ class _$DtoUserLoginInfo extends DtoUserLoginInfo {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, mfaStatus.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, token.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -51,7 +51,7 @@ class _$DtoUserLoginInfo extends DtoUserLoginInfo {
   String toString() {
     return (newBuiltValueToStringHelper(r'DtoUserLoginInfo')
           ..add('mfaStatus', mfaStatus)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('token', token))
         .toString();
   }
@@ -65,9 +65,9 @@ class DtoUserLoginInfoBuilder
   String? get mfaStatus => _$this._mfaStatus;
   set mfaStatus(String? mfaStatus) => _$this._mfaStatus = mfaStatus;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _token;
   String? get token => _$this._token;
@@ -81,7 +81,7 @@ class DtoUserLoginInfoBuilder
     final $v = _$v;
     if ($v != null) {
       _mfaStatus = $v.mfaStatus;
-      _name = $v.name;
+      _xname = $v.xname;
       _token = $v.token;
       _$v = null;
     }
@@ -106,7 +106,7 @@ class DtoUserLoginInfoBuilder
     final _$result = _$v ??
         new _$DtoUserLoginInfo._(
           mfaStatus: mfaStatus,
-          name: name,
+          xname: xname,
           token: token,
         );
     replace(_$result);

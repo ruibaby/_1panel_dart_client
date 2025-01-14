@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **image** | **String** |  | [optional] 
 **message** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **params** | [**BuiltMap&lt;String, JsonObject&gt;**](JsonObject.md) |  | [optional] 
 **path** | **String** |  | [optional] 
 **port** | **int** |  | [optional] 

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **enable** | **bool** |  | [optional] 
 **filePath** | **String** |  | [optional] 
 **keepPath** | **bool** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **path** | **String** |  | [optional] 
 **redirect** | **String** |  | [optional] 
 **redirectRoot** | **bool** |  | [optional] 

@@ -37,8 +37,9 @@ final BuiltSet<DtoPostgresqlDBSearchOrderEnum>
   _$dtoPostgresqlDBSearchOrderEnum_descending,
 ]);
 
-const DtoPostgresqlDBSearchOrderByEnum _$dtoPostgresqlDBSearchOrderByEnum_name =
-    const DtoPostgresqlDBSearchOrderByEnum._('name');
+const DtoPostgresqlDBSearchOrderByEnum
+    _$dtoPostgresqlDBSearchOrderByEnum_xname =
+    const DtoPostgresqlDBSearchOrderByEnum._('xname');
 const DtoPostgresqlDBSearchOrderByEnum
     _$dtoPostgresqlDBSearchOrderByEnum_createdAt =
     const DtoPostgresqlDBSearchOrderByEnum._('createdAt');
@@ -46,8 +47,8 @@ const DtoPostgresqlDBSearchOrderByEnum
 DtoPostgresqlDBSearchOrderByEnum _$dtoPostgresqlDBSearchOrderByEnumValueOf(
     String name) {
   switch (name) {
-    case 'name':
-      return _$dtoPostgresqlDBSearchOrderByEnum_name;
+    case 'xname':
+      return _$dtoPostgresqlDBSearchOrderByEnum_xname;
     case 'createdAt':
       return _$dtoPostgresqlDBSearchOrderByEnum_createdAt;
     default:
@@ -58,7 +59,7 @@ DtoPostgresqlDBSearchOrderByEnum _$dtoPostgresqlDBSearchOrderByEnumValueOf(
 final BuiltSet<DtoPostgresqlDBSearchOrderByEnum>
     _$dtoPostgresqlDBSearchOrderByEnumValues = new BuiltSet<
         DtoPostgresqlDBSearchOrderByEnum>(const <DtoPostgresqlDBSearchOrderByEnum>[
-  _$dtoPostgresqlDBSearchOrderByEnum_name,
+  _$dtoPostgresqlDBSearchOrderByEnum_xname,
   _$dtoPostgresqlDBSearchOrderByEnum_createdAt,
 ]);
 
@@ -104,11 +105,11 @@ class _$DtoPostgresqlDBSearchOrderEnumSerializer
 class _$DtoPostgresqlDBSearchOrderByEnumSerializer
     implements PrimitiveSerializer<DtoPostgresqlDBSearchOrderByEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'name': 'name',
+    'xname': 'name',
     'createdAt': 'created_at',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'name': 'name',
+    'name': 'xname',
     'created_at': 'createdAt',
   };
 

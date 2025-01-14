@@ -9,7 +9,7 @@ import 'package:one_panel_client/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **content** | **String** |  | 
-**name** | **String** |  | 
+**xname** | **String** |  | 
 **websiteID** | **int** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

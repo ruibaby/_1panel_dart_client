@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **csr** | **String** |  | [optional] 
 **id** | **int** |  | [optional] 
 **keyType** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **organization** | **String** |  | [optional] 
 **organizationUint** | **String** |  | [optional] 
 **privateKey** | **String** |  | [optional] 

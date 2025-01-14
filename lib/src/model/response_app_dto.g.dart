@@ -28,7 +28,7 @@ class _$ResponseAppDTO extends ResponseAppDTO {
   @override
   final int? limit;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? readMe;
   @override
@@ -68,7 +68,7 @@ class _$ResponseAppDTO extends ResponseAppDTO {
       this.key,
       this.lastModified,
       this.limit,
-      this.name,
+      this.xname,
       this.readMe,
       this.recommend,
       this.required_,
@@ -105,7 +105,7 @@ class _$ResponseAppDTO extends ResponseAppDTO {
         key == other.key &&
         lastModified == other.lastModified &&
         limit == other.limit &&
-        name == other.name &&
+        xname == other.xname &&
         readMe == other.readMe &&
         recommend == other.recommend &&
         required_ == other.required_ &&
@@ -133,7 +133,7 @@ class _$ResponseAppDTO extends ResponseAppDTO {
     _$hash = $jc(_$hash, key.hashCode);
     _$hash = $jc(_$hash, lastModified.hashCode);
     _$hash = $jc(_$hash, limit.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, readMe.hashCode);
     _$hash = $jc(_$hash, recommend.hashCode);
     _$hash = $jc(_$hash, required_.hashCode);
@@ -163,7 +163,7 @@ class _$ResponseAppDTO extends ResponseAppDTO {
           ..add('key', key)
           ..add('lastModified', lastModified)
           ..add('limit', limit)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('readMe', readMe)
           ..add('recommend', recommend)
           ..add('required_', required_)
@@ -225,9 +225,9 @@ class ResponseAppDTOBuilder
   int? get limit => _$this._limit;
   set limit(int? limit) => _$this._limit = limit;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _readMe;
   String? get readMe => _$this._readMe;
@@ -296,7 +296,7 @@ class ResponseAppDTOBuilder
       _key = $v.key;
       _lastModified = $v.lastModified;
       _limit = $v.limit;
-      _name = $v.name;
+      _xname = $v.xname;
       _readMe = $v.readMe;
       _recommend = $v.recommend;
       _required_ = $v.required_;
@@ -343,7 +343,7 @@ class ResponseAppDTOBuilder
             key: key,
             lastModified: lastModified,
             limit: limit,
-            name: name,
+            xname: xname,
             readMe: readMe,
             recommend: recommend,
             required_: required_,

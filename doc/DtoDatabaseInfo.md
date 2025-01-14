@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **from** | **String** |  | [optional] 
 **id** | **int** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **password** | **String** |  | [optional] 
 **port** | **int** |  | [optional] 
 **rootCert** | **String** |  | [optional] 

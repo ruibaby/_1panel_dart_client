@@ -15,7 +15,7 @@ class _$ResponseSupervisorProcessConfig
   @override
   final String? msg;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? numprocs;
   @override
@@ -31,7 +31,7 @@ class _$ResponseSupervisorProcessConfig
       {this.command,
       this.dir,
       this.msg,
-      this.name,
+      this.xname,
       this.numprocs,
       this.status,
       this.user})
@@ -53,7 +53,7 @@ class _$ResponseSupervisorProcessConfig
         command == other.command &&
         dir == other.dir &&
         msg == other.msg &&
-        name == other.name &&
+        xname == other.xname &&
         numprocs == other.numprocs &&
         status == other.status &&
         user == other.user;
@@ -65,7 +65,7 @@ class _$ResponseSupervisorProcessConfig
     _$hash = $jc(_$hash, command.hashCode);
     _$hash = $jc(_$hash, dir.hashCode);
     _$hash = $jc(_$hash, msg.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, numprocs.hashCode);
     _$hash = $jc(_$hash, status.hashCode);
     _$hash = $jc(_$hash, user.hashCode);
@@ -79,7 +79,7 @@ class _$ResponseSupervisorProcessConfig
           ..add('command', command)
           ..add('dir', dir)
           ..add('msg', msg)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('numprocs', numprocs)
           ..add('status', status)
           ..add('user', user))
@@ -105,9 +105,9 @@ class ResponseSupervisorProcessConfigBuilder
   String? get msg => _$this._msg;
   set msg(String? msg) => _$this._msg = msg;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _numprocs;
   String? get numprocs => _$this._numprocs;
@@ -133,7 +133,7 @@ class ResponseSupervisorProcessConfigBuilder
       _command = $v.command;
       _dir = $v.dir;
       _msg = $v.msg;
-      _name = $v.name;
+      _xname = $v.xname;
       _numprocs = $v.numprocs;
       _status = $v.status?.toBuilder();
       _user = $v.user;
@@ -164,7 +164,7 @@ class ResponseSupervisorProcessConfigBuilder
             command: command,
             dir: dir,
             msg: msg,
-            name: name,
+            xname: xname,
             numprocs: numprocs,
             status: _status?.build(),
             user: user,

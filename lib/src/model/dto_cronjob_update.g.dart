@@ -30,7 +30,7 @@ class _$DtoCronjobUpdate extends DtoCronjobUpdate {
   @override
   final int id;
   @override
-  final String name;
+  final String xname;
   @override
   final int? retainCopies;
   @override
@@ -64,7 +64,7 @@ class _$DtoCronjobUpdate extends DtoCronjobUpdate {
       this.defaultDownload,
       this.exclusionRules,
       required this.id,
-      required this.name,
+      required this.xname,
       this.retainCopies,
       this.script,
       this.secret,
@@ -75,7 +75,7 @@ class _$DtoCronjobUpdate extends DtoCronjobUpdate {
       this.website})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(id, r'DtoCronjobUpdate', 'id');
-    BuiltValueNullFieldError.checkNotNull(name, r'DtoCronjobUpdate', 'name');
+    BuiltValueNullFieldError.checkNotNull(xname, r'DtoCronjobUpdate', 'xname');
     BuiltValueNullFieldError.checkNotNull(spec, r'DtoCronjobUpdate', 'spec');
     BuiltValueNullFieldError.checkNotNull(type, r'DtoCronjobUpdate', 'type');
   }
@@ -103,7 +103,7 @@ class _$DtoCronjobUpdate extends DtoCronjobUpdate {
         defaultDownload == other.defaultDownload &&
         exclusionRules == other.exclusionRules &&
         id == other.id &&
-        name == other.name &&
+        xname == other.xname &&
         retainCopies == other.retainCopies &&
         script == other.script &&
         secret == other.secret &&
@@ -128,7 +128,7 @@ class _$DtoCronjobUpdate extends DtoCronjobUpdate {
     _$hash = $jc(_$hash, defaultDownload.hashCode);
     _$hash = $jc(_$hash, exclusionRules.hashCode);
     _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, retainCopies.hashCode);
     _$hash = $jc(_$hash, script.hashCode);
     _$hash = $jc(_$hash, secret.hashCode);
@@ -155,7 +155,7 @@ class _$DtoCronjobUpdate extends DtoCronjobUpdate {
           ..add('defaultDownload', defaultDownload)
           ..add('exclusionRules', exclusionRules)
           ..add('id', id)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('retainCopies', retainCopies)
           ..add('script', script)
           ..add('secret', secret)
@@ -220,9 +220,9 @@ class DtoCronjobUpdateBuilder
   int? get id => _$this._id;
   set id(int? id) => _$this._id = id;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   int? _retainCopies;
   int? get retainCopies => _$this._retainCopies;
@@ -274,7 +274,7 @@ class DtoCronjobUpdateBuilder
       _defaultDownload = $v.defaultDownload;
       _exclusionRules = $v.exclusionRules;
       _id = $v.id;
-      _name = $v.name;
+      _xname = $v.xname;
       _retainCopies = $v.retainCopies;
       _script = $v.script;
       _secret = $v.secret;
@@ -317,8 +317,8 @@ class DtoCronjobUpdateBuilder
           exclusionRules: exclusionRules,
           id: BuiltValueNullFieldError.checkNotNull(
               id, r'DtoCronjobUpdate', 'id'),
-          name: BuiltValueNullFieldError.checkNotNull(
-              name, r'DtoCronjobUpdate', 'name'),
+          xname: BuiltValueNullFieldError.checkNotNull(
+              xname, r'DtoCronjobUpdate', 'xname'),
           retainCopies: retainCopies,
           script: script,
           secret: secret,

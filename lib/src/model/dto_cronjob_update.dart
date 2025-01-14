@@ -22,7 +22,7 @@ part 'dto_cronjob_update.g.dart';
 /// * [defaultDownload] 
 /// * [exclusionRules] 
 /// * [id] 
-/// * [name] 
+/// * [xname] 
 /// * [retainCopies] 
 /// * [script] 
 /// * [secret] 
@@ -67,7 +67,7 @@ abstract class DtoCronjobUpdate implements Built<DtoCronjobUpdate, DtoCronjobUpd
   int get id;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'retainCopies')
   int? get retainCopies;
@@ -193,7 +193,7 @@ class _$DtoCronjobUpdateSerializer implements PrimitiveSerializer<DtoCronjobUpda
     );
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     if (object.retainCopies != null) {
@@ -353,7 +353,7 @@ class _$DtoCronjobUpdateSerializer implements PrimitiveSerializer<DtoCronjobUpda
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'retainCopies':
           final valueDes = serializers.deserialize(

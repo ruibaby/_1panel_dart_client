@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **additionalProperties** | [**DtoAppProperty**](DtoAppProperty.md) |  | [optional] 
 **icon** | **String** |  | [optional] 
 **lastModified** | **int** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **readMe** | **String** |  | [optional] 
 **versions** | [**BuiltList&lt;DtoAppConfigVersion&gt;**](DtoAppConfigVersion.md) |  | [optional] 
 

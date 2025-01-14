@@ -16,7 +16,7 @@ class _$DtoCommandOperate extends DtoCommandOperate {
   @override
   final int? id;
   @override
-  final String name;
+  final String xname;
 
   factory _$DtoCommandOperate(
           [void Function(DtoCommandOperateBuilder)? updates]) =>
@@ -27,11 +27,11 @@ class _$DtoCommandOperate extends DtoCommandOperate {
       this.groupBelong,
       this.groupID,
       this.id,
-      required this.name})
+      required this.xname})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         command, r'DtoCommandOperate', 'command');
-    BuiltValueNullFieldError.checkNotNull(name, r'DtoCommandOperate', 'name');
+    BuiltValueNullFieldError.checkNotNull(xname, r'DtoCommandOperate', 'xname');
   }
 
   @override
@@ -50,7 +50,7 @@ class _$DtoCommandOperate extends DtoCommandOperate {
         groupBelong == other.groupBelong &&
         groupID == other.groupID &&
         id == other.id &&
-        name == other.name;
+        xname == other.xname;
   }
 
   @override
@@ -60,7 +60,7 @@ class _$DtoCommandOperate extends DtoCommandOperate {
     _$hash = $jc(_$hash, groupBelong.hashCode);
     _$hash = $jc(_$hash, groupID.hashCode);
     _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -72,7 +72,7 @@ class _$DtoCommandOperate extends DtoCommandOperate {
           ..add('groupBelong', groupBelong)
           ..add('groupID', groupID)
           ..add('id', id)
-          ..add('name', name))
+          ..add('xname', xname))
         .toString();
   }
 }
@@ -97,9 +97,9 @@ class DtoCommandOperateBuilder
   int? get id => _$this._id;
   set id(int? id) => _$this._id = id;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   DtoCommandOperateBuilder() {
     DtoCommandOperate._defaults(this);
@@ -112,7 +112,7 @@ class DtoCommandOperateBuilder
       _groupBelong = $v.groupBelong;
       _groupID = $v.groupID;
       _id = $v.id;
-      _name = $v.name;
+      _xname = $v.xname;
       _$v = null;
     }
     return this;
@@ -140,8 +140,8 @@ class DtoCommandOperateBuilder
           groupBelong: groupBelong,
           groupID: groupID,
           id: id,
-          name: BuiltValueNullFieldError.checkNotNull(
-              name, r'DtoCommandOperate', 'name'),
+          xname: BuiltValueNullFieldError.checkNotNull(
+              xname, r'DtoCommandOperate', 'xname'),
         );
     replace(_$result);
     return _$result;

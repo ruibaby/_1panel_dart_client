@@ -12,7 +12,7 @@ part 'dto_user_login_info.g.dart';
 ///
 /// Properties:
 /// * [mfaStatus] 
-/// * [name] 
+/// * [xname] 
 /// * [token] 
 @BuiltValue()
 abstract class DtoUserLoginInfo implements Built<DtoUserLoginInfo, DtoUserLoginInfoBuilder> {
@@ -20,7 +20,7 @@ abstract class DtoUserLoginInfo implements Built<DtoUserLoginInfo, DtoUserLoginI
   String? get mfaStatus;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'token')
   String? get token;
@@ -55,10 +55,10 @@ class _$DtoUserLoginInfoSerializer implements PrimitiveSerializer<DtoUserLoginIn
         specifiedType: const FullType(String),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -104,7 +104,7 @@ class _$DtoUserLoginInfoSerializer implements PrimitiveSerializer<DtoUserLoginIn
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'token':
           final valueDes = serializers.deserialize(

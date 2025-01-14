@@ -10,7 +10,7 @@ class _$DtoPostgresqlBindUser extends DtoPostgresqlBindUser {
   @override
   final String database;
   @override
-  final String name;
+  final String xname;
   @override
   final String password;
   @override
@@ -24,7 +24,7 @@ class _$DtoPostgresqlBindUser extends DtoPostgresqlBindUser {
 
   _$DtoPostgresqlBindUser._(
       {required this.database,
-      required this.name,
+      required this.xname,
       required this.password,
       this.superUser,
       required this.username})
@@ -32,7 +32,7 @@ class _$DtoPostgresqlBindUser extends DtoPostgresqlBindUser {
     BuiltValueNullFieldError.checkNotNull(
         database, r'DtoPostgresqlBindUser', 'database');
     BuiltValueNullFieldError.checkNotNull(
-        name, r'DtoPostgresqlBindUser', 'name');
+        xname, r'DtoPostgresqlBindUser', 'xname');
     BuiltValueNullFieldError.checkNotNull(
         password, r'DtoPostgresqlBindUser', 'password');
     BuiltValueNullFieldError.checkNotNull(
@@ -53,7 +53,7 @@ class _$DtoPostgresqlBindUser extends DtoPostgresqlBindUser {
     if (identical(other, this)) return true;
     return other is DtoPostgresqlBindUser &&
         database == other.database &&
-        name == other.name &&
+        xname == other.xname &&
         password == other.password &&
         superUser == other.superUser &&
         username == other.username;
@@ -63,7 +63,7 @@ class _$DtoPostgresqlBindUser extends DtoPostgresqlBindUser {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, database.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, password.hashCode);
     _$hash = $jc(_$hash, superUser.hashCode);
     _$hash = $jc(_$hash, username.hashCode);
@@ -75,7 +75,7 @@ class _$DtoPostgresqlBindUser extends DtoPostgresqlBindUser {
   String toString() {
     return (newBuiltValueToStringHelper(r'DtoPostgresqlBindUser')
           ..add('database', database)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('password', password)
           ..add('superUser', superUser)
           ..add('username', username))
@@ -91,9 +91,9 @@ class DtoPostgresqlBindUserBuilder
   String? get database => _$this._database;
   set database(String? database) => _$this._database = database;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _password;
   String? get password => _$this._password;
@@ -115,7 +115,7 @@ class DtoPostgresqlBindUserBuilder
     final $v = _$v;
     if ($v != null) {
       _database = $v.database;
-      _name = $v.name;
+      _xname = $v.xname;
       _password = $v.password;
       _superUser = $v.superUser;
       _username = $v.username;
@@ -143,8 +143,8 @@ class DtoPostgresqlBindUserBuilder
         new _$DtoPostgresqlBindUser._(
           database: BuiltValueNullFieldError.checkNotNull(
               database, r'DtoPostgresqlBindUser', 'database'),
-          name: BuiltValueNullFieldError.checkNotNull(
-              name, r'DtoPostgresqlBindUser', 'name'),
+          xname: BuiltValueNullFieldError.checkNotNull(
+              xname, r'DtoPostgresqlBindUser', 'xname'),
           password: BuiltValueNullFieldError.checkNotNull(
               password, r'DtoPostgresqlBindUser', 'password'),
           superUser: superUser,

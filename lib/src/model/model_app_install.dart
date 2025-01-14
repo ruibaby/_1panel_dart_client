@@ -24,7 +24,7 @@ part 'model_app_install.g.dart';
 /// * [httpsPort] 
 /// * [id] 
 /// * [message] 
-/// * [name] 
+/// * [xname] 
 /// * [param] 
 /// * [serviceName] 
 /// * [status] 
@@ -69,7 +69,7 @@ abstract class ModelAppInstall implements Built<ModelAppInstall, ModelAppInstall
   String? get message;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'param')
   String? get param;
@@ -193,10 +193,10 @@ class _$ModelAppInstallSerializer implements PrimitiveSerializer<ModelAppInstall
         specifiedType: const FullType(String),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -347,7 +347,7 @@ class _$ModelAppInstallSerializer implements PrimitiveSerializer<ModelAppInstall
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'param':
           final valueDes = serializers.deserialize(

@@ -12,15 +12,14 @@ part 'request_file_compress.g.dart';
 /// RequestFileCompress
 ///
 /// Properties:
-/// * [dst]
-/// * [files]
-/// * [name]
-/// * [replace]
-/// * [secret]
-/// * [type]
+/// * [dst] 
+/// * [files] 
+/// * [xname] 
+/// * [xreplace] 
+/// * [secret] 
+/// * [type] 
 @BuiltValue()
-abstract class RequestFileCompress
-    implements Built<RequestFileCompress, RequestFileCompressBuilder> {
+abstract class RequestFileCompress implements Built<RequestFileCompress, RequestFileCompressBuilder> {
   @BuiltValueField(wireName: r'dst')
   String get dst;
 
@@ -28,10 +27,10 @@ abstract class RequestFileCompress
   BuiltList<String> get files;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'replace')
-  bool? get needsReplace;
+  bool? get xreplace;
 
   @BuiltValueField(wireName: r'secret')
   String? get secret;
@@ -41,24 +40,18 @@ abstract class RequestFileCompress
 
   RequestFileCompress._();
 
-  factory RequestFileCompress([void updates(RequestFileCompressBuilder b)]) =
-      _$RequestFileCompress;
+  factory RequestFileCompress([void updates(RequestFileCompressBuilder b)]) = _$RequestFileCompress;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(RequestFileCompressBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<RequestFileCompress> get serializer =>
-      _$RequestFileCompressSerializer();
+  static Serializer<RequestFileCompress> get serializer => _$RequestFileCompressSerializer();
 }
 
-class _$RequestFileCompressSerializer
-    implements PrimitiveSerializer<RequestFileCompress> {
+class _$RequestFileCompressSerializer implements PrimitiveSerializer<RequestFileCompress> {
   @override
-  final Iterable<Type> types = const [
-    RequestFileCompress,
-    _$RequestFileCompress
-  ];
+  final Iterable<Type> types = const [RequestFileCompress, _$RequestFileCompress];
 
   @override
   final String wireName = r'RequestFileCompress';
@@ -80,13 +73,13 @@ class _$RequestFileCompressSerializer
     );
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
-    if (object.replace != null) {
+    if (object.xreplace != null) {
       yield r'replace';
       yield serializers.serialize(
-        object.replace,
+        object.xreplace,
         specifiedType: const FullType(bool),
       );
     }
@@ -110,9 +103,7 @@ class _$RequestFileCompressSerializer
     RequestFileCompress object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object,
-            specifiedType: specifiedType)
-        .toList();
+    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
   }
 
   void _deserializeProperties(
@@ -146,14 +137,14 @@ class _$RequestFileCompressSerializer
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'replace':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(bool),
           ) as bool;
-          result.replace = valueDes;
+          result.xreplace = valueDes;
           break;
         case r'secret':
           final valueDes = serializers.deserialize(
@@ -197,3 +188,4 @@ class _$RequestFileCompressSerializer
     return result.build();
   }
 }
+

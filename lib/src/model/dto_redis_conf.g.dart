@@ -16,7 +16,7 @@ class _$DtoRedisConf extends DtoRedisConf {
   @override
   final String? maxmemory;
   @override
-  final String? name;
+  final String? xname;
   @override
   final int? port;
   @override
@@ -32,7 +32,7 @@ class _$DtoRedisConf extends DtoRedisConf {
       required this.database,
       this.maxclients,
       this.maxmemory,
-      this.name,
+      this.xname,
       this.port,
       this.requirepass,
       this.timeout})
@@ -56,7 +56,7 @@ class _$DtoRedisConf extends DtoRedisConf {
         database == other.database &&
         maxclients == other.maxclients &&
         maxmemory == other.maxmemory &&
-        name == other.name &&
+        xname == other.xname &&
         port == other.port &&
         requirepass == other.requirepass &&
         timeout == other.timeout;
@@ -69,7 +69,7 @@ class _$DtoRedisConf extends DtoRedisConf {
     _$hash = $jc(_$hash, database.hashCode);
     _$hash = $jc(_$hash, maxclients.hashCode);
     _$hash = $jc(_$hash, maxmemory.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, port.hashCode);
     _$hash = $jc(_$hash, requirepass.hashCode);
     _$hash = $jc(_$hash, timeout.hashCode);
@@ -84,7 +84,7 @@ class _$DtoRedisConf extends DtoRedisConf {
           ..add('database', database)
           ..add('maxclients', maxclients)
           ..add('maxmemory', maxmemory)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('port', port)
           ..add('requirepass', requirepass)
           ..add('timeout', timeout))
@@ -113,9 +113,9 @@ class DtoRedisConfBuilder
   String? get maxmemory => _$this._maxmemory;
   set maxmemory(String? maxmemory) => _$this._maxmemory = maxmemory;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   int? _port;
   int? get port => _$this._port;
@@ -140,7 +140,7 @@ class DtoRedisConfBuilder
       _database = $v.database;
       _maxclients = $v.maxclients;
       _maxmemory = $v.maxmemory;
-      _name = $v.name;
+      _xname = $v.xname;
       _port = $v.port;
       _requirepass = $v.requirepass;
       _timeout = $v.timeout;
@@ -171,7 +171,7 @@ class DtoRedisConfBuilder
               database, r'DtoRedisConf', 'database'),
           maxclients: maxclients,
           maxmemory: maxmemory,
-          name: name,
+          xname: xname,
           port: port,
           requirepass: requirepass,
           timeout: timeout,

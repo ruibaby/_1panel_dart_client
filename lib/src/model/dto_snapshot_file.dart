@@ -12,7 +12,7 @@ part 'dto_snapshot_file.g.dart';
 ///
 /// Properties:
 /// * [id] 
-/// * [name] 
+/// * [xname] 
 /// * [size] 
 @BuiltValue()
 abstract class DtoSnapshotFile implements Built<DtoSnapshotFile, DtoSnapshotFileBuilder> {
@@ -20,7 +20,7 @@ abstract class DtoSnapshotFile implements Built<DtoSnapshotFile, DtoSnapshotFile
   int? get id;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'size')
   int? get size;
@@ -55,10 +55,10 @@ class _$DtoSnapshotFileSerializer implements PrimitiveSerializer<DtoSnapshotFile
         specifiedType: const FullType(int),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -104,7 +104,7 @@ class _$DtoSnapshotFileSerializer implements PrimitiveSerializer<DtoSnapshotFile
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'size':
           final valueDes = serializers.deserialize(

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **exposedPorts** | [**BuiltList&lt;RequestExposedPort&gt;**](RequestExposedPort.md) |  | [optional] 
 **image** | **String** |  | [optional] 
 **install** | **bool** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **params** | [**BuiltMap&lt;String, JsonObject&gt;**](JsonObject.md) |  | [optional] 
 **port** | **int** |  | [optional] 
 **resource** | **String** |  | [optional] 

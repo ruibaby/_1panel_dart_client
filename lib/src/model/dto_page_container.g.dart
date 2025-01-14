@@ -33,8 +33,8 @@ final BuiltSet<DtoPageContainerOrderEnum> _$dtoPageContainerOrderEnumValues =
   _$dtoPageContainerOrderEnum_descending,
 ]);
 
-const DtoPageContainerOrderByEnum _$dtoPageContainerOrderByEnum_name =
-    const DtoPageContainerOrderByEnum._('name');
+const DtoPageContainerOrderByEnum _$dtoPageContainerOrderByEnum_xname =
+    const DtoPageContainerOrderByEnum._('xname');
 const DtoPageContainerOrderByEnum _$dtoPageContainerOrderByEnum_state =
     const DtoPageContainerOrderByEnum._('state');
 const DtoPageContainerOrderByEnum _$dtoPageContainerOrderByEnum_createdAt =
@@ -42,8 +42,8 @@ const DtoPageContainerOrderByEnum _$dtoPageContainerOrderByEnum_createdAt =
 
 DtoPageContainerOrderByEnum _$dtoPageContainerOrderByEnumValueOf(String name) {
   switch (name) {
-    case 'name':
-      return _$dtoPageContainerOrderByEnum_name;
+    case 'xname':
+      return _$dtoPageContainerOrderByEnum_xname;
     case 'state':
       return _$dtoPageContainerOrderByEnum_state;
     case 'createdAt':
@@ -56,7 +56,7 @@ DtoPageContainerOrderByEnum _$dtoPageContainerOrderByEnumValueOf(String name) {
 final BuiltSet<DtoPageContainerOrderByEnum>
     _$dtoPageContainerOrderByEnumValues = new BuiltSet<
         DtoPageContainerOrderByEnum>(const <DtoPageContainerOrderByEnum>[
-  _$dtoPageContainerOrderByEnum_name,
+  _$dtoPageContainerOrderByEnum_xname,
   _$dtoPageContainerOrderByEnum_state,
   _$dtoPageContainerOrderByEnum_createdAt,
 ]);
@@ -155,12 +155,12 @@ class _$DtoPageContainerOrderEnumSerializer
 class _$DtoPageContainerOrderByEnumSerializer
     implements PrimitiveSerializer<DtoPageContainerOrderByEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'name': 'name',
+    'xname': 'name',
     'state': 'state',
     'createdAt': 'created_at',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'name': 'name',
+    'name': 'xname',
     'state': 'state',
     'created_at': 'createdAt',
   };
@@ -230,7 +230,7 @@ class _$DtoPageContainer extends DtoPageContainer {
   @override
   final String? filters;
   @override
-  final String? name;
+  final String? xname;
   @override
   final DtoPageContainerOrderEnum order;
   @override
@@ -249,7 +249,7 @@ class _$DtoPageContainer extends DtoPageContainer {
   _$DtoPageContainer._(
       {this.excludeAppStore,
       this.filters,
-      this.name,
+      this.xname,
       required this.order,
       required this.orderBy,
       required this.page,
@@ -279,7 +279,7 @@ class _$DtoPageContainer extends DtoPageContainer {
     return other is DtoPageContainer &&
         excludeAppStore == other.excludeAppStore &&
         filters == other.filters &&
-        name == other.name &&
+        xname == other.xname &&
         order == other.order &&
         orderBy == other.orderBy &&
         page == other.page &&
@@ -292,7 +292,7 @@ class _$DtoPageContainer extends DtoPageContainer {
     var _$hash = 0;
     _$hash = $jc(_$hash, excludeAppStore.hashCode);
     _$hash = $jc(_$hash, filters.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, order.hashCode);
     _$hash = $jc(_$hash, orderBy.hashCode);
     _$hash = $jc(_$hash, page.hashCode);
@@ -307,7 +307,7 @@ class _$DtoPageContainer extends DtoPageContainer {
     return (newBuiltValueToStringHelper(r'DtoPageContainer')
           ..add('excludeAppStore', excludeAppStore)
           ..add('filters', filters)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('order', order)
           ..add('orderBy', orderBy)
           ..add('page', page)
@@ -330,9 +330,9 @@ class DtoPageContainerBuilder
   String? get filters => _$this._filters;
   set filters(String? filters) => _$this._filters = filters;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   DtoPageContainerOrderEnum? _order;
   DtoPageContainerOrderEnum? get order => _$this._order;
@@ -364,7 +364,7 @@ class DtoPageContainerBuilder
     if ($v != null) {
       _excludeAppStore = $v.excludeAppStore;
       _filters = $v.filters;
-      _name = $v.name;
+      _xname = $v.xname;
       _order = $v.order;
       _orderBy = $v.orderBy;
       _page = $v.page;
@@ -394,7 +394,7 @@ class DtoPageContainerBuilder
         new _$DtoPageContainer._(
           excludeAppStore: excludeAppStore,
           filters: filters,
-          name: name,
+          xname: xname,
           order: BuiltValueNullFieldError.checkNotNull(
               order, r'DtoPageContainer', 'order'),
           orderBy: BuiltValueNullFieldError.checkNotNull(

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **env** | **BuiltList&lt;String&gt;** |  | [optional] 
 **file** | **String** |  | [optional] 
 **from** | **String** |  | 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **path** | **String** |  | [optional] 
 **template** | **int** |  | [optional] 
 

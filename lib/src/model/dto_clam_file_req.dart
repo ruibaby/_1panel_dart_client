@@ -11,12 +11,12 @@ part 'dto_clam_file_req.g.dart';
 /// DtoClamFileReq
 ///
 /// Properties:
-/// * [name] 
+/// * [xname] 
 /// * [tail] 
 @BuiltValue()
 abstract class DtoClamFileReq implements Built<DtoClamFileReq, DtoClamFileReqBuilder> {
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'tail')
   String? get tail;
@@ -46,7 +46,7 @@ class _$DtoClamFileReqSerializer implements PrimitiveSerializer<DtoClamFileReq> 
   }) sync* {
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     if (object.tail != null) {
@@ -84,7 +84,7 @@ class _$DtoClamFileReqSerializer implements PrimitiveSerializer<DtoClamFileReq> 
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'tail':
           final valueDes = serializers.deserialize(

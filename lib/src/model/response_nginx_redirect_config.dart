@@ -17,7 +17,7 @@ part 'response_nginx_redirect_config.g.dart';
 /// * [enable] 
 /// * [filePath] 
 /// * [keepPath] 
-/// * [name] 
+/// * [xname] 
 /// * [path] 
 /// * [redirect] 
 /// * [redirectRoot] 
@@ -42,7 +42,7 @@ abstract class ResponseNginxRedirectConfig implements Built<ResponseNginxRedirec
   bool? get keepPath;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'path')
   String? get path;
@@ -120,10 +120,10 @@ class _$ResponseNginxRedirectConfigSerializer implements PrimitiveSerializer<Res
         specifiedType: const FullType(bool),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -232,7 +232,7 @@ class _$ResponseNginxRedirectConfigSerializer implements PrimitiveSerializer<Res
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'path':
           final valueDes = serializers.deserialize(

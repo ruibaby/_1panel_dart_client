@@ -18,7 +18,7 @@ part 'response_app_item.g.dart';
 /// * [installed] 
 /// * [key] 
 /// * [limit] 
-/// * [name] 
+/// * [xname] 
 /// * [resource] 
 /// * [shortDescEn] 
 /// * [shortDescZh] 
@@ -44,7 +44,7 @@ abstract class ResponseAppItem implements Built<ResponseAppItem, ResponseAppItem
   int? get limit;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'resource')
   String? get resource;
@@ -125,10 +125,10 @@ class _$ResponseAppItemSerializer implements PrimitiveSerializer<ResponseAppItem
         specifiedType: const FullType(int),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -244,7 +244,7 @@ class _$ResponseAppItemSerializer implements PrimitiveSerializer<ResponseAppItem
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'resource':
           final valueDes = serializers.deserialize(

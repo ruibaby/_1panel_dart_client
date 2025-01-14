@@ -8,7 +8,7 @@ part of 'dto_firewall_base_info.dart';
 
 class _$DtoFirewallBaseInfo extends DtoFirewallBaseInfo {
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? pingStatus;
   @override
@@ -21,7 +21,7 @@ class _$DtoFirewallBaseInfo extends DtoFirewallBaseInfo {
       (new DtoFirewallBaseInfoBuilder()..update(updates))._build();
 
   _$DtoFirewallBaseInfo._(
-      {this.name, this.pingStatus, this.status, this.version})
+      {this.xname, this.pingStatus, this.status, this.version})
       : super._();
 
   @override
@@ -37,7 +37,7 @@ class _$DtoFirewallBaseInfo extends DtoFirewallBaseInfo {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is DtoFirewallBaseInfo &&
-        name == other.name &&
+        xname == other.xname &&
         pingStatus == other.pingStatus &&
         status == other.status &&
         version == other.version;
@@ -46,7 +46,7 @@ class _$DtoFirewallBaseInfo extends DtoFirewallBaseInfo {
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, pingStatus.hashCode);
     _$hash = $jc(_$hash, status.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
@@ -57,7 +57,7 @@ class _$DtoFirewallBaseInfo extends DtoFirewallBaseInfo {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'DtoFirewallBaseInfo')
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('pingStatus', pingStatus)
           ..add('status', status)
           ..add('version', version))
@@ -69,9 +69,9 @@ class DtoFirewallBaseInfoBuilder
     implements Builder<DtoFirewallBaseInfo, DtoFirewallBaseInfoBuilder> {
   _$DtoFirewallBaseInfo? _$v;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _pingStatus;
   String? get pingStatus => _$this._pingStatus;
@@ -92,7 +92,7 @@ class DtoFirewallBaseInfoBuilder
   DtoFirewallBaseInfoBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _name = $v.name;
+      _xname = $v.xname;
       _pingStatus = $v.pingStatus;
       _status = $v.status;
       _version = $v.version;
@@ -118,7 +118,7 @@ class DtoFirewallBaseInfoBuilder
   _$DtoFirewallBaseInfo _build() {
     final _$result = _$v ??
         new _$DtoFirewallBaseInfo._(
-          name: name,
+          xname: xname,
           pingStatus: pingStatus,
           status: status,
           version: version,

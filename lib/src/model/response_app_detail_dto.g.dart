@@ -36,7 +36,7 @@ class _$ResponseAppDetailDTO extends ResponseAppDetailDTO {
   @override
   final String? status;
   @override
-  final bool? hasUpdate;
+  final bool? xupdate;
   @override
   final String? updatedAt;
   @override
@@ -61,7 +61,7 @@ class _$ResponseAppDetailDTO extends ResponseAppDetailDTO {
       this.lastVersion,
       this.params,
       this.status,
-      this.hasUpdate,
+      this.xupdate,
       this.updatedAt,
       this.version})
       : super._();
@@ -93,7 +93,7 @@ class _$ResponseAppDetailDTO extends ResponseAppDetailDTO {
         lastVersion == other.lastVersion &&
         params == other.params &&
         status == other.status &&
-        hasUpdate == other.hasUpdate &&
+        xupdate == other.xupdate &&
         updatedAt == other.updatedAt &&
         version == other.version;
   }
@@ -115,7 +115,7 @@ class _$ResponseAppDetailDTO extends ResponseAppDetailDTO {
     _$hash = $jc(_$hash, lastVersion.hashCode);
     _$hash = $jc(_$hash, params.hashCode);
     _$hash = $jc(_$hash, status.hashCode);
-    _$hash = $jc(_$hash, hasUpdate.hashCode);
+    _$hash = $jc(_$hash, xupdate.hashCode);
     _$hash = $jc(_$hash, updatedAt.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
     _$hash = $jf(_$hash);
@@ -139,7 +139,7 @@ class _$ResponseAppDetailDTO extends ResponseAppDetailDTO {
           ..add('lastVersion', lastVersion)
           ..add('params', params)
           ..add('status', status)
-          ..add('hasUpdate', hasUpdate)
+          ..add('xupdate', xupdate)
           ..add('updatedAt', updatedAt)
           ..add('version', version))
         .toString();
@@ -209,9 +209,9 @@ class ResponseAppDetailDTOBuilder
   String? get status => _$this._status;
   set status(String? status) => _$this._status = status;
 
-  bool? _hasUpdate;
-  bool? get hasUpdate => _$this._hasUpdate;
-  set hasUpdate(bool? hasUpdate) => _$this._hasUpdate = hasUpdate;
+  bool? _xupdate;
+  bool? get xupdate => _$this._xupdate;
+  set xupdate(bool? xupdate) => _$this._xupdate = xupdate;
 
   String? _updatedAt;
   String? get updatedAt => _$this._updatedAt;
@@ -242,7 +242,7 @@ class ResponseAppDetailDTOBuilder
       _lastVersion = $v.lastVersion;
       _params = $v.params;
       _status = $v.status;
-      _hasUpdate = $v.hasUpdate;
+      _xupdate = $v.xupdate;
       _updatedAt = $v.updatedAt;
       _version = $v.version;
       _$v = null;
@@ -281,7 +281,7 @@ class ResponseAppDetailDTOBuilder
           lastVersion: lastVersion,
           params: params,
           status: status,
-          hasUpdate: hasUpdate,
+          xupdate: xupdate,
           updatedAt: updatedAt,
           version: version,
         );

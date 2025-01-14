@@ -9,7 +9,7 @@ import 'package:one_panel_client/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **database** | **String** |  | 
-**name** | **String** |  | 
+**xname** | **String** |  | 
 **password** | **String** |  | 
 **superUser** | **bool** |  | [optional] 
 **username** | **String** |  | 

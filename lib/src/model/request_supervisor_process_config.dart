@@ -13,7 +13,7 @@ part 'request_supervisor_process_config.g.dart';
 /// Properties:
 /// * [command] 
 /// * [dir] 
-/// * [name] 
+/// * [xname] 
 /// * [numprocs] 
 /// * [operate] 
 /// * [user] 
@@ -26,7 +26,7 @@ abstract class RequestSupervisorProcessConfig implements Built<RequestSupervisor
   String? get dir;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'numprocs')
   String? get numprocs;
@@ -74,10 +74,10 @@ class _$RequestSupervisorProcessConfigSerializer implements PrimitiveSerializer<
         specifiedType: const FullType(String),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -144,7 +144,7 @@ class _$RequestSupervisorProcessConfigSerializer implements PrimitiveSerializer<
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'numprocs':
           final valueDes = serializers.deserialize(

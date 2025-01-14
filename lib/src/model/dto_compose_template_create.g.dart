@@ -12,17 +12,17 @@ class _$DtoComposeTemplateCreate extends DtoComposeTemplateCreate {
   @override
   final String? description;
   @override
-  final String name;
+  final String xname;
 
   factory _$DtoComposeTemplateCreate(
           [void Function(DtoComposeTemplateCreateBuilder)? updates]) =>
       (new DtoComposeTemplateCreateBuilder()..update(updates))._build();
 
   _$DtoComposeTemplateCreate._(
-      {this.content, this.description, required this.name})
+      {this.content, this.description, required this.xname})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        name, r'DtoComposeTemplateCreate', 'name');
+        xname, r'DtoComposeTemplateCreate', 'xname');
   }
 
   @override
@@ -40,7 +40,7 @@ class _$DtoComposeTemplateCreate extends DtoComposeTemplateCreate {
     return other is DtoComposeTemplateCreate &&
         content == other.content &&
         description == other.description &&
-        name == other.name;
+        xname == other.xname;
   }
 
   @override
@@ -48,7 +48,7 @@ class _$DtoComposeTemplateCreate extends DtoComposeTemplateCreate {
     var _$hash = 0;
     _$hash = $jc(_$hash, content.hashCode);
     _$hash = $jc(_$hash, description.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -58,7 +58,7 @@ class _$DtoComposeTemplateCreate extends DtoComposeTemplateCreate {
     return (newBuiltValueToStringHelper(r'DtoComposeTemplateCreate')
           ..add('content', content)
           ..add('description', description)
-          ..add('name', name))
+          ..add('xname', xname))
         .toString();
   }
 }
@@ -76,9 +76,9 @@ class DtoComposeTemplateCreateBuilder
   String? get description => _$this._description;
   set description(String? description) => _$this._description = description;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   DtoComposeTemplateCreateBuilder() {
     DtoComposeTemplateCreate._defaults(this);
@@ -89,7 +89,7 @@ class DtoComposeTemplateCreateBuilder
     if ($v != null) {
       _content = $v.content;
       _description = $v.description;
-      _name = $v.name;
+      _xname = $v.xname;
       _$v = null;
     }
     return this;
@@ -114,8 +114,8 @@ class DtoComposeTemplateCreateBuilder
         new _$DtoComposeTemplateCreate._(
           content: content,
           description: description,
-          name: BuiltValueNullFieldError.checkNotNull(
-              name, r'DtoComposeTemplateCreate', 'name'),
+          xname: BuiltValueNullFieldError.checkNotNull(
+              xname, r'DtoComposeTemplateCreate', 'xname'),
         );
     replace(_$result);
     return _$result;

@@ -11,12 +11,12 @@ part 'dto_operation_with_name_and_type.g.dart';
 /// DtoOperationWithNameAndType
 ///
 /// Properties:
-/// * [name] 
+/// * [xname] 
 /// * [type] 
 @BuiltValue()
 abstract class DtoOperationWithNameAndType implements Built<DtoOperationWithNameAndType, DtoOperationWithNameAndTypeBuilder> {
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'type')
   String get type;
@@ -44,10 +44,10 @@ class _$DtoOperationWithNameAndTypeSerializer implements PrimitiveSerializer<Dto
     DtoOperationWithNameAndType object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -84,7 +84,7 @@ class _$DtoOperationWithNameAndTypeSerializer implements PrimitiveSerializer<Dto
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'type':
           final valueDes = serializers.deserialize(

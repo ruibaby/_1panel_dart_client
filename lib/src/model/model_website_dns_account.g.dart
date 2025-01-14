@@ -12,7 +12,7 @@ class _$ModelWebsiteDnsAccount extends ModelWebsiteDnsAccount {
   @override
   final int? id;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? type;
   @override
@@ -23,7 +23,7 @@ class _$ModelWebsiteDnsAccount extends ModelWebsiteDnsAccount {
       (new ModelWebsiteDnsAccountBuilder()..update(updates))._build();
 
   _$ModelWebsiteDnsAccount._(
-      {this.createdAt, this.id, this.name, this.type, this.updatedAt})
+      {this.createdAt, this.id, this.xname, this.type, this.updatedAt})
       : super._();
 
   @override
@@ -41,7 +41,7 @@ class _$ModelWebsiteDnsAccount extends ModelWebsiteDnsAccount {
     return other is ModelWebsiteDnsAccount &&
         createdAt == other.createdAt &&
         id == other.id &&
-        name == other.name &&
+        xname == other.xname &&
         type == other.type &&
         updatedAt == other.updatedAt;
   }
@@ -51,7 +51,7 @@ class _$ModelWebsiteDnsAccount extends ModelWebsiteDnsAccount {
     var _$hash = 0;
     _$hash = $jc(_$hash, createdAt.hashCode);
     _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jc(_$hash, updatedAt.hashCode);
     _$hash = $jf(_$hash);
@@ -63,7 +63,7 @@ class _$ModelWebsiteDnsAccount extends ModelWebsiteDnsAccount {
     return (newBuiltValueToStringHelper(r'ModelWebsiteDnsAccount')
           ..add('createdAt', createdAt)
           ..add('id', id)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('type', type)
           ..add('updatedAt', updatedAt))
         .toString();
@@ -82,9 +82,9 @@ class ModelWebsiteDnsAccountBuilder
   int? get id => _$this._id;
   set id(int? id) => _$this._id = id;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _type;
   String? get type => _$this._type;
@@ -103,7 +103,7 @@ class ModelWebsiteDnsAccountBuilder
     if ($v != null) {
       _createdAt = $v.createdAt;
       _id = $v.id;
-      _name = $v.name;
+      _xname = $v.xname;
       _type = $v.type;
       _updatedAt = $v.updatedAt;
       _$v = null;
@@ -130,7 +130,7 @@ class ModelWebsiteDnsAccountBuilder
         new _$ModelWebsiteDnsAccount._(
           createdAt: createdAt,
           id: id,
-          name: name,
+          xname: xname,
           type: type,
           updatedAt: updatedAt,
         );

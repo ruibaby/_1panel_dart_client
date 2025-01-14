@@ -209,7 +209,7 @@ class DtoPostgresqlDBSearchOrderEnum extends EnumClass {
 class DtoPostgresqlDBSearchOrderByEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'name')
-  static const DtoPostgresqlDBSearchOrderByEnum name = _$dtoPostgresqlDBSearchOrderByEnum_name;
+  static const DtoPostgresqlDBSearchOrderByEnum xname = _$dtoPostgresqlDBSearchOrderByEnum_xname;
   @BuiltValueEnumConst(wireName: r'created_at')
   static const DtoPostgresqlDBSearchOrderByEnum createdAt = _$dtoPostgresqlDBSearchOrderByEnum_createdAt;
 

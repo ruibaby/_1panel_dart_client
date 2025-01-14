@@ -193,7 +193,7 @@ class DtoPageSnapshotOrderEnum extends EnumClass {
 class DtoPageSnapshotOrderByEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'name')
-  static const DtoPageSnapshotOrderByEnum name = _$dtoPageSnapshotOrderByEnum_name;
+  static const DtoPageSnapshotOrderByEnum xname = _$dtoPageSnapshotOrderByEnum_xname;
   @BuiltValueEnumConst(wireName: r'created_at')
   static const DtoPageSnapshotOrderByEnum createdAt = _$dtoPageSnapshotOrderByEnum_createdAt;
 

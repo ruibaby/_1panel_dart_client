@@ -12,13 +12,13 @@ class _$DtoImageRepoOption extends DtoImageRepoOption {
   @override
   final int? id;
   @override
-  final String? name;
+  final String? xname;
 
   factory _$DtoImageRepoOption(
           [void Function(DtoImageRepoOptionBuilder)? updates]) =>
       (new DtoImageRepoOptionBuilder()..update(updates))._build();
 
-  _$DtoImageRepoOption._({this.downloadUrl, this.id, this.name}) : super._();
+  _$DtoImageRepoOption._({this.downloadUrl, this.id, this.xname}) : super._();
 
   @override
   DtoImageRepoOption rebuild(
@@ -35,7 +35,7 @@ class _$DtoImageRepoOption extends DtoImageRepoOption {
     return other is DtoImageRepoOption &&
         downloadUrl == other.downloadUrl &&
         id == other.id &&
-        name == other.name;
+        xname == other.xname;
   }
 
   @override
@@ -43,7 +43,7 @@ class _$DtoImageRepoOption extends DtoImageRepoOption {
     var _$hash = 0;
     _$hash = $jc(_$hash, downloadUrl.hashCode);
     _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -53,7 +53,7 @@ class _$DtoImageRepoOption extends DtoImageRepoOption {
     return (newBuiltValueToStringHelper(r'DtoImageRepoOption')
           ..add('downloadUrl', downloadUrl)
           ..add('id', id)
-          ..add('name', name))
+          ..add('xname', xname))
         .toString();
   }
 }
@@ -70,9 +70,9 @@ class DtoImageRepoOptionBuilder
   int? get id => _$this._id;
   set id(int? id) => _$this._id = id;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   DtoImageRepoOptionBuilder() {
     DtoImageRepoOption._defaults(this);
@@ -83,7 +83,7 @@ class DtoImageRepoOptionBuilder
     if ($v != null) {
       _downloadUrl = $v.downloadUrl;
       _id = $v.id;
-      _name = $v.name;
+      _xname = $v.xname;
       _$v = null;
     }
     return this;
@@ -108,7 +108,7 @@ class DtoImageRepoOptionBuilder
         new _$DtoImageRepoOption._(
           downloadUrl: downloadUrl,
           id: id,
-          name: name,
+          xname: xname,
         );
     replace(_$result);
     return _$result;

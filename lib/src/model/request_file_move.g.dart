@@ -10,7 +10,7 @@ class _$RequestFileMove extends RequestFileMove {
   @override
   final bool? cover;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String newPath;
   @override
@@ -23,7 +23,7 @@ class _$RequestFileMove extends RequestFileMove {
 
   _$RequestFileMove._(
       {this.cover,
-      this.name,
+      this.xname,
       required this.newPath,
       required this.oldPaths,
       required this.type})
@@ -48,7 +48,7 @@ class _$RequestFileMove extends RequestFileMove {
     if (identical(other, this)) return true;
     return other is RequestFileMove &&
         cover == other.cover &&
-        name == other.name &&
+        xname == other.xname &&
         newPath == other.newPath &&
         oldPaths == other.oldPaths &&
         type == other.type;
@@ -58,7 +58,7 @@ class _$RequestFileMove extends RequestFileMove {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, cover.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, newPath.hashCode);
     _$hash = $jc(_$hash, oldPaths.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
@@ -70,7 +70,7 @@ class _$RequestFileMove extends RequestFileMove {
   String toString() {
     return (newBuiltValueToStringHelper(r'RequestFileMove')
           ..add('cover', cover)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('newPath', newPath)
           ..add('oldPaths', oldPaths)
           ..add('type', type))
@@ -86,9 +86,9 @@ class RequestFileMoveBuilder
   bool? get cover => _$this._cover;
   set cover(bool? cover) => _$this._cover = cover;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _newPath;
   String? get newPath => _$this._newPath;
@@ -111,7 +111,7 @@ class RequestFileMoveBuilder
     final $v = _$v;
     if ($v != null) {
       _cover = $v.cover;
-      _name = $v.name;
+      _xname = $v.xname;
       _newPath = $v.newPath;
       _oldPaths = $v.oldPaths.toBuilder();
       _type = $v.type;
@@ -140,7 +140,7 @@ class RequestFileMoveBuilder
       _$result = _$v ??
           new _$RequestFileMove._(
             cover: cover,
-            name: name,
+            xname: xname,
             newPath: BuiltValueNullFieldError.checkNotNull(
                 newPath, r'RequestFileMove', 'newPath'),
             oldPaths: oldPaths.build(),

@@ -15,7 +15,7 @@ part 'dto_compose_create.g.dart';
 /// * [env] 
 /// * [file] 
 /// * [from] 
-/// * [name] 
+/// * [xname] 
 /// * [path] 
 /// * [template] 
 @BuiltValue()
@@ -31,7 +31,7 @@ abstract class DtoComposeCreate implements Built<DtoComposeCreate, DtoComposeCre
   // enum fromEnum {  edit,  path,  template,  };
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'path')
   String? get path;
@@ -81,10 +81,10 @@ class _$DtoComposeCreateSerializer implements PrimitiveSerializer<DtoComposeCrea
       object.from,
       specifiedType: const FullType(DtoComposeCreateFromEnum),
     );
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -151,7 +151,7 @@ class _$DtoComposeCreateSerializer implements PrimitiveSerializer<DtoComposeCrea
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'path':
           final valueDes = serializers.deserialize(

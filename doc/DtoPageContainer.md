@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **excludeAppStore** | **bool** |  | [optional] 
 **filters** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **order** | **String** |  | 
 **orderBy** | **String** |  | 
 **page** | **int** |  | 

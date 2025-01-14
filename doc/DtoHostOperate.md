@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **groupID** | **int** |  | [optional] 
 **id** | **int** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **passPhrase** | **String** |  | [optional] 
 **password** | **String** |  | [optional] 
 **port** | **int** |  | 

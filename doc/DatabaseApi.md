@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **databasesDbNameGet**
-> DtoDatabaseInfo databasesDbNameGet(name)
+> DtoDatabaseInfo databasesDbNameGet(xname)
 
 Get databases
 
@@ -233,10 +233,10 @@ import 'package:one_panel_client/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Timestamp').apiKeyPrefix = 'Bearer';
 
 final api = OnePanelClient().getDatabaseApi();
-final String name = name_example; // String | name
+final String xname = xname_example; // String | name
 
 try {
-    final response = api.databasesDbNameGet(name);
+    final response = api.databasesDbNameGet(xname);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling DatabaseApi->databasesDbNameGet: $e\n');
@@ -247,7 +247,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **String**| name | 
+ **xname** | **String**| name | 
 
 ### Return type
 

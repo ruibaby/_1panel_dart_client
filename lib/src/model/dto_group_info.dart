@@ -13,7 +13,7 @@ part 'dto_group_info.g.dart';
 /// Properties:
 /// * [id] 
 /// * [isDefault] 
-/// * [name] 
+/// * [xname] 
 /// * [type] 
 @BuiltValue()
 abstract class DtoGroupInfo implements Built<DtoGroupInfo, DtoGroupInfoBuilder> {
@@ -24,7 +24,7 @@ abstract class DtoGroupInfo implements Built<DtoGroupInfo, DtoGroupInfoBuilder> 
   bool? get isDefault;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'type')
   String? get type;
@@ -66,10 +66,10 @@ class _$DtoGroupInfoSerializer implements PrimitiveSerializer<DtoGroupInfo> {
         specifiedType: const FullType(bool),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -122,7 +122,7 @@ class _$DtoGroupInfoSerializer implements PrimitiveSerializer<DtoGroupInfo> {
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'type':
           final valueDes = serializers.deserialize(

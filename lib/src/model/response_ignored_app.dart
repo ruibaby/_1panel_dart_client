@@ -13,7 +13,7 @@ part 'response_ignored_app.g.dart';
 /// Properties:
 /// * [detailID] 
 /// * [icon] 
-/// * [name] 
+/// * [xname] 
 /// * [version] 
 @BuiltValue()
 abstract class ResponseIgnoredApp implements Built<ResponseIgnoredApp, ResponseIgnoredAppBuilder> {
@@ -24,7 +24,7 @@ abstract class ResponseIgnoredApp implements Built<ResponseIgnoredApp, ResponseI
   String? get icon;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'version')
   String? get version;
@@ -66,10 +66,10 @@ class _$ResponseIgnoredAppSerializer implements PrimitiveSerializer<ResponseIgno
         specifiedType: const FullType(String),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -122,7 +122,7 @@ class _$ResponseIgnoredAppSerializer implements PrimitiveSerializer<ResponseIgno
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'version':
           final valueDes = serializers.deserialize(

@@ -158,7 +158,7 @@ class _$DtoLogin extends DtoLogin {
   @override
   final DtoLoginLanguageEnum language;
   @override
-  final String name;
+  final String xname;
   @override
   final String password;
 
@@ -171,13 +171,13 @@ class _$DtoLogin extends DtoLogin {
       this.captchaID,
       this.ignoreCaptcha,
       required this.language,
-      required this.name,
+      required this.xname,
       required this.password})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         authMethod, r'DtoLogin', 'authMethod');
     BuiltValueNullFieldError.checkNotNull(language, r'DtoLogin', 'language');
-    BuiltValueNullFieldError.checkNotNull(name, r'DtoLogin', 'name');
+    BuiltValueNullFieldError.checkNotNull(xname, r'DtoLogin', 'xname');
     BuiltValueNullFieldError.checkNotNull(password, r'DtoLogin', 'password');
   }
 
@@ -197,7 +197,7 @@ class _$DtoLogin extends DtoLogin {
         captchaID == other.captchaID &&
         ignoreCaptcha == other.ignoreCaptcha &&
         language == other.language &&
-        name == other.name &&
+        xname == other.xname &&
         password == other.password;
   }
 
@@ -209,7 +209,7 @@ class _$DtoLogin extends DtoLogin {
     _$hash = $jc(_$hash, captchaID.hashCode);
     _$hash = $jc(_$hash, ignoreCaptcha.hashCode);
     _$hash = $jc(_$hash, language.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, password.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -223,7 +223,7 @@ class _$DtoLogin extends DtoLogin {
           ..add('captchaID', captchaID)
           ..add('ignoreCaptcha', ignoreCaptcha)
           ..add('language', language)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('password', password))
         .toString();
   }
@@ -254,9 +254,9 @@ class DtoLoginBuilder implements Builder<DtoLogin, DtoLoginBuilder> {
   DtoLoginLanguageEnum? get language => _$this._language;
   set language(DtoLoginLanguageEnum? language) => _$this._language = language;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _password;
   String? get password => _$this._password;
@@ -274,7 +274,7 @@ class DtoLoginBuilder implements Builder<DtoLogin, DtoLoginBuilder> {
       _captchaID = $v.captchaID;
       _ignoreCaptcha = $v.ignoreCaptcha;
       _language = $v.language;
-      _name = $v.name;
+      _xname = $v.xname;
       _password = $v.password;
       _$v = null;
     }
@@ -305,8 +305,8 @@ class DtoLoginBuilder implements Builder<DtoLogin, DtoLoginBuilder> {
           ignoreCaptcha: ignoreCaptcha,
           language: BuiltValueNullFieldError.checkNotNull(
               language, r'DtoLogin', 'language'),
-          name:
-              BuiltValueNullFieldError.checkNotNull(name, r'DtoLogin', 'name'),
+          xname: BuiltValueNullFieldError.checkNotNull(
+              xname, r'DtoLogin', 'xname'),
           password: BuiltValueNullFieldError.checkNotNull(
               password, r'DtoLogin', 'password'),
         );

@@ -45,8 +45,8 @@ const RequestSupervisorProcessFileReqOperateEnum
     _$requestSupervisorProcessFileReqOperateEnum_clear =
     const RequestSupervisorProcessFileReqOperateEnum._('clear');
 const RequestSupervisorProcessFileReqOperateEnum
-    _$requestSupervisorProcessFileReqOperateEnum_update =
-    const RequestSupervisorProcessFileReqOperateEnum._('update');
+    _$requestSupervisorProcessFileReqOperateEnum_xupdate =
+    const RequestSupervisorProcessFileReqOperateEnum._('xupdate');
 
 RequestSupervisorProcessFileReqOperateEnum
     _$requestSupervisorProcessFileReqOperateEnumValueOf(String name) {
@@ -55,8 +55,8 @@ RequestSupervisorProcessFileReqOperateEnum
       return _$requestSupervisorProcessFileReqOperateEnum_get_;
     case 'clear':
       return _$requestSupervisorProcessFileReqOperateEnum_clear;
-    case 'update':
-      return _$requestSupervisorProcessFileReqOperateEnum_update;
+    case 'xupdate':
+      return _$requestSupervisorProcessFileReqOperateEnum_xupdate;
     default:
       throw new ArgumentError(name);
   }
@@ -67,7 +67,7 @@ final BuiltSet<RequestSupervisorProcessFileReqOperateEnum>
         RequestSupervisorProcessFileReqOperateEnum>(const <RequestSupervisorProcessFileReqOperateEnum>[
   _$requestSupervisorProcessFileReqOperateEnum_get_,
   _$requestSupervisorProcessFileReqOperateEnum_clear,
-  _$requestSupervisorProcessFileReqOperateEnum_update,
+  _$requestSupervisorProcessFileReqOperateEnum_xupdate,
 ]);
 
 Serializer<RequestSupervisorProcessFileReqFileEnum>
@@ -116,12 +116,12 @@ class _$RequestSupervisorProcessFileReqOperateEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'get_': 'get',
     'clear': 'clear',
-    'update': 'update',
+    'xupdate': 'update',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'get': 'get_',
     'clear': 'clear',
-    'update': 'update',
+    'update': 'xupdate',
   };
 
   @override
@@ -152,7 +152,7 @@ class _$RequestSupervisorProcessFileReq
   @override
   final RequestSupervisorProcessFileReqFileEnum file;
   @override
-  final String name;
+  final String xname;
   @override
   final RequestSupervisorProcessFileReqOperateEnum operate;
 
@@ -163,13 +163,13 @@ class _$RequestSupervisorProcessFileReq
   _$RequestSupervisorProcessFileReq._(
       {this.content,
       required this.file,
-      required this.name,
+      required this.xname,
       required this.operate})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         file, r'RequestSupervisorProcessFileReq', 'file');
     BuiltValueNullFieldError.checkNotNull(
-        name, r'RequestSupervisorProcessFileReq', 'name');
+        xname, r'RequestSupervisorProcessFileReq', 'xname');
     BuiltValueNullFieldError.checkNotNull(
         operate, r'RequestSupervisorProcessFileReq', 'operate');
   }
@@ -189,7 +189,7 @@ class _$RequestSupervisorProcessFileReq
     return other is RequestSupervisorProcessFileReq &&
         content == other.content &&
         file == other.file &&
-        name == other.name &&
+        xname == other.xname &&
         operate == other.operate;
   }
 
@@ -198,7 +198,7 @@ class _$RequestSupervisorProcessFileReq
     var _$hash = 0;
     _$hash = $jc(_$hash, content.hashCode);
     _$hash = $jc(_$hash, file.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, operate.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -209,7 +209,7 @@ class _$RequestSupervisorProcessFileReq
     return (newBuiltValueToStringHelper(r'RequestSupervisorProcessFileReq')
           ..add('content', content)
           ..add('file', file)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('operate', operate))
         .toString();
   }
@@ -230,9 +230,9 @@ class RequestSupervisorProcessFileReqBuilder
   set file(RequestSupervisorProcessFileReqFileEnum? file) =>
       _$this._file = file;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   RequestSupervisorProcessFileReqOperateEnum? _operate;
   RequestSupervisorProcessFileReqOperateEnum? get operate => _$this._operate;
@@ -248,7 +248,7 @@ class RequestSupervisorProcessFileReqBuilder
     if ($v != null) {
       _content = $v.content;
       _file = $v.file;
-      _name = $v.name;
+      _xname = $v.xname;
       _operate = $v.operate;
       _$v = null;
     }
@@ -275,8 +275,8 @@ class RequestSupervisorProcessFileReqBuilder
           content: content,
           file: BuiltValueNullFieldError.checkNotNull(
               file, r'RequestSupervisorProcessFileReq', 'file'),
-          name: BuiltValueNullFieldError.checkNotNull(
-              name, r'RequestSupervisorProcessFileReq', 'name'),
+          xname: BuiltValueNullFieldError.checkNotNull(
+              xname, r'RequestSupervisorProcessFileReq', 'xname'),
           operate: BuiltValueNullFieldError.checkNotNull(
               operate, r'RequestSupervisorProcessFileReq', 'operate'),
         );

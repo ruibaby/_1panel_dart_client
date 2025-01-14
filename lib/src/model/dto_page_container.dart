@@ -14,7 +14,7 @@ part 'dto_page_container.g.dart';
 /// Properties:
 /// * [excludeAppStore] 
 /// * [filters] 
-/// * [name] 
+/// * [xname] 
 /// * [order] 
 /// * [orderBy] 
 /// * [page] 
@@ -29,7 +29,7 @@ abstract class DtoPageContainer implements Built<DtoPageContainer, DtoPageContai
   String? get filters;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'order')
   DtoPageContainerOrderEnum get order;
@@ -86,10 +86,10 @@ class _$DtoPageContainerSerializer implements PrimitiveSerializer<DtoPageContain
         specifiedType: const FullType(String),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -160,7 +160,7 @@ class _$DtoPageContainerSerializer implements PrimitiveSerializer<DtoPageContain
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'order':
           final valueDes = serializers.deserialize(
@@ -246,7 +246,7 @@ class DtoPageContainerOrderEnum extends EnumClass {
 class DtoPageContainerOrderByEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'name')
-  static const DtoPageContainerOrderByEnum name = _$dtoPageContainerOrderByEnum_name;
+  static const DtoPageContainerOrderByEnum xname = _$dtoPageContainerOrderByEnum_xname;
   @BuiltValueEnumConst(wireName: r'state')
   static const DtoPageContainerOrderByEnum state = _$dtoPageContainerOrderByEnum_state;
   @BuiltValueEnumConst(wireName: r'created_at')

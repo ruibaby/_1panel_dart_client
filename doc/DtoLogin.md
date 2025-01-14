@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **captchaID** | **String** |  | [optional] 
 **ignoreCaptcha** | **bool** |  | [optional] 
 **language** | **String** |  | 
-**name** | **String** |  | 
+**xname** | **String** |  | 
 **password** | **String** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **hostMode** | **bool** |  | [optional] 
 **memoryLimit** | **num** |  | [optional] 
 **memoryUnit** | **String** |  | [optional] 
-**name** | **String** |  | 
+**xname** | **String** |  | 
 **params** | [**BuiltMap&lt;String, JsonObject&gt;**](JsonObject.md) |  | [optional] 
 **pullImage** | **bool** |  | [optional] 
 **services** | **BuiltMap&lt;String, String&gt;** |  | [optional] 

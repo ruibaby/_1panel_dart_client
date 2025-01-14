@@ -22,7 +22,7 @@ class _$ResponseWebsiteCADTO extends ResponseWebsiteCADTO {
   @override
   final String? keyType;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? organization;
   @override
@@ -46,7 +46,7 @@ class _$ResponseWebsiteCADTO extends ResponseWebsiteCADTO {
       this.csr,
       this.id,
       this.keyType,
-      this.name,
+      this.xname,
       this.organization,
       this.organizationUint,
       this.privateKey,
@@ -74,7 +74,7 @@ class _$ResponseWebsiteCADTO extends ResponseWebsiteCADTO {
         csr == other.csr &&
         id == other.id &&
         keyType == other.keyType &&
-        name == other.name &&
+        xname == other.xname &&
         organization == other.organization &&
         organizationUint == other.organizationUint &&
         privateKey == other.privateKey &&
@@ -92,7 +92,7 @@ class _$ResponseWebsiteCADTO extends ResponseWebsiteCADTO {
     _$hash = $jc(_$hash, csr.hashCode);
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, keyType.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, organization.hashCode);
     _$hash = $jc(_$hash, organizationUint.hashCode);
     _$hash = $jc(_$hash, privateKey.hashCode);
@@ -112,7 +112,7 @@ class _$ResponseWebsiteCADTO extends ResponseWebsiteCADTO {
           ..add('csr', csr)
           ..add('id', id)
           ..add('keyType', keyType)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('organization', organization)
           ..add('organizationUint', organizationUint)
           ..add('privateKey', privateKey)
@@ -154,9 +154,9 @@ class ResponseWebsiteCADTOBuilder
   String? get keyType => _$this._keyType;
   set keyType(String? keyType) => _$this._keyType = keyType;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _organization;
   String? get organization => _$this._organization;
@@ -193,7 +193,7 @@ class ResponseWebsiteCADTOBuilder
       _csr = $v.csr;
       _id = $v.id;
       _keyType = $v.keyType;
-      _name = $v.name;
+      _xname = $v.xname;
       _organization = $v.organization;
       _organizationUint = $v.organizationUint;
       _privateKey = $v.privateKey;
@@ -228,7 +228,7 @@ class ResponseWebsiteCADTOBuilder
           csr: csr,
           id: id,
           keyType: keyType,
-          name: name,
+          xname: xname,
           organization: organization,
           organizationUint: organizationUint,
           privateKey: privateKey,

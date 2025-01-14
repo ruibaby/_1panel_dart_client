@@ -14,7 +14,7 @@ part 'dto_common_recover.g.dart';
 /// Properties:
 /// * [detailName] 
 /// * [file] 
-/// * [name] 
+/// * [xname] 
 /// * [secret] 
 /// * [source_] 
 /// * [type] 
@@ -27,7 +27,7 @@ abstract class DtoCommonRecover implements Built<DtoCommonRecover, DtoCommonReco
   String? get file;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'secret')
   String? get secret;
@@ -77,10 +77,10 @@ class _$DtoCommonRecoverSerializer implements PrimitiveSerializer<DtoCommonRecov
         specifiedType: const FullType(String),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -143,7 +143,7 @@ class _$DtoCommonRecoverSerializer implements PrimitiveSerializer<DtoCommonRecov
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'secret':
           final valueDes = serializers.deserialize(

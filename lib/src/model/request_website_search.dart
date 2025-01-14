@@ -12,7 +12,7 @@ part 'request_website_search.g.dart';
 /// RequestWebsiteSearch
 ///
 /// Properties:
-/// * [name] 
+/// * [xname] 
 /// * [order] 
 /// * [orderBy] 
 /// * [page] 
@@ -21,7 +21,7 @@ part 'request_website_search.g.dart';
 @BuiltValue()
 abstract class RequestWebsiteSearch implements Built<RequestWebsiteSearch, RequestWebsiteSearchBuilder> {
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'order')
   RequestWebsiteSearchOrderEnum get order;
@@ -63,10 +63,10 @@ class _$RequestWebsiteSearchSerializer implements PrimitiveSerializer<RequestWeb
     RequestWebsiteSearch object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -125,7 +125,7 @@ class _$RequestWebsiteSearchSerializer implements PrimitiveSerializer<RequestWeb
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'order':
           final valueDes = serializers.deserialize(

@@ -38,7 +38,7 @@ class _$ResponseFileInfo extends ResponseFileInfo {
   @override
   final String? mode;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? path;
   @override
@@ -72,7 +72,7 @@ class _$ResponseFileInfo extends ResponseFileInfo {
       this.mimeType,
       this.modTime,
       this.mode,
-      this.name,
+      this.xname,
       this.path,
       this.size,
       this.type,
@@ -108,7 +108,7 @@ class _$ResponseFileInfo extends ResponseFileInfo {
         mimeType == other.mimeType &&
         modTime == other.modTime &&
         mode == other.mode &&
-        name == other.name &&
+        xname == other.xname &&
         path == other.path &&
         size == other.size &&
         type == other.type &&
@@ -135,7 +135,7 @@ class _$ResponseFileInfo extends ResponseFileInfo {
     _$hash = $jc(_$hash, mimeType.hashCode);
     _$hash = $jc(_$hash, modTime.hashCode);
     _$hash = $jc(_$hash, mode.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, path.hashCode);
     _$hash = $jc(_$hash, size.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
@@ -164,7 +164,7 @@ class _$ResponseFileInfo extends ResponseFileInfo {
           ..add('mimeType', mimeType)
           ..add('modTime', modTime)
           ..add('mode', mode)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('path', path)
           ..add('size', size)
           ..add('type', type)
@@ -240,9 +240,9 @@ class ResponseFileInfoBuilder
   String? get mode => _$this._mode;
   set mode(String? mode) => _$this._mode = mode;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _path;
   String? get path => _$this._path;
@@ -290,7 +290,7 @@ class ResponseFileInfoBuilder
       _mimeType = $v.mimeType;
       _modTime = $v.modTime;
       _mode = $v.mode;
-      _name = $v.name;
+      _xname = $v.xname;
       _path = $v.path;
       _size = $v.size;
       _type = $v.type;
@@ -336,7 +336,7 @@ class ResponseFileInfoBuilder
             mimeType: mimeType,
             modTime: modTime,
             mode: mode,
-            name: name,
+            xname: xname,
             path: path,
             size: size,
             type: type,

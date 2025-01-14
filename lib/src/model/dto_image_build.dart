@@ -14,7 +14,7 @@ part 'dto_image_build.g.dart';
 /// Properties:
 /// * [dockerfile] 
 /// * [from] 
-/// * [name] 
+/// * [xname] 
 /// * [tags] 
 @BuiltValue()
 abstract class DtoImageBuild implements Built<DtoImageBuild, DtoImageBuildBuilder> {
@@ -25,7 +25,7 @@ abstract class DtoImageBuild implements Built<DtoImageBuild, DtoImageBuildBuilde
   String get from;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'tags')
   BuiltList<String>? get tags;
@@ -65,7 +65,7 @@ class _$DtoImageBuildSerializer implements PrimitiveSerializer<DtoImageBuild> {
     );
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     if (object.tags != null) {
@@ -117,7 +117,7 @@ class _$DtoImageBuildSerializer implements PrimitiveSerializer<DtoImageBuild> {
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'tags':
           final valueDes = serializers.deserialize(

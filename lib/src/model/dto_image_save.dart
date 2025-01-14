@@ -11,13 +11,13 @@ part 'dto_image_save.g.dart';
 /// DtoImageSave
 ///
 /// Properties:
-/// * [name] 
+/// * [xname] 
 /// * [path] 
 /// * [tagName] 
 @BuiltValue()
 abstract class DtoImageSave implements Built<DtoImageSave, DtoImageSaveBuilder> {
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'path')
   String get path;
@@ -50,7 +50,7 @@ class _$DtoImageSaveSerializer implements PrimitiveSerializer<DtoImageSave> {
   }) sync* {
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     yield r'path';
@@ -91,7 +91,7 @@ class _$DtoImageSaveSerializer implements PrimitiveSerializer<DtoImageSave> {
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'path':
           final valueDes = serializers.deserialize(

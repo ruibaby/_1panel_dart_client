@@ -13,7 +13,7 @@ part 'dto_image_repo_option.g.dart';
 /// Properties:
 /// * [downloadUrl] 
 /// * [id] 
-/// * [name] 
+/// * [xname] 
 @BuiltValue()
 abstract class DtoImageRepoOption implements Built<DtoImageRepoOption, DtoImageRepoOptionBuilder> {
   @BuiltValueField(wireName: r'downloadUrl')
@@ -23,7 +23,7 @@ abstract class DtoImageRepoOption implements Built<DtoImageRepoOption, DtoImageR
   int? get id;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   DtoImageRepoOption._();
 
@@ -62,10 +62,10 @@ class _$DtoImageRepoOptionSerializer implements PrimitiveSerializer<DtoImageRepo
         specifiedType: const FullType(int),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -111,7 +111,7 @@ class _$DtoImageRepoOptionSerializer implements PrimitiveSerializer<DtoImageRepo
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         default:
           unhandled.add(key);

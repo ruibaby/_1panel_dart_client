@@ -137,7 +137,7 @@ class _$DtoMysqlDBCreate extends DtoMysqlDBCreate {
   @override
   final DtoMysqlDBCreateFromEnum from;
   @override
-  final String name;
+  final String xname;
   @override
   final String password;
   @override
@@ -154,7 +154,7 @@ class _$DtoMysqlDBCreate extends DtoMysqlDBCreate {
       this.description,
       required this.format,
       required this.from,
-      required this.name,
+      required this.xname,
       required this.password,
       required this.permission,
       required this.username})
@@ -164,7 +164,7 @@ class _$DtoMysqlDBCreate extends DtoMysqlDBCreate {
     BuiltValueNullFieldError.checkNotNull(
         format, r'DtoMysqlDBCreate', 'format');
     BuiltValueNullFieldError.checkNotNull(from, r'DtoMysqlDBCreate', 'from');
-    BuiltValueNullFieldError.checkNotNull(name, r'DtoMysqlDBCreate', 'name');
+    BuiltValueNullFieldError.checkNotNull(xname, r'DtoMysqlDBCreate', 'xname');
     BuiltValueNullFieldError.checkNotNull(
         password, r'DtoMysqlDBCreate', 'password');
     BuiltValueNullFieldError.checkNotNull(
@@ -189,7 +189,7 @@ class _$DtoMysqlDBCreate extends DtoMysqlDBCreate {
         description == other.description &&
         format == other.format &&
         from == other.from &&
-        name == other.name &&
+        xname == other.xname &&
         password == other.password &&
         permission == other.permission &&
         username == other.username;
@@ -202,7 +202,7 @@ class _$DtoMysqlDBCreate extends DtoMysqlDBCreate {
     _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, format.hashCode);
     _$hash = $jc(_$hash, from.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, password.hashCode);
     _$hash = $jc(_$hash, permission.hashCode);
     _$hash = $jc(_$hash, username.hashCode);
@@ -217,7 +217,7 @@ class _$DtoMysqlDBCreate extends DtoMysqlDBCreate {
           ..add('description', description)
           ..add('format', format)
           ..add('from', from)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('password', password)
           ..add('permission', permission)
           ..add('username', username))
@@ -245,9 +245,9 @@ class DtoMysqlDBCreateBuilder
   DtoMysqlDBCreateFromEnum? get from => _$this._from;
   set from(DtoMysqlDBCreateFromEnum? from) => _$this._from = from;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _password;
   String? get password => _$this._password;
@@ -272,7 +272,7 @@ class DtoMysqlDBCreateBuilder
       _description = $v.description;
       _format = $v.format;
       _from = $v.from;
-      _name = $v.name;
+      _xname = $v.xname;
       _password = $v.password;
       _permission = $v.permission;
       _username = $v.username;
@@ -305,8 +305,8 @@ class DtoMysqlDBCreateBuilder
               format, r'DtoMysqlDBCreate', 'format'),
           from: BuiltValueNullFieldError.checkNotNull(
               from, r'DtoMysqlDBCreate', 'from'),
-          name: BuiltValueNullFieldError.checkNotNull(
-              name, r'DtoMysqlDBCreate', 'name'),
+          xname: BuiltValueNullFieldError.checkNotNull(
+              xname, r'DtoMysqlDBCreate', 'xname'),
           password: BuiltValueNullFieldError.checkNotNull(
               password, r'DtoMysqlDBCreate', 'password'),
           permission: BuiltValueNullFieldError.checkNotNull(

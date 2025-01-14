@@ -12,12 +12,12 @@ class _$DtoRedisCommand extends DtoRedisCommand {
   @override
   final int? id;
   @override
-  final String? name;
+  final String? xname;
 
   factory _$DtoRedisCommand([void Function(DtoRedisCommandBuilder)? updates]) =>
       (new DtoRedisCommandBuilder()..update(updates))._build();
 
-  _$DtoRedisCommand._({this.command, this.id, this.name}) : super._();
+  _$DtoRedisCommand._({this.command, this.id, this.xname}) : super._();
 
   @override
   DtoRedisCommand rebuild(void Function(DtoRedisCommandBuilder) updates) =>
@@ -33,7 +33,7 @@ class _$DtoRedisCommand extends DtoRedisCommand {
     return other is DtoRedisCommand &&
         command == other.command &&
         id == other.id &&
-        name == other.name;
+        xname == other.xname;
   }
 
   @override
@@ -41,7 +41,7 @@ class _$DtoRedisCommand extends DtoRedisCommand {
     var _$hash = 0;
     _$hash = $jc(_$hash, command.hashCode);
     _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -51,7 +51,7 @@ class _$DtoRedisCommand extends DtoRedisCommand {
     return (newBuiltValueToStringHelper(r'DtoRedisCommand')
           ..add('command', command)
           ..add('id', id)
-          ..add('name', name))
+          ..add('xname', xname))
         .toString();
   }
 }
@@ -68,9 +68,9 @@ class DtoRedisCommandBuilder
   int? get id => _$this._id;
   set id(int? id) => _$this._id = id;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   DtoRedisCommandBuilder() {
     DtoRedisCommand._defaults(this);
@@ -81,7 +81,7 @@ class DtoRedisCommandBuilder
     if ($v != null) {
       _command = $v.command;
       _id = $v.id;
-      _name = $v.name;
+      _xname = $v.xname;
       _$v = null;
     }
     return this;
@@ -106,7 +106,7 @@ class DtoRedisCommandBuilder
         new _$DtoRedisCommand._(
           command: command,
           id: id,
-          name: name,
+          xname: xname,
         );
     replace(_$result);
     return _$result;

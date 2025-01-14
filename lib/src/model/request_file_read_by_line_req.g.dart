@@ -12,7 +12,7 @@ class _$RequestFileReadByLineReq extends RequestFileReadByLineReq {
   @override
   final bool? latest;
   @override
-  final String? name;
+  final String? xname;
   @override
   final int page;
   @override
@@ -27,7 +27,7 @@ class _$RequestFileReadByLineReq extends RequestFileReadByLineReq {
   _$RequestFileReadByLineReq._(
       {this.ID,
       this.latest,
-      this.name,
+      this.xname,
       required this.page,
       required this.pageSize,
       required this.type})
@@ -55,7 +55,7 @@ class _$RequestFileReadByLineReq extends RequestFileReadByLineReq {
     return other is RequestFileReadByLineReq &&
         ID == other.ID &&
         latest == other.latest &&
-        name == other.name &&
+        xname == other.xname &&
         page == other.page &&
         pageSize == other.pageSize &&
         type == other.type;
@@ -66,7 +66,7 @@ class _$RequestFileReadByLineReq extends RequestFileReadByLineReq {
     var _$hash = 0;
     _$hash = $jc(_$hash, ID.hashCode);
     _$hash = $jc(_$hash, latest.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, page.hashCode);
     _$hash = $jc(_$hash, pageSize.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
@@ -79,7 +79,7 @@ class _$RequestFileReadByLineReq extends RequestFileReadByLineReq {
     return (newBuiltValueToStringHelper(r'RequestFileReadByLineReq')
           ..add('ID', ID)
           ..add('latest', latest)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('page', page)
           ..add('pageSize', pageSize)
           ..add('type', type))
@@ -100,9 +100,9 @@ class RequestFileReadByLineReqBuilder
   bool? get latest => _$this._latest;
   set latest(bool? latest) => _$this._latest = latest;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   int? _page;
   int? get page => _$this._page;
@@ -125,7 +125,7 @@ class RequestFileReadByLineReqBuilder
     if ($v != null) {
       _ID = $v.ID;
       _latest = $v.latest;
-      _name = $v.name;
+      _xname = $v.xname;
       _page = $v.page;
       _pageSize = $v.pageSize;
       _type = $v.type;
@@ -153,7 +153,7 @@ class RequestFileReadByLineReqBuilder
         new _$RequestFileReadByLineReq._(
           ID: ID,
           latest: latest,
-          name: name,
+          xname: xname,
           page: BuiltValueNullFieldError.checkNotNull(
               page, r'RequestFileReadByLineReq', 'page'),
           pageSize: BuiltValueNullFieldError.checkNotNull(

@@ -14,7 +14,7 @@ class _$DtoAppDefine extends DtoAppDefine {
   @override
   final int? lastModified;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? readMe;
   @override
@@ -27,7 +27,7 @@ class _$DtoAppDefine extends DtoAppDefine {
       {this.additionalProperties,
       this.icon,
       this.lastModified,
-      this.name,
+      this.xname,
       this.readMe,
       this.versions})
       : super._();
@@ -46,7 +46,7 @@ class _$DtoAppDefine extends DtoAppDefine {
         additionalProperties == other.additionalProperties &&
         icon == other.icon &&
         lastModified == other.lastModified &&
-        name == other.name &&
+        xname == other.xname &&
         readMe == other.readMe &&
         versions == other.versions;
   }
@@ -57,7 +57,7 @@ class _$DtoAppDefine extends DtoAppDefine {
     _$hash = $jc(_$hash, additionalProperties.hashCode);
     _$hash = $jc(_$hash, icon.hashCode);
     _$hash = $jc(_$hash, lastModified.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, readMe.hashCode);
     _$hash = $jc(_$hash, versions.hashCode);
     _$hash = $jf(_$hash);
@@ -70,7 +70,7 @@ class _$DtoAppDefine extends DtoAppDefine {
           ..add('additionalProperties', additionalProperties)
           ..add('icon', icon)
           ..add('lastModified', lastModified)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('readMe', readMe)
           ..add('versions', versions))
         .toString();
@@ -95,9 +95,9 @@ class DtoAppDefineBuilder
   int? get lastModified => _$this._lastModified;
   set lastModified(int? lastModified) => _$this._lastModified = lastModified;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _readMe;
   String? get readMe => _$this._readMe;
@@ -119,7 +119,7 @@ class DtoAppDefineBuilder
       _additionalProperties = $v.additionalProperties?.toBuilder();
       _icon = $v.icon;
       _lastModified = $v.lastModified;
-      _name = $v.name;
+      _xname = $v.xname;
       _readMe = $v.readMe;
       _versions = $v.versions?.toBuilder();
       _$v = null;
@@ -149,7 +149,7 @@ class DtoAppDefineBuilder
             additionalProperties: _additionalProperties?.build(),
             icon: icon,
             lastModified: lastModified,
-            name: name,
+            xname: xname,
             readMe: readMe,
             versions: _versions?.build(),
           );

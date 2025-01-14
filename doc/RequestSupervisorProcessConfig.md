@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **command** | **String** |  | [optional] 
 **dir** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **numprocs** | **String** |  | [optional] 
 **operate** | **String** |  | [optional] 
 **user** | **String** |  | [optional] 

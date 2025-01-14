@@ -11,13 +11,13 @@ part 'dto_clean.g.dart';
 /// DtoClean
 ///
 /// Properties:
-/// * [name] 
+/// * [xname] 
 /// * [size] 
 /// * [treeType] 
 @BuiltValue()
 abstract class DtoClean implements Built<DtoClean, DtoCleanBuilder> {
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'size')
   int? get size;
@@ -48,10 +48,10 @@ class _$DtoCleanSerializer implements PrimitiveSerializer<DtoClean> {
     DtoClean object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -97,7 +97,7 @@ class _$DtoCleanSerializer implements PrimitiveSerializer<DtoClean> {
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'size':
           final valueDes = serializers.deserialize(

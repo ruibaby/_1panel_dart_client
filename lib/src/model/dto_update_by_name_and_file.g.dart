@@ -10,13 +10,13 @@ class _$DtoUpdateByNameAndFile extends DtoUpdateByNameAndFile {
   @override
   final String? file;
   @override
-  final String? name;
+  final String? xname;
 
   factory _$DtoUpdateByNameAndFile(
           [void Function(DtoUpdateByNameAndFileBuilder)? updates]) =>
       (new DtoUpdateByNameAndFileBuilder()..update(updates))._build();
 
-  _$DtoUpdateByNameAndFile._({this.file, this.name}) : super._();
+  _$DtoUpdateByNameAndFile._({this.file, this.xname}) : super._();
 
   @override
   DtoUpdateByNameAndFile rebuild(
@@ -32,14 +32,14 @@ class _$DtoUpdateByNameAndFile extends DtoUpdateByNameAndFile {
     if (identical(other, this)) return true;
     return other is DtoUpdateByNameAndFile &&
         file == other.file &&
-        name == other.name;
+        xname == other.xname;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, file.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -48,7 +48,7 @@ class _$DtoUpdateByNameAndFile extends DtoUpdateByNameAndFile {
   String toString() {
     return (newBuiltValueToStringHelper(r'DtoUpdateByNameAndFile')
           ..add('file', file)
-          ..add('name', name))
+          ..add('xname', xname))
         .toString();
   }
 }
@@ -61,9 +61,9 @@ class DtoUpdateByNameAndFileBuilder
   String? get file => _$this._file;
   set file(String? file) => _$this._file = file;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   DtoUpdateByNameAndFileBuilder() {
     DtoUpdateByNameAndFile._defaults(this);
@@ -73,7 +73,7 @@ class DtoUpdateByNameAndFileBuilder
     final $v = _$v;
     if ($v != null) {
       _file = $v.file;
-      _name = $v.name;
+      _xname = $v.xname;
       _$v = null;
     }
     return this;
@@ -97,7 +97,7 @@ class DtoUpdateByNameAndFileBuilder
     final _$result = _$v ??
         new _$DtoUpdateByNameAndFile._(
           file: file,
-          name: name,
+          xname: xname,
         );
     replace(_$result);
     return _$result;

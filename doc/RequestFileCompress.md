@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **dst** | **String** |  | 
 **files** | **BuiltList&lt;String&gt;** |  | 
-**name** | **String** |  | 
-**replace** | **bool** |  | [optional] 
+**xname** | **String** |  | 
+**xreplace** | **bool** |  | [optional] 
 **secret** | **String** |  | [optional] 
 **type** | **String** |  | 
 

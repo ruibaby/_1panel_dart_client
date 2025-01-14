@@ -10,13 +10,13 @@ class _$RequestAppInstalledInfo extends RequestAppInstalledInfo {
   @override
   final String key;
   @override
-  final String? name;
+  final String? xname;
 
   factory _$RequestAppInstalledInfo(
           [void Function(RequestAppInstalledInfoBuilder)? updates]) =>
       (new RequestAppInstalledInfoBuilder()..update(updates))._build();
 
-  _$RequestAppInstalledInfo._({required this.key, this.name}) : super._() {
+  _$RequestAppInstalledInfo._({required this.key, this.xname}) : super._() {
     BuiltValueNullFieldError.checkNotNull(
         key, r'RequestAppInstalledInfo', 'key');
   }
@@ -35,14 +35,14 @@ class _$RequestAppInstalledInfo extends RequestAppInstalledInfo {
     if (identical(other, this)) return true;
     return other is RequestAppInstalledInfo &&
         key == other.key &&
-        name == other.name;
+        xname == other.xname;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, key.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -51,7 +51,7 @@ class _$RequestAppInstalledInfo extends RequestAppInstalledInfo {
   String toString() {
     return (newBuiltValueToStringHelper(r'RequestAppInstalledInfo')
           ..add('key', key)
-          ..add('name', name))
+          ..add('xname', xname))
         .toString();
   }
 }
@@ -65,9 +65,9 @@ class RequestAppInstalledInfoBuilder
   String? get key => _$this._key;
   set key(String? key) => _$this._key = key;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   RequestAppInstalledInfoBuilder() {
     RequestAppInstalledInfo._defaults(this);
@@ -77,7 +77,7 @@ class RequestAppInstalledInfoBuilder
     final $v = _$v;
     if ($v != null) {
       _key = $v.key;
-      _name = $v.name;
+      _xname = $v.xname;
       _$v = null;
     }
     return this;
@@ -102,7 +102,7 @@ class RequestAppInstalledInfoBuilder
         new _$RequestAppInstalledInfo._(
           key: BuiltValueNullFieldError.checkNotNull(
               key, r'RequestAppInstalledInfo', 'key'),
-          name: name,
+          xname: xname,
         );
     replace(_$result);
     return _$result;

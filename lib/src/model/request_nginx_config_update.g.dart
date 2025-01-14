@@ -10,8 +10,8 @@ const RequestNginxConfigUpdateOperateEnum
     _$requestNginxConfigUpdateOperateEnum_add =
     const RequestNginxConfigUpdateOperateEnum._('add');
 const RequestNginxConfigUpdateOperateEnum
-    _$requestNginxConfigUpdateOperateEnum_update =
-    const RequestNginxConfigUpdateOperateEnum._('update');
+    _$requestNginxConfigUpdateOperateEnum_xupdate =
+    const RequestNginxConfigUpdateOperateEnum._('xupdate');
 const RequestNginxConfigUpdateOperateEnum
     _$requestNginxConfigUpdateOperateEnum_delete =
     const RequestNginxConfigUpdateOperateEnum._('delete');
@@ -21,8 +21,8 @@ RequestNginxConfigUpdateOperateEnum
   switch (name) {
     case 'add':
       return _$requestNginxConfigUpdateOperateEnum_add;
-    case 'update':
-      return _$requestNginxConfigUpdateOperateEnum_update;
+    case 'xupdate':
+      return _$requestNginxConfigUpdateOperateEnum_xupdate;
     case 'delete':
       return _$requestNginxConfigUpdateOperateEnum_delete;
     default:
@@ -34,7 +34,7 @@ final BuiltSet<RequestNginxConfigUpdateOperateEnum>
     _$requestNginxConfigUpdateOperateEnumValues = new BuiltSet<
         RequestNginxConfigUpdateOperateEnum>(const <RequestNginxConfigUpdateOperateEnum>[
   _$requestNginxConfigUpdateOperateEnum_add,
-  _$requestNginxConfigUpdateOperateEnum_update,
+  _$requestNginxConfigUpdateOperateEnum_xupdate,
   _$requestNginxConfigUpdateOperateEnum_delete,
 ]);
 
@@ -46,12 +46,12 @@ class _$RequestNginxConfigUpdateOperateEnumSerializer
     implements PrimitiveSerializer<RequestNginxConfigUpdateOperateEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'add': 'add',
-    'update': 'update',
+    'xupdate': 'update',
     'delete': 'delete',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'add': 'add',
-    'update': 'update',
+    'update': 'xupdate',
     'delete': 'delete',
   };
 

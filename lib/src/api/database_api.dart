@@ -389,7 +389,7 @@ class DatabaseApi {
   /// 
   ///
   /// Parameters:
-  /// * [name] - name
+  /// * [xname] - name
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -400,7 +400,7 @@ class DatabaseApi {
   /// Returns a [Future] containing a [Response] with a [DtoDatabaseInfo] as data
   /// Throws [DioException] if API call or serialization fails
   Future<Response<DtoDatabaseInfo>> databasesDbNameGet({ 
-    required String name,
+    required String xname,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -408,7 +408,7 @@ class DatabaseApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/databases/db/{name}'.replaceAll('{' r'name' '}', encodeQueryParameter(_serializers, name, const FullType(String)).toString());
+    final _path = r'/databases/db/{name}'.replaceAll('{' r'name' '}', encodeQueryParameter(_serializers, xname, const FullType(String)).toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{

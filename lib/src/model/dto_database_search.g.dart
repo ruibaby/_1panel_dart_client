@@ -33,16 +33,16 @@ final BuiltSet<DtoDatabaseSearchOrderEnum> _$dtoDatabaseSearchOrderEnumValues =
   _$dtoDatabaseSearchOrderEnum_descending,
 ]);
 
-const DtoDatabaseSearchOrderByEnum _$dtoDatabaseSearchOrderByEnum_name =
-    const DtoDatabaseSearchOrderByEnum._('name');
+const DtoDatabaseSearchOrderByEnum _$dtoDatabaseSearchOrderByEnum_xname =
+    const DtoDatabaseSearchOrderByEnum._('xname');
 const DtoDatabaseSearchOrderByEnum _$dtoDatabaseSearchOrderByEnum_createdAt =
     const DtoDatabaseSearchOrderByEnum._('createdAt');
 
 DtoDatabaseSearchOrderByEnum _$dtoDatabaseSearchOrderByEnumValueOf(
     String name) {
   switch (name) {
-    case 'name':
-      return _$dtoDatabaseSearchOrderByEnum_name;
+    case 'xname':
+      return _$dtoDatabaseSearchOrderByEnum_xname;
     case 'createdAt':
       return _$dtoDatabaseSearchOrderByEnum_createdAt;
     default:
@@ -53,7 +53,7 @@ DtoDatabaseSearchOrderByEnum _$dtoDatabaseSearchOrderByEnumValueOf(
 final BuiltSet<DtoDatabaseSearchOrderByEnum>
     _$dtoDatabaseSearchOrderByEnumValues = new BuiltSet<
         DtoDatabaseSearchOrderByEnum>(const <DtoDatabaseSearchOrderByEnum>[
-  _$dtoDatabaseSearchOrderByEnum_name,
+  _$dtoDatabaseSearchOrderByEnum_xname,
   _$dtoDatabaseSearchOrderByEnum_createdAt,
 ]);
 
@@ -97,11 +97,11 @@ class _$DtoDatabaseSearchOrderEnumSerializer
 class _$DtoDatabaseSearchOrderByEnumSerializer
     implements PrimitiveSerializer<DtoDatabaseSearchOrderByEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'name': 'name',
+    'xname': 'name',
     'createdAt': 'created_at',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'name': 'name',
+    'name': 'xname',
     'created_at': 'createdAt',
   };
 

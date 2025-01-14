@@ -10,7 +10,7 @@ class _$RequestWebsiteDnsAccountCreate extends RequestWebsiteDnsAccountCreate {
   @override
   final BuiltMap<String, String> authorization;
   @override
-  final String name;
+  final String xname;
   @override
   final String type;
 
@@ -19,12 +19,12 @@ class _$RequestWebsiteDnsAccountCreate extends RequestWebsiteDnsAccountCreate {
       (new RequestWebsiteDnsAccountCreateBuilder()..update(updates))._build();
 
   _$RequestWebsiteDnsAccountCreate._(
-      {required this.authorization, required this.name, required this.type})
+      {required this.authorization, required this.xname, required this.type})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         authorization, r'RequestWebsiteDnsAccountCreate', 'authorization');
     BuiltValueNullFieldError.checkNotNull(
-        name, r'RequestWebsiteDnsAccountCreate', 'name');
+        xname, r'RequestWebsiteDnsAccountCreate', 'xname');
     BuiltValueNullFieldError.checkNotNull(
         type, r'RequestWebsiteDnsAccountCreate', 'type');
   }
@@ -43,7 +43,7 @@ class _$RequestWebsiteDnsAccountCreate extends RequestWebsiteDnsAccountCreate {
     if (identical(other, this)) return true;
     return other is RequestWebsiteDnsAccountCreate &&
         authorization == other.authorization &&
-        name == other.name &&
+        xname == other.xname &&
         type == other.type;
   }
 
@@ -51,7 +51,7 @@ class _$RequestWebsiteDnsAccountCreate extends RequestWebsiteDnsAccountCreate {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, authorization.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -61,7 +61,7 @@ class _$RequestWebsiteDnsAccountCreate extends RequestWebsiteDnsAccountCreate {
   String toString() {
     return (newBuiltValueToStringHelper(r'RequestWebsiteDnsAccountCreate')
           ..add('authorization', authorization)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('type', type))
         .toString();
   }
@@ -79,9 +79,9 @@ class RequestWebsiteDnsAccountCreateBuilder
   set authorization(MapBuilder<String, String>? authorization) =>
       _$this._authorization = authorization;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _type;
   String? get type => _$this._type;
@@ -95,7 +95,7 @@ class RequestWebsiteDnsAccountCreateBuilder
     final $v = _$v;
     if ($v != null) {
       _authorization = $v.authorization.toBuilder();
-      _name = $v.name;
+      _xname = $v.xname;
       _type = $v.type;
       _$v = null;
     }
@@ -122,8 +122,8 @@ class RequestWebsiteDnsAccountCreateBuilder
       _$result = _$v ??
           new _$RequestWebsiteDnsAccountCreate._(
             authorization: authorization.build(),
-            name: BuiltValueNullFieldError.checkNotNull(
-                name, r'RequestWebsiteDnsAccountCreate', 'name'),
+            xname: BuiltValueNullFieldError.checkNotNull(
+                xname, r'RequestWebsiteDnsAccountCreate', 'xname'),
             type: BuiltValueNullFieldError.checkNotNull(
                 type, r'RequestWebsiteDnsAccountCreate', 'type'),
           );

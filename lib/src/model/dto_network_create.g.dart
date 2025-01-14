@@ -28,7 +28,7 @@ class _$DtoNetworkCreate extends DtoNetworkCreate {
   @override
   final BuiltList<String>? labels;
   @override
-  final String name;
+  final String xname;
   @override
   final BuiltList<String>? options;
   @override
@@ -51,14 +51,14 @@ class _$DtoNetworkCreate extends DtoNetworkCreate {
       this.ipv4,
       this.ipv6,
       this.labels,
-      required this.name,
+      required this.xname,
       this.options,
       this.subnet,
       this.subnetV6})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         driver, r'DtoNetworkCreate', 'driver');
-    BuiltValueNullFieldError.checkNotNull(name, r'DtoNetworkCreate', 'name');
+    BuiltValueNullFieldError.checkNotNull(xname, r'DtoNetworkCreate', 'xname');
   }
 
   @override
@@ -83,7 +83,7 @@ class _$DtoNetworkCreate extends DtoNetworkCreate {
         ipv4 == other.ipv4 &&
         ipv6 == other.ipv6 &&
         labels == other.labels &&
-        name == other.name &&
+        xname == other.xname &&
         options == other.options &&
         subnet == other.subnet &&
         subnetV6 == other.subnetV6;
@@ -102,7 +102,7 @@ class _$DtoNetworkCreate extends DtoNetworkCreate {
     _$hash = $jc(_$hash, ipv4.hashCode);
     _$hash = $jc(_$hash, ipv6.hashCode);
     _$hash = $jc(_$hash, labels.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, options.hashCode);
     _$hash = $jc(_$hash, subnet.hashCode);
     _$hash = $jc(_$hash, subnetV6.hashCode);
@@ -123,7 +123,7 @@ class _$DtoNetworkCreate extends DtoNetworkCreate {
           ..add('ipv4', ipv4)
           ..add('ipv6', ipv6)
           ..add('labels', labels)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('options', options)
           ..add('subnet', subnet)
           ..add('subnetV6', subnetV6))
@@ -180,9 +180,9 @@ class DtoNetworkCreateBuilder
       _$this._labels ??= new ListBuilder<String>();
   set labels(ListBuilder<String>? labels) => _$this._labels = labels;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   ListBuilder<String>? _options;
   ListBuilder<String> get options =>
@@ -214,7 +214,7 @@ class DtoNetworkCreateBuilder
       _ipv4 = $v.ipv4;
       _ipv6 = $v.ipv6;
       _labels = $v.labels?.toBuilder();
-      _name = $v.name;
+      _xname = $v.xname;
       _options = $v.options?.toBuilder();
       _subnet = $v.subnet;
       _subnetV6 = $v.subnetV6;
@@ -253,8 +253,8 @@ class DtoNetworkCreateBuilder
             ipv4: ipv4,
             ipv6: ipv6,
             labels: _labels?.build(),
-            name: BuiltValueNullFieldError.checkNotNull(
-                name, r'DtoNetworkCreate', 'name'),
+            xname: BuiltValueNullFieldError.checkNotNull(
+                xname, r'DtoNetworkCreate', 'xname'),
             options: _options?.build(),
             subnet: subnet,
             subnetV6: subnetV6,

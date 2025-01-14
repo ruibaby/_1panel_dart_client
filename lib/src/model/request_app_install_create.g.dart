@@ -28,7 +28,7 @@ class _$RequestAppInstallCreate extends RequestAppInstallCreate {
   @override
   final String? memoryUnit;
   @override
-  final String name;
+  final String xname;
   @override
   final BuiltMap<String, JsonObject?>? params;
   @override
@@ -51,7 +51,7 @@ class _$RequestAppInstallCreate extends RequestAppInstallCreate {
       this.hostMode,
       this.memoryLimit,
       this.memoryUnit,
-      required this.name,
+      required this.xname,
       this.params,
       this.pullImage,
       this.services})
@@ -59,7 +59,7 @@ class _$RequestAppInstallCreate extends RequestAppInstallCreate {
     BuiltValueNullFieldError.checkNotNull(
         appDetailId, r'RequestAppInstallCreate', 'appDetailId');
     BuiltValueNullFieldError.checkNotNull(
-        name, r'RequestAppInstallCreate', 'name');
+        xname, r'RequestAppInstallCreate', 'xname');
   }
 
   @override
@@ -85,7 +85,7 @@ class _$RequestAppInstallCreate extends RequestAppInstallCreate {
         hostMode == other.hostMode &&
         memoryLimit == other.memoryLimit &&
         memoryUnit == other.memoryUnit &&
-        name == other.name &&
+        xname == other.xname &&
         params == other.params &&
         pullImage == other.pullImage &&
         services == other.services;
@@ -104,7 +104,7 @@ class _$RequestAppInstallCreate extends RequestAppInstallCreate {
     _$hash = $jc(_$hash, hostMode.hashCode);
     _$hash = $jc(_$hash, memoryLimit.hashCode);
     _$hash = $jc(_$hash, memoryUnit.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, params.hashCode);
     _$hash = $jc(_$hash, pullImage.hashCode);
     _$hash = $jc(_$hash, services.hashCode);
@@ -125,7 +125,7 @@ class _$RequestAppInstallCreate extends RequestAppInstallCreate {
           ..add('hostMode', hostMode)
           ..add('memoryLimit', memoryLimit)
           ..add('memoryUnit', memoryUnit)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('params', params)
           ..add('pullImage', pullImage)
           ..add('services', services))
@@ -180,9 +180,9 @@ class RequestAppInstallCreateBuilder
   String? get memoryUnit => _$this._memoryUnit;
   set memoryUnit(String? memoryUnit) => _$this._memoryUnit = memoryUnit;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   MapBuilder<String, JsonObject?>? _params;
   MapBuilder<String, JsonObject?> get params =>
@@ -217,7 +217,7 @@ class RequestAppInstallCreateBuilder
       _hostMode = $v.hostMode;
       _memoryLimit = $v.memoryLimit;
       _memoryUnit = $v.memoryUnit;
-      _name = $v.name;
+      _xname = $v.xname;
       _params = $v.params?.toBuilder();
       _pullImage = $v.pullImage;
       _services = $v.services?.toBuilder();
@@ -256,8 +256,8 @@ class RequestAppInstallCreateBuilder
             hostMode: hostMode,
             memoryLimit: memoryLimit,
             memoryUnit: memoryUnit,
-            name: BuiltValueNullFieldError.checkNotNull(
-                name, r'RequestAppInstallCreate', 'name'),
+            xname: BuiltValueNullFieldError.checkNotNull(
+                xname, r'RequestAppInstallCreate', 'xname'),
             params: _params?.build(),
             pullImage: pullImage,
             services: _services?.build(),

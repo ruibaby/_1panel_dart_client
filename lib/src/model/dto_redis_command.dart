@@ -13,7 +13,7 @@ part 'dto_redis_command.g.dart';
 /// Properties:
 /// * [command] 
 /// * [id] 
-/// * [name] 
+/// * [xname] 
 @BuiltValue()
 abstract class DtoRedisCommand implements Built<DtoRedisCommand, DtoRedisCommandBuilder> {
   @BuiltValueField(wireName: r'command')
@@ -23,7 +23,7 @@ abstract class DtoRedisCommand implements Built<DtoRedisCommand, DtoRedisCommand
   int? get id;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   DtoRedisCommand._();
 
@@ -62,10 +62,10 @@ class _$DtoRedisCommandSerializer implements PrimitiveSerializer<DtoRedisCommand
         specifiedType: const FullType(int),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -111,7 +111,7 @@ class _$DtoRedisCommandSerializer implements PrimitiveSerializer<DtoRedisCommand
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         default:
           unhandled.add(key);

@@ -14,7 +14,7 @@ class _$RequestNginxRedirectReq extends RequestNginxRedirectReq {
   @override
   final bool? keepPath;
   @override
-  final String name;
+  final String xname;
   @override
   final String operate;
   @override
@@ -38,7 +38,7 @@ class _$RequestNginxRedirectReq extends RequestNginxRedirectReq {
       {this.domains,
       this.enable,
       this.keepPath,
-      required this.name,
+      required this.xname,
       required this.operate,
       this.path,
       required this.redirect,
@@ -48,7 +48,7 @@ class _$RequestNginxRedirectReq extends RequestNginxRedirectReq {
       required this.websiteID})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        name, r'RequestNginxRedirectReq', 'name');
+        xname, r'RequestNginxRedirectReq', 'xname');
     BuiltValueNullFieldError.checkNotNull(
         operate, r'RequestNginxRedirectReq', 'operate');
     BuiltValueNullFieldError.checkNotNull(
@@ -77,7 +77,7 @@ class _$RequestNginxRedirectReq extends RequestNginxRedirectReq {
         domains == other.domains &&
         enable == other.enable &&
         keepPath == other.keepPath &&
-        name == other.name &&
+        xname == other.xname &&
         operate == other.operate &&
         path == other.path &&
         redirect == other.redirect &&
@@ -93,7 +93,7 @@ class _$RequestNginxRedirectReq extends RequestNginxRedirectReq {
     _$hash = $jc(_$hash, domains.hashCode);
     _$hash = $jc(_$hash, enable.hashCode);
     _$hash = $jc(_$hash, keepPath.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, operate.hashCode);
     _$hash = $jc(_$hash, path.hashCode);
     _$hash = $jc(_$hash, redirect.hashCode);
@@ -111,7 +111,7 @@ class _$RequestNginxRedirectReq extends RequestNginxRedirectReq {
           ..add('domains', domains)
           ..add('enable', enable)
           ..add('keepPath', keepPath)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('operate', operate)
           ..add('path', path)
           ..add('redirect', redirect)
@@ -141,9 +141,9 @@ class RequestNginxRedirectReqBuilder
   bool? get keepPath => _$this._keepPath;
   set keepPath(bool? keepPath) => _$this._keepPath = keepPath;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _operate;
   String? get operate => _$this._operate;
@@ -183,7 +183,7 @@ class RequestNginxRedirectReqBuilder
       _domains = $v.domains?.toBuilder();
       _enable = $v.enable;
       _keepPath = $v.keepPath;
-      _name = $v.name;
+      _xname = $v.xname;
       _operate = $v.operate;
       _path = $v.path;
       _redirect = $v.redirect;
@@ -218,8 +218,8 @@ class RequestNginxRedirectReqBuilder
             domains: _domains?.build(),
             enable: enable,
             keepPath: keepPath,
-            name: BuiltValueNullFieldError.checkNotNull(
-                name, r'RequestNginxRedirectReq', 'name'),
+            xname: BuiltValueNullFieldError.checkNotNull(
+                xname, r'RequestNginxRedirectReq', 'xname'),
             operate: BuiltValueNullFieldError.checkNotNull(
                 operate, r'RequestNginxRedirectReq', 'operate'),
             path: path,

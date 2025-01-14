@@ -26,7 +26,7 @@ class _$ResponseRuntimeDTO extends ResponseRuntimeDTO {
   @override
   final String? message;
   @override
-  final String? name;
+  final String? xname;
   @override
   final BuiltMap<String, JsonObject?>? params;
   @override
@@ -58,7 +58,7 @@ class _$ResponseRuntimeDTO extends ResponseRuntimeDTO {
       this.id,
       this.image,
       this.message,
-      this.name,
+      this.xname,
       this.params,
       this.path,
       this.port,
@@ -91,7 +91,7 @@ class _$ResponseRuntimeDTO extends ResponseRuntimeDTO {
         id == other.id &&
         image == other.image &&
         message == other.message &&
-        name == other.name &&
+        xname == other.xname &&
         params == other.params &&
         path == other.path &&
         port == other.port &&
@@ -114,7 +114,7 @@ class _$ResponseRuntimeDTO extends ResponseRuntimeDTO {
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, image.hashCode);
     _$hash = $jc(_$hash, message.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, params.hashCode);
     _$hash = $jc(_$hash, path.hashCode);
     _$hash = $jc(_$hash, port.hashCode);
@@ -139,7 +139,7 @@ class _$ResponseRuntimeDTO extends ResponseRuntimeDTO {
           ..add('id', id)
           ..add('image', image)
           ..add('message', message)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('params', params)
           ..add('path', path)
           ..add('port', port)
@@ -196,9 +196,9 @@ class ResponseRuntimeDTOBuilder
   String? get message => _$this._message;
   set message(String? message) => _$this._message = message;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   MapBuilder<String, JsonObject?>? _params;
   MapBuilder<String, JsonObject?> get params =>
@@ -250,7 +250,7 @@ class ResponseRuntimeDTOBuilder
       _id = $v.id;
       _image = $v.image;
       _message = $v.message;
-      _name = $v.name;
+      _xname = $v.xname;
       _params = $v.params?.toBuilder();
       _path = $v.path;
       _port = $v.port;
@@ -292,7 +292,7 @@ class ResponseRuntimeDTOBuilder
             id: id,
             image: image,
             message: message,
-            name: name,
+            xname: xname,
             params: _params?.build(),
             path: path,
             port: port,

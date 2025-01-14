@@ -8,7 +8,7 @@ part of 'dto_image_save.dart';
 
 class _$DtoImageSave extends DtoImageSave {
   @override
-  final String name;
+  final String xname;
   @override
   final String path;
   @override
@@ -18,9 +18,9 @@ class _$DtoImageSave extends DtoImageSave {
       (new DtoImageSaveBuilder()..update(updates))._build();
 
   _$DtoImageSave._(
-      {required this.name, required this.path, required this.tagName})
+      {required this.xname, required this.path, required this.tagName})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(name, r'DtoImageSave', 'name');
+    BuiltValueNullFieldError.checkNotNull(xname, r'DtoImageSave', 'xname');
     BuiltValueNullFieldError.checkNotNull(path, r'DtoImageSave', 'path');
     BuiltValueNullFieldError.checkNotNull(tagName, r'DtoImageSave', 'tagName');
   }
@@ -36,7 +36,7 @@ class _$DtoImageSave extends DtoImageSave {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is DtoImageSave &&
-        name == other.name &&
+        xname == other.xname &&
         path == other.path &&
         tagName == other.tagName;
   }
@@ -44,7 +44,7 @@ class _$DtoImageSave extends DtoImageSave {
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, path.hashCode);
     _$hash = $jc(_$hash, tagName.hashCode);
     _$hash = $jf(_$hash);
@@ -54,7 +54,7 @@ class _$DtoImageSave extends DtoImageSave {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'DtoImageSave')
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('path', path)
           ..add('tagName', tagName))
         .toString();
@@ -65,9 +65,9 @@ class DtoImageSaveBuilder
     implements Builder<DtoImageSave, DtoImageSaveBuilder> {
   _$DtoImageSave? _$v;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _path;
   String? get path => _$this._path;
@@ -84,7 +84,7 @@ class DtoImageSaveBuilder
   DtoImageSaveBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _name = $v.name;
+      _xname = $v.xname;
       _path = $v.path;
       _tagName = $v.tagName;
       _$v = null;
@@ -109,8 +109,8 @@ class DtoImageSaveBuilder
   _$DtoImageSave _build() {
     final _$result = _$v ??
         new _$DtoImageSave._(
-          name: BuiltValueNullFieldError.checkNotNull(
-              name, r'DtoImageSave', 'name'),
+          xname: BuiltValueNullFieldError.checkNotNull(
+              xname, r'DtoImageSave', 'xname'),
           path: BuiltValueNullFieldError.checkNotNull(
               path, r'DtoImageSave', 'path'),
           tagName: BuiltValueNullFieldError.checkNotNull(

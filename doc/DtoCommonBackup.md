@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **detailName** | **String** |  | [optional] 
 **fileName** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **secret** | **String** |  | [optional] 
 **type** | **String** |  | 
 

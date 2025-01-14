@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **clientKey** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **from** | **String** |  | 
-**name** | **String** |  | 
+**xname** | **String** |  | 
 **password** | **String** |  | [optional] 
 **port** | **int** |  | [optional] 
 **rootCert** | **String** |  | [optional] 

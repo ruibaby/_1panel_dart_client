@@ -10,7 +10,7 @@ class _$DtoRecordSearch extends DtoRecordSearch {
   @override
   final String? detailName;
   @override
-  final String? name;
+  final String? xname;
   @override
   final int page;
   @override
@@ -23,7 +23,7 @@ class _$DtoRecordSearch extends DtoRecordSearch {
 
   _$DtoRecordSearch._(
       {this.detailName,
-      this.name,
+      this.xname,
       required this.page,
       required this.pageSize,
       required this.type})
@@ -47,7 +47,7 @@ class _$DtoRecordSearch extends DtoRecordSearch {
     if (identical(other, this)) return true;
     return other is DtoRecordSearch &&
         detailName == other.detailName &&
-        name == other.name &&
+        xname == other.xname &&
         page == other.page &&
         pageSize == other.pageSize &&
         type == other.type;
@@ -57,7 +57,7 @@ class _$DtoRecordSearch extends DtoRecordSearch {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, detailName.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, page.hashCode);
     _$hash = $jc(_$hash, pageSize.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
@@ -69,7 +69,7 @@ class _$DtoRecordSearch extends DtoRecordSearch {
   String toString() {
     return (newBuiltValueToStringHelper(r'DtoRecordSearch')
           ..add('detailName', detailName)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('page', page)
           ..add('pageSize', pageSize)
           ..add('type', type))
@@ -85,9 +85,9 @@ class DtoRecordSearchBuilder
   String? get detailName => _$this._detailName;
   set detailName(String? detailName) => _$this._detailName = detailName;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   int? _page;
   int? get page => _$this._page;
@@ -109,7 +109,7 @@ class DtoRecordSearchBuilder
     final $v = _$v;
     if ($v != null) {
       _detailName = $v.detailName;
-      _name = $v.name;
+      _xname = $v.xname;
       _page = $v.page;
       _pageSize = $v.pageSize;
       _type = $v.type;
@@ -136,7 +136,7 @@ class DtoRecordSearchBuilder
     final _$result = _$v ??
         new _$DtoRecordSearch._(
           detailName: detailName,
-          name: name,
+          xname: xname,
           page: BuiltValueNullFieldError.checkNotNull(
               page, r'DtoRecordSearch', 'page'),
           pageSize: BuiltValueNullFieldError.checkNotNull(

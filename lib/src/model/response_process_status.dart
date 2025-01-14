@@ -13,7 +13,7 @@ part 'response_process_status.g.dart';
 /// Properties:
 /// * [PID] 
 /// * [msg] 
-/// * [name] 
+/// * [xname] 
 /// * [status] 
 /// * [uptime] 
 @BuiltValue()
@@ -25,7 +25,7 @@ abstract class ResponseProcessStatus implements Built<ResponseProcessStatus, Res
   String? get msg;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'status')
   String? get status;
@@ -70,10 +70,10 @@ class _$ResponseProcessStatusSerializer implements PrimitiveSerializer<ResponseP
         specifiedType: const FullType(String),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -133,7 +133,7 @@ class _$ResponseProcessStatusSerializer implements PrimitiveSerializer<ResponseP
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'status':
           final valueDes = serializers.deserialize(

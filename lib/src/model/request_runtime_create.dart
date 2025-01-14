@@ -20,7 +20,7 @@ part 'request_runtime_create.g.dart';
 /// * [exposedPorts] 
 /// * [image] 
 /// * [install] 
-/// * [name] 
+/// * [xname] 
 /// * [params] 
 /// * [port] 
 /// * [resource] 
@@ -48,7 +48,7 @@ abstract class RequestRuntimeCreate implements Built<RequestRuntimeCreate, Reque
   bool? get install;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'params')
   BuiltMap<String, JsonObject?>? get params;
@@ -133,10 +133,10 @@ class _$RequestRuntimeCreateSerializer implements PrimitiveSerializer<RequestRun
         specifiedType: const FullType(bool),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -252,7 +252,7 @@ class _$RequestRuntimeCreateSerializer implements PrimitiveSerializer<RequestRun
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'params':
           final valueDes = serializers.deserialize(

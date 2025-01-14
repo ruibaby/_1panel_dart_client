@@ -18,7 +18,7 @@ part 'dto_app_property.g.dart';
 /// * [github] 
 /// * [key] 
 /// * [limit] 
-/// * [name] 
+/// * [xname] 
 /// * [recommend] 
 /// * [shortDescEn] 
 /// * [shortDescZh] 
@@ -47,7 +47,7 @@ abstract class DtoAppProperty implements Built<DtoAppProperty, DtoAppPropertyBui
   int? get limit;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'recommend')
   int? get recommend;
@@ -135,10 +135,10 @@ class _$DtoAppPropertySerializer implements PrimitiveSerializer<DtoAppProperty> 
         specifiedType: const FullType(int),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -261,7 +261,7 @@ class _$DtoAppPropertySerializer implements PrimitiveSerializer<DtoAppProperty> 
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'recommend':
           final valueDes = serializers.deserialize(

@@ -15,7 +15,7 @@ part 'dto_command_operate.g.dart';
 /// * [groupBelong] 
 /// * [groupID] 
 /// * [id] 
-/// * [name] 
+/// * [xname] 
 @BuiltValue()
 abstract class DtoCommandOperate implements Built<DtoCommandOperate, DtoCommandOperateBuilder> {
   @BuiltValueField(wireName: r'command')
@@ -31,7 +31,7 @@ abstract class DtoCommandOperate implements Built<DtoCommandOperate, DtoCommandO
   int? get id;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   DtoCommandOperate._();
 
@@ -84,7 +84,7 @@ class _$DtoCommandOperateSerializer implements PrimitiveSerializer<DtoCommandOpe
     }
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
   }
@@ -143,7 +143,7 @@ class _$DtoCommandOperateSerializer implements PrimitiveSerializer<DtoCommandOpe
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         default:
           unhandled.add(key);

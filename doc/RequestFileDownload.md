@@ -9,7 +9,7 @@ import 'package:one_panel_client/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **compress** | **bool** |  | [optional] 
-**name** | **String** |  | 
+**xname** | **String** |  | 
 **paths** | **BuiltList&lt;String&gt;** |  | 
 **type** | **String** |  | 
 

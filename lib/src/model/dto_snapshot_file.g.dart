@@ -10,14 +10,14 @@ class _$DtoSnapshotFile extends DtoSnapshotFile {
   @override
   final int? id;
   @override
-  final String? name;
+  final String? xname;
   @override
   final int? size;
 
   factory _$DtoSnapshotFile([void Function(DtoSnapshotFileBuilder)? updates]) =>
       (new DtoSnapshotFileBuilder()..update(updates))._build();
 
-  _$DtoSnapshotFile._({this.id, this.name, this.size}) : super._();
+  _$DtoSnapshotFile._({this.id, this.xname, this.size}) : super._();
 
   @override
   DtoSnapshotFile rebuild(void Function(DtoSnapshotFileBuilder) updates) =>
@@ -32,7 +32,7 @@ class _$DtoSnapshotFile extends DtoSnapshotFile {
     if (identical(other, this)) return true;
     return other is DtoSnapshotFile &&
         id == other.id &&
-        name == other.name &&
+        xname == other.xname &&
         size == other.size;
   }
 
@@ -40,7 +40,7 @@ class _$DtoSnapshotFile extends DtoSnapshotFile {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, size.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -50,7 +50,7 @@ class _$DtoSnapshotFile extends DtoSnapshotFile {
   String toString() {
     return (newBuiltValueToStringHelper(r'DtoSnapshotFile')
           ..add('id', id)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('size', size))
         .toString();
   }
@@ -64,9 +64,9 @@ class DtoSnapshotFileBuilder
   int? get id => _$this._id;
   set id(int? id) => _$this._id = id;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   int? _size;
   int? get size => _$this._size;
@@ -80,7 +80,7 @@ class DtoSnapshotFileBuilder
     final $v = _$v;
     if ($v != null) {
       _id = $v.id;
-      _name = $v.name;
+      _xname = $v.xname;
       _size = $v.size;
       _$v = null;
     }
@@ -105,7 +105,7 @@ class DtoSnapshotFileBuilder
     final _$result = _$v ??
         new _$DtoSnapshotFile._(
           id: id,
-          name: name,
+          xname: xname,
           size: size,
         );
     replace(_$result);

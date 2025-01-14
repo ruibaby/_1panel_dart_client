@@ -18,7 +18,7 @@ part 'dto_database_info.g.dart';
 /// * [description] 
 /// * [from] 
 /// * [id] 
-/// * [name] 
+/// * [xname] 
 /// * [password] 
 /// * [port] 
 /// * [rootCert] 
@@ -51,7 +51,7 @@ abstract class DtoDatabaseInfo implements Built<DtoDatabaseInfo, DtoDatabaseInfo
   int? get id;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'password')
   String? get password;
@@ -149,10 +149,10 @@ class _$DtoDatabaseInfoSerializer implements PrimitiveSerializer<DtoDatabaseInfo
         specifiedType: const FullType(int),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -289,7 +289,7 @@ class _$DtoDatabaseInfoSerializer implements PrimitiveSerializer<DtoDatabaseInfo
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'password':
           final valueDes = serializers.deserialize(

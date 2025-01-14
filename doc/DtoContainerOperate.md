@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **ipv6** | **String** |  | [optional] 
 **labels** | **BuiltList&lt;String&gt;** |  | [optional] 
 **memory** | **num** |  | [optional] 
-**name** | **String** |  | 
+**xname** | **String** |  | 
 **nanoCPUs** | **num** |  | [optional] 
 **network** | **String** |  | [optional] 
 **openStdin** | **bool** |  | [optional] 

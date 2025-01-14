@@ -12,14 +12,14 @@ part 'dto_compose_operation.g.dart';
 /// DtoComposeOperation
 ///
 /// Properties:
-/// * [name] 
+/// * [xname] 
 /// * [operation] 
 /// * [path] 
 /// * [withFile] 
 @BuiltValue()
 abstract class DtoComposeOperation implements Built<DtoComposeOperation, DtoComposeOperationBuilder> {
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'operation')
   DtoComposeOperationOperationEnum get operation;
@@ -56,7 +56,7 @@ class _$DtoComposeOperationSerializer implements PrimitiveSerializer<DtoComposeO
   }) sync* {
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     yield r'operation';
@@ -106,7 +106,7 @@ class _$DtoComposeOperationSerializer implements PrimitiveSerializer<DtoComposeO
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'operation':
           final valueDes = serializers.deserialize(

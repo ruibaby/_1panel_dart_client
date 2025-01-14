@@ -18,7 +18,7 @@ part 'dto_host_info.g.dart';
 /// * [groupBelong] 
 /// * [groupID] 
 /// * [id] 
-/// * [name] 
+/// * [xname] 
 /// * [passPhrase] 
 /// * [password] 
 /// * [port] 
@@ -49,7 +49,7 @@ abstract class DtoHostInfo implements Built<DtoHostInfo, DtoHostInfoBuilder> {
   int? get id;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'passPhrase')
   String? get passPhrase;
@@ -141,10 +141,10 @@ class _$DtoHostInfoSerializer implements PrimitiveSerializer<DtoHostInfo> {
         specifiedType: const FullType(int),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -267,7 +267,7 @@ class _$DtoHostInfoSerializer implements PrimitiveSerializer<DtoHostInfo> {
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'passPhrase':
           final valueDes = serializers.deserialize(

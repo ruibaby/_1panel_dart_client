@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **isDir** | **bool** |  | [optional] 
 **isTxt** | **bool** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **path** | **String** |  | [optional] 
 **type** | **String** |  | [optional] 
 **updatedAt** | **String** |  | [optional] 

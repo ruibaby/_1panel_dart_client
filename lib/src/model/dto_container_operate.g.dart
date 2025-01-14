@@ -34,7 +34,7 @@ class _$DtoContainerOperate extends DtoContainerOperate {
   @override
   final num? memory;
   @override
-  final String name;
+  final String xname;
   @override
   final num? nanoCPUs;
   @override
@@ -70,7 +70,7 @@ class _$DtoContainerOperate extends DtoContainerOperate {
       this.ipv6,
       this.labels,
       this.memory,
-      required this.name,
+      required this.xname,
       this.nanoCPUs,
       this.network,
       this.openStdin,
@@ -82,7 +82,8 @@ class _$DtoContainerOperate extends DtoContainerOperate {
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         image, r'DtoContainerOperate', 'image');
-    BuiltValueNullFieldError.checkNotNull(name, r'DtoContainerOperate', 'name');
+    BuiltValueNullFieldError.checkNotNull(
+        xname, r'DtoContainerOperate', 'xname');
   }
 
   @override
@@ -111,7 +112,7 @@ class _$DtoContainerOperate extends DtoContainerOperate {
         ipv6 == other.ipv6 &&
         labels == other.labels &&
         memory == other.memory &&
-        name == other.name &&
+        xname == other.xname &&
         nanoCPUs == other.nanoCPUs &&
         network == other.network &&
         openStdin == other.openStdin &&
@@ -138,7 +139,7 @@ class _$DtoContainerOperate extends DtoContainerOperate {
     _$hash = $jc(_$hash, ipv6.hashCode);
     _$hash = $jc(_$hash, labels.hashCode);
     _$hash = $jc(_$hash, memory.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, nanoCPUs.hashCode);
     _$hash = $jc(_$hash, network.hashCode);
     _$hash = $jc(_$hash, openStdin.hashCode);
@@ -167,7 +168,7 @@ class _$DtoContainerOperate extends DtoContainerOperate {
           ..add('ipv6', ipv6)
           ..add('labels', labels)
           ..add('memory', memory)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('nanoCPUs', nanoCPUs)
           ..add('network', network)
           ..add('openStdin', openStdin)
@@ -241,9 +242,9 @@ class DtoContainerOperateBuilder
   num? get memory => _$this._memory;
   set memory(num? memory) => _$this._memory = memory;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   num? _nanoCPUs;
   num? get nanoCPUs => _$this._nanoCPUs;
@@ -301,7 +302,7 @@ class DtoContainerOperateBuilder
       _ipv6 = $v.ipv6;
       _labels = $v.labels?.toBuilder();
       _memory = $v.memory;
-      _name = $v.name;
+      _xname = $v.xname;
       _nanoCPUs = $v.nanoCPUs;
       _network = $v.network;
       _openStdin = $v.openStdin;
@@ -348,8 +349,8 @@ class DtoContainerOperateBuilder
             ipv6: ipv6,
             labels: _labels?.build(),
             memory: memory,
-            name: BuiltValueNullFieldError.checkNotNull(
-                name, r'DtoContainerOperate', 'name'),
+            xname: BuiltValueNullFieldError.checkNotNull(
+                xname, r'DtoContainerOperate', 'xname'),
             nanoCPUs: nanoCPUs,
             network: network,
             openStdin: openStdin,

@@ -10,14 +10,14 @@ class _$DtoTag extends DtoTag {
   @override
   final String? key;
   @override
-  final String? name;
+  final String? xname;
   @override
   final int? sort;
 
   factory _$DtoTag([void Function(DtoTagBuilder)? updates]) =>
       (new DtoTagBuilder()..update(updates))._build();
 
-  _$DtoTag._({this.key, this.name, this.sort}) : super._();
+  _$DtoTag._({this.key, this.xname, this.sort}) : super._();
 
   @override
   DtoTag rebuild(void Function(DtoTagBuilder) updates) =>
@@ -31,7 +31,7 @@ class _$DtoTag extends DtoTag {
     if (identical(other, this)) return true;
     return other is DtoTag &&
         key == other.key &&
-        name == other.name &&
+        xname == other.xname &&
         sort == other.sort;
   }
 
@@ -39,7 +39,7 @@ class _$DtoTag extends DtoTag {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, key.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, sort.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -49,7 +49,7 @@ class _$DtoTag extends DtoTag {
   String toString() {
     return (newBuiltValueToStringHelper(r'DtoTag')
           ..add('key', key)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('sort', sort))
         .toString();
   }
@@ -62,9 +62,9 @@ class DtoTagBuilder implements Builder<DtoTag, DtoTagBuilder> {
   String? get key => _$this._key;
   set key(String? key) => _$this._key = key;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   int? _sort;
   int? get sort => _$this._sort;
@@ -78,7 +78,7 @@ class DtoTagBuilder implements Builder<DtoTag, DtoTagBuilder> {
     final $v = _$v;
     if ($v != null) {
       _key = $v.key;
-      _name = $v.name;
+      _xname = $v.xname;
       _sort = $v.sort;
       _$v = null;
     }
@@ -103,7 +103,7 @@ class DtoTagBuilder implements Builder<DtoTag, DtoTagBuilder> {
     final _$result = _$v ??
         new _$DtoTag._(
           key: key,
-          name: name,
+          xname: xname,
           sort: sort,
         );
     replace(_$result);

@@ -23,7 +23,7 @@ part 'request_new_app_install.g.dart';
 /// * [hostMode] 
 /// * [memoryLimit] 
 /// * [memoryUnit] 
-/// * [name] 
+/// * [xname] 
 /// * [params] 
 /// * [pullImage] 
 @BuiltValue()
@@ -59,7 +59,7 @@ abstract class RequestNewAppInstall implements Built<RequestNewAppInstall, Reque
   String? get memoryUnit;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'params')
   BuiltMap<String, JsonObject?>? get params;
@@ -160,10 +160,10 @@ class _$RequestNewAppInstallSerializer implements PrimitiveSerializer<RequestNew
         specifiedType: const FullType(String),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -279,7 +279,7 @@ class _$RequestNewAppInstallSerializer implements PrimitiveSerializer<RequestNew
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'params':
           final valueDes = serializers.deserialize(

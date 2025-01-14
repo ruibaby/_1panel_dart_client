@@ -193,7 +193,7 @@ class DtoPageCronjobOrderEnum extends EnumClass {
 class DtoPageCronjobOrderByEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'name')
-  static const DtoPageCronjobOrderByEnum name = _$dtoPageCronjobOrderByEnum_name;
+  static const DtoPageCronjobOrderByEnum xname = _$dtoPageCronjobOrderByEnum_xname;
   @BuiltValueEnumConst(wireName: r'status')
   static const DtoPageCronjobOrderByEnum status = _$dtoPageCronjobOrderByEnum_status;
   @BuiltValueEnumConst(wireName: r'created_at')

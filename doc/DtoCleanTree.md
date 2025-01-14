@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **isCheck** | **bool** |  | [optional] 
 **isRecommend** | **bool** |  | [optional] 
 **label** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **size** | **int** |  | [optional] 
 **type** | **String** |  | [optional] 
 

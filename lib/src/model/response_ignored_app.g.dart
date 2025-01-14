@@ -12,7 +12,7 @@ class _$ResponseIgnoredApp extends ResponseIgnoredApp {
   @override
   final String? icon;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? version;
 
@@ -20,7 +20,7 @@ class _$ResponseIgnoredApp extends ResponseIgnoredApp {
           [void Function(ResponseIgnoredAppBuilder)? updates]) =>
       (new ResponseIgnoredAppBuilder()..update(updates))._build();
 
-  _$ResponseIgnoredApp._({this.detailID, this.icon, this.name, this.version})
+  _$ResponseIgnoredApp._({this.detailID, this.icon, this.xname, this.version})
       : super._();
 
   @override
@@ -38,7 +38,7 @@ class _$ResponseIgnoredApp extends ResponseIgnoredApp {
     return other is ResponseIgnoredApp &&
         detailID == other.detailID &&
         icon == other.icon &&
-        name == other.name &&
+        xname == other.xname &&
         version == other.version;
   }
 
@@ -47,7 +47,7 @@ class _$ResponseIgnoredApp extends ResponseIgnoredApp {
     var _$hash = 0;
     _$hash = $jc(_$hash, detailID.hashCode);
     _$hash = $jc(_$hash, icon.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -58,7 +58,7 @@ class _$ResponseIgnoredApp extends ResponseIgnoredApp {
     return (newBuiltValueToStringHelper(r'ResponseIgnoredApp')
           ..add('detailID', detailID)
           ..add('icon', icon)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('version', version))
         .toString();
   }
@@ -76,9 +76,9 @@ class ResponseIgnoredAppBuilder
   String? get icon => _$this._icon;
   set icon(String? icon) => _$this._icon = icon;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _version;
   String? get version => _$this._version;
@@ -93,7 +93,7 @@ class ResponseIgnoredAppBuilder
     if ($v != null) {
       _detailID = $v.detailID;
       _icon = $v.icon;
-      _name = $v.name;
+      _xname = $v.xname;
       _version = $v.version;
       _$v = null;
     }
@@ -119,7 +119,7 @@ class ResponseIgnoredAppBuilder
         new _$ResponseIgnoredApp._(
           detailID: detailID,
           icon: icon,
-          name: name,
+          xname: xname,
           version: version,
         );
     replace(_$result);

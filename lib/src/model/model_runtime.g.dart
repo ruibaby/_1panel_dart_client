@@ -24,7 +24,7 @@ class _$ModelRuntime extends ModelRuntime {
   @override
   final String? message;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? params;
   @override
@@ -54,7 +54,7 @@ class _$ModelRuntime extends ModelRuntime {
       this.id,
       this.image,
       this.message,
-      this.name,
+      this.xname,
       this.params,
       this.port,
       this.resource,
@@ -84,7 +84,7 @@ class _$ModelRuntime extends ModelRuntime {
         id == other.id &&
         image == other.image &&
         message == other.message &&
-        name == other.name &&
+        xname == other.xname &&
         params == other.params &&
         port == other.port &&
         resource == other.resource &&
@@ -106,7 +106,7 @@ class _$ModelRuntime extends ModelRuntime {
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, image.hashCode);
     _$hash = $jc(_$hash, message.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, params.hashCode);
     _$hash = $jc(_$hash, port.hashCode);
     _$hash = $jc(_$hash, resource.hashCode);
@@ -130,7 +130,7 @@ class _$ModelRuntime extends ModelRuntime {
           ..add('id', id)
           ..add('image', image)
           ..add('message', message)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('params', params)
           ..add('port', port)
           ..add('resource', resource)
@@ -180,9 +180,9 @@ class ModelRuntimeBuilder
   String? get message => _$this._message;
   set message(String? message) => _$this._message = message;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _params;
   String? get params => _$this._params;
@@ -231,7 +231,7 @@ class ModelRuntimeBuilder
       _id = $v.id;
       _image = $v.image;
       _message = $v.message;
-      _name = $v.name;
+      _xname = $v.xname;
       _params = $v.params;
       _port = $v.port;
       _resource = $v.resource;
@@ -270,7 +270,7 @@ class ModelRuntimeBuilder
           id: id,
           image: image,
           message: message,
-          name: name,
+          xname: xname,
           params: params,
           port: port,
           resource: resource,

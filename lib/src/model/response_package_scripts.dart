@@ -11,12 +11,12 @@ part 'response_package_scripts.g.dart';
 /// ResponsePackageScripts
 ///
 /// Properties:
-/// * [name] 
+/// * [xname] 
 /// * [script] 
 @BuiltValue()
 abstract class ResponsePackageScripts implements Built<ResponsePackageScripts, ResponsePackageScriptsBuilder> {
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'script')
   String? get script;
@@ -44,10 +44,10 @@ class _$ResponsePackageScriptsSerializer implements PrimitiveSerializer<Response
     ResponsePackageScripts object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -86,7 +86,7 @@ class _$ResponsePackageScriptsSerializer implements PrimitiveSerializer<Response
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'script':
           final valueDes = serializers.deserialize(

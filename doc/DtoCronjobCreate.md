@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **dbType** | **String** |  | [optional] 
 **defaultDownload** | **String** |  | [optional] 
 **exclusionRules** | **String** |  | [optional] 
-**name** | **String** |  | 
+**xname** | **String** |  | 
 **retainCopies** | **int** |  | [optional] 
 **script** | **String** |  | [optional] 
 **secret** | **String** |  | [optional] 

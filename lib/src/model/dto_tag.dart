@@ -12,7 +12,7 @@ part 'dto_tag.g.dart';
 ///
 /// Properties:
 /// * [key] 
-/// * [name] 
+/// * [xname] 
 /// * [sort] 
 @BuiltValue()
 abstract class DtoTag implements Built<DtoTag, DtoTagBuilder> {
@@ -20,7 +20,7 @@ abstract class DtoTag implements Built<DtoTag, DtoTagBuilder> {
   String? get key;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'sort')
   int? get sort;
@@ -55,10 +55,10 @@ class _$DtoTagSerializer implements PrimitiveSerializer<DtoTag> {
         specifiedType: const FullType(String),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -104,7 +104,7 @@ class _$DtoTagSerializer implements PrimitiveSerializer<DtoTag> {
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'sort':
           final valueDes = serializers.deserialize(

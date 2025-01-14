@@ -12,7 +12,7 @@ class _$RequestWebsiteDnsAccountUpdate extends RequestWebsiteDnsAccountUpdate {
   @override
   final int id;
   @override
-  final String name;
+  final String xname;
   @override
   final String type;
 
@@ -23,7 +23,7 @@ class _$RequestWebsiteDnsAccountUpdate extends RequestWebsiteDnsAccountUpdate {
   _$RequestWebsiteDnsAccountUpdate._(
       {required this.authorization,
       required this.id,
-      required this.name,
+      required this.xname,
       required this.type})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
@@ -31,7 +31,7 @@ class _$RequestWebsiteDnsAccountUpdate extends RequestWebsiteDnsAccountUpdate {
     BuiltValueNullFieldError.checkNotNull(
         id, r'RequestWebsiteDnsAccountUpdate', 'id');
     BuiltValueNullFieldError.checkNotNull(
-        name, r'RequestWebsiteDnsAccountUpdate', 'name');
+        xname, r'RequestWebsiteDnsAccountUpdate', 'xname');
     BuiltValueNullFieldError.checkNotNull(
         type, r'RequestWebsiteDnsAccountUpdate', 'type');
   }
@@ -51,7 +51,7 @@ class _$RequestWebsiteDnsAccountUpdate extends RequestWebsiteDnsAccountUpdate {
     return other is RequestWebsiteDnsAccountUpdate &&
         authorization == other.authorization &&
         id == other.id &&
-        name == other.name &&
+        xname == other.xname &&
         type == other.type;
   }
 
@@ -60,7 +60,7 @@ class _$RequestWebsiteDnsAccountUpdate extends RequestWebsiteDnsAccountUpdate {
     var _$hash = 0;
     _$hash = $jc(_$hash, authorization.hashCode);
     _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -71,7 +71,7 @@ class _$RequestWebsiteDnsAccountUpdate extends RequestWebsiteDnsAccountUpdate {
     return (newBuiltValueToStringHelper(r'RequestWebsiteDnsAccountUpdate')
           ..add('authorization', authorization)
           ..add('id', id)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('type', type))
         .toString();
   }
@@ -93,9 +93,9 @@ class RequestWebsiteDnsAccountUpdateBuilder
   int? get id => _$this._id;
   set id(int? id) => _$this._id = id;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _type;
   String? get type => _$this._type;
@@ -110,7 +110,7 @@ class RequestWebsiteDnsAccountUpdateBuilder
     if ($v != null) {
       _authorization = $v.authorization.toBuilder();
       _id = $v.id;
-      _name = $v.name;
+      _xname = $v.xname;
       _type = $v.type;
       _$v = null;
     }
@@ -139,8 +139,8 @@ class RequestWebsiteDnsAccountUpdateBuilder
             authorization: authorization.build(),
             id: BuiltValueNullFieldError.checkNotNull(
                 id, r'RequestWebsiteDnsAccountUpdate', 'id'),
-            name: BuiltValueNullFieldError.checkNotNull(
-                name, r'RequestWebsiteDnsAccountUpdate', 'name'),
+            xname: BuiltValueNullFieldError.checkNotNull(
+                xname, r'RequestWebsiteDnsAccountUpdate', 'xname'),
             type: BuiltValueNullFieldError.checkNotNull(
                 type, r'RequestWebsiteDnsAccountUpdate', 'type'),
           );

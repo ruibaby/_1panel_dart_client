@@ -16,7 +16,7 @@ part 'dto_mysql_db_create.g.dart';
 /// * [description] 
 /// * [format] 
 /// * [from] 
-/// * [name] 
+/// * [xname] 
 /// * [password] 
 /// * [permission] 
 /// * [username] 
@@ -37,7 +37,7 @@ abstract class DtoMysqlDBCreate implements Built<DtoMysqlDBCreate, DtoMysqlDBCre
   // enum fromEnum {  local,  remote,  };
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'password')
   String get password;
@@ -95,7 +95,7 @@ class _$DtoMysqlDBCreateSerializer implements PrimitiveSerializer<DtoMysqlDBCrea
     );
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     yield r'password';
@@ -169,7 +169,7 @@ class _$DtoMysqlDBCreateSerializer implements PrimitiveSerializer<DtoMysqlDBCrea
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'password':
           final valueDes = serializers.deserialize(

@@ -10,7 +10,7 @@ class _$ResponseWebsitePreInstallCheck extends ResponseWebsitePreInstallCheck {
   @override
   final String? appName;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? status;
   @override
@@ -21,7 +21,7 @@ class _$ResponseWebsitePreInstallCheck extends ResponseWebsitePreInstallCheck {
       (new ResponseWebsitePreInstallCheckBuilder()..update(updates))._build();
 
   _$ResponseWebsitePreInstallCheck._(
-      {this.appName, this.name, this.status, this.version})
+      {this.appName, this.xname, this.status, this.version})
       : super._();
 
   @override
@@ -38,7 +38,7 @@ class _$ResponseWebsitePreInstallCheck extends ResponseWebsitePreInstallCheck {
     if (identical(other, this)) return true;
     return other is ResponseWebsitePreInstallCheck &&
         appName == other.appName &&
-        name == other.name &&
+        xname == other.xname &&
         status == other.status &&
         version == other.version;
   }
@@ -47,7 +47,7 @@ class _$ResponseWebsitePreInstallCheck extends ResponseWebsitePreInstallCheck {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, appName.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, status.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
     _$hash = $jf(_$hash);
@@ -58,7 +58,7 @@ class _$ResponseWebsitePreInstallCheck extends ResponseWebsitePreInstallCheck {
   String toString() {
     return (newBuiltValueToStringHelper(r'ResponseWebsitePreInstallCheck')
           ..add('appName', appName)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('status', status)
           ..add('version', version))
         .toString();
@@ -75,9 +75,9 @@ class ResponseWebsitePreInstallCheckBuilder
   String? get appName => _$this._appName;
   set appName(String? appName) => _$this._appName = appName;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _status;
   String? get status => _$this._status;
@@ -95,7 +95,7 @@ class ResponseWebsitePreInstallCheckBuilder
     final $v = _$v;
     if ($v != null) {
       _appName = $v.appName;
-      _name = $v.name;
+      _xname = $v.xname;
       _status = $v.status;
       _version = $v.version;
       _$v = null;
@@ -121,7 +121,7 @@ class ResponseWebsitePreInstallCheckBuilder
     final _$result = _$v ??
         new _$ResponseWebsitePreInstallCheck._(
           appName: appName,
-          name: name,
+          xname: xname,
           status: status,
           version: version,
         );

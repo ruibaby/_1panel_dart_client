@@ -10,7 +10,7 @@ class _$RequestPortUpdate extends RequestPortUpdate {
   @override
   final String? key;
   @override
-  final String? name;
+  final String? xname;
   @override
   final int? port;
 
@@ -18,7 +18,7 @@ class _$RequestPortUpdate extends RequestPortUpdate {
           [void Function(RequestPortUpdateBuilder)? updates]) =>
       (new RequestPortUpdateBuilder()..update(updates))._build();
 
-  _$RequestPortUpdate._({this.key, this.name, this.port}) : super._();
+  _$RequestPortUpdate._({this.key, this.xname, this.port}) : super._();
 
   @override
   RequestPortUpdate rebuild(void Function(RequestPortUpdateBuilder) updates) =>
@@ -33,7 +33,7 @@ class _$RequestPortUpdate extends RequestPortUpdate {
     if (identical(other, this)) return true;
     return other is RequestPortUpdate &&
         key == other.key &&
-        name == other.name &&
+        xname == other.xname &&
         port == other.port;
   }
 
@@ -41,7 +41,7 @@ class _$RequestPortUpdate extends RequestPortUpdate {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, key.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, port.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -51,7 +51,7 @@ class _$RequestPortUpdate extends RequestPortUpdate {
   String toString() {
     return (newBuiltValueToStringHelper(r'RequestPortUpdate')
           ..add('key', key)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('port', port))
         .toString();
   }
@@ -65,9 +65,9 @@ class RequestPortUpdateBuilder
   String? get key => _$this._key;
   set key(String? key) => _$this._key = key;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   int? _port;
   int? get port => _$this._port;
@@ -81,7 +81,7 @@ class RequestPortUpdateBuilder
     final $v = _$v;
     if ($v != null) {
       _key = $v.key;
-      _name = $v.name;
+      _xname = $v.xname;
       _port = $v.port;
       _$v = null;
     }
@@ -106,7 +106,7 @@ class RequestPortUpdateBuilder
     final _$result = _$v ??
         new _$RequestPortUpdate._(
           key: key,
-          name: name,
+          xname: xname,
           port: port,
         );
     replace(_$result);

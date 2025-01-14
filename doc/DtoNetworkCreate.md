@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **ipv4** | **bool** |  | [optional] 
 **ipv6** | **bool** |  | [optional] 
 **labels** | **BuiltList&lt;String&gt;** |  | [optional] 
-**name** | **String** |  | 
+**xname** | **String** |  | 
 **options** | **BuiltList&lt;String&gt;** |  | [optional] 
 **subnet** | **String** |  | [optional] 
 **subnetV6** | **String** |  | [optional] 

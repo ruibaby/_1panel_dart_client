@@ -13,7 +13,7 @@ part 'dto_compose_template_create.g.dart';
 /// Properties:
 /// * [content] 
 /// * [description] 
-/// * [name] 
+/// * [xname] 
 @BuiltValue()
 abstract class DtoComposeTemplateCreate implements Built<DtoComposeTemplateCreate, DtoComposeTemplateCreateBuilder> {
   @BuiltValueField(wireName: r'content')
@@ -23,7 +23,7 @@ abstract class DtoComposeTemplateCreate implements Built<DtoComposeTemplateCreat
   String? get description;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   DtoComposeTemplateCreate._();
 
@@ -64,7 +64,7 @@ class _$DtoComposeTemplateCreateSerializer implements PrimitiveSerializer<DtoCom
     }
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
   }
@@ -109,7 +109,7 @@ class _$DtoComposeTemplateCreateSerializer implements PrimitiveSerializer<DtoCom
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         default:
           unhandled.add(key);

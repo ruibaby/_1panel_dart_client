@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **defaultDownload** | **String** |  | [optional] 
 **exclusionRules** | **String** |  | [optional] 
 **id** | **int** |  | 
-**name** | **String** |  | 
+**xname** | **String** |  | 
 **retainCopies** | **int** |  | [optional] 
 **script** | **String** |  | [optional] 
 **secret** | **String** |  | [optional] 

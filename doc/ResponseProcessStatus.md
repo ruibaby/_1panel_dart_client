@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PID** | **String** |  | [optional] 
 **msg** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 
 **uptime** | **String** |  | [optional] 
 

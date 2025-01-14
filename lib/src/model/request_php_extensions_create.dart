@@ -12,14 +12,14 @@ part 'request_php_extensions_create.g.dart';
 ///
 /// Properties:
 /// * [extensions] 
-/// * [name] 
+/// * [xname] 
 @BuiltValue()
 abstract class RequestPHPExtensionsCreate implements Built<RequestPHPExtensionsCreate, RequestPHPExtensionsCreateBuilder> {
   @BuiltValueField(wireName: r'extensions')
   String get extensions;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   RequestPHPExtensionsCreate._();
 
@@ -51,7 +51,7 @@ class _$RequestPHPExtensionsCreateSerializer implements PrimitiveSerializer<Requ
     );
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
   }
@@ -89,7 +89,7 @@ class _$RequestPHPExtensionsCreateSerializer implements PrimitiveSerializer<Requ
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         default:
           unhandled.add(key);

@@ -20,10 +20,10 @@ part 'request_runtime_update.g.dart';
 /// * [id] 
 /// * [image] 
 /// * [install] 
-/// * [name] 
+/// * [xname] 
 /// * [params] 
 /// * [port] 
-/// * [rebuild] 
+/// * [xrebuild] 
 /// * [source_] 
 /// * [version] 
 @BuiltValue()
@@ -47,7 +47,7 @@ abstract class RequestRuntimeUpdate implements Built<RequestRuntimeUpdate, Reque
   bool? get install;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'params')
   BuiltMap<String, JsonObject?>? get params;
@@ -56,7 +56,7 @@ abstract class RequestRuntimeUpdate implements Built<RequestRuntimeUpdate, Reque
   int? get port;
 
   @BuiltValueField(wireName: r'rebuild')
-  bool? get rebuild;
+  bool? get xrebuild;
 
   @BuiltValueField(wireName: r'source')
   String? get source_;
@@ -129,10 +129,10 @@ class _$RequestRuntimeUpdateSerializer implements PrimitiveSerializer<RequestRun
         specifiedType: const FullType(bool),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -150,10 +150,10 @@ class _$RequestRuntimeUpdateSerializer implements PrimitiveSerializer<RequestRun
         specifiedType: const FullType(int),
       );
     }
-    if (object.rebuild != null) {
+    if (object.xrebuild != null) {
       yield r'rebuild';
       yield serializers.serialize(
-        object.rebuild,
+        object.xrebuild,
         specifiedType: const FullType(bool),
       );
     }
@@ -241,7 +241,7 @@ class _$RequestRuntimeUpdateSerializer implements PrimitiveSerializer<RequestRun
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'params':
           final valueDes = serializers.deserialize(
@@ -262,7 +262,7 @@ class _$RequestRuntimeUpdateSerializer implements PrimitiveSerializer<RequestRun
             value,
             specifiedType: const FullType(bool),
           ) as bool;
-          result.rebuild = valueDes;
+          result.xrebuild = valueDes;
           break;
         case r'source':
           final valueDes = serializers.deserialize(

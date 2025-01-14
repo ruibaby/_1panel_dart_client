@@ -12,13 +12,13 @@ class _$DtoAppInstallInfo extends DtoAppInstallInfo {
   @override
   final String? key;
   @override
-  final String? name;
+  final String? xname;
 
   factory _$DtoAppInstallInfo(
           [void Function(DtoAppInstallInfoBuilder)? updates]) =>
       (new DtoAppInstallInfoBuilder()..update(updates))._build();
 
-  _$DtoAppInstallInfo._({this.id, this.key, this.name}) : super._();
+  _$DtoAppInstallInfo._({this.id, this.key, this.xname}) : super._();
 
   @override
   DtoAppInstallInfo rebuild(void Function(DtoAppInstallInfoBuilder) updates) =>
@@ -34,7 +34,7 @@ class _$DtoAppInstallInfo extends DtoAppInstallInfo {
     return other is DtoAppInstallInfo &&
         id == other.id &&
         key == other.key &&
-        name == other.name;
+        xname == other.xname;
   }
 
   @override
@@ -42,7 +42,7 @@ class _$DtoAppInstallInfo extends DtoAppInstallInfo {
     var _$hash = 0;
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, key.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -52,7 +52,7 @@ class _$DtoAppInstallInfo extends DtoAppInstallInfo {
     return (newBuiltValueToStringHelper(r'DtoAppInstallInfo')
           ..add('id', id)
           ..add('key', key)
-          ..add('name', name))
+          ..add('xname', xname))
         .toString();
   }
 }
@@ -69,9 +69,9 @@ class DtoAppInstallInfoBuilder
   String? get key => _$this._key;
   set key(String? key) => _$this._key = key;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   DtoAppInstallInfoBuilder() {
     DtoAppInstallInfo._defaults(this);
@@ -82,7 +82,7 @@ class DtoAppInstallInfoBuilder
     if ($v != null) {
       _id = $v.id;
       _key = $v.key;
-      _name = $v.name;
+      _xname = $v.xname;
       _$v = null;
     }
     return this;
@@ -107,7 +107,7 @@ class DtoAppInstallInfoBuilder
         new _$DtoAppInstallInfo._(
           id: id,
           key: key,
-          name: name,
+          xname: xname,
         );
     replace(_$result);
     return _$result;

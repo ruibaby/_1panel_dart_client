@@ -11,7 +11,7 @@ part 'request_runtime_search.g.dart';
 /// RequestRuntimeSearch
 ///
 /// Properties:
-/// * [name] 
+/// * [xname] 
 /// * [page] 
 /// * [pageSize] 
 /// * [status] 
@@ -19,7 +19,7 @@ part 'request_runtime_search.g.dart';
 @BuiltValue()
 abstract class RequestRuntimeSearch implements Built<RequestRuntimeSearch, RequestRuntimeSearchBuilder> {
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'page')
   int get page;
@@ -56,10 +56,10 @@ class _$RequestRuntimeSearchSerializer implements PrimitiveSerializer<RequestRun
     RequestRuntimeSearch object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -115,7 +115,7 @@ class _$RequestRuntimeSearchSerializer implements PrimitiveSerializer<RequestRun
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'page':
           final valueDes = serializers.deserialize(

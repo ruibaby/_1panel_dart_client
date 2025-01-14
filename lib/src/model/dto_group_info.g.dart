@@ -12,14 +12,15 @@ class _$DtoGroupInfo extends DtoGroupInfo {
   @override
   final bool? isDefault;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? type;
 
   factory _$DtoGroupInfo([void Function(DtoGroupInfoBuilder)? updates]) =>
       (new DtoGroupInfoBuilder()..update(updates))._build();
 
-  _$DtoGroupInfo._({this.id, this.isDefault, this.name, this.type}) : super._();
+  _$DtoGroupInfo._({this.id, this.isDefault, this.xname, this.type})
+      : super._();
 
   @override
   DtoGroupInfo rebuild(void Function(DtoGroupInfoBuilder) updates) =>
@@ -34,7 +35,7 @@ class _$DtoGroupInfo extends DtoGroupInfo {
     return other is DtoGroupInfo &&
         id == other.id &&
         isDefault == other.isDefault &&
-        name == other.name &&
+        xname == other.xname &&
         type == other.type;
   }
 
@@ -43,7 +44,7 @@ class _$DtoGroupInfo extends DtoGroupInfo {
     var _$hash = 0;
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, isDefault.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -54,7 +55,7 @@ class _$DtoGroupInfo extends DtoGroupInfo {
     return (newBuiltValueToStringHelper(r'DtoGroupInfo')
           ..add('id', id)
           ..add('isDefault', isDefault)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('type', type))
         .toString();
   }
@@ -72,9 +73,9 @@ class DtoGroupInfoBuilder
   bool? get isDefault => _$this._isDefault;
   set isDefault(bool? isDefault) => _$this._isDefault = isDefault;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _type;
   String? get type => _$this._type;
@@ -89,7 +90,7 @@ class DtoGroupInfoBuilder
     if ($v != null) {
       _id = $v.id;
       _isDefault = $v.isDefault;
-      _name = $v.name;
+      _xname = $v.xname;
       _type = $v.type;
       _$v = null;
     }
@@ -115,7 +116,7 @@ class DtoGroupInfoBuilder
         new _$DtoGroupInfo._(
           id: id,
           isDefault: isDefault,
-          name: name,
+          xname: xname,
           type: type,
         );
     replace(_$result);

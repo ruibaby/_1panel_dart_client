@@ -13,7 +13,7 @@ part 'dto_app_install_info.g.dart';
 /// Properties:
 /// * [id] 
 /// * [key] 
-/// * [name] 
+/// * [xname] 
 @BuiltValue()
 abstract class DtoAppInstallInfo implements Built<DtoAppInstallInfo, DtoAppInstallInfoBuilder> {
   @BuiltValueField(wireName: r'id')
@@ -23,7 +23,7 @@ abstract class DtoAppInstallInfo implements Built<DtoAppInstallInfo, DtoAppInsta
   String? get key;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   DtoAppInstallInfo._();
 
@@ -62,10 +62,10 @@ class _$DtoAppInstallInfoSerializer implements PrimitiveSerializer<DtoAppInstall
         specifiedType: const FullType(String),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -111,7 +111,7 @@ class _$DtoAppInstallInfoSerializer implements PrimitiveSerializer<DtoAppInstall
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         default:
           unhandled.add(key);

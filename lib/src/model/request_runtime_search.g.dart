@@ -8,7 +8,7 @@ part of 'request_runtime_search.dart';
 
 class _$RequestRuntimeSearch extends RequestRuntimeSearch {
   @override
-  final String? name;
+  final String? xname;
   @override
   final int page;
   @override
@@ -23,7 +23,7 @@ class _$RequestRuntimeSearch extends RequestRuntimeSearch {
       (new RequestRuntimeSearchBuilder()..update(updates))._build();
 
   _$RequestRuntimeSearch._(
-      {this.name,
+      {this.xname,
       required this.page,
       required this.pageSize,
       this.status,
@@ -48,7 +48,7 @@ class _$RequestRuntimeSearch extends RequestRuntimeSearch {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is RequestRuntimeSearch &&
-        name == other.name &&
+        xname == other.xname &&
         page == other.page &&
         pageSize == other.pageSize &&
         status == other.status &&
@@ -58,7 +58,7 @@ class _$RequestRuntimeSearch extends RequestRuntimeSearch {
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, page.hashCode);
     _$hash = $jc(_$hash, pageSize.hashCode);
     _$hash = $jc(_$hash, status.hashCode);
@@ -70,7 +70,7 @@ class _$RequestRuntimeSearch extends RequestRuntimeSearch {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'RequestRuntimeSearch')
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('page', page)
           ..add('pageSize', pageSize)
           ..add('status', status)
@@ -83,9 +83,9 @@ class RequestRuntimeSearchBuilder
     implements Builder<RequestRuntimeSearch, RequestRuntimeSearchBuilder> {
   _$RequestRuntimeSearch? _$v;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   int? _page;
   int? get page => _$this._page;
@@ -110,7 +110,7 @@ class RequestRuntimeSearchBuilder
   RequestRuntimeSearchBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _name = $v.name;
+      _xname = $v.xname;
       _page = $v.page;
       _pageSize = $v.pageSize;
       _status = $v.status;
@@ -137,7 +137,7 @@ class RequestRuntimeSearchBuilder
   _$RequestRuntimeSearch _build() {
     final _$result = _$v ??
         new _$RequestRuntimeSearch._(
-          name: name,
+          xname: xname,
           page: BuiltValueNullFieldError.checkNotNull(
               page, r'RequestRuntimeSearch', 'page'),
           pageSize: BuiltValueNullFieldError.checkNotNull(

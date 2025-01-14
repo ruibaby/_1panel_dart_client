@@ -12,14 +12,14 @@ part 'request_app_installed_info.g.dart';
 ///
 /// Properties:
 /// * [key] 
-/// * [name] 
+/// * [xname] 
 @BuiltValue()
 abstract class RequestAppInstalledInfo implements Built<RequestAppInstalledInfo, RequestAppInstalledInfoBuilder> {
   @BuiltValueField(wireName: r'key')
   String get key;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   RequestAppInstalledInfo._();
 
@@ -49,10 +49,10 @@ class _$RequestAppInstalledInfoSerializer implements PrimitiveSerializer<Request
       object.key,
       specifiedType: const FullType(String),
     );
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -91,7 +91,7 @@ class _$RequestAppInstalledInfoSerializer implements PrimitiveSerializer<Request
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         default:
           unhandled.add(key);

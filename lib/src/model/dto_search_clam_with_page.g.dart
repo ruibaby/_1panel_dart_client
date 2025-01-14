@@ -37,8 +37,9 @@ final BuiltSet<DtoSearchClamWithPageOrderEnum>
   _$dtoSearchClamWithPageOrderEnum_descending,
 ]);
 
-const DtoSearchClamWithPageOrderByEnum _$dtoSearchClamWithPageOrderByEnum_name =
-    const DtoSearchClamWithPageOrderByEnum._('name');
+const DtoSearchClamWithPageOrderByEnum
+    _$dtoSearchClamWithPageOrderByEnum_xname =
+    const DtoSearchClamWithPageOrderByEnum._('xname');
 const DtoSearchClamWithPageOrderByEnum
     _$dtoSearchClamWithPageOrderByEnum_status =
     const DtoSearchClamWithPageOrderByEnum._('status');
@@ -49,8 +50,8 @@ const DtoSearchClamWithPageOrderByEnum
 DtoSearchClamWithPageOrderByEnum _$dtoSearchClamWithPageOrderByEnumValueOf(
     String name) {
   switch (name) {
-    case 'name':
-      return _$dtoSearchClamWithPageOrderByEnum_name;
+    case 'xname':
+      return _$dtoSearchClamWithPageOrderByEnum_xname;
     case 'status':
       return _$dtoSearchClamWithPageOrderByEnum_status;
     case 'createdAt':
@@ -63,7 +64,7 @@ DtoSearchClamWithPageOrderByEnum _$dtoSearchClamWithPageOrderByEnumValueOf(
 final BuiltSet<DtoSearchClamWithPageOrderByEnum>
     _$dtoSearchClamWithPageOrderByEnumValues = new BuiltSet<
         DtoSearchClamWithPageOrderByEnum>(const <DtoSearchClamWithPageOrderByEnum>[
-  _$dtoSearchClamWithPageOrderByEnum_name,
+  _$dtoSearchClamWithPageOrderByEnum_xname,
   _$dtoSearchClamWithPageOrderByEnum_status,
   _$dtoSearchClamWithPageOrderByEnum_createdAt,
 ]);
@@ -110,12 +111,12 @@ class _$DtoSearchClamWithPageOrderEnumSerializer
 class _$DtoSearchClamWithPageOrderByEnumSerializer
     implements PrimitiveSerializer<DtoSearchClamWithPageOrderByEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'name': 'name',
+    'xname': 'name',
     'status': 'status',
     'createdAt': 'created_at',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'name': 'name',
+    'name': 'xname',
     'status': 'status',
     'created_at': 'createdAt',
   };

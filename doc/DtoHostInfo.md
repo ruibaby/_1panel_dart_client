@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **groupBelong** | **String** |  | [optional] 
 **groupID** | **int** |  | [optional] 
 **id** | **int** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **passPhrase** | **String** |  | [optional] 
 **password** | **String** |  | [optional] 
 **port** | **int** |  | [optional] 

@@ -10,7 +10,7 @@ class _$RequestFileDownload extends RequestFileDownload {
   @override
   final bool? compress;
   @override
-  final String name;
+  final String xname;
   @override
   final BuiltList<String> paths;
   @override
@@ -22,11 +22,12 @@ class _$RequestFileDownload extends RequestFileDownload {
 
   _$RequestFileDownload._(
       {this.compress,
-      required this.name,
+      required this.xname,
       required this.paths,
       required this.type})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(name, r'RequestFileDownload', 'name');
+    BuiltValueNullFieldError.checkNotNull(
+        xname, r'RequestFileDownload', 'xname');
     BuiltValueNullFieldError.checkNotNull(
         paths, r'RequestFileDownload', 'paths');
     BuiltValueNullFieldError.checkNotNull(type, r'RequestFileDownload', 'type');
@@ -46,7 +47,7 @@ class _$RequestFileDownload extends RequestFileDownload {
     if (identical(other, this)) return true;
     return other is RequestFileDownload &&
         compress == other.compress &&
-        name == other.name &&
+        xname == other.xname &&
         paths == other.paths &&
         type == other.type;
   }
@@ -55,7 +56,7 @@ class _$RequestFileDownload extends RequestFileDownload {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, compress.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, paths.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jf(_$hash);
@@ -66,7 +67,7 @@ class _$RequestFileDownload extends RequestFileDownload {
   String toString() {
     return (newBuiltValueToStringHelper(r'RequestFileDownload')
           ..add('compress', compress)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('paths', paths)
           ..add('type', type))
         .toString();
@@ -81,9 +82,9 @@ class RequestFileDownloadBuilder
   bool? get compress => _$this._compress;
   set compress(bool? compress) => _$this._compress = compress;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   ListBuilder<String>? _paths;
   ListBuilder<String> get paths => _$this._paths ??= new ListBuilder<String>();
@@ -101,7 +102,7 @@ class RequestFileDownloadBuilder
     final $v = _$v;
     if ($v != null) {
       _compress = $v.compress;
-      _name = $v.name;
+      _xname = $v.xname;
       _paths = $v.paths.toBuilder();
       _type = $v.type;
       _$v = null;
@@ -129,8 +130,8 @@ class RequestFileDownloadBuilder
       _$result = _$v ??
           new _$RequestFileDownload._(
             compress: compress,
-            name: BuiltValueNullFieldError.checkNotNull(
-                name, r'RequestFileDownload', 'name'),
+            xname: BuiltValueNullFieldError.checkNotNull(
+                xname, r'RequestFileDownload', 'xname'),
             paths: paths.build(),
             type: BuiltValueNullFieldError.checkNotNull(
                 type, r'RequestFileDownload', 'type'),

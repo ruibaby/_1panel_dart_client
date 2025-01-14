@@ -12,7 +12,7 @@ class _$DtoImageBuild extends DtoImageBuild {
   @override
   final String from;
   @override
-  final String name;
+  final String xname;
   @override
   final BuiltList<String>? tags;
 
@@ -22,13 +22,13 @@ class _$DtoImageBuild extends DtoImageBuild {
   _$DtoImageBuild._(
       {required this.dockerfile,
       required this.from,
-      required this.name,
+      required this.xname,
       this.tags})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         dockerfile, r'DtoImageBuild', 'dockerfile');
     BuiltValueNullFieldError.checkNotNull(from, r'DtoImageBuild', 'from');
-    BuiltValueNullFieldError.checkNotNull(name, r'DtoImageBuild', 'name');
+    BuiltValueNullFieldError.checkNotNull(xname, r'DtoImageBuild', 'xname');
   }
 
   @override
@@ -44,7 +44,7 @@ class _$DtoImageBuild extends DtoImageBuild {
     return other is DtoImageBuild &&
         dockerfile == other.dockerfile &&
         from == other.from &&
-        name == other.name &&
+        xname == other.xname &&
         tags == other.tags;
   }
 
@@ -53,7 +53,7 @@ class _$DtoImageBuild extends DtoImageBuild {
     var _$hash = 0;
     _$hash = $jc(_$hash, dockerfile.hashCode);
     _$hash = $jc(_$hash, from.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, tags.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -64,7 +64,7 @@ class _$DtoImageBuild extends DtoImageBuild {
     return (newBuiltValueToStringHelper(r'DtoImageBuild')
           ..add('dockerfile', dockerfile)
           ..add('from', from)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('tags', tags))
         .toString();
   }
@@ -82,9 +82,9 @@ class DtoImageBuildBuilder
   String? get from => _$this._from;
   set from(String? from) => _$this._from = from;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   ListBuilder<String>? _tags;
   ListBuilder<String> get tags => _$this._tags ??= new ListBuilder<String>();
@@ -99,7 +99,7 @@ class DtoImageBuildBuilder
     if ($v != null) {
       _dockerfile = $v.dockerfile;
       _from = $v.from;
-      _name = $v.name;
+      _xname = $v.xname;
       _tags = $v.tags?.toBuilder();
       _$v = null;
     }
@@ -129,8 +129,8 @@ class DtoImageBuildBuilder
                 dockerfile, r'DtoImageBuild', 'dockerfile'),
             from: BuiltValueNullFieldError.checkNotNull(
                 from, r'DtoImageBuild', 'from'),
-            name: BuiltValueNullFieldError.checkNotNull(
-                name, r'DtoImageBuild', 'name'),
+            xname: BuiltValueNullFieldError.checkNotNull(
+                xname, r'DtoImageBuild', 'xname'),
             tags: _tags?.build(),
           );
     } catch (_) {

@@ -13,7 +13,7 @@ part 'model_website_dns_account.g.dart';
 /// Properties:
 /// * [createdAt] 
 /// * [id] 
-/// * [name] 
+/// * [xname] 
 /// * [type] 
 /// * [updatedAt] 
 @BuiltValue()
@@ -25,7 +25,7 @@ abstract class ModelWebsiteDnsAccount implements Built<ModelWebsiteDnsAccount, M
   int? get id;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'type')
   String? get type;
@@ -70,10 +70,10 @@ class _$ModelWebsiteDnsAccountSerializer implements PrimitiveSerializer<ModelWeb
         specifiedType: const FullType(int),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -133,7 +133,7 @@ class _$ModelWebsiteDnsAccountSerializer implements PrimitiveSerializer<ModelWeb
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'type':
           final valueDes = serializers.deserialize(

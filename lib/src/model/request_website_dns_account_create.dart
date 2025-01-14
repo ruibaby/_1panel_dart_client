@@ -13,7 +13,7 @@ part 'request_website_dns_account_create.g.dart';
 ///
 /// Properties:
 /// * [authorization] 
-/// * [name] 
+/// * [xname] 
 /// * [type] 
 @BuiltValue()
 abstract class RequestWebsiteDnsAccountCreate implements Built<RequestWebsiteDnsAccountCreate, RequestWebsiteDnsAccountCreateBuilder> {
@@ -21,7 +21,7 @@ abstract class RequestWebsiteDnsAccountCreate implements Built<RequestWebsiteDns
   BuiltMap<String, String> get authorization;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'type')
   String get type;
@@ -56,7 +56,7 @@ class _$RequestWebsiteDnsAccountCreateSerializer implements PrimitiveSerializer<
     );
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     yield r'type';
@@ -99,7 +99,7 @@ class _$RequestWebsiteDnsAccountCreateSerializer implements PrimitiveSerializer<
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'type':
           final valueDes = serializers.deserialize(

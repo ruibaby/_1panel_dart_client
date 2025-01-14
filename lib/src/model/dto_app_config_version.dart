@@ -16,7 +16,7 @@ part 'dto_app_config_version.g.dart';
 /// * [downloadCallBackUrl] 
 /// * [downloadUrl] 
 /// * [lastModified] 
-/// * [name] 
+/// * [xname] 
 @BuiltValue()
 abstract class DtoAppConfigVersion implements Built<DtoAppConfigVersion, DtoAppConfigVersionBuilder> {
   @BuiltValueField(wireName: r'additionalProperties')
@@ -32,7 +32,7 @@ abstract class DtoAppConfigVersion implements Built<DtoAppConfigVersion, DtoAppC
   int? get lastModified;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   DtoAppConfigVersion._();
 
@@ -85,10 +85,10 @@ class _$DtoAppConfigVersionSerializer implements PrimitiveSerializer<DtoAppConfi
         specifiedType: const FullType(int),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -148,7 +148,7 @@ class _$DtoAppConfigVersionSerializer implements PrimitiveSerializer<DtoAppConfi
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         default:
           unhandled.add(key);

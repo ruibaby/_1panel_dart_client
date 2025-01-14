@@ -22,7 +22,7 @@ class _$DtoDatabaseInfo extends DtoDatabaseInfo {
   @override
   final int? id;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? password;
   @override
@@ -51,7 +51,7 @@ class _$DtoDatabaseInfo extends DtoDatabaseInfo {
       this.description,
       this.from,
       this.id,
-      this.name,
+      this.xname,
       this.password,
       this.port,
       this.rootCert,
@@ -81,7 +81,7 @@ class _$DtoDatabaseInfo extends DtoDatabaseInfo {
         description == other.description &&
         from == other.from &&
         id == other.id &&
-        name == other.name &&
+        xname == other.xname &&
         password == other.password &&
         port == other.port &&
         rootCert == other.rootCert &&
@@ -102,7 +102,7 @@ class _$DtoDatabaseInfo extends DtoDatabaseInfo {
     _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, from.hashCode);
     _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, password.hashCode);
     _$hash = $jc(_$hash, port.hashCode);
     _$hash = $jc(_$hash, rootCert.hashCode);
@@ -125,7 +125,7 @@ class _$DtoDatabaseInfo extends DtoDatabaseInfo {
           ..add('description', description)
           ..add('from', from)
           ..add('id', id)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('password', password)
           ..add('port', port)
           ..add('rootCert', rootCert)
@@ -170,9 +170,9 @@ class DtoDatabaseInfoBuilder
   int? get id => _$this._id;
   set id(int? id) => _$this._id = id;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _password;
   String? get password => _$this._password;
@@ -220,7 +220,7 @@ class DtoDatabaseInfoBuilder
       _description = $v.description;
       _from = $v.from;
       _id = $v.id;
-      _name = $v.name;
+      _xname = $v.xname;
       _password = $v.password;
       _port = $v.port;
       _rootCert = $v.rootCert;
@@ -258,7 +258,7 @@ class DtoDatabaseInfoBuilder
           description: description,
           from: from,
           id: id,
-          name: name,
+          xname: xname,
           password: password,
           port: port,
           rootCert: rootCert,

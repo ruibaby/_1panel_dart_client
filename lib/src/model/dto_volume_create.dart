@@ -14,7 +14,7 @@ part 'dto_volume_create.g.dart';
 /// Properties:
 /// * [driver] 
 /// * [labels] 
-/// * [name] 
+/// * [xname] 
 /// * [options] 
 @BuiltValue()
 abstract class DtoVolumeCreate implements Built<DtoVolumeCreate, DtoVolumeCreateBuilder> {
@@ -25,7 +25,7 @@ abstract class DtoVolumeCreate implements Built<DtoVolumeCreate, DtoVolumeCreate
   BuiltList<String>? get labels;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'options')
   BuiltList<String>? get options;
@@ -67,7 +67,7 @@ class _$DtoVolumeCreateSerializer implements PrimitiveSerializer<DtoVolumeCreate
     }
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     if (object.options != null) {
@@ -119,7 +119,7 @@ class _$DtoVolumeCreateSerializer implements PrimitiveSerializer<DtoVolumeCreate
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'options':
           final valueDes = serializers.deserialize(

@@ -13,7 +13,7 @@ part 'dto_container_upgrade.g.dart';
 /// Properties:
 /// * [forcePull] 
 /// * [image] 
-/// * [name] 
+/// * [xname] 
 @BuiltValue()
 abstract class DtoContainerUpgrade implements Built<DtoContainerUpgrade, DtoContainerUpgradeBuilder> {
   @BuiltValueField(wireName: r'forcePull')
@@ -23,7 +23,7 @@ abstract class DtoContainerUpgrade implements Built<DtoContainerUpgrade, DtoCont
   String get image;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   DtoContainerUpgrade._();
 
@@ -62,7 +62,7 @@ class _$DtoContainerUpgradeSerializer implements PrimitiveSerializer<DtoContaine
     );
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
   }
@@ -107,7 +107,7 @@ class _$DtoContainerUpgradeSerializer implements PrimitiveSerializer<DtoContaine
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         default:
           unhandled.add(key);

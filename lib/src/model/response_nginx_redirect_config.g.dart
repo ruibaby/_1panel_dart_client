@@ -18,7 +18,7 @@ class _$ResponseNginxRedirectConfig extends ResponseNginxRedirectConfig {
   @override
   final bool? keepPath;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? path;
   @override
@@ -42,7 +42,7 @@ class _$ResponseNginxRedirectConfig extends ResponseNginxRedirectConfig {
       this.enable,
       this.filePath,
       this.keepPath,
-      this.name,
+      this.xname,
       this.path,
       this.redirect,
       this.redirectRoot,
@@ -69,7 +69,7 @@ class _$ResponseNginxRedirectConfig extends ResponseNginxRedirectConfig {
         enable == other.enable &&
         filePath == other.filePath &&
         keepPath == other.keepPath &&
-        name == other.name &&
+        xname == other.xname &&
         path == other.path &&
         redirect == other.redirect &&
         redirectRoot == other.redirectRoot &&
@@ -86,7 +86,7 @@ class _$ResponseNginxRedirectConfig extends ResponseNginxRedirectConfig {
     _$hash = $jc(_$hash, enable.hashCode);
     _$hash = $jc(_$hash, filePath.hashCode);
     _$hash = $jc(_$hash, keepPath.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, path.hashCode);
     _$hash = $jc(_$hash, redirect.hashCode);
     _$hash = $jc(_$hash, redirectRoot.hashCode);
@@ -105,7 +105,7 @@ class _$ResponseNginxRedirectConfig extends ResponseNginxRedirectConfig {
           ..add('enable', enable)
           ..add('filePath', filePath)
           ..add('keepPath', keepPath)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('path', path)
           ..add('redirect', redirect)
           ..add('redirectRoot', redirectRoot)
@@ -143,9 +143,9 @@ class ResponseNginxRedirectConfigBuilder
   bool? get keepPath => _$this._keepPath;
   set keepPath(bool? keepPath) => _$this._keepPath = keepPath;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _path;
   String? get path => _$this._path;
@@ -183,7 +183,7 @@ class ResponseNginxRedirectConfigBuilder
       _enable = $v.enable;
       _filePath = $v.filePath;
       _keepPath = $v.keepPath;
-      _name = $v.name;
+      _xname = $v.xname;
       _path = $v.path;
       _redirect = $v.redirect;
       _redirectRoot = $v.redirectRoot;
@@ -219,7 +219,7 @@ class ResponseNginxRedirectConfigBuilder
             enable: enable,
             filePath: filePath,
             keepPath: keepPath,
-            name: name,
+            xname: xname,
             path: path,
             redirect: redirect,
             redirectRoot: redirectRoot,

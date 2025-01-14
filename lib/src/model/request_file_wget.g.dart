@@ -10,7 +10,7 @@ class _$RequestFileWget extends RequestFileWget {
   @override
   final bool? ignoreCertificate;
   @override
-  final String name;
+  final String xname;
   @override
   final String path;
   @override
@@ -21,11 +21,11 @@ class _$RequestFileWget extends RequestFileWget {
 
   _$RequestFileWget._(
       {this.ignoreCertificate,
-      required this.name,
+      required this.xname,
       required this.path,
       required this.url})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(name, r'RequestFileWget', 'name');
+    BuiltValueNullFieldError.checkNotNull(xname, r'RequestFileWget', 'xname');
     BuiltValueNullFieldError.checkNotNull(path, r'RequestFileWget', 'path');
     BuiltValueNullFieldError.checkNotNull(url, r'RequestFileWget', 'url');
   }
@@ -43,7 +43,7 @@ class _$RequestFileWget extends RequestFileWget {
     if (identical(other, this)) return true;
     return other is RequestFileWget &&
         ignoreCertificate == other.ignoreCertificate &&
-        name == other.name &&
+        xname == other.xname &&
         path == other.path &&
         url == other.url;
   }
@@ -52,7 +52,7 @@ class _$RequestFileWget extends RequestFileWget {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, ignoreCertificate.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, path.hashCode);
     _$hash = $jc(_$hash, url.hashCode);
     _$hash = $jf(_$hash);
@@ -63,7 +63,7 @@ class _$RequestFileWget extends RequestFileWget {
   String toString() {
     return (newBuiltValueToStringHelper(r'RequestFileWget')
           ..add('ignoreCertificate', ignoreCertificate)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('path', path)
           ..add('url', url))
         .toString();
@@ -79,9 +79,9 @@ class RequestFileWgetBuilder
   set ignoreCertificate(bool? ignoreCertificate) =>
       _$this._ignoreCertificate = ignoreCertificate;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _path;
   String? get path => _$this._path;
@@ -99,7 +99,7 @@ class RequestFileWgetBuilder
     final $v = _$v;
     if ($v != null) {
       _ignoreCertificate = $v.ignoreCertificate;
-      _name = $v.name;
+      _xname = $v.xname;
       _path = $v.path;
       _url = $v.url;
       _$v = null;
@@ -125,8 +125,8 @@ class RequestFileWgetBuilder
     final _$result = _$v ??
         new _$RequestFileWget._(
           ignoreCertificate: ignoreCertificate,
-          name: BuiltValueNullFieldError.checkNotNull(
-              name, r'RequestFileWget', 'name'),
+          xname: BuiltValueNullFieldError.checkNotNull(
+              xname, r'RequestFileWget', 'xname'),
           path: BuiltValueNullFieldError.checkNotNull(
               path, r'RequestFileWget', 'path'),
           url: BuiltValueNullFieldError.checkNotNull(

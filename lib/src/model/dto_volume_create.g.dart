@@ -12,7 +12,7 @@ class _$DtoVolumeCreate extends DtoVolumeCreate {
   @override
   final BuiltList<String>? labels;
   @override
-  final String name;
+  final String xname;
   @override
   final BuiltList<String>? options;
 
@@ -20,10 +20,10 @@ class _$DtoVolumeCreate extends DtoVolumeCreate {
       (new DtoVolumeCreateBuilder()..update(updates))._build();
 
   _$DtoVolumeCreate._(
-      {required this.driver, this.labels, required this.name, this.options})
+      {required this.driver, this.labels, required this.xname, this.options})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(driver, r'DtoVolumeCreate', 'driver');
-    BuiltValueNullFieldError.checkNotNull(name, r'DtoVolumeCreate', 'name');
+    BuiltValueNullFieldError.checkNotNull(xname, r'DtoVolumeCreate', 'xname');
   }
 
   @override
@@ -40,7 +40,7 @@ class _$DtoVolumeCreate extends DtoVolumeCreate {
     return other is DtoVolumeCreate &&
         driver == other.driver &&
         labels == other.labels &&
-        name == other.name &&
+        xname == other.xname &&
         options == other.options;
   }
 
@@ -49,7 +49,7 @@ class _$DtoVolumeCreate extends DtoVolumeCreate {
     var _$hash = 0;
     _$hash = $jc(_$hash, driver.hashCode);
     _$hash = $jc(_$hash, labels.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, options.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -60,7 +60,7 @@ class _$DtoVolumeCreate extends DtoVolumeCreate {
     return (newBuiltValueToStringHelper(r'DtoVolumeCreate')
           ..add('driver', driver)
           ..add('labels', labels)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('options', options))
         .toString();
   }
@@ -79,9 +79,9 @@ class DtoVolumeCreateBuilder
       _$this._labels ??= new ListBuilder<String>();
   set labels(ListBuilder<String>? labels) => _$this._labels = labels;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   ListBuilder<String>? _options;
   ListBuilder<String> get options =>
@@ -97,7 +97,7 @@ class DtoVolumeCreateBuilder
     if ($v != null) {
       _driver = $v.driver;
       _labels = $v.labels?.toBuilder();
-      _name = $v.name;
+      _xname = $v.xname;
       _options = $v.options?.toBuilder();
       _$v = null;
     }
@@ -126,8 +126,8 @@ class DtoVolumeCreateBuilder
             driver: BuiltValueNullFieldError.checkNotNull(
                 driver, r'DtoVolumeCreate', 'driver'),
             labels: _labels?.build(),
-            name: BuiltValueNullFieldError.checkNotNull(
-                name, r'DtoVolumeCreate', 'name'),
+            xname: BuiltValueNullFieldError.checkNotNull(
+                xname, r'DtoVolumeCreate', 'xname'),
             options: _options?.build(),
           );
     } catch (_) {

@@ -12,7 +12,7 @@ part 'dto_group_create.g.dart';
 ///
 /// Properties:
 /// * [id] 
-/// * [name] 
+/// * [xname] 
 /// * [type] 
 @BuiltValue()
 abstract class DtoGroupCreate implements Built<DtoGroupCreate, DtoGroupCreateBuilder> {
@@ -20,7 +20,7 @@ abstract class DtoGroupCreate implements Built<DtoGroupCreate, DtoGroupCreateBui
   int? get id;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'type')
   String get type;
@@ -57,7 +57,7 @@ class _$DtoGroupCreateSerializer implements PrimitiveSerializer<DtoGroupCreate> 
     }
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     yield r'type';
@@ -100,7 +100,7 @@ class _$DtoGroupCreateSerializer implements PrimitiveSerializer<DtoGroupCreate> 
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'type':
           final valueDes = serializers.deserialize(

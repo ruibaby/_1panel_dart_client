@@ -14,7 +14,7 @@ part 'request_supervisor_process_file_req.g.dart';
 /// Properties:
 /// * [content] 
 /// * [file] 
-/// * [name] 
+/// * [xname] 
 /// * [operate] 
 @BuiltValue()
 abstract class RequestSupervisorProcessFileReq implements Built<RequestSupervisorProcessFileReq, RequestSupervisorProcessFileReqBuilder> {
@@ -26,7 +26,7 @@ abstract class RequestSupervisorProcessFileReq implements Built<RequestSuperviso
   // enum fileEnum {  out.log,  err.log,  config,  };
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'operate')
   RequestSupervisorProcessFileReqOperateEnum get operate;
@@ -69,7 +69,7 @@ class _$RequestSupervisorProcessFileReqSerializer implements PrimitiveSerializer
     );
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     yield r'operate';
@@ -119,7 +119,7 @@ class _$RequestSupervisorProcessFileReqSerializer implements PrimitiveSerializer
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'operate':
           final valueDes = serializers.deserialize(
@@ -181,7 +181,7 @@ class RequestSupervisorProcessFileReqOperateEnum extends EnumClass {
   @BuiltValueEnumConst(wireName: r'clear')
   static const RequestSupervisorProcessFileReqOperateEnum clear = _$requestSupervisorProcessFileReqOperateEnum_clear;
   @BuiltValueEnumConst(wireName: r'update')
-  static const RequestSupervisorProcessFileReqOperateEnum update = _$requestSupervisorProcessFileReqOperateEnum_update;
+  static const RequestSupervisorProcessFileReqOperateEnum xupdate = _$requestSupervisorProcessFileReqOperateEnum_xupdate;
 
   static Serializer<RequestSupervisorProcessFileReqOperateEnum> get serializer => _$requestSupervisorProcessFileReqOperateEnumSerializer;
 

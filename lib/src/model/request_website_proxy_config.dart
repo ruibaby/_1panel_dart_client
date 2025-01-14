@@ -21,7 +21,7 @@ part 'request_website_proxy_config.g.dart';
 /// * [id] 
 /// * [match] 
 /// * [modifier] 
-/// * [name] 
+/// * [xname] 
 /// * [operate] 
 /// * [proxyHost] 
 /// * [proxyPass] 
@@ -58,7 +58,7 @@ abstract class RequestWebsiteProxyConfig implements Built<RequestWebsiteProxyCon
   String? get modifier;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'operate')
   String get operate;
@@ -162,7 +162,7 @@ class _$RequestWebsiteProxyConfigSerializer implements PrimitiveSerializer<Reque
     }
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     yield r'operate';
@@ -292,7 +292,7 @@ class _$RequestWebsiteProxyConfigSerializer implements PrimitiveSerializer<Reque
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'operate':
           final valueDes = serializers.deserialize(

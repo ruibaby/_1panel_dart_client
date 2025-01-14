@@ -209,7 +209,7 @@ class DtoMysqlDBSearchOrderEnum extends EnumClass {
 class DtoMysqlDBSearchOrderByEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'name')
-  static const DtoMysqlDBSearchOrderByEnum name = _$dtoMysqlDBSearchOrderByEnum_name;
+  static const DtoMysqlDBSearchOrderByEnum xname = _$dtoMysqlDBSearchOrderByEnum_xname;
   @BuiltValueEnumConst(wireName: r'created_at')
   static const DtoMysqlDBSearchOrderByEnum createdAt = _$dtoMysqlDBSearchOrderByEnum_createdAt;
 

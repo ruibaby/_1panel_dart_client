@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **installed** | **bool** |  | [optional] 
 **key** | **String** |  | [optional] 
 **limit** | **int** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **resource** | **String** |  | [optional] 
 **shortDescEn** | **String** |  | [optional] 
 **shortDescZh** | **String** |  | [optional] 

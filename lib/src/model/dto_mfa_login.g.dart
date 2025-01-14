@@ -12,7 +12,7 @@ class _$DtoMFALogin extends DtoMFALogin {
   @override
   final String code;
   @override
-  final String name;
+  final String xname;
   @override
   final String password;
 
@@ -22,11 +22,11 @@ class _$DtoMFALogin extends DtoMFALogin {
   _$DtoMFALogin._(
       {this.authMethod,
       required this.code,
-      required this.name,
+      required this.xname,
       required this.password})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(code, r'DtoMFALogin', 'code');
-    BuiltValueNullFieldError.checkNotNull(name, r'DtoMFALogin', 'name');
+    BuiltValueNullFieldError.checkNotNull(xname, r'DtoMFALogin', 'xname');
     BuiltValueNullFieldError.checkNotNull(password, r'DtoMFALogin', 'password');
   }
 
@@ -43,7 +43,7 @@ class _$DtoMFALogin extends DtoMFALogin {
     return other is DtoMFALogin &&
         authMethod == other.authMethod &&
         code == other.code &&
-        name == other.name &&
+        xname == other.xname &&
         password == other.password;
   }
 
@@ -52,7 +52,7 @@ class _$DtoMFALogin extends DtoMFALogin {
     var _$hash = 0;
     _$hash = $jc(_$hash, authMethod.hashCode);
     _$hash = $jc(_$hash, code.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, password.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -63,7 +63,7 @@ class _$DtoMFALogin extends DtoMFALogin {
     return (newBuiltValueToStringHelper(r'DtoMFALogin')
           ..add('authMethod', authMethod)
           ..add('code', code)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('password', password))
         .toString();
   }
@@ -80,9 +80,9 @@ class DtoMFALoginBuilder implements Builder<DtoMFALogin, DtoMFALoginBuilder> {
   String? get code => _$this._code;
   set code(String? code) => _$this._code = code;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _password;
   String? get password => _$this._password;
@@ -97,7 +97,7 @@ class DtoMFALoginBuilder implements Builder<DtoMFALogin, DtoMFALoginBuilder> {
     if ($v != null) {
       _authMethod = $v.authMethod;
       _code = $v.code;
-      _name = $v.name;
+      _xname = $v.xname;
       _password = $v.password;
       _$v = null;
     }
@@ -124,8 +124,8 @@ class DtoMFALoginBuilder implements Builder<DtoMFALogin, DtoMFALoginBuilder> {
           authMethod: authMethod,
           code: BuiltValueNullFieldError.checkNotNull(
               code, r'DtoMFALogin', 'code'),
-          name: BuiltValueNullFieldError.checkNotNull(
-              name, r'DtoMFALogin', 'name'),
+          xname: BuiltValueNullFieldError.checkNotNull(
+              xname, r'DtoMFALogin', 'xname'),
           password: BuiltValueNullFieldError.checkNotNull(
               password, r'DtoMFALogin', 'password'),
         );

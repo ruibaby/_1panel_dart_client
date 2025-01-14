@@ -17,7 +17,7 @@ part 'dto_clean_tree.g.dart';
 /// * [isCheck] 
 /// * [isRecommend] 
 /// * [label] 
-/// * [name] 
+/// * [xname] 
 /// * [size] 
 /// * [type] 
 @BuiltValue()
@@ -38,7 +38,7 @@ abstract class DtoCleanTree implements Built<DtoCleanTree, DtoCleanTreeBuilder> 
   String? get label;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'size')
   int? get size;
@@ -104,10 +104,10 @@ class _$DtoCleanTreeSerializer implements PrimitiveSerializer<DtoCleanTree> {
         specifiedType: const FullType(String),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -188,7 +188,7 @@ class _$DtoCleanTreeSerializer implements PrimitiveSerializer<DtoCleanTree> {
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'size':
           final valueDes = serializers.deserialize(

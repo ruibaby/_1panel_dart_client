@@ -33,15 +33,15 @@ final BuiltSet<DtoPageSnapshotOrderEnum> _$dtoPageSnapshotOrderEnumValues =
   _$dtoPageSnapshotOrderEnum_descending,
 ]);
 
-const DtoPageSnapshotOrderByEnum _$dtoPageSnapshotOrderByEnum_name =
-    const DtoPageSnapshotOrderByEnum._('name');
+const DtoPageSnapshotOrderByEnum _$dtoPageSnapshotOrderByEnum_xname =
+    const DtoPageSnapshotOrderByEnum._('xname');
 const DtoPageSnapshotOrderByEnum _$dtoPageSnapshotOrderByEnum_createdAt =
     const DtoPageSnapshotOrderByEnum._('createdAt');
 
 DtoPageSnapshotOrderByEnum _$dtoPageSnapshotOrderByEnumValueOf(String name) {
   switch (name) {
-    case 'name':
-      return _$dtoPageSnapshotOrderByEnum_name;
+    case 'xname':
+      return _$dtoPageSnapshotOrderByEnum_xname;
     case 'createdAt':
       return _$dtoPageSnapshotOrderByEnum_createdAt;
     default:
@@ -51,7 +51,7 @@ DtoPageSnapshotOrderByEnum _$dtoPageSnapshotOrderByEnumValueOf(String name) {
 
 final BuiltSet<DtoPageSnapshotOrderByEnum> _$dtoPageSnapshotOrderByEnumValues =
     new BuiltSet<DtoPageSnapshotOrderByEnum>(const <DtoPageSnapshotOrderByEnum>[
-  _$dtoPageSnapshotOrderByEnum_name,
+  _$dtoPageSnapshotOrderByEnum_xname,
   _$dtoPageSnapshotOrderByEnum_createdAt,
 ]);
 
@@ -94,11 +94,11 @@ class _$DtoPageSnapshotOrderEnumSerializer
 class _$DtoPageSnapshotOrderByEnumSerializer
     implements PrimitiveSerializer<DtoPageSnapshotOrderByEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'name': 'name',
+    'xname': 'name',
     'createdAt': 'created_at',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'name': 'name',
+    'name': 'xname',
     'created_at': 'createdAt',
   };
 

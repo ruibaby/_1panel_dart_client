@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | 
 **match** | **String** |  | 
 **modifier** | **String** |  | [optional] 
-**name** | **String** |  | 
+**xname** | **String** |  | 
 **operate** | **String** |  | 
 **proxyHost** | **String** |  | 
 **proxyPass** | **String** |  | 

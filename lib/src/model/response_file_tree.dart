@@ -16,7 +16,7 @@ part 'response_file_tree.g.dart';
 /// * [extension_] 
 /// * [id] 
 /// * [isDir] 
-/// * [name] 
+/// * [xname] 
 /// * [path] 
 @BuiltValue()
 abstract class ResponseFileTree implements Built<ResponseFileTree, ResponseFileTreeBuilder> {
@@ -33,7 +33,7 @@ abstract class ResponseFileTree implements Built<ResponseFileTree, ResponseFileT
   bool? get isDir;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'path')
   String? get path;
@@ -89,10 +89,10 @@ class _$ResponseFileTreeSerializer implements PrimitiveSerializer<ResponseFileTr
         specifiedType: const FullType(bool),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -159,7 +159,7 @@ class _$ResponseFileTreeSerializer implements PrimitiveSerializer<ResponseFileTr
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'path':
           final valueDes = serializers.deserialize(

@@ -20,13 +20,13 @@ class _$RequestRuntimeUpdate extends RequestRuntimeUpdate {
   @override
   final bool? install;
   @override
-  final String? name;
+  final String? xname;
   @override
   final BuiltMap<String, JsonObject?>? params;
   @override
   final int? port;
   @override
-  final bool? rebuild;
+  final bool? xrebuild;
   @override
   final String? source_;
   @override
@@ -43,10 +43,10 @@ class _$RequestRuntimeUpdate extends RequestRuntimeUpdate {
       this.id,
       this.image,
       this.install,
-      this.name,
+      this.xname,
       this.params,
       this.port,
-      this.rebuild,
+      this.xrebuild,
       this.source_,
       this.version})
       : super._();
@@ -70,10 +70,10 @@ class _$RequestRuntimeUpdate extends RequestRuntimeUpdate {
         id == other.id &&
         image == other.image &&
         install == other.install &&
-        name == other.name &&
+        xname == other.xname &&
         params == other.params &&
         port == other.port &&
-        rebuild == other.rebuild &&
+        xrebuild == other.xrebuild &&
         source_ == other.source_ &&
         version == other.version;
   }
@@ -87,10 +87,10 @@ class _$RequestRuntimeUpdate extends RequestRuntimeUpdate {
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, image.hashCode);
     _$hash = $jc(_$hash, install.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, params.hashCode);
     _$hash = $jc(_$hash, port.hashCode);
-    _$hash = $jc(_$hash, rebuild.hashCode);
+    _$hash = $jc(_$hash, xrebuild.hashCode);
     _$hash = $jc(_$hash, source_.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
     _$hash = $jf(_$hash);
@@ -106,10 +106,10 @@ class _$RequestRuntimeUpdate extends RequestRuntimeUpdate {
           ..add('id', id)
           ..add('image', image)
           ..add('install', install)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('params', params)
           ..add('port', port)
-          ..add('rebuild', rebuild)
+          ..add('xrebuild', xrebuild)
           ..add('source_', source_)
           ..add('version', version))
         .toString();
@@ -146,9 +146,9 @@ class RequestRuntimeUpdateBuilder
   bool? get install => _$this._install;
   set install(bool? install) => _$this._install = install;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   MapBuilder<String, JsonObject?>? _params;
   MapBuilder<String, JsonObject?> get params =>
@@ -160,9 +160,9 @@ class RequestRuntimeUpdateBuilder
   int? get port => _$this._port;
   set port(int? port) => _$this._port = port;
 
-  bool? _rebuild;
-  bool? get rebuild => _$this._rebuild;
-  set rebuild(bool? rebuild) => _$this._rebuild = rebuild;
+  bool? _xrebuild;
+  bool? get xrebuild => _$this._xrebuild;
+  set xrebuild(bool? xrebuild) => _$this._xrebuild = xrebuild;
 
   String? _source_;
   String? get source_ => _$this._source_;
@@ -185,10 +185,10 @@ class RequestRuntimeUpdateBuilder
       _id = $v.id;
       _image = $v.image;
       _install = $v.install;
-      _name = $v.name;
+      _xname = $v.xname;
       _params = $v.params?.toBuilder();
       _port = $v.port;
-      _rebuild = $v.rebuild;
+      _xrebuild = $v.xrebuild;
       _source_ = $v.source_;
       _version = $v.version;
       _$v = null;
@@ -221,10 +221,10 @@ class RequestRuntimeUpdateBuilder
             id: id,
             image: image,
             install: install,
-            name: name,
+            xname: xname,
             params: _params?.build(),
             port: port,
-            rebuild: rebuild,
+            xrebuild: xrebuild,
             source_: source_,
             version: version,
           );

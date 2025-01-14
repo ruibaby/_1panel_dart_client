@@ -12,7 +12,7 @@ part 'request_nginx_proxy_update.g.dart';
 ///
 /// Properties:
 /// * [content] 
-/// * [name] 
+/// * [xname] 
 /// * [websiteID] 
 @BuiltValue()
 abstract class RequestNginxProxyUpdate implements Built<RequestNginxProxyUpdate, RequestNginxProxyUpdateBuilder> {
@@ -20,7 +20,7 @@ abstract class RequestNginxProxyUpdate implements Built<RequestNginxProxyUpdate,
   String get content;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'websiteID')
   int get websiteID;
@@ -55,7 +55,7 @@ class _$RequestNginxProxyUpdateSerializer implements PrimitiveSerializer<Request
     );
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     yield r'websiteID';
@@ -98,7 +98,7 @@ class _$RequestNginxProxyUpdateSerializer implements PrimitiveSerializer<Request
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'websiteID':
           final valueDes = serializers.deserialize(

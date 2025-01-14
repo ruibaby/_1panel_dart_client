@@ -11,14 +11,14 @@ part 'dto_firewall_base_info.g.dart';
 /// DtoFirewallBaseInfo
 ///
 /// Properties:
-/// * [name] 
+/// * [xname] 
 /// * [pingStatus] 
 /// * [status] 
 /// * [version] 
 @BuiltValue()
 abstract class DtoFirewallBaseInfo implements Built<DtoFirewallBaseInfo, DtoFirewallBaseInfoBuilder> {
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'pingStatus')
   String? get pingStatus;
@@ -52,10 +52,10 @@ class _$DtoFirewallBaseInfoSerializer implements PrimitiveSerializer<DtoFirewall
     DtoFirewallBaseInfo object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -108,7 +108,7 @@ class _$DtoFirewallBaseInfoSerializer implements PrimitiveSerializer<DtoFirewall
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'pingStatus':
           final valueDes = serializers.deserialize(

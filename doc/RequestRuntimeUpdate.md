@@ -14,10 +14,10 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **image** | **String** |  | [optional] 
 **install** | **bool** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **params** | [**BuiltMap&lt;String, JsonObject&gt;**](JsonObject.md) |  | [optional] 
 **port** | **int** |  | [optional] 
-**rebuild** | **bool** |  | [optional] 
+**xrebuild** | **bool** |  | [optional] 
 **source_** | **String** |  | [optional] 
 **version** | **String** |  | [optional] 
 

@@ -168,7 +168,7 @@ class RequestNginxConfigUpdateOperateEnum extends EnumClass {
   @BuiltValueEnumConst(wireName: r'add')
   static const RequestNginxConfigUpdateOperateEnum add = _$requestNginxConfigUpdateOperateEnum_add;
   @BuiltValueEnumConst(wireName: r'update')
-  static const RequestNginxConfigUpdateOperateEnum update = _$requestNginxConfigUpdateOperateEnum_update;
+  static const RequestNginxConfigUpdateOperateEnum xupdate = _$requestNginxConfigUpdateOperateEnum_xupdate;
   @BuiltValueEnumConst(wireName: r'delete')
   static const RequestNginxConfigUpdateOperateEnum delete = _$requestNginxConfigUpdateOperateEnum_delete;
 

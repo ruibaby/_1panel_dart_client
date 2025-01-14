@@ -27,7 +27,7 @@ part 'dto_container_operate.g.dart';
 /// * [ipv6] 
 /// * [labels] 
 /// * [memory] 
-/// * [name] 
+/// * [xname] 
 /// * [nanoCPUs] 
 /// * [network] 
 /// * [openStdin] 
@@ -78,7 +78,7 @@ abstract class DtoContainerOperate implements Built<DtoContainerOperate, DtoCont
   num? get memory;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'nanoCPUs')
   num? get nanoCPUs;
@@ -218,7 +218,7 @@ class _$DtoContainerOperateSerializer implements PrimitiveSerializer<DtoContaine
     }
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     if (object.nanoCPUs != null) {
@@ -396,7 +396,7 @@ class _$DtoContainerOperateSerializer implements PrimitiveSerializer<DtoContaine
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'nanoCPUs':
           final valueDes = serializers.deserialize(

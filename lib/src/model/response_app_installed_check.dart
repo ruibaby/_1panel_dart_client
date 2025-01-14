@@ -20,7 +20,7 @@ part 'response_app_installed_check.g.dart';
 /// * [installPath] 
 /// * [isExist] 
 /// * [lastBackupAt] 
-/// * [name] 
+/// * [xname] 
 /// * [status] 
 /// * [version] 
 @BuiltValue()
@@ -53,7 +53,7 @@ abstract class ResponseAppInstalledCheck implements Built<ResponseAppInstalledCh
   String? get lastBackupAt;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'status')
   String? get status;
@@ -147,10 +147,10 @@ class _$ResponseAppInstalledCheckSerializer implements PrimitiveSerializer<Respo
         specifiedType: const FullType(String),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -259,7 +259,7 @@ class _$ResponseAppInstalledCheckSerializer implements PrimitiveSerializer<Respo
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'status':
           final valueDes = serializers.deserialize(

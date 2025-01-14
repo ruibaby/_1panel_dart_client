@@ -10,16 +10,16 @@ class _$DtoGroupCreate extends DtoGroupCreate {
   @override
   final int? id;
   @override
-  final String name;
+  final String xname;
   @override
   final String type;
 
   factory _$DtoGroupCreate([void Function(DtoGroupCreateBuilder)? updates]) =>
       (new DtoGroupCreateBuilder()..update(updates))._build();
 
-  _$DtoGroupCreate._({this.id, required this.name, required this.type})
+  _$DtoGroupCreate._({this.id, required this.xname, required this.type})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(name, r'DtoGroupCreate', 'name');
+    BuiltValueNullFieldError.checkNotNull(xname, r'DtoGroupCreate', 'xname');
     BuiltValueNullFieldError.checkNotNull(type, r'DtoGroupCreate', 'type');
   }
 
@@ -36,7 +36,7 @@ class _$DtoGroupCreate extends DtoGroupCreate {
     if (identical(other, this)) return true;
     return other is DtoGroupCreate &&
         id == other.id &&
-        name == other.name &&
+        xname == other.xname &&
         type == other.type;
   }
 
@@ -44,7 +44,7 @@ class _$DtoGroupCreate extends DtoGroupCreate {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -54,7 +54,7 @@ class _$DtoGroupCreate extends DtoGroupCreate {
   String toString() {
     return (newBuiltValueToStringHelper(r'DtoGroupCreate')
           ..add('id', id)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('type', type))
         .toString();
   }
@@ -68,9 +68,9 @@ class DtoGroupCreateBuilder
   int? get id => _$this._id;
   set id(int? id) => _$this._id = id;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _type;
   String? get type => _$this._type;
@@ -84,7 +84,7 @@ class DtoGroupCreateBuilder
     final $v = _$v;
     if ($v != null) {
       _id = $v.id;
-      _name = $v.name;
+      _xname = $v.xname;
       _type = $v.type;
       _$v = null;
     }
@@ -109,8 +109,8 @@ class DtoGroupCreateBuilder
     final _$result = _$v ??
         new _$DtoGroupCreate._(
           id: id,
-          name: BuiltValueNullFieldError.checkNotNull(
-              name, r'DtoGroupCreate', 'name'),
+          xname: BuiltValueNullFieldError.checkNotNull(
+              xname, r'DtoGroupCreate', 'xname'),
           type: BuiltValueNullFieldError.checkNotNull(
               type, r'DtoGroupCreate', 'type'),
         );

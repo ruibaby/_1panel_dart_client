@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **command** | **String** |  | [optional] 
 **dir** | **String** |  | [optional] 
 **msg** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **numprocs** | **String** |  | [optional] 
 **status** | [**BuiltList&lt;ResponseProcessStatus&gt;**](ResponseProcessStatus.md) |  | [optional] 
 **user** | **String** |  | [optional] 

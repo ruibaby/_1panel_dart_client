@@ -12,7 +12,7 @@ part 'request_nginx_rewrite_update.g.dart';
 ///
 /// Properties:
 /// * [content] 
-/// * [name] 
+/// * [xname] 
 /// * [websiteId] 
 @BuiltValue()
 abstract class RequestNginxRewriteUpdate implements Built<RequestNginxRewriteUpdate, RequestNginxRewriteUpdateBuilder> {
@@ -20,7 +20,7 @@ abstract class RequestNginxRewriteUpdate implements Built<RequestNginxRewriteUpd
   String? get content;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'websiteId')
   int get websiteId;
@@ -57,7 +57,7 @@ class _$RequestNginxRewriteUpdateSerializer implements PrimitiveSerializer<Reque
     }
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     yield r'websiteId';
@@ -100,7 +100,7 @@ class _$RequestNginxRewriteUpdateSerializer implements PrimitiveSerializer<Reque
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'websiteId':
           final valueDes = serializers.deserialize(

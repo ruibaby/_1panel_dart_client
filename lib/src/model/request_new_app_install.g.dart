@@ -28,7 +28,7 @@ class _$RequestNewAppInstall extends RequestNewAppInstall {
   @override
   final String? memoryUnit;
   @override
-  final String? name;
+  final String? xname;
   @override
   final BuiltMap<String, JsonObject?>? params;
   @override
@@ -49,7 +49,7 @@ class _$RequestNewAppInstall extends RequestNewAppInstall {
       this.hostMode,
       this.memoryLimit,
       this.memoryUnit,
-      this.name,
+      this.xname,
       this.params,
       this.pullImage})
       : super._();
@@ -77,7 +77,7 @@ class _$RequestNewAppInstall extends RequestNewAppInstall {
         hostMode == other.hostMode &&
         memoryLimit == other.memoryLimit &&
         memoryUnit == other.memoryUnit &&
-        name == other.name &&
+        xname == other.xname &&
         params == other.params &&
         pullImage == other.pullImage;
   }
@@ -95,7 +95,7 @@ class _$RequestNewAppInstall extends RequestNewAppInstall {
     _$hash = $jc(_$hash, hostMode.hashCode);
     _$hash = $jc(_$hash, memoryLimit.hashCode);
     _$hash = $jc(_$hash, memoryUnit.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, params.hashCode);
     _$hash = $jc(_$hash, pullImage.hashCode);
     _$hash = $jf(_$hash);
@@ -115,7 +115,7 @@ class _$RequestNewAppInstall extends RequestNewAppInstall {
           ..add('hostMode', hostMode)
           ..add('memoryLimit', memoryLimit)
           ..add('memoryUnit', memoryUnit)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('params', params)
           ..add('pullImage', pullImage))
         .toString();
@@ -168,9 +168,9 @@ class RequestNewAppInstallBuilder
   String? get memoryUnit => _$this._memoryUnit;
   set memoryUnit(String? memoryUnit) => _$this._memoryUnit = memoryUnit;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   MapBuilder<String, JsonObject?>? _params;
   MapBuilder<String, JsonObject?> get params =>
@@ -199,7 +199,7 @@ class RequestNewAppInstallBuilder
       _hostMode = $v.hostMode;
       _memoryLimit = $v.memoryLimit;
       _memoryUnit = $v.memoryUnit;
-      _name = $v.name;
+      _xname = $v.xname;
       _params = $v.params?.toBuilder();
       _pullImage = $v.pullImage;
       _$v = null;
@@ -236,7 +236,7 @@ class RequestNewAppInstallBuilder
             hostMode: hostMode,
             memoryLimit: memoryLimit,
             memoryUnit: memoryUnit,
-            name: name,
+            xname: xname,
             params: _params?.build(),
             pullImage: pullImage,
           );

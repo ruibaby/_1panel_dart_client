@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **infectedDir** | **String** |  | [optional] 
 **infectedStrategy** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **path** | **String** |  | [optional] 
 **spec** | **String** |  | [optional] 
 

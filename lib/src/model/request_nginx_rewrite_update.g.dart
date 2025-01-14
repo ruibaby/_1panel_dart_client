@@ -10,7 +10,7 @@ class _$RequestNginxRewriteUpdate extends RequestNginxRewriteUpdate {
   @override
   final String? content;
   @override
-  final String name;
+  final String xname;
   @override
   final int websiteId;
 
@@ -19,10 +19,10 @@ class _$RequestNginxRewriteUpdate extends RequestNginxRewriteUpdate {
       (new RequestNginxRewriteUpdateBuilder()..update(updates))._build();
 
   _$RequestNginxRewriteUpdate._(
-      {this.content, required this.name, required this.websiteId})
+      {this.content, required this.xname, required this.websiteId})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        name, r'RequestNginxRewriteUpdate', 'name');
+        xname, r'RequestNginxRewriteUpdate', 'xname');
     BuiltValueNullFieldError.checkNotNull(
         websiteId, r'RequestNginxRewriteUpdate', 'websiteId');
   }
@@ -41,7 +41,7 @@ class _$RequestNginxRewriteUpdate extends RequestNginxRewriteUpdate {
     if (identical(other, this)) return true;
     return other is RequestNginxRewriteUpdate &&
         content == other.content &&
-        name == other.name &&
+        xname == other.xname &&
         websiteId == other.websiteId;
   }
 
@@ -49,7 +49,7 @@ class _$RequestNginxRewriteUpdate extends RequestNginxRewriteUpdate {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, content.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, websiteId.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -59,7 +59,7 @@ class _$RequestNginxRewriteUpdate extends RequestNginxRewriteUpdate {
   String toString() {
     return (newBuiltValueToStringHelper(r'RequestNginxRewriteUpdate')
           ..add('content', content)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('websiteId', websiteId))
         .toString();
   }
@@ -74,9 +74,9 @@ class RequestNginxRewriteUpdateBuilder
   String? get content => _$this._content;
   set content(String? content) => _$this._content = content;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   int? _websiteId;
   int? get websiteId => _$this._websiteId;
@@ -90,7 +90,7 @@ class RequestNginxRewriteUpdateBuilder
     final $v = _$v;
     if ($v != null) {
       _content = $v.content;
-      _name = $v.name;
+      _xname = $v.xname;
       _websiteId = $v.websiteId;
       _$v = null;
     }
@@ -115,8 +115,8 @@ class RequestNginxRewriteUpdateBuilder
     final _$result = _$v ??
         new _$RequestNginxRewriteUpdate._(
           content: content,
-          name: BuiltValueNullFieldError.checkNotNull(
-              name, r'RequestNginxRewriteUpdate', 'name'),
+          xname: BuiltValueNullFieldError.checkNotNull(
+              xname, r'RequestNginxRewriteUpdate', 'xname'),
           websiteId: BuiltValueNullFieldError.checkNotNull(
               websiteId, r'RequestNginxRewriteUpdate', 'websiteId'),
         );

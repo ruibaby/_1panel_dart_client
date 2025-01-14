@@ -16,7 +16,7 @@ part 'dto_postgresql_db_create.g.dart';
 /// * [description] 
 /// * [format] 
 /// * [from] 
-/// * [name] 
+/// * [xname] 
 /// * [password] 
 /// * [superUser] 
 /// * [username] 
@@ -36,7 +36,7 @@ abstract class DtoPostgresqlDBCreate implements Built<DtoPostgresqlDBCreate, Dto
   // enum fromEnum {  local,  remote,  };
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'password')
   String get password;
@@ -96,7 +96,7 @@ class _$DtoPostgresqlDBCreateSerializer implements PrimitiveSerializer<DtoPostgr
     );
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     yield r'password';
@@ -172,7 +172,7 @@ class _$DtoPostgresqlDBCreateSerializer implements PrimitiveSerializer<DtoPostgr
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'password':
           final valueDes = serializers.deserialize(

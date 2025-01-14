@@ -10,7 +10,7 @@ class _$RequestAppInstalledSearch extends RequestAppInstalledSearch {
   @override
   final bool? all;
   @override
-  final String? name;
+  final String? xname;
   @override
   final int page;
   @override
@@ -24,7 +24,7 @@ class _$RequestAppInstalledSearch extends RequestAppInstalledSearch {
   @override
   final bool? unused;
   @override
-  final bool? hasUpdate;
+  final bool? xupdate;
 
   factory _$RequestAppInstalledSearch(
           [void Function(RequestAppInstalledSearchBuilder)? updates]) =>
@@ -32,14 +32,14 @@ class _$RequestAppInstalledSearch extends RequestAppInstalledSearch {
 
   _$RequestAppInstalledSearch._(
       {this.all,
-      this.name,
+      this.xname,
       required this.page,
       required this.pageSize,
       this.sync_,
       this.tags,
       this.type,
       this.unused,
-      this.hasUpdate})
+      this.xupdate})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         page, r'RequestAppInstalledSearch', 'page');
@@ -61,28 +61,28 @@ class _$RequestAppInstalledSearch extends RequestAppInstalledSearch {
     if (identical(other, this)) return true;
     return other is RequestAppInstalledSearch &&
         all == other.all &&
-        name == other.name &&
+        xname == other.xname &&
         page == other.page &&
         pageSize == other.pageSize &&
         sync_ == other.sync_ &&
         tags == other.tags &&
         type == other.type &&
         unused == other.unused &&
-        hasUpdate == other.hasUpdate;
+        xupdate == other.xupdate;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, all.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, page.hashCode);
     _$hash = $jc(_$hash, pageSize.hashCode);
     _$hash = $jc(_$hash, sync_.hashCode);
     _$hash = $jc(_$hash, tags.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jc(_$hash, unused.hashCode);
-    _$hash = $jc(_$hash, hasUpdate.hashCode);
+    _$hash = $jc(_$hash, xupdate.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -91,14 +91,14 @@ class _$RequestAppInstalledSearch extends RequestAppInstalledSearch {
   String toString() {
     return (newBuiltValueToStringHelper(r'RequestAppInstalledSearch')
           ..add('all', all)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('page', page)
           ..add('pageSize', pageSize)
           ..add('sync_', sync_)
           ..add('tags', tags)
           ..add('type', type)
           ..add('unused', unused)
-          ..add('hasUpdate', hasUpdate))
+          ..add('xupdate', xupdate))
         .toString();
   }
 }
@@ -112,9 +112,9 @@ class RequestAppInstalledSearchBuilder
   bool? get all => _$this._all;
   set all(bool? all) => _$this._all = all;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   int? _page;
   int? get page => _$this._page;
@@ -140,9 +140,9 @@ class RequestAppInstalledSearchBuilder
   bool? get unused => _$this._unused;
   set unused(bool? unused) => _$this._unused = unused;
 
-  bool? _hasUpdate;
-  bool? get hasUpdate => _$this._hasUpdate;
-  set hasUpdate(bool? hasUpdate) => _$this._hasUpdate = hasUpdate;
+  bool? _xupdate;
+  bool? get xupdate => _$this._xupdate;
+  set xupdate(bool? xupdate) => _$this._xupdate = xupdate;
 
   RequestAppInstalledSearchBuilder() {
     RequestAppInstalledSearch._defaults(this);
@@ -152,14 +152,14 @@ class RequestAppInstalledSearchBuilder
     final $v = _$v;
     if ($v != null) {
       _all = $v.all;
-      _name = $v.name;
+      _xname = $v.xname;
       _page = $v.page;
       _pageSize = $v.pageSize;
       _sync_ = $v.sync_;
       _tags = $v.tags?.toBuilder();
       _type = $v.type;
       _unused = $v.unused;
-      _hasUpdate = $v.hasUpdate;
+      _xupdate = $v.xupdate;
       _$v = null;
     }
     return this;
@@ -185,7 +185,7 @@ class RequestAppInstalledSearchBuilder
       _$result = _$v ??
           new _$RequestAppInstalledSearch._(
             all: all,
-            name: name,
+            xname: xname,
             page: BuiltValueNullFieldError.checkNotNull(
                 page, r'RequestAppInstalledSearch', 'page'),
             pageSize: BuiltValueNullFieldError.checkNotNull(
@@ -194,7 +194,7 @@ class RequestAppInstalledSearchBuilder
             tags: _tags?.build(),
             type: type,
             unused: unused,
-            hasUpdate: hasUpdate,
+            xupdate: xupdate,
           );
     } catch (_) {
       late String _$failedField;

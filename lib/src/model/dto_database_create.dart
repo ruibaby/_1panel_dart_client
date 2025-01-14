@@ -17,7 +17,7 @@ part 'dto_database_create.g.dart';
 /// * [clientKey] 
 /// * [description] 
 /// * [from] 
-/// * [name] 
+/// * [xname] 
 /// * [password] 
 /// * [port] 
 /// * [rootCert] 
@@ -45,7 +45,7 @@ abstract class DtoDatabaseCreate implements Built<DtoDatabaseCreate, DtoDatabase
   // enum fromEnum {  local,  remote,  };
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'password')
   String? get password;
@@ -129,7 +129,7 @@ class _$DtoDatabaseCreateSerializer implements PrimitiveSerializer<DtoDatabaseCr
     );
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     if (object.password != null) {
@@ -245,7 +245,7 @@ class _$DtoDatabaseCreateSerializer implements PrimitiveSerializer<DtoDatabaseCr
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'password':
           final valueDes = serializers.deserialize(

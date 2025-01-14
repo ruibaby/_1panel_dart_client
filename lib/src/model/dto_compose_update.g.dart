@@ -12,7 +12,7 @@ class _$DtoComposeUpdate extends DtoComposeUpdate {
   @override
   final BuiltList<String>? env;
   @override
-  final String name;
+  final String xname;
   @override
   final String path;
 
@@ -21,11 +21,14 @@ class _$DtoComposeUpdate extends DtoComposeUpdate {
       (new DtoComposeUpdateBuilder()..update(updates))._build();
 
   _$DtoComposeUpdate._(
-      {required this.content, this.env, required this.name, required this.path})
+      {required this.content,
+      this.env,
+      required this.xname,
+      required this.path})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         content, r'DtoComposeUpdate', 'content');
-    BuiltValueNullFieldError.checkNotNull(name, r'DtoComposeUpdate', 'name');
+    BuiltValueNullFieldError.checkNotNull(xname, r'DtoComposeUpdate', 'xname');
     BuiltValueNullFieldError.checkNotNull(path, r'DtoComposeUpdate', 'path');
   }
 
@@ -43,7 +46,7 @@ class _$DtoComposeUpdate extends DtoComposeUpdate {
     return other is DtoComposeUpdate &&
         content == other.content &&
         env == other.env &&
-        name == other.name &&
+        xname == other.xname &&
         path == other.path;
   }
 
@@ -52,7 +55,7 @@ class _$DtoComposeUpdate extends DtoComposeUpdate {
     var _$hash = 0;
     _$hash = $jc(_$hash, content.hashCode);
     _$hash = $jc(_$hash, env.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, path.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -63,7 +66,7 @@ class _$DtoComposeUpdate extends DtoComposeUpdate {
     return (newBuiltValueToStringHelper(r'DtoComposeUpdate')
           ..add('content', content)
           ..add('env', env)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('path', path))
         .toString();
   }
@@ -81,9 +84,9 @@ class DtoComposeUpdateBuilder
   ListBuilder<String> get env => _$this._env ??= new ListBuilder<String>();
   set env(ListBuilder<String>? env) => _$this._env = env;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _path;
   String? get path => _$this._path;
@@ -98,7 +101,7 @@ class DtoComposeUpdateBuilder
     if ($v != null) {
       _content = $v.content;
       _env = $v.env?.toBuilder();
-      _name = $v.name;
+      _xname = $v.xname;
       _path = $v.path;
       _$v = null;
     }
@@ -127,8 +130,8 @@ class DtoComposeUpdateBuilder
             content: BuiltValueNullFieldError.checkNotNull(
                 content, r'DtoComposeUpdate', 'content'),
             env: _env?.build(),
-            name: BuiltValueNullFieldError.checkNotNull(
-                name, r'DtoComposeUpdate', 'name'),
+            xname: BuiltValueNullFieldError.checkNotNull(
+                xname, r'DtoComposeUpdate', 'xname'),
             path: BuiltValueNullFieldError.checkNotNull(
                 path, r'DtoComposeUpdate', 'path'),
           );

@@ -26,7 +26,7 @@ class _$ResponseAppInstalledCheck extends ResponseAppInstalledCheck {
   @override
   final String? lastBackupAt;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? status;
   @override
@@ -46,7 +46,7 @@ class _$ResponseAppInstalledCheck extends ResponseAppInstalledCheck {
       this.installPath,
       this.isExist,
       this.lastBackupAt,
-      this.name,
+      this.xname,
       this.status,
       this.version})
       : super._();
@@ -73,7 +73,7 @@ class _$ResponseAppInstalledCheck extends ResponseAppInstalledCheck {
         installPath == other.installPath &&
         isExist == other.isExist &&
         lastBackupAt == other.lastBackupAt &&
-        name == other.name &&
+        xname == other.xname &&
         status == other.status &&
         version == other.version;
   }
@@ -90,7 +90,7 @@ class _$ResponseAppInstalledCheck extends ResponseAppInstalledCheck {
     _$hash = $jc(_$hash, installPath.hashCode);
     _$hash = $jc(_$hash, isExist.hashCode);
     _$hash = $jc(_$hash, lastBackupAt.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, status.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
     _$hash = $jf(_$hash);
@@ -109,7 +109,7 @@ class _$ResponseAppInstalledCheck extends ResponseAppInstalledCheck {
           ..add('installPath', installPath)
           ..add('isExist', isExist)
           ..add('lastBackupAt', lastBackupAt)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('status', status)
           ..add('version', version))
         .toString();
@@ -158,9 +158,9 @@ class ResponseAppInstalledCheckBuilder
   String? get lastBackupAt => _$this._lastBackupAt;
   set lastBackupAt(String? lastBackupAt) => _$this._lastBackupAt = lastBackupAt;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _status;
   String? get status => _$this._status;
@@ -186,7 +186,7 @@ class ResponseAppInstalledCheckBuilder
       _installPath = $v.installPath;
       _isExist = $v.isExist;
       _lastBackupAt = $v.lastBackupAt;
-      _name = $v.name;
+      _xname = $v.xname;
       _status = $v.status;
       _version = $v.version;
       _$v = null;
@@ -220,7 +220,7 @@ class ResponseAppInstalledCheckBuilder
           installPath: installPath,
           isExist: isExist,
           lastBackupAt: lastBackupAt,
-          name: name,
+          xname: xname,
           status: status,
           version: version,
         );

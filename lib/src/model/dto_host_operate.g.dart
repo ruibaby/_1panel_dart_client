@@ -72,7 +72,7 @@ class _$DtoHostOperate extends DtoHostOperate {
   @override
   final int? id;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? passPhrase;
   @override
@@ -95,7 +95,7 @@ class _$DtoHostOperate extends DtoHostOperate {
       this.description,
       this.groupID,
       this.id,
-      this.name,
+      this.xname,
       this.passPhrase,
       this.password,
       required this.port,
@@ -125,7 +125,7 @@ class _$DtoHostOperate extends DtoHostOperate {
         description == other.description &&
         groupID == other.groupID &&
         id == other.id &&
-        name == other.name &&
+        xname == other.xname &&
         passPhrase == other.passPhrase &&
         password == other.password &&
         port == other.port &&
@@ -142,7 +142,7 @@ class _$DtoHostOperate extends DtoHostOperate {
     _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, groupID.hashCode);
     _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, passPhrase.hashCode);
     _$hash = $jc(_$hash, password.hashCode);
     _$hash = $jc(_$hash, port.hashCode);
@@ -161,7 +161,7 @@ class _$DtoHostOperate extends DtoHostOperate {
           ..add('description', description)
           ..add('groupID', groupID)
           ..add('id', id)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('passPhrase', passPhrase)
           ..add('password', password)
           ..add('port', port)
@@ -197,9 +197,9 @@ class DtoHostOperateBuilder
   int? get id => _$this._id;
   set id(int? id) => _$this._id = id;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _passPhrase;
   String? get passPhrase => _$this._passPhrase;
@@ -238,7 +238,7 @@ class DtoHostOperateBuilder
       _description = $v.description;
       _groupID = $v.groupID;
       _id = $v.id;
-      _name = $v.name;
+      _xname = $v.xname;
       _passPhrase = $v.passPhrase;
       _password = $v.password;
       _port = $v.port;
@@ -273,7 +273,7 @@ class DtoHostOperateBuilder
           description: description,
           groupID: groupID,
           id: id,
-          name: name,
+          xname: xname,
           passPhrase: passPhrase,
           password: password,
           port: BuiltValueNullFieldError.checkNotNull(

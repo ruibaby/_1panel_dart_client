@@ -18,7 +18,7 @@ class _$DtoCleanTree extends DtoCleanTree {
   @override
   final String? label;
   @override
-  final String? name;
+  final String? xname;
   @override
   final int? size;
   @override
@@ -33,7 +33,7 @@ class _$DtoCleanTree extends DtoCleanTree {
       this.isCheck,
       this.isRecommend,
       this.label,
-      this.name,
+      this.xname,
       this.size,
       this.type})
       : super._();
@@ -54,7 +54,7 @@ class _$DtoCleanTree extends DtoCleanTree {
         isCheck == other.isCheck &&
         isRecommend == other.isRecommend &&
         label == other.label &&
-        name == other.name &&
+        xname == other.xname &&
         size == other.size &&
         type == other.type;
   }
@@ -67,7 +67,7 @@ class _$DtoCleanTree extends DtoCleanTree {
     _$hash = $jc(_$hash, isCheck.hashCode);
     _$hash = $jc(_$hash, isRecommend.hashCode);
     _$hash = $jc(_$hash, label.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, size.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jf(_$hash);
@@ -82,7 +82,7 @@ class _$DtoCleanTree extends DtoCleanTree {
           ..add('isCheck', isCheck)
           ..add('isRecommend', isRecommend)
           ..add('label', label)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('size', size)
           ..add('type', type))
         .toString();
@@ -115,9 +115,9 @@ class DtoCleanTreeBuilder
   String? get label => _$this._label;
   set label(String? label) => _$this._label = label;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   int? _size;
   int? get size => _$this._size;
@@ -139,7 +139,7 @@ class DtoCleanTreeBuilder
       _isCheck = $v.isCheck;
       _isRecommend = $v.isRecommend;
       _label = $v.label;
-      _name = $v.name;
+      _xname = $v.xname;
       _size = $v.size;
       _type = $v.type;
       _$v = null;
@@ -171,7 +171,7 @@ class DtoCleanTreeBuilder
             isCheck: isCheck,
             isRecommend: isRecommend,
             label: label,
-            name: name,
+            xname: xname,
             size: size,
             type: type,
           );

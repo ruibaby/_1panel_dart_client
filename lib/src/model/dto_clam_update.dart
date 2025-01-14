@@ -17,7 +17,7 @@ part 'dto_clam_update.g.dart';
 /// * [id] 
 /// * [infectedDir] 
 /// * [infectedStrategy] 
-/// * [name] 
+/// * [xname] 
 /// * [path] 
 /// * [spec] 
 @BuiltValue()
@@ -41,7 +41,7 @@ abstract class DtoClamUpdate implements Built<DtoClamUpdate, DtoClamUpdateBuilde
   String? get infectedStrategy;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'path')
   String? get path;
@@ -114,10 +114,10 @@ class _$DtoClamUpdateSerializer implements PrimitiveSerializer<DtoClamUpdate> {
         specifiedType: const FullType(String),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -205,7 +205,7 @@ class _$DtoClamUpdateSerializer implements PrimitiveSerializer<DtoClamUpdate> {
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'path':
           final valueDes = serializers.deserialize(

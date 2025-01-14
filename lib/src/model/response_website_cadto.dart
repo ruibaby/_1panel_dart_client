@@ -18,7 +18,7 @@ part 'response_website_cadto.g.dart';
 /// * [csr] 
 /// * [id] 
 /// * [keyType] 
-/// * [name] 
+/// * [xname] 
 /// * [organization] 
 /// * [organizationUint] 
 /// * [privateKey] 
@@ -48,7 +48,7 @@ abstract class ResponseWebsiteCADTO implements Built<ResponseWebsiteCADTO, Respo
   String? get keyType;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'organization')
   String? get organization;
@@ -137,10 +137,10 @@ class _$ResponseWebsiteCADTOSerializer implements PrimitiveSerializer<ResponseWe
         specifiedType: const FullType(String),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -256,7 +256,7 @@ class _$ResponseWebsiteCADTOSerializer implements PrimitiveSerializer<ResponseWe
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'organization':
           final valueDes = serializers.deserialize(

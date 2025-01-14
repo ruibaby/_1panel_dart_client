@@ -28,7 +28,7 @@ class _$DtoCronjobCreate extends DtoCronjobCreate {
   @override
   final String? exclusionRules;
   @override
-  final String name;
+  final String xname;
   @override
   final int? retainCopies;
   @override
@@ -61,7 +61,7 @@ class _$DtoCronjobCreate extends DtoCronjobCreate {
       this.dbType,
       this.defaultDownload,
       this.exclusionRules,
-      required this.name,
+      required this.xname,
       this.retainCopies,
       this.script,
       this.secret,
@@ -71,7 +71,7 @@ class _$DtoCronjobCreate extends DtoCronjobCreate {
       this.url,
       this.website})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(name, r'DtoCronjobCreate', 'name');
+    BuiltValueNullFieldError.checkNotNull(xname, r'DtoCronjobCreate', 'xname');
     BuiltValueNullFieldError.checkNotNull(spec, r'DtoCronjobCreate', 'spec');
     BuiltValueNullFieldError.checkNotNull(type, r'DtoCronjobCreate', 'type');
   }
@@ -98,7 +98,7 @@ class _$DtoCronjobCreate extends DtoCronjobCreate {
         dbType == other.dbType &&
         defaultDownload == other.defaultDownload &&
         exclusionRules == other.exclusionRules &&
-        name == other.name &&
+        xname == other.xname &&
         retainCopies == other.retainCopies &&
         script == other.script &&
         secret == other.secret &&
@@ -122,7 +122,7 @@ class _$DtoCronjobCreate extends DtoCronjobCreate {
     _$hash = $jc(_$hash, dbType.hashCode);
     _$hash = $jc(_$hash, defaultDownload.hashCode);
     _$hash = $jc(_$hash, exclusionRules.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, retainCopies.hashCode);
     _$hash = $jc(_$hash, script.hashCode);
     _$hash = $jc(_$hash, secret.hashCode);
@@ -148,7 +148,7 @@ class _$DtoCronjobCreate extends DtoCronjobCreate {
           ..add('dbType', dbType)
           ..add('defaultDownload', defaultDownload)
           ..add('exclusionRules', exclusionRules)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('retainCopies', retainCopies)
           ..add('script', script)
           ..add('secret', secret)
@@ -209,9 +209,9 @@ class DtoCronjobCreateBuilder
   set exclusionRules(String? exclusionRules) =>
       _$this._exclusionRules = exclusionRules;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   int? _retainCopies;
   int? get retainCopies => _$this._retainCopies;
@@ -262,7 +262,7 @@ class DtoCronjobCreateBuilder
       _dbType = $v.dbType;
       _defaultDownload = $v.defaultDownload;
       _exclusionRules = $v.exclusionRules;
-      _name = $v.name;
+      _xname = $v.xname;
       _retainCopies = $v.retainCopies;
       _script = $v.script;
       _secret = $v.secret;
@@ -303,8 +303,8 @@ class DtoCronjobCreateBuilder
           dbType: dbType,
           defaultDownload: defaultDownload,
           exclusionRules: exclusionRules,
-          name: BuiltValueNullFieldError.checkNotNull(
-              name, r'DtoCronjobCreate', 'name'),
+          xname: BuiltValueNullFieldError.checkNotNull(
+              xname, r'DtoCronjobCreate', 'xname'),
           retainCopies: retainCopies,
           script: script,
           secret: secret,

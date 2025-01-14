@@ -12,7 +12,7 @@ part 'request_port_update.g.dart';
 ///
 /// Properties:
 /// * [key] 
-/// * [name] 
+/// * [xname] 
 /// * [port] 
 @BuiltValue()
 abstract class RequestPortUpdate implements Built<RequestPortUpdate, RequestPortUpdateBuilder> {
@@ -20,7 +20,7 @@ abstract class RequestPortUpdate implements Built<RequestPortUpdate, RequestPort
   String? get key;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'port')
   int? get port;
@@ -55,10 +55,10 @@ class _$RequestPortUpdateSerializer implements PrimitiveSerializer<RequestPortUp
         specifiedType: const FullType(String),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -104,7 +104,7 @@ class _$RequestPortUpdateSerializer implements PrimitiveSerializer<RequestPortUp
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'port':
           final valueDes = serializers.deserialize(

@@ -18,7 +18,7 @@ class _$ResponseAppItem extends ResponseAppItem {
   @override
   final int? limit;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? resource;
   @override
@@ -43,7 +43,7 @@ class _$ResponseAppItem extends ResponseAppItem {
       this.installed,
       this.key,
       this.limit,
-      this.name,
+      this.xname,
       this.resource,
       this.shortDescEn,
       this.shortDescZh,
@@ -70,7 +70,7 @@ class _$ResponseAppItem extends ResponseAppItem {
         installed == other.installed &&
         key == other.key &&
         limit == other.limit &&
-        name == other.name &&
+        xname == other.xname &&
         resource == other.resource &&
         shortDescEn == other.shortDescEn &&
         shortDescZh == other.shortDescZh &&
@@ -88,7 +88,7 @@ class _$ResponseAppItem extends ResponseAppItem {
     _$hash = $jc(_$hash, installed.hashCode);
     _$hash = $jc(_$hash, key.hashCode);
     _$hash = $jc(_$hash, limit.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, resource.hashCode);
     _$hash = $jc(_$hash, shortDescEn.hashCode);
     _$hash = $jc(_$hash, shortDescZh.hashCode);
@@ -108,7 +108,7 @@ class _$ResponseAppItem extends ResponseAppItem {
           ..add('installed', installed)
           ..add('key', key)
           ..add('limit', limit)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('resource', resource)
           ..add('shortDescEn', shortDescEn)
           ..add('shortDescZh', shortDescZh)
@@ -144,9 +144,9 @@ class ResponseAppItemBuilder
   int? get limit => _$this._limit;
   set limit(int? limit) => _$this._limit = limit;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _resource;
   String? get resource => _$this._resource;
@@ -190,7 +190,7 @@ class ResponseAppItemBuilder
       _installed = $v.installed;
       _key = $v.key;
       _limit = $v.limit;
-      _name = $v.name;
+      _xname = $v.xname;
       _resource = $v.resource;
       _shortDescEn = $v.shortDescEn;
       _shortDescZh = $v.shortDescZh;
@@ -227,7 +227,7 @@ class ResponseAppItemBuilder
             installed: installed,
             key: key,
             limit: limit,
-            name: name,
+            xname: xname,
             resource: resource,
             shortDescEn: shortDescEn,
             shortDescZh: shortDescZh,

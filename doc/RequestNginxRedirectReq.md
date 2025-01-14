@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **domains** | **BuiltList&lt;String&gt;** |  | [optional] 
 **enable** | **bool** |  | [optional] 
 **keepPath** | **bool** |  | [optional] 
-**name** | **String** |  | 
+**xname** | **String** |  | 
 **operate** | **String** |  | 
 **path** | **String** |  | [optional] 
 **redirect** | **String** |  | 

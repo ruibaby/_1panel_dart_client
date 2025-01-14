@@ -27,7 +27,7 @@ part 'files_file_info.g.dart';
 /// * [mimeType] 
 /// * [modTime] 
 /// * [mode] 
-/// * [name] 
+/// * [xname] 
 /// * [path] 
 /// * [size] 
 /// * [type] 
@@ -82,7 +82,7 @@ abstract class FilesFileInfo implements Built<FilesFileInfo, FilesFileInfoBuilde
   String? get mode;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'path')
   String? get path;
@@ -230,10 +230,10 @@ class _$FilesFileInfoSerializer implements PrimitiveSerializer<FilesFileInfo> {
         specifiedType: const FullType(String),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -412,7 +412,7 @@ class _$FilesFileInfoSerializer implements PrimitiveSerializer<FilesFileInfo> {
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'path':
           final valueDes = serializers.deserialize(

@@ -14,14 +14,14 @@ class _$DtoMysqlOption extends DtoMysqlOption {
   @override
   final int? id;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? type;
 
   factory _$DtoMysqlOption([void Function(DtoMysqlOptionBuilder)? updates]) =>
       (new DtoMysqlOptionBuilder()..update(updates))._build();
 
-  _$DtoMysqlOption._({this.database, this.from, this.id, this.name, this.type})
+  _$DtoMysqlOption._({this.database, this.from, this.id, this.xname, this.type})
       : super._();
 
   @override
@@ -39,7 +39,7 @@ class _$DtoMysqlOption extends DtoMysqlOption {
         database == other.database &&
         from == other.from &&
         id == other.id &&
-        name == other.name &&
+        xname == other.xname &&
         type == other.type;
   }
 
@@ -49,7 +49,7 @@ class _$DtoMysqlOption extends DtoMysqlOption {
     _$hash = $jc(_$hash, database.hashCode);
     _$hash = $jc(_$hash, from.hashCode);
     _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -61,7 +61,7 @@ class _$DtoMysqlOption extends DtoMysqlOption {
           ..add('database', database)
           ..add('from', from)
           ..add('id', id)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('type', type))
         .toString();
   }
@@ -83,9 +83,9 @@ class DtoMysqlOptionBuilder
   int? get id => _$this._id;
   set id(int? id) => _$this._id = id;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _type;
   String? get type => _$this._type;
@@ -101,7 +101,7 @@ class DtoMysqlOptionBuilder
       _database = $v.database;
       _from = $v.from;
       _id = $v.id;
-      _name = $v.name;
+      _xname = $v.xname;
       _type = $v.type;
       _$v = null;
     }
@@ -128,7 +128,7 @@ class DtoMysqlOptionBuilder
           database: database,
           from: from,
           id: id,
-          name: name,
+          xname: xname,
           type: type,
         );
     replace(_$result);

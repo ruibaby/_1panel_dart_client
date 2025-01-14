@@ -14,7 +14,7 @@ part 'dto_mysql_option.g.dart';
 /// * [database] 
 /// * [from] 
 /// * [id] 
-/// * [name] 
+/// * [xname] 
 /// * [type] 
 @BuiltValue()
 abstract class DtoMysqlOption implements Built<DtoMysqlOption, DtoMysqlOptionBuilder> {
@@ -28,7 +28,7 @@ abstract class DtoMysqlOption implements Built<DtoMysqlOption, DtoMysqlOptionBui
   int? get id;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'type')
   String? get type;
@@ -77,10 +77,10 @@ class _$DtoMysqlOptionSerializer implements PrimitiveSerializer<DtoMysqlOption> 
         specifiedType: const FullType(int),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -140,7 +140,7 @@ class _$DtoMysqlOptionSerializer implements PrimitiveSerializer<DtoMysqlOption> 
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'type':
           final valueDes = serializers.deserialize(

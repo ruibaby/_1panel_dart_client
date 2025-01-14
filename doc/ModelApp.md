@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **key** | **String** |  | [optional] 
 **lastModified** | **int** |  | [optional] 
 **limit** | **int** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **readMe** | **String** |  | [optional] 
 **recommend** | **int** |  | [optional] 
 **required_** | **String** |  | [optional] 

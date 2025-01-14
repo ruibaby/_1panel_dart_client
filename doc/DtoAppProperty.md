@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **github** | **String** |  | [optional] 
 **key** | **String** |  | [optional] 
 **limit** | **int** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **recommend** | **int** |  | [optional] 
 **shortDescEn** | **String** |  | [optional] 
 **shortDescZh** | **String** |  | [optional] 

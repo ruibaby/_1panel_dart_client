@@ -8,7 +8,7 @@ part of 'dto_operation_with_name_and_type.dart';
 
 class _$DtoOperationWithNameAndType extends DtoOperationWithNameAndType {
   @override
-  final String? name;
+  final String? xname;
   @override
   final String type;
 
@@ -16,7 +16,8 @@ class _$DtoOperationWithNameAndType extends DtoOperationWithNameAndType {
           [void Function(DtoOperationWithNameAndTypeBuilder)? updates]) =>
       (new DtoOperationWithNameAndTypeBuilder()..update(updates))._build();
 
-  _$DtoOperationWithNameAndType._({this.name, required this.type}) : super._() {
+  _$DtoOperationWithNameAndType._({this.xname, required this.type})
+      : super._() {
     BuiltValueNullFieldError.checkNotNull(
         type, r'DtoOperationWithNameAndType', 'type');
   }
@@ -34,14 +35,14 @@ class _$DtoOperationWithNameAndType extends DtoOperationWithNameAndType {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is DtoOperationWithNameAndType &&
-        name == other.name &&
+        xname == other.xname &&
         type == other.type;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -50,7 +51,7 @@ class _$DtoOperationWithNameAndType extends DtoOperationWithNameAndType {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'DtoOperationWithNameAndType')
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('type', type))
         .toString();
   }
@@ -62,9 +63,9 @@ class DtoOperationWithNameAndTypeBuilder
             DtoOperationWithNameAndTypeBuilder> {
   _$DtoOperationWithNameAndType? _$v;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _type;
   String? get type => _$this._type;
@@ -77,7 +78,7 @@ class DtoOperationWithNameAndTypeBuilder
   DtoOperationWithNameAndTypeBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _name = $v.name;
+      _xname = $v.xname;
       _type = $v.type;
       _$v = null;
     }
@@ -101,7 +102,7 @@ class DtoOperationWithNameAndTypeBuilder
   _$DtoOperationWithNameAndType _build() {
     final _$result = _$v ??
         new _$DtoOperationWithNameAndType._(
-          name: name,
+          xname: xname,
           type: BuiltValueNullFieldError.checkNotNull(
               type, r'DtoOperationWithNameAndType', 'type'),
         );

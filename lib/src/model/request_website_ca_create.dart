@@ -16,7 +16,7 @@ part 'request_website_ca_create.g.dart';
 /// * [commonName] 
 /// * [country] 
 /// * [keyType] 
-/// * [name] 
+/// * [xname] 
 /// * [organization] 
 /// * [organizationUint] 
 /// * [province] 
@@ -36,7 +36,7 @@ abstract class RequestWebsiteCACreate implements Built<RequestWebsiteCACreate, R
   // enum keyTypeEnum {  P256,  P384,  2048,  3072,  4096,  8192,  };
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'organization')
   String get organization;
@@ -94,7 +94,7 @@ class _$RequestWebsiteCACreateSerializer implements PrimitiveSerializer<RequestW
     );
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     yield r'organization';
@@ -172,7 +172,7 @@ class _$RequestWebsiteCACreateSerializer implements PrimitiveSerializer<RequestW
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'organization':
           final valueDes = serializers.deserialize(

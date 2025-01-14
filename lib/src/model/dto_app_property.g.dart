@@ -20,7 +20,7 @@ class _$DtoAppProperty extends DtoAppProperty {
   @override
   final int? limit;
   @override
-  final String? name;
+  final String? xname;
   @override
   final int? recommend;
   @override
@@ -46,7 +46,7 @@ class _$DtoAppProperty extends DtoAppProperty {
       this.github,
       this.key,
       this.limit,
-      this.name,
+      this.xname,
       this.recommend,
       this.shortDescEn,
       this.shortDescZh,
@@ -74,7 +74,7 @@ class _$DtoAppProperty extends DtoAppProperty {
         github == other.github &&
         key == other.key &&
         limit == other.limit &&
-        name == other.name &&
+        xname == other.xname &&
         recommend == other.recommend &&
         shortDescEn == other.shortDescEn &&
         shortDescZh == other.shortDescZh &&
@@ -93,7 +93,7 @@ class _$DtoAppProperty extends DtoAppProperty {
     _$hash = $jc(_$hash, github.hashCode);
     _$hash = $jc(_$hash, key.hashCode);
     _$hash = $jc(_$hash, limit.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, recommend.hashCode);
     _$hash = $jc(_$hash, shortDescEn.hashCode);
     _$hash = $jc(_$hash, shortDescZh.hashCode);
@@ -114,7 +114,7 @@ class _$DtoAppProperty extends DtoAppProperty {
           ..add('github', github)
           ..add('key', key)
           ..add('limit', limit)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('recommend', recommend)
           ..add('shortDescEn', shortDescEn)
           ..add('shortDescZh', shortDescZh)
@@ -157,9 +157,9 @@ class DtoAppPropertyBuilder
   int? get limit => _$this._limit;
   set limit(int? limit) => _$this._limit = limit;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   int? _recommend;
   int? get recommend => _$this._recommend;
@@ -202,7 +202,7 @@ class DtoAppPropertyBuilder
       _github = $v.github;
       _key = $v.key;
       _limit = $v.limit;
-      _name = $v.name;
+      _xname = $v.xname;
       _recommend = $v.recommend;
       _shortDescEn = $v.shortDescEn;
       _shortDescZh = $v.shortDescZh;
@@ -240,7 +240,7 @@ class DtoAppPropertyBuilder
             github: github,
             key: key,
             limit: limit,
-            name: name,
+            xname: xname,
             recommend: recommend,
             shortDescEn: shortDescEn,
             shortDescZh: shortDescZh,

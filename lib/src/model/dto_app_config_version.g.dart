@@ -16,7 +16,7 @@ class _$DtoAppConfigVersion extends DtoAppConfigVersion {
   @override
   final int? lastModified;
   @override
-  final String? name;
+  final String? xname;
 
   factory _$DtoAppConfigVersion(
           [void Function(DtoAppConfigVersionBuilder)? updates]) =>
@@ -27,7 +27,7 @@ class _$DtoAppConfigVersion extends DtoAppConfigVersion {
       this.downloadCallBackUrl,
       this.downloadUrl,
       this.lastModified,
-      this.name})
+      this.xname})
       : super._();
 
   @override
@@ -47,7 +47,7 @@ class _$DtoAppConfigVersion extends DtoAppConfigVersion {
         downloadCallBackUrl == other.downloadCallBackUrl &&
         downloadUrl == other.downloadUrl &&
         lastModified == other.lastModified &&
-        name == other.name;
+        xname == other.xname;
   }
 
   @override
@@ -57,7 +57,7 @@ class _$DtoAppConfigVersion extends DtoAppConfigVersion {
     _$hash = $jc(_$hash, downloadCallBackUrl.hashCode);
     _$hash = $jc(_$hash, downloadUrl.hashCode);
     _$hash = $jc(_$hash, lastModified.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -69,7 +69,7 @@ class _$DtoAppConfigVersion extends DtoAppConfigVersion {
           ..add('downloadCallBackUrl', downloadCallBackUrl)
           ..add('downloadUrl', downloadUrl)
           ..add('lastModified', lastModified)
-          ..add('name', name))
+          ..add('xname', xname))
         .toString();
   }
 }
@@ -96,9 +96,9 @@ class DtoAppConfigVersionBuilder
   int? get lastModified => _$this._lastModified;
   set lastModified(int? lastModified) => _$this._lastModified = lastModified;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   DtoAppConfigVersionBuilder() {
     DtoAppConfigVersion._defaults(this);
@@ -111,7 +111,7 @@ class DtoAppConfigVersionBuilder
       _downloadCallBackUrl = $v.downloadCallBackUrl;
       _downloadUrl = $v.downloadUrl;
       _lastModified = $v.lastModified;
-      _name = $v.name;
+      _xname = $v.xname;
       _$v = null;
     }
     return this;
@@ -138,7 +138,7 @@ class DtoAppConfigVersionBuilder
           downloadCallBackUrl: downloadCallBackUrl,
           downloadUrl: downloadUrl,
           lastModified: lastModified,
-          name: name,
+          xname: xname,
         );
     replace(_$result);
     return _$result;

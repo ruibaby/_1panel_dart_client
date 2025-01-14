@@ -94,7 +94,7 @@ class _$DtoCommonBackup extends DtoCommonBackup {
   @override
   final String? fileName;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? secret;
   @override
@@ -106,7 +106,7 @@ class _$DtoCommonBackup extends DtoCommonBackup {
   _$DtoCommonBackup._(
       {this.detailName,
       this.fileName,
-      this.name,
+      this.xname,
       this.secret,
       required this.type})
       : super._() {
@@ -127,7 +127,7 @@ class _$DtoCommonBackup extends DtoCommonBackup {
     return other is DtoCommonBackup &&
         detailName == other.detailName &&
         fileName == other.fileName &&
-        name == other.name &&
+        xname == other.xname &&
         secret == other.secret &&
         type == other.type;
   }
@@ -137,7 +137,7 @@ class _$DtoCommonBackup extends DtoCommonBackup {
     var _$hash = 0;
     _$hash = $jc(_$hash, detailName.hashCode);
     _$hash = $jc(_$hash, fileName.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, secret.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jf(_$hash);
@@ -149,7 +149,7 @@ class _$DtoCommonBackup extends DtoCommonBackup {
     return (newBuiltValueToStringHelper(r'DtoCommonBackup')
           ..add('detailName', detailName)
           ..add('fileName', fileName)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('secret', secret)
           ..add('type', type))
         .toString();
@@ -168,9 +168,9 @@ class DtoCommonBackupBuilder
   String? get fileName => _$this._fileName;
   set fileName(String? fileName) => _$this._fileName = fileName;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _secret;
   String? get secret => _$this._secret;
@@ -189,7 +189,7 @@ class DtoCommonBackupBuilder
     if ($v != null) {
       _detailName = $v.detailName;
       _fileName = $v.fileName;
-      _name = $v.name;
+      _xname = $v.xname;
       _secret = $v.secret;
       _type = $v.type;
       _$v = null;
@@ -216,7 +216,7 @@ class DtoCommonBackupBuilder
         new _$DtoCommonBackup._(
           detailName: detailName,
           fileName: fileName,
-          name: name,
+          xname: xname,
           secret: secret,
           type: BuiltValueNullFieldError.checkNotNull(
               type, r'DtoCommonBackup', 'type'),

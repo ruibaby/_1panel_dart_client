@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **image** | **String** |  | [optional] 
 **message** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **params** | **String** |  | [optional] 
 **port** | **int** |  | [optional] 
 **resource** | **String** |  | [optional] 

@@ -8,7 +8,7 @@ part of 'response_package_scripts.dart';
 
 class _$ResponsePackageScripts extends ResponsePackageScripts {
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? script;
 
@@ -16,7 +16,7 @@ class _$ResponsePackageScripts extends ResponsePackageScripts {
           [void Function(ResponsePackageScriptsBuilder)? updates]) =>
       (new ResponsePackageScriptsBuilder()..update(updates))._build();
 
-  _$ResponsePackageScripts._({this.name, this.script}) : super._();
+  _$ResponsePackageScripts._({this.xname, this.script}) : super._();
 
   @override
   ResponsePackageScripts rebuild(
@@ -31,14 +31,14 @@ class _$ResponsePackageScripts extends ResponsePackageScripts {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is ResponsePackageScripts &&
-        name == other.name &&
+        xname == other.xname &&
         script == other.script;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, script.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -47,7 +47,7 @@ class _$ResponsePackageScripts extends ResponsePackageScripts {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'ResponsePackageScripts')
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('script', script))
         .toString();
   }
@@ -57,9 +57,9 @@ class ResponsePackageScriptsBuilder
     implements Builder<ResponsePackageScripts, ResponsePackageScriptsBuilder> {
   _$ResponsePackageScripts? _$v;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _script;
   String? get script => _$this._script;
@@ -72,7 +72,7 @@ class ResponsePackageScriptsBuilder
   ResponsePackageScriptsBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _name = $v.name;
+      _xname = $v.xname;
       _script = $v.script;
       _$v = null;
     }
@@ -96,7 +96,7 @@ class ResponsePackageScriptsBuilder
   _$ResponsePackageScripts _build() {
     final _$result = _$v ??
         new _$ResponsePackageScripts._(
-          name: name,
+          xname: xname,
           script: script,
         );
     replace(_$result);

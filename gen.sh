@@ -17,6 +17,7 @@ npx @openapitools/openapi-generator-cli generate \
     -i https://raw.githubusercontent.com/1Panel-dev/1Panel/refs/heads/dev/cmd/server/docs/swagger.json \
     -g dart-dio \
     -o ./ \
+    --reserved-words-mappings update=xupdate,replace=xreplace,rebuild=xrebuild,name=xname \
     -c .openapi_config.yaml
 
 dart run build_runner build

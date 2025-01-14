@@ -8,15 +8,15 @@ part of 'dto_operation_with_name.dart';
 
 class _$DtoOperationWithName extends DtoOperationWithName {
   @override
-  final String name;
+  final String xname;
 
   factory _$DtoOperationWithName(
           [void Function(DtoOperationWithNameBuilder)? updates]) =>
       (new DtoOperationWithNameBuilder()..update(updates))._build();
 
-  _$DtoOperationWithName._({required this.name}) : super._() {
+  _$DtoOperationWithName._({required this.xname}) : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        name, r'DtoOperationWithName', 'name');
+        xname, r'DtoOperationWithName', 'xname');
   }
 
   @override
@@ -31,13 +31,13 @@ class _$DtoOperationWithName extends DtoOperationWithName {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is DtoOperationWithName && name == other.name;
+    return other is DtoOperationWithName && xname == other.xname;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -45,7 +45,7 @@ class _$DtoOperationWithName extends DtoOperationWithName {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'DtoOperationWithName')
-          ..add('name', name))
+          ..add('xname', xname))
         .toString();
   }
 }
@@ -54,9 +54,9 @@ class DtoOperationWithNameBuilder
     implements Builder<DtoOperationWithName, DtoOperationWithNameBuilder> {
   _$DtoOperationWithName? _$v;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   DtoOperationWithNameBuilder() {
     DtoOperationWithName._defaults(this);
@@ -65,7 +65,7 @@ class DtoOperationWithNameBuilder
   DtoOperationWithNameBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _name = $v.name;
+      _xname = $v.xname;
       _$v = null;
     }
     return this;
@@ -88,8 +88,8 @@ class DtoOperationWithNameBuilder
   _$DtoOperationWithName _build() {
     final _$result = _$v ??
         new _$DtoOperationWithName._(
-          name: BuiltValueNullFieldError.checkNotNull(
-              name, r'DtoOperationWithName', 'name'),
+          xname: BuiltValueNullFieldError.checkNotNull(
+              xname, r'DtoOperationWithName', 'xname'),
         );
     replace(_$result);
     return _$result;

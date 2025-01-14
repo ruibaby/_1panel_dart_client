@@ -154,7 +154,7 @@ class _$RequestWebsiteSearchOrderByEnumSerializer
 
 class _$RequestWebsiteSearch extends RequestWebsiteSearch {
   @override
-  final String? name;
+  final String? xname;
   @override
   final RequestWebsiteSearchOrderEnum order;
   @override
@@ -171,7 +171,7 @@ class _$RequestWebsiteSearch extends RequestWebsiteSearch {
       (new RequestWebsiteSearchBuilder()..update(updates))._build();
 
   _$RequestWebsiteSearch._(
-      {this.name,
+      {this.xname,
       required this.order,
       required this.orderBy,
       required this.page,
@@ -201,7 +201,7 @@ class _$RequestWebsiteSearch extends RequestWebsiteSearch {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is RequestWebsiteSearch &&
-        name == other.name &&
+        xname == other.xname &&
         order == other.order &&
         orderBy == other.orderBy &&
         page == other.page &&
@@ -212,7 +212,7 @@ class _$RequestWebsiteSearch extends RequestWebsiteSearch {
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, order.hashCode);
     _$hash = $jc(_$hash, orderBy.hashCode);
     _$hash = $jc(_$hash, page.hashCode);
@@ -225,7 +225,7 @@ class _$RequestWebsiteSearch extends RequestWebsiteSearch {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'RequestWebsiteSearch')
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('order', order)
           ..add('orderBy', orderBy)
           ..add('page', page)
@@ -239,9 +239,9 @@ class RequestWebsiteSearchBuilder
     implements Builder<RequestWebsiteSearch, RequestWebsiteSearchBuilder> {
   _$RequestWebsiteSearch? _$v;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   RequestWebsiteSearchOrderEnum? _order;
   RequestWebsiteSearchOrderEnum? get order => _$this._order;
@@ -272,7 +272,7 @@ class RequestWebsiteSearchBuilder
   RequestWebsiteSearchBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _name = $v.name;
+      _xname = $v.xname;
       _order = $v.order;
       _orderBy = $v.orderBy;
       _page = $v.page;
@@ -300,7 +300,7 @@ class RequestWebsiteSearchBuilder
   _$RequestWebsiteSearch _build() {
     final _$result = _$v ??
         new _$RequestWebsiteSearch._(
-          name: name,
+          xname: xname,
           order: BuiltValueNullFieldError.checkNotNull(
               order, r'RequestWebsiteSearch', 'order'),
           orderBy: BuiltValueNullFieldError.checkNotNull(

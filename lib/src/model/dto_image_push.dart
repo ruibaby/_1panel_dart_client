@@ -11,13 +11,13 @@ part 'dto_image_push.g.dart';
 /// DtoImagePush
 ///
 /// Properties:
-/// * [name] 
+/// * [xname] 
 /// * [repoID] 
 /// * [tagName] 
 @BuiltValue()
 abstract class DtoImagePush implements Built<DtoImagePush, DtoImagePushBuilder> {
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'repoID')
   int get repoID;
@@ -50,7 +50,7 @@ class _$DtoImagePushSerializer implements PrimitiveSerializer<DtoImagePush> {
   }) sync* {
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     yield r'repoID';
@@ -91,7 +91,7 @@ class _$DtoImagePushSerializer implements PrimitiveSerializer<DtoImagePush> {
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'repoID':
           final valueDes = serializers.deserialize(

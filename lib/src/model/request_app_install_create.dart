@@ -23,7 +23,7 @@ part 'request_app_install_create.g.dart';
 /// * [hostMode] 
 /// * [memoryLimit] 
 /// * [memoryUnit] 
-/// * [name] 
+/// * [xname] 
 /// * [params] 
 /// * [pullImage] 
 /// * [services] 
@@ -60,7 +60,7 @@ abstract class RequestAppInstallCreate implements Built<RequestAppInstallCreate,
   String? get memoryUnit;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'params')
   BuiltMap<String, JsonObject?>? get params;
@@ -164,7 +164,7 @@ class _$RequestAppInstallCreateSerializer implements PrimitiveSerializer<Request
     }
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     if (object.params != null) {
@@ -286,7 +286,7 @@ class _$RequestAppInstallCreateSerializer implements PrimitiveSerializer<Request
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'params':
           final valueDes = serializers.deserialize(

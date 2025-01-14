@@ -15,7 +15,7 @@ part 'request_nginx_redirect_req.g.dart';
 /// * [domains] 
 /// * [enable] 
 /// * [keepPath] 
-/// * [name] 
+/// * [xname] 
 /// * [operate] 
 /// * [path] 
 /// * [redirect] 
@@ -35,7 +35,7 @@ abstract class RequestNginxRedirectReq implements Built<RequestNginxRedirectReq,
   bool? get keepPath;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'operate')
   String get operate;
@@ -104,7 +104,7 @@ class _$RequestNginxRedirectReqSerializer implements PrimitiveSerializer<Request
     }
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     yield r'operate';
@@ -195,7 +195,7 @@ class _$RequestNginxRedirectReqSerializer implements PrimitiveSerializer<Request
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'operate':
           final valueDes = serializers.deserialize(

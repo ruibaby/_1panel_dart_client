@@ -72,7 +72,7 @@ class _$DtoDatabaseCreate extends DtoDatabaseCreate {
   @override
   final DtoDatabaseCreateFromEnum from;
   @override
-  final String name;
+  final String xname;
   @override
   final String? password;
   @override
@@ -100,7 +100,7 @@ class _$DtoDatabaseCreate extends DtoDatabaseCreate {
       this.clientKey,
       this.description,
       required this.from,
-      required this.name,
+      required this.xname,
       this.password,
       this.port,
       this.rootCert,
@@ -111,7 +111,7 @@ class _$DtoDatabaseCreate extends DtoDatabaseCreate {
       required this.version})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(from, r'DtoDatabaseCreate', 'from');
-    BuiltValueNullFieldError.checkNotNull(name, r'DtoDatabaseCreate', 'name');
+    BuiltValueNullFieldError.checkNotNull(xname, r'DtoDatabaseCreate', 'xname');
     BuiltValueNullFieldError.checkNotNull(type, r'DtoDatabaseCreate', 'type');
     BuiltValueNullFieldError.checkNotNull(
         username, r'DtoDatabaseCreate', 'username');
@@ -136,7 +136,7 @@ class _$DtoDatabaseCreate extends DtoDatabaseCreate {
         clientKey == other.clientKey &&
         description == other.description &&
         from == other.from &&
-        name == other.name &&
+        xname == other.xname &&
         password == other.password &&
         port == other.port &&
         rootCert == other.rootCert &&
@@ -155,7 +155,7 @@ class _$DtoDatabaseCreate extends DtoDatabaseCreate {
     _$hash = $jc(_$hash, clientKey.hashCode);
     _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, from.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, password.hashCode);
     _$hash = $jc(_$hash, port.hashCode);
     _$hash = $jc(_$hash, rootCert.hashCode);
@@ -176,7 +176,7 @@ class _$DtoDatabaseCreate extends DtoDatabaseCreate {
           ..add('clientKey', clientKey)
           ..add('description', description)
           ..add('from', from)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('password', password)
           ..add('port', port)
           ..add('rootCert', rootCert)
@@ -213,9 +213,9 @@ class DtoDatabaseCreateBuilder
   DtoDatabaseCreateFromEnum? get from => _$this._from;
   set from(DtoDatabaseCreateFromEnum? from) => _$this._from = from;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _password;
   String? get password => _$this._password;
@@ -261,7 +261,7 @@ class DtoDatabaseCreateBuilder
       _clientKey = $v.clientKey;
       _description = $v.description;
       _from = $v.from;
-      _name = $v.name;
+      _xname = $v.xname;
       _password = $v.password;
       _port = $v.port;
       _rootCert = $v.rootCert;
@@ -298,8 +298,8 @@ class DtoDatabaseCreateBuilder
           description: description,
           from: BuiltValueNullFieldError.checkNotNull(
               from, r'DtoDatabaseCreate', 'from'),
-          name: BuiltValueNullFieldError.checkNotNull(
-              name, r'DtoDatabaseCreate', 'name'),
+          xname: BuiltValueNullFieldError.checkNotNull(
+              xname, r'DtoDatabaseCreate', 'xname'),
           password: password,
           port: port,
           rootCert: rootCert,

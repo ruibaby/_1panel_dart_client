@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **format** | **String** |  | 
 **from** | **String** |  | 
-**name** | **String** |  | 
+**xname** | **String** |  | 
 **password** | **String** |  | 
 **permission** | **String** |  | 
 **username** | **String** |  | 

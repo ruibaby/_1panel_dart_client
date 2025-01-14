@@ -12,12 +12,12 @@ part 'response_nginx_param.g.dart';
 /// ResponseNginxParam
 ///
 /// Properties:
-/// * [name] 
+/// * [xname] 
 /// * [params] 
 @BuiltValue()
 abstract class ResponseNginxParam implements Built<ResponseNginxParam, ResponseNginxParamBuilder> {
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'params')
   BuiltList<String>? get params;
@@ -45,10 +45,10 @@ class _$ResponseNginxParamSerializer implements PrimitiveSerializer<ResponseNgin
     ResponseNginxParam object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -87,7 +87,7 @@ class _$ResponseNginxParamSerializer implements PrimitiveSerializer<ResponseNgin
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'params':
           final valueDes = serializers.deserialize(

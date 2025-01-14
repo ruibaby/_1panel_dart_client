@@ -2,9 +2,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:built_value/built_value.dart';
 // ignore_for_file: unused_element
 import 'package:built_value/json_object.dart';
+import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
 part 'response_app_detail_dto.g.dart';
@@ -12,26 +12,25 @@ part 'response_app_detail_dto.g.dart';
 /// ResponseAppDetailDTO
 ///
 /// Properties:
-/// * [appId]
-/// * [createdAt]
-/// * [dockerCompose]
-/// * [downloadCallBackUrl]
-/// * [downloadUrl]
-/// * [enable]
-/// * [hostMode]
-/// * [id]
-/// * [ignoreUpgrade]
-/// * [image]
-/// * [lastModified]
-/// * [lastVersion]
-/// * [params]
-/// * [status]
-/// * [update]
-/// * [updatedAt]
-/// * [version]
+/// * [appId] 
+/// * [createdAt] 
+/// * [dockerCompose] 
+/// * [downloadCallBackUrl] 
+/// * [downloadUrl] 
+/// * [enable] 
+/// * [hostMode] 
+/// * [id] 
+/// * [ignoreUpgrade] 
+/// * [image] 
+/// * [lastModified] 
+/// * [lastVersion] 
+/// * [params] 
+/// * [status] 
+/// * [xupdate] 
+/// * [updatedAt] 
+/// * [version] 
 @BuiltValue()
-abstract class ResponseAppDetailDTO
-    implements Built<ResponseAppDetailDTO, ResponseAppDetailDTOBuilder> {
+abstract class ResponseAppDetailDTO implements Built<ResponseAppDetailDTO, ResponseAppDetailDTOBuilder> {
   @BuiltValueField(wireName: r'appId')
   int? get appId;
 
@@ -75,7 +74,7 @@ abstract class ResponseAppDetailDTO
   String? get status;
 
   @BuiltValueField(wireName: r'update')
-  bool? get hasUpdate;
+  bool? get xupdate;
 
   @BuiltValueField(wireName: r'updatedAt')
   String? get updatedAt;
@@ -85,24 +84,18 @@ abstract class ResponseAppDetailDTO
 
   ResponseAppDetailDTO._();
 
-  factory ResponseAppDetailDTO([void updates(ResponseAppDetailDTOBuilder b)]) =
-      _$ResponseAppDetailDTO;
+  factory ResponseAppDetailDTO([void updates(ResponseAppDetailDTOBuilder b)]) = _$ResponseAppDetailDTO;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(ResponseAppDetailDTOBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<ResponseAppDetailDTO> get serializer =>
-      _$ResponseAppDetailDTOSerializer();
+  static Serializer<ResponseAppDetailDTO> get serializer => _$ResponseAppDetailDTOSerializer();
 }
 
-class _$ResponseAppDetailDTOSerializer
-    implements PrimitiveSerializer<ResponseAppDetailDTO> {
+class _$ResponseAppDetailDTOSerializer implements PrimitiveSerializer<ResponseAppDetailDTO> {
   @override
-  final Iterable<Type> types = const [
-    ResponseAppDetailDTO,
-    _$ResponseAppDetailDTO
-  ];
+  final Iterable<Type> types = const [ResponseAppDetailDTO, _$ResponseAppDetailDTO];
 
   @override
   final String wireName = r'ResponseAppDetailDTO';
@@ -210,10 +203,10 @@ class _$ResponseAppDetailDTOSerializer
         specifiedType: const FullType(String),
       );
     }
-    if (object.hasUpdate != null) {
+    if (object.xupdate != null) {
       yield r'update';
       yield serializers.serialize(
-        object.hasUpdate,
+        object.xupdate,
         specifiedType: const FullType(bool),
       );
     }
@@ -239,9 +232,7 @@ class _$ResponseAppDetailDTOSerializer
     ResponseAppDetailDTO object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object,
-            specifiedType: specifiedType)
-        .toList();
+    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
   }
 
   void _deserializeProperties(
@@ -359,7 +350,7 @@ class _$ResponseAppDetailDTOSerializer
             value,
             specifiedType: const FullType(bool),
           ) as bool;
-          result.hasUpdate = valueDes;
+          result.xupdate = valueDes;
           break;
         case r'updatedAt':
           final valueDes = serializers.deserialize(
@@ -403,3 +394,4 @@ class _$ResponseAppDetailDTOSerializer
     return result.build();
   }
 }
+

@@ -12,7 +12,7 @@ class _$ResponseNodeModule extends ResponseNodeModule {
   @override
   final String? license;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? version;
 
@@ -21,7 +21,7 @@ class _$ResponseNodeModule extends ResponseNodeModule {
       (new ResponseNodeModuleBuilder()..update(updates))._build();
 
   _$ResponseNodeModule._(
-      {this.description, this.license, this.name, this.version})
+      {this.description, this.license, this.xname, this.version})
       : super._();
 
   @override
@@ -39,7 +39,7 @@ class _$ResponseNodeModule extends ResponseNodeModule {
     return other is ResponseNodeModule &&
         description == other.description &&
         license == other.license &&
-        name == other.name &&
+        xname == other.xname &&
         version == other.version;
   }
 
@@ -48,7 +48,7 @@ class _$ResponseNodeModule extends ResponseNodeModule {
     var _$hash = 0;
     _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, license.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -59,7 +59,7 @@ class _$ResponseNodeModule extends ResponseNodeModule {
     return (newBuiltValueToStringHelper(r'ResponseNodeModule')
           ..add('description', description)
           ..add('license', license)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('version', version))
         .toString();
   }
@@ -77,9 +77,9 @@ class ResponseNodeModuleBuilder
   String? get license => _$this._license;
   set license(String? license) => _$this._license = license;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _version;
   String? get version => _$this._version;
@@ -94,7 +94,7 @@ class ResponseNodeModuleBuilder
     if ($v != null) {
       _description = $v.description;
       _license = $v.license;
-      _name = $v.name;
+      _xname = $v.xname;
       _version = $v.version;
       _$v = null;
     }
@@ -120,7 +120,7 @@ class ResponseNodeModuleBuilder
         new _$ResponseNodeModule._(
           description: description,
           license: license,
-          name: name,
+          xname: xname,
           version: version,
         );
     replace(_$result);

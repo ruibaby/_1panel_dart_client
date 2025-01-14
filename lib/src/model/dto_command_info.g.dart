@@ -16,13 +16,13 @@ class _$DtoCommandInfo extends DtoCommandInfo {
   @override
   final int? id;
   @override
-  final String? name;
+  final String? xname;
 
   factory _$DtoCommandInfo([void Function(DtoCommandInfoBuilder)? updates]) =>
       (new DtoCommandInfoBuilder()..update(updates))._build();
 
   _$DtoCommandInfo._(
-      {this.command, this.groupBelong, this.groupID, this.id, this.name})
+      {this.command, this.groupBelong, this.groupID, this.id, this.xname})
       : super._();
 
   @override
@@ -41,7 +41,7 @@ class _$DtoCommandInfo extends DtoCommandInfo {
         groupBelong == other.groupBelong &&
         groupID == other.groupID &&
         id == other.id &&
-        name == other.name;
+        xname == other.xname;
   }
 
   @override
@@ -51,7 +51,7 @@ class _$DtoCommandInfo extends DtoCommandInfo {
     _$hash = $jc(_$hash, groupBelong.hashCode);
     _$hash = $jc(_$hash, groupID.hashCode);
     _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -63,7 +63,7 @@ class _$DtoCommandInfo extends DtoCommandInfo {
           ..add('groupBelong', groupBelong)
           ..add('groupID', groupID)
           ..add('id', id)
-          ..add('name', name))
+          ..add('xname', xname))
         .toString();
   }
 }
@@ -88,9 +88,9 @@ class DtoCommandInfoBuilder
   int? get id => _$this._id;
   set id(int? id) => _$this._id = id;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   DtoCommandInfoBuilder() {
     DtoCommandInfo._defaults(this);
@@ -103,7 +103,7 @@ class DtoCommandInfoBuilder
       _groupBelong = $v.groupBelong;
       _groupID = $v.groupID;
       _id = $v.id;
-      _name = $v.name;
+      _xname = $v.xname;
       _$v = null;
     }
     return this;
@@ -130,7 +130,7 @@ class DtoCommandInfoBuilder
           groupBelong: groupBelong,
           groupID: groupID,
           id: id,
-          name: name,
+          xname: xname,
         );
     replace(_$result);
     return _$result;

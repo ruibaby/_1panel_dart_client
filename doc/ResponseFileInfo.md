@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **mimeType** | **String** |  | [optional] 
 **modTime** | **String** |  | [optional] 
 **mode** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **path** | **String** |  | [optional] 
 **size** | **int** |  | [optional] 
 **type** | **String** |  | [optional] 

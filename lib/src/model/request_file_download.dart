@@ -13,7 +13,7 @@ part 'request_file_download.g.dart';
 ///
 /// Properties:
 /// * [compress] 
-/// * [name] 
+/// * [xname] 
 /// * [paths] 
 /// * [type] 
 @BuiltValue()
@@ -22,7 +22,7 @@ abstract class RequestFileDownload implements Built<RequestFileDownload, Request
   bool? get compress;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'paths')
   BuiltList<String> get paths;
@@ -62,7 +62,7 @@ class _$RequestFileDownloadSerializer implements PrimitiveSerializer<RequestFile
     }
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     yield r'paths';
@@ -110,7 +110,7 @@ class _$RequestFileDownloadSerializer implements PrimitiveSerializer<RequestFile
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'paths':
           final valueDes = serializers.deserialize(

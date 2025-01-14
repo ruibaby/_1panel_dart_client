@@ -193,7 +193,7 @@ class DtoSearchClamWithPageOrderEnum extends EnumClass {
 class DtoSearchClamWithPageOrderByEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'name')
-  static const DtoSearchClamWithPageOrderByEnum name = _$dtoSearchClamWithPageOrderByEnum_name;
+  static const DtoSearchClamWithPageOrderByEnum xname = _$dtoSearchClamWithPageOrderByEnum_xname;
   @BuiltValueEnumConst(wireName: r'status')
   static const DtoSearchClamWithPageOrderByEnum status = _$dtoSearchClamWithPageOrderByEnum_status;
   @BuiltValueEnumConst(wireName: r'created_at')

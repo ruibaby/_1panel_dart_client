@@ -20,7 +20,7 @@ class _$DtoClamUpdate extends DtoClamUpdate {
   @override
   final String? infectedStrategy;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? path;
   @override
@@ -36,7 +36,7 @@ class _$DtoClamUpdate extends DtoClamUpdate {
       this.id,
       this.infectedDir,
       this.infectedStrategy,
-      this.name,
+      this.xname,
       this.path,
       this.spec})
       : super._();
@@ -58,7 +58,7 @@ class _$DtoClamUpdate extends DtoClamUpdate {
         id == other.id &&
         infectedDir == other.infectedDir &&
         infectedStrategy == other.infectedStrategy &&
-        name == other.name &&
+        xname == other.xname &&
         path == other.path &&
         spec == other.spec;
   }
@@ -72,7 +72,7 @@ class _$DtoClamUpdate extends DtoClamUpdate {
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, infectedDir.hashCode);
     _$hash = $jc(_$hash, infectedStrategy.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, path.hashCode);
     _$hash = $jc(_$hash, spec.hashCode);
     _$hash = $jf(_$hash);
@@ -88,7 +88,7 @@ class _$DtoClamUpdate extends DtoClamUpdate {
           ..add('id', id)
           ..add('infectedDir', infectedDir)
           ..add('infectedStrategy', infectedStrategy)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('path', path)
           ..add('spec', spec))
         .toString();
@@ -124,9 +124,9 @@ class DtoClamUpdateBuilder
   set infectedStrategy(String? infectedStrategy) =>
       _$this._infectedStrategy = infectedStrategy;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _path;
   String? get path => _$this._path;
@@ -149,7 +149,7 @@ class DtoClamUpdateBuilder
       _id = $v.id;
       _infectedDir = $v.infectedDir;
       _infectedStrategy = $v.infectedStrategy;
-      _name = $v.name;
+      _xname = $v.xname;
       _path = $v.path;
       _spec = $v.spec;
       _$v = null;
@@ -180,7 +180,7 @@ class DtoClamUpdateBuilder
           id: id,
           infectedDir: infectedDir,
           infectedStrategy: infectedStrategy,
-          name: name,
+          xname: xname,
           path: path,
           spec: spec,
         );

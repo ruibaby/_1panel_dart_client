@@ -12,24 +12,22 @@ part 'request_app_installed_search.g.dart';
 /// RequestAppInstalledSearch
 ///
 /// Properties:
-/// * [all]
-/// * [name]
-/// * [page]
-/// * [pageSize]
-/// * [sync_]
-/// * [tags]
-/// * [type]
-/// * [unused]
-/// * [update]
+/// * [all] 
+/// * [xname] 
+/// * [page] 
+/// * [pageSize] 
+/// * [sync_] 
+/// * [tags] 
+/// * [type] 
+/// * [unused] 
+/// * [xupdate] 
 @BuiltValue()
-abstract class RequestAppInstalledSearch
-    implements
-        Built<RequestAppInstalledSearch, RequestAppInstalledSearchBuilder> {
+abstract class RequestAppInstalledSearch implements Built<RequestAppInstalledSearch, RequestAppInstalledSearchBuilder> {
   @BuiltValueField(wireName: r'all')
   bool? get all;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'page')
   int get page;
@@ -50,29 +48,22 @@ abstract class RequestAppInstalledSearch
   bool? get unused;
 
   @BuiltValueField(wireName: r'update')
-  bool? get hasUpdate;
+  bool? get xupdate;
 
   RequestAppInstalledSearch._();
 
-  factory RequestAppInstalledSearch(
-          [void updates(RequestAppInstalledSearchBuilder b)]) =
-      _$RequestAppInstalledSearch;
+  factory RequestAppInstalledSearch([void updates(RequestAppInstalledSearchBuilder b)]) = _$RequestAppInstalledSearch;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(RequestAppInstalledSearchBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<RequestAppInstalledSearch> get serializer =>
-      _$RequestAppInstalledSearchSerializer();
+  static Serializer<RequestAppInstalledSearch> get serializer => _$RequestAppInstalledSearchSerializer();
 }
 
-class _$RequestAppInstalledSearchSerializer
-    implements PrimitiveSerializer<RequestAppInstalledSearch> {
+class _$RequestAppInstalledSearchSerializer implements PrimitiveSerializer<RequestAppInstalledSearch> {
   @override
-  final Iterable<Type> types = const [
-    RequestAppInstalledSearch,
-    _$RequestAppInstalledSearch
-  ];
+  final Iterable<Type> types = const [RequestAppInstalledSearch, _$RequestAppInstalledSearch];
 
   @override
   final String wireName = r'RequestAppInstalledSearch';
@@ -89,10 +80,10 @@ class _$RequestAppInstalledSearchSerializer
         specifiedType: const FullType(bool),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -134,10 +125,10 @@ class _$RequestAppInstalledSearchSerializer
         specifiedType: const FullType(bool),
       );
     }
-    if (object.update != null) {
+    if (object.xupdate != null) {
       yield r'update';
       yield serializers.serialize(
-        object.update,
+        object.xupdate,
         specifiedType: const FullType(bool),
       );
     }
@@ -149,9 +140,7 @@ class _$RequestAppInstalledSearchSerializer
     RequestAppInstalledSearch object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object,
-            specifiedType: specifiedType)
-        .toList();
+    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
   }
 
   void _deserializeProperties(
@@ -178,7 +167,7 @@ class _$RequestAppInstalledSearchSerializer
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'page':
           final valueDes = serializers.deserialize(
@@ -227,7 +216,7 @@ class _$RequestAppInstalledSearchSerializer
             value,
             specifiedType: const FullType(bool),
           ) as bool;
-          result.update = valueDes;
+          result.xupdate = valueDes;
           break;
         default:
           unhandled.add(key);
@@ -257,3 +246,4 @@ class _$RequestAppInstalledSearchSerializer
     return result.build();
   }
 }
+

@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **installPath** | **String** |  | [optional] 
 **isExist** | **bool** |  | [optional] 
 **lastBackupAt** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 
 **version** | **String** |  | [optional] 
 

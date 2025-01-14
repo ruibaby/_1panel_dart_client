@@ -211,7 +211,7 @@ class DtoDatabaseSearchOrderEnum extends EnumClass {
 class DtoDatabaseSearchOrderByEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'name')
-  static const DtoDatabaseSearchOrderByEnum name = _$dtoDatabaseSearchOrderByEnum_name;
+  static const DtoDatabaseSearchOrderByEnum xname = _$dtoDatabaseSearchOrderByEnum_xname;
   @BuiltValueEnumConst(wireName: r'created_at')
   static const DtoDatabaseSearchOrderByEnum createdAt = _$dtoDatabaseSearchOrderByEnum_createdAt;
 

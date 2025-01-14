@@ -18,7 +18,7 @@ class _$DtoClamCreate extends DtoClamCreate {
   @override
   final String? infectedStrategy;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? path;
   @override
@@ -35,7 +35,7 @@ class _$DtoClamCreate extends DtoClamCreate {
       this.description,
       this.infectedDir,
       this.infectedStrategy,
-      this.name,
+      this.xname,
       this.path,
       this.spec,
       this.status})
@@ -57,7 +57,7 @@ class _$DtoClamCreate extends DtoClamCreate {
         description == other.description &&
         infectedDir == other.infectedDir &&
         infectedStrategy == other.infectedStrategy &&
-        name == other.name &&
+        xname == other.xname &&
         path == other.path &&
         spec == other.spec &&
         status == other.status;
@@ -71,7 +71,7 @@ class _$DtoClamCreate extends DtoClamCreate {
     _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, infectedDir.hashCode);
     _$hash = $jc(_$hash, infectedStrategy.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, path.hashCode);
     _$hash = $jc(_$hash, spec.hashCode);
     _$hash = $jc(_$hash, status.hashCode);
@@ -87,7 +87,7 @@ class _$DtoClamCreate extends DtoClamCreate {
           ..add('description', description)
           ..add('infectedDir', infectedDir)
           ..add('infectedStrategy', infectedStrategy)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('path', path)
           ..add('spec', spec)
           ..add('status', status))
@@ -120,9 +120,9 @@ class DtoClamCreateBuilder
   set infectedStrategy(String? infectedStrategy) =>
       _$this._infectedStrategy = infectedStrategy;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _path;
   String? get path => _$this._path;
@@ -148,7 +148,7 @@ class DtoClamCreateBuilder
       _description = $v.description;
       _infectedDir = $v.infectedDir;
       _infectedStrategy = $v.infectedStrategy;
-      _name = $v.name;
+      _xname = $v.xname;
       _path = $v.path;
       _spec = $v.spec;
       _status = $v.status;
@@ -179,7 +179,7 @@ class DtoClamCreateBuilder
           description: description,
           infectedDir: infectedDir,
           infectedStrategy: infectedStrategy,
-          name: name,
+          xname: xname,
           path: path,
           spec: spec,
           status: status,

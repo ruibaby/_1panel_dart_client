@@ -13,7 +13,7 @@ part 'request_file_move.g.dart';
 ///
 /// Properties:
 /// * [cover] 
-/// * [name] 
+/// * [xname] 
 /// * [newPath] 
 /// * [oldPaths] 
 /// * [type] 
@@ -23,7 +23,7 @@ abstract class RequestFileMove implements Built<RequestFileMove, RequestFileMove
   bool? get cover;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'newPath')
   String get newPath;
@@ -64,10 +64,10 @@ class _$RequestFileMoveSerializer implements PrimitiveSerializer<RequestFileMove
         specifiedType: const FullType(bool),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -121,7 +121,7 @@ class _$RequestFileMoveSerializer implements PrimitiveSerializer<RequestFileMove
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'newPath':
           final valueDes = serializers.deserialize(

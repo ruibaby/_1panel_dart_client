@@ -108,7 +108,7 @@ class _$RequestWebsiteCACreate extends RequestWebsiteCACreate {
   @override
   final RequestWebsiteCACreateKeyTypeEnum keyType;
   @override
-  final String name;
+  final String xname;
   @override
   final String organization;
   @override
@@ -125,7 +125,7 @@ class _$RequestWebsiteCACreate extends RequestWebsiteCACreate {
       required this.commonName,
       required this.country,
       required this.keyType,
-      required this.name,
+      required this.xname,
       required this.organization,
       this.organizationUint,
       this.province})
@@ -137,7 +137,7 @@ class _$RequestWebsiteCACreate extends RequestWebsiteCACreate {
     BuiltValueNullFieldError.checkNotNull(
         keyType, r'RequestWebsiteCACreate', 'keyType');
     BuiltValueNullFieldError.checkNotNull(
-        name, r'RequestWebsiteCACreate', 'name');
+        xname, r'RequestWebsiteCACreate', 'xname');
     BuiltValueNullFieldError.checkNotNull(
         organization, r'RequestWebsiteCACreate', 'organization');
   }
@@ -159,7 +159,7 @@ class _$RequestWebsiteCACreate extends RequestWebsiteCACreate {
         commonName == other.commonName &&
         country == other.country &&
         keyType == other.keyType &&
-        name == other.name &&
+        xname == other.xname &&
         organization == other.organization &&
         organizationUint == other.organizationUint &&
         province == other.province;
@@ -172,7 +172,7 @@ class _$RequestWebsiteCACreate extends RequestWebsiteCACreate {
     _$hash = $jc(_$hash, commonName.hashCode);
     _$hash = $jc(_$hash, country.hashCode);
     _$hash = $jc(_$hash, keyType.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, organization.hashCode);
     _$hash = $jc(_$hash, organizationUint.hashCode);
     _$hash = $jc(_$hash, province.hashCode);
@@ -187,7 +187,7 @@ class _$RequestWebsiteCACreate extends RequestWebsiteCACreate {
           ..add('commonName', commonName)
           ..add('country', country)
           ..add('keyType', keyType)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('organization', organization)
           ..add('organizationUint', organizationUint)
           ..add('province', province))
@@ -216,9 +216,9 @@ class RequestWebsiteCACreateBuilder
   set keyType(RequestWebsiteCACreateKeyTypeEnum? keyType) =>
       _$this._keyType = keyType;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _organization;
   String? get organization => _$this._organization;
@@ -244,7 +244,7 @@ class RequestWebsiteCACreateBuilder
       _commonName = $v.commonName;
       _country = $v.country;
       _keyType = $v.keyType;
-      _name = $v.name;
+      _xname = $v.xname;
       _organization = $v.organization;
       _organizationUint = $v.organizationUint;
       _province = $v.province;
@@ -277,8 +277,8 @@ class RequestWebsiteCACreateBuilder
               country, r'RequestWebsiteCACreate', 'country'),
           keyType: BuiltValueNullFieldError.checkNotNull(
               keyType, r'RequestWebsiteCACreate', 'keyType'),
-          name: BuiltValueNullFieldError.checkNotNull(
-              name, r'RequestWebsiteCACreate', 'name'),
+          xname: BuiltValueNullFieldError.checkNotNull(
+              xname, r'RequestWebsiteCACreate', 'xname'),
           organization: BuiltValueNullFieldError.checkNotNull(
               organization, r'RequestWebsiteCACreate', 'organization'),
           organizationUint: organizationUint,

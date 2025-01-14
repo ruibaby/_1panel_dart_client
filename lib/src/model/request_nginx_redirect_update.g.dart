@@ -10,7 +10,7 @@ class _$RequestNginxRedirectUpdate extends RequestNginxRedirectUpdate {
   @override
   final String content;
   @override
-  final String name;
+  final String xname;
   @override
   final int websiteID;
 
@@ -19,12 +19,12 @@ class _$RequestNginxRedirectUpdate extends RequestNginxRedirectUpdate {
       (new RequestNginxRedirectUpdateBuilder()..update(updates))._build();
 
   _$RequestNginxRedirectUpdate._(
-      {required this.content, required this.name, required this.websiteID})
+      {required this.content, required this.xname, required this.websiteID})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         content, r'RequestNginxRedirectUpdate', 'content');
     BuiltValueNullFieldError.checkNotNull(
-        name, r'RequestNginxRedirectUpdate', 'name');
+        xname, r'RequestNginxRedirectUpdate', 'xname');
     BuiltValueNullFieldError.checkNotNull(
         websiteID, r'RequestNginxRedirectUpdate', 'websiteID');
   }
@@ -43,7 +43,7 @@ class _$RequestNginxRedirectUpdate extends RequestNginxRedirectUpdate {
     if (identical(other, this)) return true;
     return other is RequestNginxRedirectUpdate &&
         content == other.content &&
-        name == other.name &&
+        xname == other.xname &&
         websiteID == other.websiteID;
   }
 
@@ -51,7 +51,7 @@ class _$RequestNginxRedirectUpdate extends RequestNginxRedirectUpdate {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, content.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, websiteID.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -61,7 +61,7 @@ class _$RequestNginxRedirectUpdate extends RequestNginxRedirectUpdate {
   String toString() {
     return (newBuiltValueToStringHelper(r'RequestNginxRedirectUpdate')
           ..add('content', content)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('websiteID', websiteID))
         .toString();
   }
@@ -76,9 +76,9 @@ class RequestNginxRedirectUpdateBuilder
   String? get content => _$this._content;
   set content(String? content) => _$this._content = content;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   int? _websiteID;
   int? get websiteID => _$this._websiteID;
@@ -92,7 +92,7 @@ class RequestNginxRedirectUpdateBuilder
     final $v = _$v;
     if ($v != null) {
       _content = $v.content;
-      _name = $v.name;
+      _xname = $v.xname;
       _websiteID = $v.websiteID;
       _$v = null;
     }
@@ -118,8 +118,8 @@ class RequestNginxRedirectUpdateBuilder
         new _$RequestNginxRedirectUpdate._(
           content: BuiltValueNullFieldError.checkNotNull(
               content, r'RequestNginxRedirectUpdate', 'content'),
-          name: BuiltValueNullFieldError.checkNotNull(
-              name, r'RequestNginxRedirectUpdate', 'name'),
+          xname: BuiltValueNullFieldError.checkNotNull(
+              xname, r'RequestNginxRedirectUpdate', 'xname'),
           websiteID: BuiltValueNullFieldError.checkNotNull(
               websiteID, r'RequestNginxRedirectUpdate', 'websiteID'),
         );

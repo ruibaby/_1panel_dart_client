@@ -17,7 +17,7 @@ part 'dto_app_define.g.dart';
 /// * [additionalProperties] 
 /// * [icon] 
 /// * [lastModified] 
-/// * [name] 
+/// * [xname] 
 /// * [readMe] 
 /// * [versions] 
 @BuiltValue()
@@ -32,7 +32,7 @@ abstract class DtoAppDefine implements Built<DtoAppDefine, DtoAppDefineBuilder> 
   int? get lastModified;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'readMe')
   String? get readMe;
@@ -84,10 +84,10 @@ class _$DtoAppDefineSerializer implements PrimitiveSerializer<DtoAppDefine> {
         specifiedType: const FullType(int),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -154,7 +154,7 @@ class _$DtoAppDefineSerializer implements PrimitiveSerializer<DtoAppDefine> {
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'readMe':
           final valueDes = serializers.deserialize(

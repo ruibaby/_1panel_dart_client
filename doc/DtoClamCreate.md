@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **infectedDir** | **String** |  | [optional] 
 **infectedStrategy** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **path** | **String** |  | [optional] 
 **spec** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 

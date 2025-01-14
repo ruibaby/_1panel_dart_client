@@ -33,8 +33,8 @@ final BuiltSet<DtoPageCronjobOrderEnum> _$dtoPageCronjobOrderEnumValues =
   _$dtoPageCronjobOrderEnum_descending,
 ]);
 
-const DtoPageCronjobOrderByEnum _$dtoPageCronjobOrderByEnum_name =
-    const DtoPageCronjobOrderByEnum._('name');
+const DtoPageCronjobOrderByEnum _$dtoPageCronjobOrderByEnum_xname =
+    const DtoPageCronjobOrderByEnum._('xname');
 const DtoPageCronjobOrderByEnum _$dtoPageCronjobOrderByEnum_status =
     const DtoPageCronjobOrderByEnum._('status');
 const DtoPageCronjobOrderByEnum _$dtoPageCronjobOrderByEnum_createdAt =
@@ -42,8 +42,8 @@ const DtoPageCronjobOrderByEnum _$dtoPageCronjobOrderByEnum_createdAt =
 
 DtoPageCronjobOrderByEnum _$dtoPageCronjobOrderByEnumValueOf(String name) {
   switch (name) {
-    case 'name':
-      return _$dtoPageCronjobOrderByEnum_name;
+    case 'xname':
+      return _$dtoPageCronjobOrderByEnum_xname;
     case 'status':
       return _$dtoPageCronjobOrderByEnum_status;
     case 'createdAt':
@@ -55,7 +55,7 @@ DtoPageCronjobOrderByEnum _$dtoPageCronjobOrderByEnumValueOf(String name) {
 
 final BuiltSet<DtoPageCronjobOrderByEnum> _$dtoPageCronjobOrderByEnumValues =
     new BuiltSet<DtoPageCronjobOrderByEnum>(const <DtoPageCronjobOrderByEnum>[
-  _$dtoPageCronjobOrderByEnum_name,
+  _$dtoPageCronjobOrderByEnum_xname,
   _$dtoPageCronjobOrderByEnum_status,
   _$dtoPageCronjobOrderByEnum_createdAt,
 ]);
@@ -99,12 +99,12 @@ class _$DtoPageCronjobOrderEnumSerializer
 class _$DtoPageCronjobOrderByEnumSerializer
     implements PrimitiveSerializer<DtoPageCronjobOrderByEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'name': 'name',
+    'xname': 'name',
     'status': 'status',
     'createdAt': 'created_at',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'name': 'name',
+    'name': 'xname',
     'status': 'status',
     'created_at': 'createdAt',
   };

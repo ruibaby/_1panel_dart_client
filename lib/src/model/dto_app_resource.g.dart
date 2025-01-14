@@ -8,14 +8,14 @@ part of 'dto_app_resource.dart';
 
 class _$DtoAppResource extends DtoAppResource {
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? type;
 
   factory _$DtoAppResource([void Function(DtoAppResourceBuilder)? updates]) =>
       (new DtoAppResourceBuilder()..update(updates))._build();
 
-  _$DtoAppResource._({this.name, this.type}) : super._();
+  _$DtoAppResource._({this.xname, this.type}) : super._();
 
   @override
   DtoAppResource rebuild(void Function(DtoAppResourceBuilder) updates) =>
@@ -28,13 +28,15 @@ class _$DtoAppResource extends DtoAppResource {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is DtoAppResource && name == other.name && type == other.type;
+    return other is DtoAppResource &&
+        xname == other.xname &&
+        type == other.type;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -43,7 +45,7 @@ class _$DtoAppResource extends DtoAppResource {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'DtoAppResource')
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('type', type))
         .toString();
   }
@@ -53,9 +55,9 @@ class DtoAppResourceBuilder
     implements Builder<DtoAppResource, DtoAppResourceBuilder> {
   _$DtoAppResource? _$v;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _type;
   String? get type => _$this._type;
@@ -68,7 +70,7 @@ class DtoAppResourceBuilder
   DtoAppResourceBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _name = $v.name;
+      _xname = $v.xname;
       _type = $v.type;
       _$v = null;
     }
@@ -92,7 +94,7 @@ class DtoAppResourceBuilder
   _$DtoAppResource _build() {
     final _$result = _$v ??
         new _$DtoAppResource._(
-          name: name,
+          xname: xname,
           type: type,
         );
     replace(_$result);

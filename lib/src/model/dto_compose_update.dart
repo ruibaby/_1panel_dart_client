@@ -14,7 +14,7 @@ part 'dto_compose_update.g.dart';
 /// Properties:
 /// * [content] 
 /// * [env] 
-/// * [name] 
+/// * [xname] 
 /// * [path] 
 @BuiltValue()
 abstract class DtoComposeUpdate implements Built<DtoComposeUpdate, DtoComposeUpdateBuilder> {
@@ -25,7 +25,7 @@ abstract class DtoComposeUpdate implements Built<DtoComposeUpdate, DtoComposeUpd
   BuiltList<String>? get env;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'path')
   String get path;
@@ -67,7 +67,7 @@ class _$DtoComposeUpdateSerializer implements PrimitiveSerializer<DtoComposeUpda
     }
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     yield r'path';
@@ -117,7 +117,7 @@ class _$DtoComposeUpdateSerializer implements PrimitiveSerializer<DtoComposeUpda
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'path':
           final valueDes = serializers.deserialize(

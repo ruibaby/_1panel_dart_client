@@ -10,7 +10,7 @@ class _$RequestRecycleBinReduce extends RequestRecycleBinReduce {
   @override
   final String from;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String rName;
 
@@ -19,7 +19,7 @@ class _$RequestRecycleBinReduce extends RequestRecycleBinReduce {
       (new RequestRecycleBinReduceBuilder()..update(updates))._build();
 
   _$RequestRecycleBinReduce._(
-      {required this.from, this.name, required this.rName})
+      {required this.from, this.xname, required this.rName})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         from, r'RequestRecycleBinReduce', 'from');
@@ -41,7 +41,7 @@ class _$RequestRecycleBinReduce extends RequestRecycleBinReduce {
     if (identical(other, this)) return true;
     return other is RequestRecycleBinReduce &&
         from == other.from &&
-        name == other.name &&
+        xname == other.xname &&
         rName == other.rName;
   }
 
@@ -49,7 +49,7 @@ class _$RequestRecycleBinReduce extends RequestRecycleBinReduce {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, from.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, rName.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -59,7 +59,7 @@ class _$RequestRecycleBinReduce extends RequestRecycleBinReduce {
   String toString() {
     return (newBuiltValueToStringHelper(r'RequestRecycleBinReduce')
           ..add('from', from)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('rName', rName))
         .toString();
   }
@@ -74,9 +74,9 @@ class RequestRecycleBinReduceBuilder
   String? get from => _$this._from;
   set from(String? from) => _$this._from = from;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _rName;
   String? get rName => _$this._rName;
@@ -90,7 +90,7 @@ class RequestRecycleBinReduceBuilder
     final $v = _$v;
     if ($v != null) {
       _from = $v.from;
-      _name = $v.name;
+      _xname = $v.xname;
       _rName = $v.rName;
       _$v = null;
     }
@@ -116,7 +116,7 @@ class RequestRecycleBinReduceBuilder
         new _$RequestRecycleBinReduce._(
           from: BuiltValueNullFieldError.checkNotNull(
               from, r'RequestRecycleBinReduce', 'from'),
-          name: name,
+          xname: xname,
           rName: BuiltValueNullFieldError.checkNotNull(
               rName, r'RequestRecycleBinReduce', 'rName'),
         );

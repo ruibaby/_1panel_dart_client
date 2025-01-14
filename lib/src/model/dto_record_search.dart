@@ -12,7 +12,7 @@ part 'dto_record_search.g.dart';
 ///
 /// Properties:
 /// * [detailName] 
-/// * [name] 
+/// * [xname] 
 /// * [page] 
 /// * [pageSize] 
 /// * [type] 
@@ -22,7 +22,7 @@ abstract class DtoRecordSearch implements Built<DtoRecordSearch, DtoRecordSearch
   String? get detailName;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'page')
   int get page;
@@ -63,10 +63,10 @@ class _$DtoRecordSearchSerializer implements PrimitiveSerializer<DtoRecordSearch
         specifiedType: const FullType(String),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -120,7 +120,7 @@ class _$DtoRecordSearchSerializer implements PrimitiveSerializer<DtoRecordSearch
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'page':
           final valueDes = serializers.deserialize(

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ID** | **int** |  | [optional] 
 **latest** | **bool** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **page** | **int** |  | 
 **pageSize** | **int** |  | 
 **type** | **String** |  | 

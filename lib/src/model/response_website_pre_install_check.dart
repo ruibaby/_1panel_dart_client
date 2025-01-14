@@ -12,7 +12,7 @@ part 'response_website_pre_install_check.g.dart';
 ///
 /// Properties:
 /// * [appName] 
-/// * [name] 
+/// * [xname] 
 /// * [status] 
 /// * [version] 
 @BuiltValue()
@@ -21,7 +21,7 @@ abstract class ResponseWebsitePreInstallCheck implements Built<ResponseWebsitePr
   String? get appName;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'status')
   String? get status;
@@ -59,10 +59,10 @@ class _$ResponseWebsitePreInstallCheckSerializer implements PrimitiveSerializer<
         specifiedType: const FullType(String),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -115,7 +115,7 @@ class _$ResponseWebsitePreInstallCheckSerializer implements PrimitiveSerializer<
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'status':
           final valueDes = serializers.deserialize(

@@ -74,7 +74,7 @@ class _$DtoPostgresqlDBCreate extends DtoPostgresqlDBCreate {
   @override
   final DtoPostgresqlDBCreateFromEnum from;
   @override
-  final String name;
+  final String xname;
   @override
   final String password;
   @override
@@ -91,7 +91,7 @@ class _$DtoPostgresqlDBCreate extends DtoPostgresqlDBCreate {
       this.description,
       this.format,
       required this.from,
-      required this.name,
+      required this.xname,
       required this.password,
       this.superUser,
       required this.username})
@@ -101,7 +101,7 @@ class _$DtoPostgresqlDBCreate extends DtoPostgresqlDBCreate {
     BuiltValueNullFieldError.checkNotNull(
         from, r'DtoPostgresqlDBCreate', 'from');
     BuiltValueNullFieldError.checkNotNull(
-        name, r'DtoPostgresqlDBCreate', 'name');
+        xname, r'DtoPostgresqlDBCreate', 'xname');
     BuiltValueNullFieldError.checkNotNull(
         password, r'DtoPostgresqlDBCreate', 'password');
     BuiltValueNullFieldError.checkNotNull(
@@ -125,7 +125,7 @@ class _$DtoPostgresqlDBCreate extends DtoPostgresqlDBCreate {
         description == other.description &&
         format == other.format &&
         from == other.from &&
-        name == other.name &&
+        xname == other.xname &&
         password == other.password &&
         superUser == other.superUser &&
         username == other.username;
@@ -138,7 +138,7 @@ class _$DtoPostgresqlDBCreate extends DtoPostgresqlDBCreate {
     _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, format.hashCode);
     _$hash = $jc(_$hash, from.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, password.hashCode);
     _$hash = $jc(_$hash, superUser.hashCode);
     _$hash = $jc(_$hash, username.hashCode);
@@ -153,7 +153,7 @@ class _$DtoPostgresqlDBCreate extends DtoPostgresqlDBCreate {
           ..add('description', description)
           ..add('format', format)
           ..add('from', from)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('password', password)
           ..add('superUser', superUser)
           ..add('username', username))
@@ -181,9 +181,9 @@ class DtoPostgresqlDBCreateBuilder
   DtoPostgresqlDBCreateFromEnum? get from => _$this._from;
   set from(DtoPostgresqlDBCreateFromEnum? from) => _$this._from = from;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _password;
   String? get password => _$this._password;
@@ -208,7 +208,7 @@ class DtoPostgresqlDBCreateBuilder
       _description = $v.description;
       _format = $v.format;
       _from = $v.from;
-      _name = $v.name;
+      _xname = $v.xname;
       _password = $v.password;
       _superUser = $v.superUser;
       _username = $v.username;
@@ -240,8 +240,8 @@ class DtoPostgresqlDBCreateBuilder
           format: format,
           from: BuiltValueNullFieldError.checkNotNull(
               from, r'DtoPostgresqlDBCreate', 'from'),
-          name: BuiltValueNullFieldError.checkNotNull(
-              name, r'DtoPostgresqlDBCreate', 'name'),
+          xname: BuiltValueNullFieldError.checkNotNull(
+              xname, r'DtoPostgresqlDBCreate', 'xname'),
           password: BuiltValueNullFieldError.checkNotNull(
               password, r'DtoPostgresqlDBCreate', 'password'),
           superUser: superUser,

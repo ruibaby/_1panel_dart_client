@@ -16,7 +16,7 @@ class _$ResponseFileTree extends ResponseFileTree {
   @override
   final bool? isDir;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? path;
 
@@ -29,7 +29,7 @@ class _$ResponseFileTree extends ResponseFileTree {
       this.extension_,
       this.id,
       this.isDir,
-      this.name,
+      this.xname,
       this.path})
       : super._();
 
@@ -49,7 +49,7 @@ class _$ResponseFileTree extends ResponseFileTree {
         extension_ == other.extension_ &&
         id == other.id &&
         isDir == other.isDir &&
-        name == other.name &&
+        xname == other.xname &&
         path == other.path;
   }
 
@@ -60,7 +60,7 @@ class _$ResponseFileTree extends ResponseFileTree {
     _$hash = $jc(_$hash, extension_.hashCode);
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, isDir.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, path.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -73,7 +73,7 @@ class _$ResponseFileTree extends ResponseFileTree {
           ..add('extension_', extension_)
           ..add('id', id)
           ..add('isDir', isDir)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('path', path))
         .toString();
   }
@@ -101,9 +101,9 @@ class ResponseFileTreeBuilder
   bool? get isDir => _$this._isDir;
   set isDir(bool? isDir) => _$this._isDir = isDir;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _path;
   String? get path => _$this._path;
@@ -120,7 +120,7 @@ class ResponseFileTreeBuilder
       _extension_ = $v.extension_;
       _id = $v.id;
       _isDir = $v.isDir;
-      _name = $v.name;
+      _xname = $v.xname;
       _path = $v.path;
       _$v = null;
     }
@@ -150,7 +150,7 @@ class ResponseFileTreeBuilder
             extension_: extension_,
             id: id,
             isDir: isDir,
-            name: name,
+            xname: xname,
             path: path,
           );
     } catch (_) {

@@ -10,18 +10,19 @@ class _$RequestPHPExtensionsCreate extends RequestPHPExtensionsCreate {
   @override
   final String extensions;
   @override
-  final String name;
+  final String xname;
 
   factory _$RequestPHPExtensionsCreate(
           [void Function(RequestPHPExtensionsCreateBuilder)? updates]) =>
       (new RequestPHPExtensionsCreateBuilder()..update(updates))._build();
 
-  _$RequestPHPExtensionsCreate._({required this.extensions, required this.name})
+  _$RequestPHPExtensionsCreate._(
+      {required this.extensions, required this.xname})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         extensions, r'RequestPHPExtensionsCreate', 'extensions');
     BuiltValueNullFieldError.checkNotNull(
-        name, r'RequestPHPExtensionsCreate', 'name');
+        xname, r'RequestPHPExtensionsCreate', 'xname');
   }
 
   @override
@@ -38,14 +39,14 @@ class _$RequestPHPExtensionsCreate extends RequestPHPExtensionsCreate {
     if (identical(other, this)) return true;
     return other is RequestPHPExtensionsCreate &&
         extensions == other.extensions &&
-        name == other.name;
+        xname == other.xname;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, extensions.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -54,7 +55,7 @@ class _$RequestPHPExtensionsCreate extends RequestPHPExtensionsCreate {
   String toString() {
     return (newBuiltValueToStringHelper(r'RequestPHPExtensionsCreate')
           ..add('extensions', extensions)
-          ..add('name', name))
+          ..add('xname', xname))
         .toString();
   }
 }
@@ -68,9 +69,9 @@ class RequestPHPExtensionsCreateBuilder
   String? get extensions => _$this._extensions;
   set extensions(String? extensions) => _$this._extensions = extensions;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   RequestPHPExtensionsCreateBuilder() {
     RequestPHPExtensionsCreate._defaults(this);
@@ -80,7 +81,7 @@ class RequestPHPExtensionsCreateBuilder
     final $v = _$v;
     if ($v != null) {
       _extensions = $v.extensions;
-      _name = $v.name;
+      _xname = $v.xname;
       _$v = null;
     }
     return this;
@@ -105,8 +106,8 @@ class RequestPHPExtensionsCreateBuilder
         new _$RequestPHPExtensionsCreate._(
           extensions: BuiltValueNullFieldError.checkNotNull(
               extensions, r'RequestPHPExtensionsCreate', 'extensions'),
-          name: BuiltValueNullFieldError.checkNotNull(
-              name, r'RequestPHPExtensionsCreate', 'name'),
+          xname: BuiltValueNullFieldError.checkNotNull(
+              xname, r'RequestPHPExtensionsCreate', 'xname'),
         );
     replace(_$result);
     return _$result;

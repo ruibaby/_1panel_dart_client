@@ -14,12 +14,12 @@ class _$DtoDatabaseItem extends DtoDatabaseItem {
   @override
   final int? id;
   @override
-  final String? name;
+  final String? xname;
 
   factory _$DtoDatabaseItem([void Function(DtoDatabaseItemBuilder)? updates]) =>
       (new DtoDatabaseItemBuilder()..update(updates))._build();
 
-  _$DtoDatabaseItem._({this.database, this.from, this.id, this.name})
+  _$DtoDatabaseItem._({this.database, this.from, this.id, this.xname})
       : super._();
 
   @override
@@ -37,7 +37,7 @@ class _$DtoDatabaseItem extends DtoDatabaseItem {
         database == other.database &&
         from == other.from &&
         id == other.id &&
-        name == other.name;
+        xname == other.xname;
   }
 
   @override
@@ -46,7 +46,7 @@ class _$DtoDatabaseItem extends DtoDatabaseItem {
     _$hash = $jc(_$hash, database.hashCode);
     _$hash = $jc(_$hash, from.hashCode);
     _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -57,7 +57,7 @@ class _$DtoDatabaseItem extends DtoDatabaseItem {
           ..add('database', database)
           ..add('from', from)
           ..add('id', id)
-          ..add('name', name))
+          ..add('xname', xname))
         .toString();
   }
 }
@@ -78,9 +78,9 @@ class DtoDatabaseItemBuilder
   int? get id => _$this._id;
   set id(int? id) => _$this._id = id;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   DtoDatabaseItemBuilder() {
     DtoDatabaseItem._defaults(this);
@@ -92,7 +92,7 @@ class DtoDatabaseItemBuilder
       _database = $v.database;
       _from = $v.from;
       _id = $v.id;
-      _name = $v.name;
+      _xname = $v.xname;
       _$v = null;
     }
     return this;
@@ -118,7 +118,7 @@ class DtoDatabaseItemBuilder
           database: database,
           from: from,
           id: id,
-          name: name,
+          xname: xname,
         );
     replace(_$result);
     return _$result;

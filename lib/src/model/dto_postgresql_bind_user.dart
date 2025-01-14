@@ -12,7 +12,7 @@ part 'dto_postgresql_bind_user.g.dart';
 ///
 /// Properties:
 /// * [database] 
-/// * [name] 
+/// * [xname] 
 /// * [password] 
 /// * [superUser] 
 /// * [username] 
@@ -22,7 +22,7 @@ abstract class DtoPostgresqlBindUser implements Built<DtoPostgresqlBindUser, Dto
   String get database;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'password')
   String get password;
@@ -63,7 +63,7 @@ class _$DtoPostgresqlBindUserSerializer implements PrimitiveSerializer<DtoPostgr
     );
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     yield r'password';
@@ -118,7 +118,7 @@ class _$DtoPostgresqlBindUserSerializer implements PrimitiveSerializer<DtoPostgr
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'password':
           final valueDes = serializers.deserialize(

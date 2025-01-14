@@ -12,9 +12,9 @@ class _$RequestFileCompress extends RequestFileCompress {
   @override
   final BuiltList<String> files;
   @override
-  final String name;
+  final String xname;
   @override
-  final bool? needsReplace;
+  final bool? xreplace;
   @override
   final String? secret;
   @override
@@ -27,15 +27,16 @@ class _$RequestFileCompress extends RequestFileCompress {
   _$RequestFileCompress._(
       {required this.dst,
       required this.files,
-      required this.name,
-      this.needsReplace,
+      required this.xname,
+      this.xreplace,
       this.secret,
       required this.type})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(dst, r'RequestFileCompress', 'dst');
     BuiltValueNullFieldError.checkNotNull(
         files, r'RequestFileCompress', 'files');
-    BuiltValueNullFieldError.checkNotNull(name, r'RequestFileCompress', 'name');
+    BuiltValueNullFieldError.checkNotNull(
+        xname, r'RequestFileCompress', 'xname');
     BuiltValueNullFieldError.checkNotNull(type, r'RequestFileCompress', 'type');
   }
 
@@ -54,8 +55,8 @@ class _$RequestFileCompress extends RequestFileCompress {
     return other is RequestFileCompress &&
         dst == other.dst &&
         files == other.files &&
-        name == other.name &&
-        needsReplace == other.needsReplace &&
+        xname == other.xname &&
+        xreplace == other.xreplace &&
         secret == other.secret &&
         type == other.type;
   }
@@ -65,8 +66,8 @@ class _$RequestFileCompress extends RequestFileCompress {
     var _$hash = 0;
     _$hash = $jc(_$hash, dst.hashCode);
     _$hash = $jc(_$hash, files.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
-    _$hash = $jc(_$hash, needsReplace.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
+    _$hash = $jc(_$hash, xreplace.hashCode);
     _$hash = $jc(_$hash, secret.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jf(_$hash);
@@ -78,8 +79,8 @@ class _$RequestFileCompress extends RequestFileCompress {
     return (newBuiltValueToStringHelper(r'RequestFileCompress')
           ..add('dst', dst)
           ..add('files', files)
-          ..add('name', name)
-          ..add('needsReplace', needsReplace)
+          ..add('xname', xname)
+          ..add('xreplace', xreplace)
           ..add('secret', secret)
           ..add('type', type))
         .toString();
@@ -98,13 +99,13 @@ class RequestFileCompressBuilder
   ListBuilder<String> get files => _$this._files ??= new ListBuilder<String>();
   set files(ListBuilder<String>? files) => _$this._files = files;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
-  bool? _needsReplace;
-  bool? get needsReplace => _$this._needsReplace;
-  set needsReplace(bool? needsReplace) => _$this._needsReplace = needsReplace;
+  bool? _xreplace;
+  bool? get xreplace => _$this._xreplace;
+  set xreplace(bool? xreplace) => _$this._xreplace = xreplace;
 
   String? _secret;
   String? get secret => _$this._secret;
@@ -123,8 +124,8 @@ class RequestFileCompressBuilder
     if ($v != null) {
       _dst = $v.dst;
       _files = $v.files.toBuilder();
-      _name = $v.name;
-      _needsReplace = $v.needsReplace;
+      _xname = $v.xname;
+      _xreplace = $v.xreplace;
       _secret = $v.secret;
       _type = $v.type;
       _$v = null;
@@ -154,9 +155,9 @@ class RequestFileCompressBuilder
             dst: BuiltValueNullFieldError.checkNotNull(
                 dst, r'RequestFileCompress', 'dst'),
             files: files.build(),
-            name: BuiltValueNullFieldError.checkNotNull(
-                name, r'RequestFileCompress', 'name'),
-            needsReplace: needsReplace,
+            xname: BuiltValueNullFieldError.checkNotNull(
+                xname, r'RequestFileCompress', 'xname'),
+            xreplace: xreplace,
             secret: secret,
             type: BuiltValueNullFieldError.checkNotNull(
                 type, r'RequestFileCompress', 'type'),

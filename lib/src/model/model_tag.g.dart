@@ -14,7 +14,7 @@ class _$ModelTag extends ModelTag {
   @override
   final String? key;
   @override
-  final String? name;
+  final String? xname;
   @override
   final int? sort;
   @override
@@ -24,7 +24,12 @@ class _$ModelTag extends ModelTag {
       (new ModelTagBuilder()..update(updates))._build();
 
   _$ModelTag._(
-      {this.createdAt, this.id, this.key, this.name, this.sort, this.updatedAt})
+      {this.createdAt,
+      this.id,
+      this.key,
+      this.xname,
+      this.sort,
+      this.updatedAt})
       : super._();
 
   @override
@@ -41,7 +46,7 @@ class _$ModelTag extends ModelTag {
         createdAt == other.createdAt &&
         id == other.id &&
         key == other.key &&
-        name == other.name &&
+        xname == other.xname &&
         sort == other.sort &&
         updatedAt == other.updatedAt;
   }
@@ -52,7 +57,7 @@ class _$ModelTag extends ModelTag {
     _$hash = $jc(_$hash, createdAt.hashCode);
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, key.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, sort.hashCode);
     _$hash = $jc(_$hash, updatedAt.hashCode);
     _$hash = $jf(_$hash);
@@ -65,7 +70,7 @@ class _$ModelTag extends ModelTag {
           ..add('createdAt', createdAt)
           ..add('id', id)
           ..add('key', key)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('sort', sort)
           ..add('updatedAt', updatedAt))
         .toString();
@@ -87,9 +92,9 @@ class ModelTagBuilder implements Builder<ModelTag, ModelTagBuilder> {
   String? get key => _$this._key;
   set key(String? key) => _$this._key = key;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   int? _sort;
   int? get sort => _$this._sort;
@@ -109,7 +114,7 @@ class ModelTagBuilder implements Builder<ModelTag, ModelTagBuilder> {
       _createdAt = $v.createdAt;
       _id = $v.id;
       _key = $v.key;
-      _name = $v.name;
+      _xname = $v.xname;
       _sort = $v.sort;
       _updatedAt = $v.updatedAt;
       _$v = null;
@@ -137,7 +142,7 @@ class ModelTagBuilder implements Builder<ModelTag, ModelTagBuilder> {
           createdAt: createdAt,
           id: id,
           key: key,
-          name: name,
+          xname: xname,
           sort: sort,
           updatedAt: updatedAt,
         );

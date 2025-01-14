@@ -8,7 +8,7 @@ import 'package:one_panel_client/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **page** | **int** |  | 
 **pageSize** | **int** |  | 
 **status** | **String** |  | [optional] 

@@ -8,7 +8,7 @@ part of 'response_nginx_param.dart';
 
 class _$ResponseNginxParam extends ResponseNginxParam {
   @override
-  final String? name;
+  final String? xname;
   @override
   final BuiltList<String>? params;
 
@@ -16,7 +16,7 @@ class _$ResponseNginxParam extends ResponseNginxParam {
           [void Function(ResponseNginxParamBuilder)? updates]) =>
       (new ResponseNginxParamBuilder()..update(updates))._build();
 
-  _$ResponseNginxParam._({this.name, this.params}) : super._();
+  _$ResponseNginxParam._({this.xname, this.params}) : super._();
 
   @override
   ResponseNginxParam rebuild(
@@ -31,14 +31,14 @@ class _$ResponseNginxParam extends ResponseNginxParam {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is ResponseNginxParam &&
-        name == other.name &&
+        xname == other.xname &&
         params == other.params;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, params.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -47,7 +47,7 @@ class _$ResponseNginxParam extends ResponseNginxParam {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'ResponseNginxParam')
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('params', params))
         .toString();
   }
@@ -57,9 +57,9 @@ class ResponseNginxParamBuilder
     implements Builder<ResponseNginxParam, ResponseNginxParamBuilder> {
   _$ResponseNginxParam? _$v;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   ListBuilder<String>? _params;
   ListBuilder<String> get params =>
@@ -73,7 +73,7 @@ class ResponseNginxParamBuilder
   ResponseNginxParamBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _name = $v.name;
+      _xname = $v.xname;
       _params = $v.params?.toBuilder();
       _$v = null;
     }
@@ -99,7 +99,7 @@ class ResponseNginxParamBuilder
     try {
       _$result = _$v ??
           new _$ResponseNginxParam._(
-            name: name,
+            xname: xname,
             params: _params?.build(),
           );
     } catch (_) {

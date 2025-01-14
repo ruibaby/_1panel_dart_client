@@ -10,14 +10,14 @@ class _$DtoBackupFile extends DtoBackupFile {
   @override
   final int? id;
   @override
-  final String? name;
+  final String? xname;
   @override
   final int? size;
 
   factory _$DtoBackupFile([void Function(DtoBackupFileBuilder)? updates]) =>
       (new DtoBackupFileBuilder()..update(updates))._build();
 
-  _$DtoBackupFile._({this.id, this.name, this.size}) : super._();
+  _$DtoBackupFile._({this.id, this.xname, this.size}) : super._();
 
   @override
   DtoBackupFile rebuild(void Function(DtoBackupFileBuilder) updates) =>
@@ -31,7 +31,7 @@ class _$DtoBackupFile extends DtoBackupFile {
     if (identical(other, this)) return true;
     return other is DtoBackupFile &&
         id == other.id &&
-        name == other.name &&
+        xname == other.xname &&
         size == other.size;
   }
 
@@ -39,7 +39,7 @@ class _$DtoBackupFile extends DtoBackupFile {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, size.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -49,7 +49,7 @@ class _$DtoBackupFile extends DtoBackupFile {
   String toString() {
     return (newBuiltValueToStringHelper(r'DtoBackupFile')
           ..add('id', id)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('size', size))
         .toString();
   }
@@ -63,9 +63,9 @@ class DtoBackupFileBuilder
   int? get id => _$this._id;
   set id(int? id) => _$this._id = id;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   int? _size;
   int? get size => _$this._size;
@@ -79,7 +79,7 @@ class DtoBackupFileBuilder
     final $v = _$v;
     if ($v != null) {
       _id = $v.id;
-      _name = $v.name;
+      _xname = $v.xname;
       _size = $v.size;
       _$v = null;
     }
@@ -104,7 +104,7 @@ class DtoBackupFileBuilder
     final _$result = _$v ??
         new _$DtoBackupFile._(
           id: id,
-          name: name,
+          xname: xname,
           size: size,
         );
     replace(_$result);

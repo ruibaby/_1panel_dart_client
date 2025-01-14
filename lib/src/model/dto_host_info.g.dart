@@ -22,7 +22,7 @@ class _$DtoHostInfo extends DtoHostInfo {
   @override
   final int? id;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? passPhrase;
   @override
@@ -47,7 +47,7 @@ class _$DtoHostInfo extends DtoHostInfo {
       this.groupBelong,
       this.groupID,
       this.id,
-      this.name,
+      this.xname,
       this.passPhrase,
       this.password,
       this.port,
@@ -74,7 +74,7 @@ class _$DtoHostInfo extends DtoHostInfo {
         groupBelong == other.groupBelong &&
         groupID == other.groupID &&
         id == other.id &&
-        name == other.name &&
+        xname == other.xname &&
         passPhrase == other.passPhrase &&
         password == other.password &&
         port == other.port &&
@@ -93,7 +93,7 @@ class _$DtoHostInfo extends DtoHostInfo {
     _$hash = $jc(_$hash, groupBelong.hashCode);
     _$hash = $jc(_$hash, groupID.hashCode);
     _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, passPhrase.hashCode);
     _$hash = $jc(_$hash, password.hashCode);
     _$hash = $jc(_$hash, port.hashCode);
@@ -114,7 +114,7 @@ class _$DtoHostInfo extends DtoHostInfo {
           ..add('groupBelong', groupBelong)
           ..add('groupID', groupID)
           ..add('id', id)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('passPhrase', passPhrase)
           ..add('password', password)
           ..add('port', port)
@@ -156,9 +156,9 @@ class DtoHostInfoBuilder implements Builder<DtoHostInfo, DtoHostInfoBuilder> {
   int? get id => _$this._id;
   set id(int? id) => _$this._id = id;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _passPhrase;
   String? get passPhrase => _$this._passPhrase;
@@ -199,7 +199,7 @@ class DtoHostInfoBuilder implements Builder<DtoHostInfo, DtoHostInfoBuilder> {
       _groupBelong = $v.groupBelong;
       _groupID = $v.groupID;
       _id = $v.id;
-      _name = $v.name;
+      _xname = $v.xname;
       _passPhrase = $v.passPhrase;
       _password = $v.password;
       _port = $v.port;
@@ -235,7 +235,7 @@ class DtoHostInfoBuilder implements Builder<DtoHostInfo, DtoHostInfoBuilder> {
           groupBelong: groupBelong,
           groupID: groupID,
           id: id,
-          name: name,
+          xname: xname,
           passPhrase: passPhrase,
           password: password,
           port: port,

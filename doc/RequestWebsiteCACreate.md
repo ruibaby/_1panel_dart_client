@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **commonName** | **String** |  | 
 **country** | **String** |  | 
 **keyType** | **String** |  | 
-**name** | **String** |  | 
+**xname** | **String** |  | 
 **organization** | **String** |  | 
 **organizationUint** | **String** |  | [optional] 
 **province** | **String** |  | [optional] 

@@ -14,7 +14,7 @@ class _$ResponsePHPExtensionsDTO extends ResponsePHPExtensionsDTO {
   @override
   final int? id;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? updatedAt;
 
@@ -23,7 +23,7 @@ class _$ResponsePHPExtensionsDTO extends ResponsePHPExtensionsDTO {
       (new ResponsePHPExtensionsDTOBuilder()..update(updates))._build();
 
   _$ResponsePHPExtensionsDTO._(
-      {this.createdAt, this.extensions, this.id, this.name, this.updatedAt})
+      {this.createdAt, this.extensions, this.id, this.xname, this.updatedAt})
       : super._();
 
   @override
@@ -42,7 +42,7 @@ class _$ResponsePHPExtensionsDTO extends ResponsePHPExtensionsDTO {
         createdAt == other.createdAt &&
         extensions == other.extensions &&
         id == other.id &&
-        name == other.name &&
+        xname == other.xname &&
         updatedAt == other.updatedAt;
   }
 
@@ -52,7 +52,7 @@ class _$ResponsePHPExtensionsDTO extends ResponsePHPExtensionsDTO {
     _$hash = $jc(_$hash, createdAt.hashCode);
     _$hash = $jc(_$hash, extensions.hashCode);
     _$hash = $jc(_$hash, id.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, updatedAt.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -64,7 +64,7 @@ class _$ResponsePHPExtensionsDTO extends ResponsePHPExtensionsDTO {
           ..add('createdAt', createdAt)
           ..add('extensions', extensions)
           ..add('id', id)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('updatedAt', updatedAt))
         .toString();
   }
@@ -87,9 +87,9 @@ class ResponsePHPExtensionsDTOBuilder
   int? get id => _$this._id;
   set id(int? id) => _$this._id = id;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _updatedAt;
   String? get updatedAt => _$this._updatedAt;
@@ -105,7 +105,7 @@ class ResponsePHPExtensionsDTOBuilder
       _createdAt = $v.createdAt;
       _extensions = $v.extensions;
       _id = $v.id;
-      _name = $v.name;
+      _xname = $v.xname;
       _updatedAt = $v.updatedAt;
       _$v = null;
     }
@@ -132,7 +132,7 @@ class ResponsePHPExtensionsDTOBuilder
           createdAt: createdAt,
           extensions: extensions,
           id: id,
-          name: name,
+          xname: xname,
           updatedAt: updatedAt,
         );
     replace(_$result);

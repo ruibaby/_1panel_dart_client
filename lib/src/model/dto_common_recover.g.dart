@@ -197,7 +197,7 @@ class _$DtoCommonRecover extends DtoCommonRecover {
   @override
   final String? file;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? secret;
   @override
@@ -212,7 +212,7 @@ class _$DtoCommonRecover extends DtoCommonRecover {
   _$DtoCommonRecover._(
       {this.detailName,
       this.file,
-      this.name,
+      this.xname,
       this.secret,
       required this.source_,
       required this.type})
@@ -236,7 +236,7 @@ class _$DtoCommonRecover extends DtoCommonRecover {
     return other is DtoCommonRecover &&
         detailName == other.detailName &&
         file == other.file &&
-        name == other.name &&
+        xname == other.xname &&
         secret == other.secret &&
         source_ == other.source_ &&
         type == other.type;
@@ -247,7 +247,7 @@ class _$DtoCommonRecover extends DtoCommonRecover {
     var _$hash = 0;
     _$hash = $jc(_$hash, detailName.hashCode);
     _$hash = $jc(_$hash, file.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, secret.hashCode);
     _$hash = $jc(_$hash, source_.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
@@ -260,7 +260,7 @@ class _$DtoCommonRecover extends DtoCommonRecover {
     return (newBuiltValueToStringHelper(r'DtoCommonRecover')
           ..add('detailName', detailName)
           ..add('file', file)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('secret', secret)
           ..add('source_', source_)
           ..add('type', type))
@@ -280,9 +280,9 @@ class DtoCommonRecoverBuilder
   String? get file => _$this._file;
   set file(String? file) => _$this._file = file;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _secret;
   String? get secret => _$this._secret;
@@ -306,7 +306,7 @@ class DtoCommonRecoverBuilder
     if ($v != null) {
       _detailName = $v.detailName;
       _file = $v.file;
-      _name = $v.name;
+      _xname = $v.xname;
       _secret = $v.secret;
       _source_ = $v.source_;
       _type = $v.type;
@@ -334,7 +334,7 @@ class DtoCommonRecoverBuilder
         new _$DtoCommonRecover._(
           detailName: detailName,
           file: file,
-          name: name,
+          xname: xname,
           secret: secret,
           source_: BuiltValueNullFieldError.checkNotNull(
               source_, r'DtoCommonRecover', 'source_'),

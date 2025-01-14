@@ -23,7 +23,7 @@ part 'dto_network_create.g.dart';
 /// * [ipv4] 
 /// * [ipv6] 
 /// * [labels] 
-/// * [name] 
+/// * [xname] 
 /// * [options] 
 /// * [subnet] 
 /// * [subnetV6] 
@@ -60,7 +60,7 @@ abstract class DtoNetworkCreate implements Built<DtoNetworkCreate, DtoNetworkCre
   BuiltList<String>? get labels;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'options')
   BuiltList<String>? get options;
@@ -164,7 +164,7 @@ class _$DtoNetworkCreateSerializer implements PrimitiveSerializer<DtoNetworkCrea
     }
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     if (object.options != null) {
@@ -286,7 +286,7 @@ class _$DtoNetworkCreateSerializer implements PrimitiveSerializer<DtoNetworkCrea
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'options':
           final valueDes = serializers.deserialize(

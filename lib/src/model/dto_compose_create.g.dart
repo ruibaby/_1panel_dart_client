@@ -75,7 +75,7 @@ class _$DtoComposeCreate extends DtoComposeCreate {
   @override
   final DtoComposeCreateFromEnum from;
   @override
-  final String? name;
+  final String? xname;
   @override
   final String? path;
   @override
@@ -89,7 +89,7 @@ class _$DtoComposeCreate extends DtoComposeCreate {
       {this.env,
       this.file,
       required this.from,
-      this.name,
+      this.xname,
       this.path,
       this.template})
       : super._() {
@@ -111,7 +111,7 @@ class _$DtoComposeCreate extends DtoComposeCreate {
         env == other.env &&
         file == other.file &&
         from == other.from &&
-        name == other.name &&
+        xname == other.xname &&
         path == other.path &&
         template == other.template;
   }
@@ -122,7 +122,7 @@ class _$DtoComposeCreate extends DtoComposeCreate {
     _$hash = $jc(_$hash, env.hashCode);
     _$hash = $jc(_$hash, file.hashCode);
     _$hash = $jc(_$hash, from.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, path.hashCode);
     _$hash = $jc(_$hash, template.hashCode);
     _$hash = $jf(_$hash);
@@ -135,7 +135,7 @@ class _$DtoComposeCreate extends DtoComposeCreate {
           ..add('env', env)
           ..add('file', file)
           ..add('from', from)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('path', path)
           ..add('template', template))
         .toString();
@@ -158,9 +158,9 @@ class DtoComposeCreateBuilder
   DtoComposeCreateFromEnum? get from => _$this._from;
   set from(DtoComposeCreateFromEnum? from) => _$this._from = from;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   String? _path;
   String? get path => _$this._path;
@@ -180,7 +180,7 @@ class DtoComposeCreateBuilder
       _env = $v.env?.toBuilder();
       _file = $v.file;
       _from = $v.from;
-      _name = $v.name;
+      _xname = $v.xname;
       _path = $v.path;
       _template = $v.template;
       _$v = null;
@@ -211,7 +211,7 @@ class DtoComposeCreateBuilder
             file: file,
             from: BuiltValueNullFieldError.checkNotNull(
                 from, r'DtoComposeCreate', 'from'),
-            name: name,
+            xname: xname,
             path: path,
             template: template,
           );

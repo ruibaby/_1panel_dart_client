@@ -13,7 +13,7 @@ part 'response_node_module.g.dart';
 /// Properties:
 /// * [description] 
 /// * [license] 
-/// * [name] 
+/// * [xname] 
 /// * [version] 
 @BuiltValue()
 abstract class ResponseNodeModule implements Built<ResponseNodeModule, ResponseNodeModuleBuilder> {
@@ -24,7 +24,7 @@ abstract class ResponseNodeModule implements Built<ResponseNodeModule, ResponseN
   String? get license;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'version')
   String? get version;
@@ -66,10 +66,10 @@ class _$ResponseNodeModuleSerializer implements PrimitiveSerializer<ResponseNode
         specifiedType: const FullType(String),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -122,7 +122,7 @@ class _$ResponseNodeModuleSerializer implements PrimitiveSerializer<ResponseNode
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'version':
           final valueDes = serializers.deserialize(

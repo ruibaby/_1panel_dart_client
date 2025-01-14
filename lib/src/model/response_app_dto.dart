@@ -23,7 +23,7 @@ part 'response_app_dto.g.dart';
 /// * [key] 
 /// * [lastModified] 
 /// * [limit] 
-/// * [name] 
+/// * [xname] 
 /// * [readMe] 
 /// * [recommend] 
 /// * [required_] 
@@ -69,7 +69,7 @@ abstract class ResponseAppDTO implements Built<ResponseAppDTO, ResponseAppDTOBui
   int? get limit;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get xname;
 
   @BuiltValueField(wireName: r'readMe')
   String? get readMe;
@@ -200,10 +200,10 @@ class _$ResponseAppDTOSerializer implements PrimitiveSerializer<ResponseAppDTO> 
         specifiedType: const FullType(int),
       );
     }
-    if (object.name != null) {
+    if (object.xname != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.xname,
         specifiedType: const FullType(String),
       );
     }
@@ -389,7 +389,7 @@ class _$ResponseAppDTOSerializer implements PrimitiveSerializer<ResponseAppDTO> 
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'readMe':
           final valueDes = serializers.deserialize(

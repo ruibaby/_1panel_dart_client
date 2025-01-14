@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **lastVersion** | **String** |  | [optional] 
 **params** | [**JsonObject**](.md) |  | [optional] 
 **status** | **String** |  | [optional] 
-**update** | **bool** |  | [optional] 
+**xupdate** | **bool** |  | [optional] 
 **updatedAt** | **String** |  | [optional] 
 **version** | **String** |  | [optional] 
 

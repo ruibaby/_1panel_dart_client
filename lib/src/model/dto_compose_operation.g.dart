@@ -89,7 +89,7 @@ class _$DtoComposeOperationOperationEnumSerializer
 
 class _$DtoComposeOperation extends DtoComposeOperation {
   @override
-  final String name;
+  final String xname;
   @override
   final DtoComposeOperationOperationEnum operation;
   @override
@@ -102,9 +102,10 @@ class _$DtoComposeOperation extends DtoComposeOperation {
       (new DtoComposeOperationBuilder()..update(updates))._build();
 
   _$DtoComposeOperation._(
-      {required this.name, required this.operation, this.path, this.withFile})
+      {required this.xname, required this.operation, this.path, this.withFile})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(name, r'DtoComposeOperation', 'name');
+    BuiltValueNullFieldError.checkNotNull(
+        xname, r'DtoComposeOperation', 'xname');
     BuiltValueNullFieldError.checkNotNull(
         operation, r'DtoComposeOperation', 'operation');
   }
@@ -122,7 +123,7 @@ class _$DtoComposeOperation extends DtoComposeOperation {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is DtoComposeOperation &&
-        name == other.name &&
+        xname == other.xname &&
         operation == other.operation &&
         path == other.path &&
         withFile == other.withFile;
@@ -131,7 +132,7 @@ class _$DtoComposeOperation extends DtoComposeOperation {
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, operation.hashCode);
     _$hash = $jc(_$hash, path.hashCode);
     _$hash = $jc(_$hash, withFile.hashCode);
@@ -142,7 +143,7 @@ class _$DtoComposeOperation extends DtoComposeOperation {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'DtoComposeOperation')
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('operation', operation)
           ..add('path', path)
           ..add('withFile', withFile))
@@ -154,9 +155,9 @@ class DtoComposeOperationBuilder
     implements Builder<DtoComposeOperation, DtoComposeOperationBuilder> {
   _$DtoComposeOperation? _$v;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   DtoComposeOperationOperationEnum? _operation;
   DtoComposeOperationOperationEnum? get operation => _$this._operation;
@@ -178,7 +179,7 @@ class DtoComposeOperationBuilder
   DtoComposeOperationBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _name = $v.name;
+      _xname = $v.xname;
       _operation = $v.operation;
       _path = $v.path;
       _withFile = $v.withFile;
@@ -204,8 +205,8 @@ class DtoComposeOperationBuilder
   _$DtoComposeOperation _build() {
     final _$result = _$v ??
         new _$DtoComposeOperation._(
-          name: BuiltValueNullFieldError.checkNotNull(
-              name, r'DtoComposeOperation', 'name'),
+          xname: BuiltValueNullFieldError.checkNotNull(
+              xname, r'DtoComposeOperation', 'xname'),
           operation: BuiltValueNullFieldError.checkNotNull(
               operation, r'DtoComposeOperation', 'operation'),
           path: path,

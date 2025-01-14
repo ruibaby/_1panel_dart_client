@@ -12,7 +12,7 @@ part 'request_file_wget.g.dart';
 ///
 /// Properties:
 /// * [ignoreCertificate] 
-/// * [name] 
+/// * [xname] 
 /// * [path] 
 /// * [url] 
 @BuiltValue()
@@ -21,7 +21,7 @@ abstract class RequestFileWget implements Built<RequestFileWget, RequestFileWget
   bool? get ignoreCertificate;
 
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get xname;
 
   @BuiltValueField(wireName: r'path')
   String get path;
@@ -61,7 +61,7 @@ class _$RequestFileWgetSerializer implements PrimitiveSerializer<RequestFileWget
     }
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.xname,
       specifiedType: const FullType(String),
     );
     yield r'path';
@@ -109,7 +109,7 @@ class _$RequestFileWgetSerializer implements PrimitiveSerializer<RequestFileWget
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.xname = valueDes;
           break;
         case r'path':
           final valueDes = serializers.deserialize(

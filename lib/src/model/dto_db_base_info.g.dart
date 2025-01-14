@@ -10,14 +10,14 @@ class _$DtoDBBaseInfo extends DtoDBBaseInfo {
   @override
   final String? containerName;
   @override
-  final String? name;
+  final String? xname;
   @override
   final int? port;
 
   factory _$DtoDBBaseInfo([void Function(DtoDBBaseInfoBuilder)? updates]) =>
       (new DtoDBBaseInfoBuilder()..update(updates))._build();
 
-  _$DtoDBBaseInfo._({this.containerName, this.name, this.port}) : super._();
+  _$DtoDBBaseInfo._({this.containerName, this.xname, this.port}) : super._();
 
   @override
   DtoDBBaseInfo rebuild(void Function(DtoDBBaseInfoBuilder) updates) =>
@@ -31,7 +31,7 @@ class _$DtoDBBaseInfo extends DtoDBBaseInfo {
     if (identical(other, this)) return true;
     return other is DtoDBBaseInfo &&
         containerName == other.containerName &&
-        name == other.name &&
+        xname == other.xname &&
         port == other.port;
   }
 
@@ -39,7 +39,7 @@ class _$DtoDBBaseInfo extends DtoDBBaseInfo {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, containerName.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, port.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -49,7 +49,7 @@ class _$DtoDBBaseInfo extends DtoDBBaseInfo {
   String toString() {
     return (newBuiltValueToStringHelper(r'DtoDBBaseInfo')
           ..add('containerName', containerName)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('port', port))
         .toString();
   }
@@ -64,9 +64,9 @@ class DtoDBBaseInfoBuilder
   set containerName(String? containerName) =>
       _$this._containerName = containerName;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   int? _port;
   int? get port => _$this._port;
@@ -80,7 +80,7 @@ class DtoDBBaseInfoBuilder
     final $v = _$v;
     if ($v != null) {
       _containerName = $v.containerName;
-      _name = $v.name;
+      _xname = $v.xname;
       _port = $v.port;
       _$v = null;
     }
@@ -105,7 +105,7 @@ class DtoDBBaseInfoBuilder
     final _$result = _$v ??
         new _$DtoDBBaseInfo._(
           containerName: containerName,
-          name: name,
+          xname: xname,
           port: port,
         );
     replace(_$result);

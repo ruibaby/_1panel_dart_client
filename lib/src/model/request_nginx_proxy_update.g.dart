@@ -10,7 +10,7 @@ class _$RequestNginxProxyUpdate extends RequestNginxProxyUpdate {
   @override
   final String content;
   @override
-  final String name;
+  final String xname;
   @override
   final int websiteID;
 
@@ -19,12 +19,12 @@ class _$RequestNginxProxyUpdate extends RequestNginxProxyUpdate {
       (new RequestNginxProxyUpdateBuilder()..update(updates))._build();
 
   _$RequestNginxProxyUpdate._(
-      {required this.content, required this.name, required this.websiteID})
+      {required this.content, required this.xname, required this.websiteID})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         content, r'RequestNginxProxyUpdate', 'content');
     BuiltValueNullFieldError.checkNotNull(
-        name, r'RequestNginxProxyUpdate', 'name');
+        xname, r'RequestNginxProxyUpdate', 'xname');
     BuiltValueNullFieldError.checkNotNull(
         websiteID, r'RequestNginxProxyUpdate', 'websiteID');
   }
@@ -43,7 +43,7 @@ class _$RequestNginxProxyUpdate extends RequestNginxProxyUpdate {
     if (identical(other, this)) return true;
     return other is RequestNginxProxyUpdate &&
         content == other.content &&
-        name == other.name &&
+        xname == other.xname &&
         websiteID == other.websiteID;
   }
 
@@ -51,7 +51,7 @@ class _$RequestNginxProxyUpdate extends RequestNginxProxyUpdate {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, content.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, websiteID.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -61,7 +61,7 @@ class _$RequestNginxProxyUpdate extends RequestNginxProxyUpdate {
   String toString() {
     return (newBuiltValueToStringHelper(r'RequestNginxProxyUpdate')
           ..add('content', content)
-          ..add('name', name)
+          ..add('xname', xname)
           ..add('websiteID', websiteID))
         .toString();
   }
@@ -76,9 +76,9 @@ class RequestNginxProxyUpdateBuilder
   String? get content => _$this._content;
   set content(String? content) => _$this._content = content;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _xname;
+  String? get xname => _$this._xname;
+  set xname(String? xname) => _$this._xname = xname;
 
   int? _websiteID;
   int? get websiteID => _$this._websiteID;
@@ -92,7 +92,7 @@ class RequestNginxProxyUpdateBuilder
     final $v = _$v;
     if ($v != null) {
       _content = $v.content;
-      _name = $v.name;
+      _xname = $v.xname;
       _websiteID = $v.websiteID;
       _$v = null;
     }
@@ -118,8 +118,8 @@ class RequestNginxProxyUpdateBuilder
         new _$RequestNginxProxyUpdate._(
           content: BuiltValueNullFieldError.checkNotNull(
               content, r'RequestNginxProxyUpdate', 'content'),
-          name: BuiltValueNullFieldError.checkNotNull(
-              name, r'RequestNginxProxyUpdate', 'name'),
+          xname: BuiltValueNullFieldError.checkNotNull(
+              xname, r'RequestNginxProxyUpdate', 'xname'),
           websiteID: BuiltValueNullFieldError.checkNotNull(
               websiteID, r'RequestNginxProxyUpdate', 'websiteID'),
         );

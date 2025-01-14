@@ -33,15 +33,15 @@ final BuiltSet<DtoMysqlDBSearchOrderEnum> _$dtoMysqlDBSearchOrderEnumValues =
   _$dtoMysqlDBSearchOrderEnum_descending,
 ]);
 
-const DtoMysqlDBSearchOrderByEnum _$dtoMysqlDBSearchOrderByEnum_name =
-    const DtoMysqlDBSearchOrderByEnum._('name');
+const DtoMysqlDBSearchOrderByEnum _$dtoMysqlDBSearchOrderByEnum_xname =
+    const DtoMysqlDBSearchOrderByEnum._('xname');
 const DtoMysqlDBSearchOrderByEnum _$dtoMysqlDBSearchOrderByEnum_createdAt =
     const DtoMysqlDBSearchOrderByEnum._('createdAt');
 
 DtoMysqlDBSearchOrderByEnum _$dtoMysqlDBSearchOrderByEnumValueOf(String name) {
   switch (name) {
-    case 'name':
-      return _$dtoMysqlDBSearchOrderByEnum_name;
+    case 'xname':
+      return _$dtoMysqlDBSearchOrderByEnum_xname;
     case 'createdAt':
       return _$dtoMysqlDBSearchOrderByEnum_createdAt;
     default:
@@ -52,7 +52,7 @@ DtoMysqlDBSearchOrderByEnum _$dtoMysqlDBSearchOrderByEnumValueOf(String name) {
 final BuiltSet<DtoMysqlDBSearchOrderByEnum>
     _$dtoMysqlDBSearchOrderByEnumValues = new BuiltSet<
         DtoMysqlDBSearchOrderByEnum>(const <DtoMysqlDBSearchOrderByEnum>[
-  _$dtoMysqlDBSearchOrderByEnum_name,
+  _$dtoMysqlDBSearchOrderByEnum_xname,
   _$dtoMysqlDBSearchOrderByEnum_createdAt,
 ]);
 
@@ -96,11 +96,11 @@ class _$DtoMysqlDBSearchOrderEnumSerializer
 class _$DtoMysqlDBSearchOrderByEnumSerializer
     implements PrimitiveSerializer<DtoMysqlDBSearchOrderByEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'name': 'name',
+    'xname': 'name',
     'createdAt': 'created_at',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'name': 'name',
+    'name': 'xname',
     'created_at': 'createdAt',
   };
 

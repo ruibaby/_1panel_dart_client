@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **database** | **String** |  | 
 **maxclients** | **String** |  | [optional] 
 **maxmemory** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **port** | **int** |  | [optional] 
 **requirepass** | **String** |  | [optional] 
 **timeout** | **String** |  | [optional] 

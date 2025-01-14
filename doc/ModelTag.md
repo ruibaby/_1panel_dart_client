@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **createdAt** | **String** |  | [optional] 
 **id** | **int** |  | [optional] 
 **key** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
+**xname** | **String** |  | [optional] 
 **sort** | **int** |  | [optional] 
 **updatedAt** | **String** |  | [optional] 
 
