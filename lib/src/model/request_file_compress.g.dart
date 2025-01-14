@@ -14,7 +14,7 @@ class _$RequestFileCompress extends RequestFileCompress {
   @override
   final String name;
   @override
-  final bool? replace;
+  final bool? needsReplace;
   @override
   final String? secret;
   @override
@@ -28,7 +28,7 @@ class _$RequestFileCompress extends RequestFileCompress {
       {required this.dst,
       required this.files,
       required this.name,
-      this.replace,
+      this.needsReplace,
       this.secret,
       required this.type})
       : super._() {
@@ -55,7 +55,7 @@ class _$RequestFileCompress extends RequestFileCompress {
         dst == other.dst &&
         files == other.files &&
         name == other.name &&
-        replace == other.replace &&
+        needsReplace == other.needsReplace &&
         secret == other.secret &&
         type == other.type;
   }
@@ -66,7 +66,7 @@ class _$RequestFileCompress extends RequestFileCompress {
     _$hash = $jc(_$hash, dst.hashCode);
     _$hash = $jc(_$hash, files.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
-    _$hash = $jc(_$hash, replace.hashCode);
+    _$hash = $jc(_$hash, needsReplace.hashCode);
     _$hash = $jc(_$hash, secret.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jf(_$hash);
@@ -79,7 +79,7 @@ class _$RequestFileCompress extends RequestFileCompress {
           ..add('dst', dst)
           ..add('files', files)
           ..add('name', name)
-          ..add('replace', replace)
+          ..add('needsReplace', needsReplace)
           ..add('secret', secret)
           ..add('type', type))
         .toString();
@@ -102,9 +102,9 @@ class RequestFileCompressBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
-  bool? _replace;
-  bool? get replace => _$this._replace;
-  set replace(bool? replace) => _$this._replace = replace;
+  bool? _needsReplace;
+  bool? get needsReplace => _$this._needsReplace;
+  set needsReplace(bool? needsReplace) => _$this._needsReplace = needsReplace;
 
   String? _secret;
   String? get secret => _$this._secret;
@@ -124,7 +124,7 @@ class RequestFileCompressBuilder
       _dst = $v.dst;
       _files = $v.files.toBuilder();
       _name = $v.name;
-      _replace = $v.replace;
+      _needsReplace = $v.needsReplace;
       _secret = $v.secret;
       _type = $v.type;
       _$v = null;
@@ -156,7 +156,7 @@ class RequestFileCompressBuilder
             files: files.build(),
             name: BuiltValueNullFieldError.checkNotNull(
                 name, r'RequestFileCompress', 'name'),
-            replace: replace,
+            needsReplace: needsReplace,
             secret: secret,
             type: BuiltValueNullFieldError.checkNotNull(
                 type, r'RequestFileCompress', 'type'),

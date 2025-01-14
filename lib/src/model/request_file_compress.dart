@@ -12,14 +12,15 @@ part 'request_file_compress.g.dart';
 /// RequestFileCompress
 ///
 /// Properties:
-/// * [dst] 
-/// * [files] 
-/// * [name] 
-/// * [replace] 
-/// * [secret] 
-/// * [type] 
+/// * [dst]
+/// * [files]
+/// * [name]
+/// * [replace]
+/// * [secret]
+/// * [type]
 @BuiltValue()
-abstract class RequestFileCompress implements Built<RequestFileCompress, RequestFileCompressBuilder> {
+abstract class RequestFileCompress
+    implements Built<RequestFileCompress, RequestFileCompressBuilder> {
   @BuiltValueField(wireName: r'dst')
   String get dst;
 
@@ -30,7 +31,7 @@ abstract class RequestFileCompress implements Built<RequestFileCompress, Request
   String get name;
 
   @BuiltValueField(wireName: r'replace')
-  bool? get replace;
+  bool? get needsReplace;
 
   @BuiltValueField(wireName: r'secret')
   String? get secret;
@@ -40,18 +41,24 @@ abstract class RequestFileCompress implements Built<RequestFileCompress, Request
 
   RequestFileCompress._();
 
-  factory RequestFileCompress([void updates(RequestFileCompressBuilder b)]) = _$RequestFileCompress;
+  factory RequestFileCompress([void updates(RequestFileCompressBuilder b)]) =
+      _$RequestFileCompress;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(RequestFileCompressBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<RequestFileCompress> get serializer => _$RequestFileCompressSerializer();
+  static Serializer<RequestFileCompress> get serializer =>
+      _$RequestFileCompressSerializer();
 }
 
-class _$RequestFileCompressSerializer implements PrimitiveSerializer<RequestFileCompress> {
+class _$RequestFileCompressSerializer
+    implements PrimitiveSerializer<RequestFileCompress> {
   @override
-  final Iterable<Type> types = const [RequestFileCompress, _$RequestFileCompress];
+  final Iterable<Type> types = const [
+    RequestFileCompress,
+    _$RequestFileCompress
+  ];
 
   @override
   final String wireName = r'RequestFileCompress';
@@ -103,7 +110,9 @@ class _$RequestFileCompressSerializer implements PrimitiveSerializer<RequestFile
     RequestFileCompress object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -188,4 +197,3 @@ class _$RequestFileCompressSerializer implements PrimitiveSerializer<RequestFile
     return result.build();
   }
 }
-
