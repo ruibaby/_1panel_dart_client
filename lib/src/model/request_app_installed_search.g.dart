@@ -24,7 +24,7 @@ class _$RequestAppInstalledSearch extends RequestAppInstalledSearch {
   @override
   final bool? unused;
   @override
-  final bool? update;
+  final bool? hasUpdate;
 
   factory _$RequestAppInstalledSearch(
           [void Function(RequestAppInstalledSearchBuilder)? updates]) =>
@@ -39,7 +39,7 @@ class _$RequestAppInstalledSearch extends RequestAppInstalledSearch {
       this.tags,
       this.type,
       this.unused,
-      this.update})
+      this.hasUpdate})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         page, r'RequestAppInstalledSearch', 'page');
@@ -68,7 +68,7 @@ class _$RequestAppInstalledSearch extends RequestAppInstalledSearch {
         tags == other.tags &&
         type == other.type &&
         unused == other.unused &&
-        update == other.update;
+        hasUpdate == other.hasUpdate;
   }
 
   @override
@@ -82,7 +82,7 @@ class _$RequestAppInstalledSearch extends RequestAppInstalledSearch {
     _$hash = $jc(_$hash, tags.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jc(_$hash, unused.hashCode);
-    _$hash = $jc(_$hash, update.hashCode);
+    _$hash = $jc(_$hash, hasUpdate.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -98,7 +98,7 @@ class _$RequestAppInstalledSearch extends RequestAppInstalledSearch {
           ..add('tags', tags)
           ..add('type', type)
           ..add('unused', unused)
-          ..add('update', update))
+          ..add('hasUpdate', hasUpdate))
         .toString();
   }
 }
@@ -140,9 +140,9 @@ class RequestAppInstalledSearchBuilder
   bool? get unused => _$this._unused;
   set unused(bool? unused) => _$this._unused = unused;
 
-  bool? _update;
-  bool? get update => _$this._update;
-  set update(bool? update) => _$this._update = update;
+  bool? _hasUpdate;
+  bool? get hasUpdate => _$this._hasUpdate;
+  set hasUpdate(bool? hasUpdate) => _$this._hasUpdate = hasUpdate;
 
   RequestAppInstalledSearchBuilder() {
     RequestAppInstalledSearch._defaults(this);
@@ -159,7 +159,7 @@ class RequestAppInstalledSearchBuilder
       _tags = $v.tags?.toBuilder();
       _type = $v.type;
       _unused = $v.unused;
-      _update = $v.update;
+      _hasUpdate = $v.hasUpdate;
       _$v = null;
     }
     return this;
@@ -194,7 +194,7 @@ class RequestAppInstalledSearchBuilder
             tags: _tags?.build(),
             type: type,
             unused: unused,
-            update: update,
+            hasUpdate: hasUpdate,
           );
     } catch (_) {
       late String _$failedField;

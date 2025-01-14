@@ -12,17 +12,19 @@ part 'request_app_installed_search.g.dart';
 /// RequestAppInstalledSearch
 ///
 /// Properties:
-/// * [all] 
-/// * [name] 
-/// * [page] 
-/// * [pageSize] 
-/// * [sync_] 
-/// * [tags] 
-/// * [type] 
-/// * [unused] 
-/// * [update] 
+/// * [all]
+/// * [name]
+/// * [page]
+/// * [pageSize]
+/// * [sync_]
+/// * [tags]
+/// * [type]
+/// * [unused]
+/// * [update]
 @BuiltValue()
-abstract class RequestAppInstalledSearch implements Built<RequestAppInstalledSearch, RequestAppInstalledSearchBuilder> {
+abstract class RequestAppInstalledSearch
+    implements
+        Built<RequestAppInstalledSearch, RequestAppInstalledSearchBuilder> {
   @BuiltValueField(wireName: r'all')
   bool? get all;
 
@@ -48,22 +50,29 @@ abstract class RequestAppInstalledSearch implements Built<RequestAppInstalledSea
   bool? get unused;
 
   @BuiltValueField(wireName: r'update')
-  bool? get update;
+  bool? get hasUpdate;
 
   RequestAppInstalledSearch._();
 
-  factory RequestAppInstalledSearch([void updates(RequestAppInstalledSearchBuilder b)]) = _$RequestAppInstalledSearch;
+  factory RequestAppInstalledSearch(
+          [void updates(RequestAppInstalledSearchBuilder b)]) =
+      _$RequestAppInstalledSearch;
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(RequestAppInstalledSearchBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<RequestAppInstalledSearch> get serializer => _$RequestAppInstalledSearchSerializer();
+  static Serializer<RequestAppInstalledSearch> get serializer =>
+      _$RequestAppInstalledSearchSerializer();
 }
 
-class _$RequestAppInstalledSearchSerializer implements PrimitiveSerializer<RequestAppInstalledSearch> {
+class _$RequestAppInstalledSearchSerializer
+    implements PrimitiveSerializer<RequestAppInstalledSearch> {
   @override
-  final Iterable<Type> types = const [RequestAppInstalledSearch, _$RequestAppInstalledSearch];
+  final Iterable<Type> types = const [
+    RequestAppInstalledSearch,
+    _$RequestAppInstalledSearch
+  ];
 
   @override
   final String wireName = r'RequestAppInstalledSearch';
@@ -140,7 +149,9 @@ class _$RequestAppInstalledSearchSerializer implements PrimitiveSerializer<Reque
     RequestAppInstalledSearch object, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
+    return _serializeProperties(serializers, object,
+            specifiedType: specifiedType)
+        .toList();
   }
 
   void _deserializeProperties(
@@ -246,4 +257,3 @@ class _$RequestAppInstalledSearchSerializer implements PrimitiveSerializer<Reque
     return result.build();
   }
 }
-
