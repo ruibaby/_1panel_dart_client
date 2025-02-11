@@ -421,6 +421,7 @@ Class | Method | HTTP request | Description
 [*WebsiteApi*](doc/WebsiteApi.md) | [**websitesOptionsGet**](doc/WebsiteApi.md#websitesoptionsget) | **GET** /websites/options | List website names
 [*WebsiteApi*](doc/WebsiteApi.md) | [**websitesPhpConfigIdGet**](doc/WebsiteApi.md#websitesphpconfigidget) | **GET** /websites/php/config/{id} | Load website php conf
 [*WebsiteApi*](doc/WebsiteApi.md) | [**websitesPost**](doc/WebsiteApi.md#websitespost) | **POST** /websites | Create website
+[*WebsiteApi*](doc/WebsiteApi.md) | [**websitesProxiesDelPost**](doc/WebsiteApi.md#websitesproxiesdelpost) | **POST** /websites/proxies/del | Delete proxy conf
 [*WebsiteApi*](doc/WebsiteApi.md) | [**websitesProxiesPost**](doc/WebsiteApi.md#websitesproxiespost) | **POST** /websites/proxies | Get proxy conf
 [*WebsiteApi*](doc/WebsiteApi.md) | [**websitesProxiesUpdatePost**](doc/WebsiteApi.md#websitesproxiesupdatepost) | **POST** /websites/proxies/update | Update proxy conf
 [*WebsiteApi*](doc/WebsiteApi.md) | [**websitesProxyFilePost**](doc/WebsiteApi.md#websitesproxyfilepost) | **POST** /websites/proxy/file | Update proxy file
@@ -588,6 +589,7 @@ Class | Method | HTTP request | Description
  - [DtoImageSave](doc/DtoImageSave.md)
  - [DtoImageTag](doc/DtoImageTag.md)
  - [DtoInspectReq](doc/DtoInspectReq.md)
+ - [DtoLocale](doc/DtoLocale.md)
  - [DtoLogOption](doc/DtoLogOption.md)
  - [DtoLogin](doc/DtoLogin.md)
  - [DtoMFALogin](doc/DtoMFALogin.md)
@@ -774,6 +776,7 @@ Class | Method | HTTP request | Description
  - [RequestWebsitePHPFileUpdate](doc/RequestWebsitePHPFileUpdate.md)
  - [RequestWebsitePHPVersionReq](doc/RequestWebsitePHPVersionReq.md)
  - [RequestWebsiteProxyConfig](doc/RequestWebsiteProxyConfig.md)
+ - [RequestWebsiteProxyDel](doc/RequestWebsiteProxyDel.md)
  - [RequestWebsiteProxyReq](doc/RequestWebsiteProxyReq.md)
  - [RequestWebsiteResourceReq](doc/RequestWebsiteResourceReq.md)
  - [RequestWebsiteSSLApply](doc/RequestWebsiteSSLApply.md)
@@ -812,11 +815,11 @@ Class | Method | HTTP request | Description
  - [ResponseNginxStatus](doc/ResponseNginxStatus.md)
  - [ResponseNodeModule](doc/ResponseNodeModule.md)
  - [ResponsePHPConfig](doc/ResponsePHPConfig.md)
- - [ResponsePHPExtensionsDTO](doc/ResponsePHPExtensionsDTO.md)
  - [ResponsePackageScripts](doc/ResponsePackageScripts.md)
  - [ResponseProcessStatus](doc/ResponseProcessStatus.md)
  - [ResponseRuntimeDTO](doc/ResponseRuntimeDTO.md)
  - [ResponseSupervisorProcessConfig](doc/ResponseSupervisorProcessConfig.md)
+ - [ResponseTagDTO](doc/ResponseTagDTO.md)
  - [ResponseWebsiteAcmeAccountDTO](doc/ResponseWebsiteAcmeAccountDTO.md)
  - [ResponseWebsiteCADTO](doc/ResponseWebsiteCADTO.md)
  - [ResponseWebsiteDNSRes](doc/ResponseWebsiteDNSRes.md)

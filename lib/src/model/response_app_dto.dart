@@ -15,6 +15,7 @@ part 'response_app_dto.g.dart';
 /// Properties:
 /// * [createdAt] 
 /// * [crossVersionUpdate] 
+/// * [description] 
 /// * [document] 
 /// * [github] 
 /// * [icon] 
@@ -43,6 +44,9 @@ abstract class ResponseAppDTO implements Built<ResponseAppDTO, ResponseAppDTOBui
 
   @BuiltValueField(wireName: r'crossVersionUpdate')
   bool? get crossVersionUpdate;
+
+  @BuiltValueField(wireName: r'description')
+  String? get description;
 
   @BuiltValueField(wireName: r'document')
   String? get document;
@@ -142,6 +146,13 @@ class _$ResponseAppDTOSerializer implements PrimitiveSerializer<ResponseAppDTO> 
       yield serializers.serialize(
         object.crossVersionUpdate,
         specifiedType: const FullType(bool),
+      );
+    }
+    if (object.description != null) {
+      yield r'description';
+      yield serializers.serialize(
+        object.description,
+        specifiedType: const FullType(String),
       );
     }
     if (object.document != null) {
@@ -327,6 +338,13 @@ class _$ResponseAppDTOSerializer implements PrimitiveSerializer<ResponseAppDTO> 
             specifiedType: const FullType(bool),
           ) as bool;
           result.crossVersionUpdate = valueDes;
+          break;
+        case r'description':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.description = valueDes;
           break;
         case r'document':
           final valueDes = serializers.deserialize(

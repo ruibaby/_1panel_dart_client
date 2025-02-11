@@ -36,7 +36,7 @@ abstract class DtoLogin implements Built<DtoLogin, DtoLoginBuilder> {
 
   @BuiltValueField(wireName: r'language')
   DtoLoginLanguageEnum get language;
-  // enum languageEnum {  zh,  en,  tw,  ja,  ru,  ms,  pt-BR,  };
+  // enum languageEnum {  zh,  en,  tw,  ja,  ko,  ru,  ms,  pt-BR,  };
 
   @BuiltValueField(wireName: r'name')
   String get xname;
@@ -234,6 +234,8 @@ class DtoLoginLanguageEnum extends EnumClass {
   static const DtoLoginLanguageEnum tw = _$dtoLoginLanguageEnum_tw;
   @BuiltValueEnumConst(wireName: r'ja')
   static const DtoLoginLanguageEnum ja = _$dtoLoginLanguageEnum_ja;
+  @BuiltValueEnumConst(wireName: r'ko')
+  static const DtoLoginLanguageEnum ko = _$dtoLoginLanguageEnum_ko;
   @BuiltValueEnumConst(wireName: r'ru')
   static const DtoLoginLanguageEnum ru = _$dtoLoginLanguageEnum_ru;
   @BuiltValueEnumConst(wireName: r'ms')

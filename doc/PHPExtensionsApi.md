@@ -112,7 +112,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **runtimesPhpExtensionsSearchPost**
-> BuiltList<ResponsePHPExtensionsDTO> runtimesPhpExtensionsSearchPost(request)
+> DtoPageResult runtimesPhpExtensionsSearchPost(request)
 
 Page Extensions
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;ResponsePHPExtensionsDTO&gt;**](ResponsePHPExtensionsDTO.md)
+[**DtoPageResult**](DtoPageResult.md)
 
 ### Authorization
 

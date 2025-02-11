@@ -6,23 +6,16 @@
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'model_tag.g.dart';
+part 'response_tag_dto.g.dart';
 
-/// ModelTag
+/// ResponseTagDTO
 ///
 /// Properties:
-/// * [createdAt] 
 /// * [id] 
 /// * [key] 
 /// * [xname] 
-/// * [sort] 
-/// * [translations] 
-/// * [updatedAt] 
 @BuiltValue()
-abstract class ModelTag implements Built<ModelTag, ModelTagBuilder> {
-  @BuiltValueField(wireName: r'createdAt')
-  String? get createdAt;
-
+abstract class ResponseTagDTO implements Built<ResponseTagDTO, ResponseTagDTOBuilder> {
   @BuiltValueField(wireName: r'id')
   int? get id;
 
@@ -32,45 +25,29 @@ abstract class ModelTag implements Built<ModelTag, ModelTagBuilder> {
   @BuiltValueField(wireName: r'name')
   String? get xname;
 
-  @BuiltValueField(wireName: r'sort')
-  int? get sort;
+  ResponseTagDTO._();
 
-  @BuiltValueField(wireName: r'translations')
-  String? get translations;
-
-  @BuiltValueField(wireName: r'updatedAt')
-  String? get updatedAt;
-
-  ModelTag._();
-
-  factory ModelTag([void updates(ModelTagBuilder b)]) = _$ModelTag;
+  factory ResponseTagDTO([void updates(ResponseTagDTOBuilder b)]) = _$ResponseTagDTO;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(ModelTagBuilder b) => b;
+  static void _defaults(ResponseTagDTOBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<ModelTag> get serializer => _$ModelTagSerializer();
+  static Serializer<ResponseTagDTO> get serializer => _$ResponseTagDTOSerializer();
 }
 
-class _$ModelTagSerializer implements PrimitiveSerializer<ModelTag> {
+class _$ResponseTagDTOSerializer implements PrimitiveSerializer<ResponseTagDTO> {
   @override
-  final Iterable<Type> types = const [ModelTag, _$ModelTag];
+  final Iterable<Type> types = const [ResponseTagDTO, _$ResponseTagDTO];
 
   @override
-  final String wireName = r'ModelTag';
+  final String wireName = r'ResponseTagDTO';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    ModelTag object, {
+    ResponseTagDTO object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.createdAt != null) {
-      yield r'createdAt';
-      yield serializers.serialize(
-        object.createdAt,
-        specifiedType: const FullType(String),
-      );
-    }
     if (object.id != null) {
       yield r'id';
       yield serializers.serialize(
@@ -92,33 +69,12 @@ class _$ModelTagSerializer implements PrimitiveSerializer<ModelTag> {
         specifiedType: const FullType(String),
       );
     }
-    if (object.sort != null) {
-      yield r'sort';
-      yield serializers.serialize(
-        object.sort,
-        specifiedType: const FullType(int),
-      );
-    }
-    if (object.translations != null) {
-      yield r'translations';
-      yield serializers.serialize(
-        object.translations,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.updatedAt != null) {
-      yield r'updatedAt';
-      yield serializers.serialize(
-        object.updatedAt,
-        specifiedType: const FullType(String),
-      );
-    }
   }
 
   @override
   Object serialize(
     Serializers serializers,
-    ModelTag object, {
+    ResponseTagDTO object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -129,20 +85,13 @@ class _$ModelTagSerializer implements PrimitiveSerializer<ModelTag> {
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required ModelTagBuilder result,
+    required ResponseTagDTOBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'createdAt':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.createdAt = valueDes;
-          break;
         case r'id':
           final valueDes = serializers.deserialize(
             value,
@@ -164,27 +113,6 @@ class _$ModelTagSerializer implements PrimitiveSerializer<ModelTag> {
           ) as String;
           result.xname = valueDes;
           break;
-        case r'sort':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(int),
-          ) as int;
-          result.sort = valueDes;
-          break;
-        case r'translations':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.translations = valueDes;
-          break;
-        case r'updatedAt':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.updatedAt = valueDes;
-          break;
         default:
           unhandled.add(key);
           unhandled.add(value);
@@ -194,12 +122,12 @@ class _$ModelTagSerializer implements PrimitiveSerializer<ModelTag> {
   }
 
   @override
-  ModelTag deserialize(
+  ResponseTagDTO deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = ModelTagBuilder();
+    final result = ResponseTagDTOBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

@@ -131,6 +131,7 @@ import 'package:one_panel_client/src/model/dto_image_repo_update.dart';
 import 'package:one_panel_client/src/model/dto_image_save.dart';
 import 'package:one_panel_client/src/model/dto_image_tag.dart';
 import 'package:one_panel_client/src/model/dto_inspect_req.dart';
+import 'package:one_panel_client/src/model/dto_locale.dart';
 import 'package:one_panel_client/src/model/dto_log_option.dart';
 import 'package:one_panel_client/src/model/dto_login.dart';
 import 'package:one_panel_client/src/model/dto_mfa_login.dart';
@@ -317,6 +318,7 @@ import 'package:one_panel_client/src/model/request_website_php_config_update.dar
 import 'package:one_panel_client/src/model/request_website_php_file_update.dart';
 import 'package:one_panel_client/src/model/request_website_php_version_req.dart';
 import 'package:one_panel_client/src/model/request_website_proxy_config.dart';
+import 'package:one_panel_client/src/model/request_website_proxy_del.dart';
 import 'package:one_panel_client/src/model/request_website_proxy_req.dart';
 import 'package:one_panel_client/src/model/request_website_resource_req.dart';
 import 'package:one_panel_client/src/model/request_website_ssl_apply.dart';
@@ -355,11 +357,11 @@ import 'package:one_panel_client/src/model/response_nginx_rewrite_res.dart';
 import 'package:one_panel_client/src/model/response_nginx_status.dart';
 import 'package:one_panel_client/src/model/response_node_module.dart';
 import 'package:one_panel_client/src/model/response_php_config.dart';
-import 'package:one_panel_client/src/model/response_php_extensions_dto.dart';
 import 'package:one_panel_client/src/model/response_package_scripts.dart';
 import 'package:one_panel_client/src/model/response_process_status.dart';
 import 'package:one_panel_client/src/model/response_runtime_dto.dart';
 import 'package:one_panel_client/src/model/response_supervisor_process_config.dart';
+import 'package:one_panel_client/src/model/response_tag_dto.dart';
 import 'package:one_panel_client/src/model/response_website_acme_account_dto.dart';
 import 'package:one_panel_client/src/model/response_website_cadto.dart';
 import 'package:one_panel_client/src/model/response_website_dns_res.dart';
@@ -493,6 +495,7 @@ part 'serializers.g.dart';
   DtoImageSave,
   DtoImageTag,
   DtoInspectReq,
+  DtoLocale,
   DtoLogOption,
   DtoLogin,
   DtoMFALogin,
@@ -679,6 +682,7 @@ part 'serializers.g.dart';
   RequestWebsitePHPFileUpdate,
   RequestWebsitePHPVersionReq,
   RequestWebsiteProxyConfig,
+  RequestWebsiteProxyDel,
   RequestWebsiteProxyReq,
   RequestWebsiteResourceReq,
   RequestWebsiteSSLApply,
@@ -717,11 +721,11 @@ part 'serializers.g.dart';
   ResponseNginxStatus,
   ResponseNodeModule,
   ResponsePHPConfig,
-  ResponsePHPExtensionsDTO,
   ResponsePackageScripts,
   ResponseProcessStatus,
   ResponseRuntimeDTO,
   ResponseSupervisorProcessConfig,
+  ResponseTagDTO,
   ResponseWebsiteAcmeAccountDTO,
   ResponseWebsiteCADTO,
   ResponseWebsiteDNSRes,
@@ -807,10 +811,6 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(DtoAppResource)]),
         () => ListBuilder<DtoAppResource>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(ResponsePHPExtensionsDTO)]),
-        () => ListBuilder<ResponsePHPExtensionsDTO>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(ModelWebsiteDomain)]),

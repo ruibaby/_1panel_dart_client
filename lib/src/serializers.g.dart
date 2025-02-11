@@ -152,6 +152,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(DtoImageSave.serializer)
       ..add(DtoImageTag.serializer)
       ..add(DtoInspectReq.serializer)
+      ..add(DtoLocale.serializer)
       ..add(DtoLogOption.serializer)
       ..add(DtoLogin.serializer)
       ..add(DtoLoginAuthMethodEnum.serializer)
@@ -391,6 +392,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(RequestWebsitePHPFileUpdate.serializer)
       ..add(RequestWebsitePHPVersionReq.serializer)
       ..add(RequestWebsiteProxyConfig.serializer)
+      ..add(RequestWebsiteProxyDel.serializer)
       ..add(RequestWebsiteProxyReq.serializer)
       ..add(RequestWebsiteResourceReq.serializer)
       ..add(RequestWebsiteSSLApply.serializer)
@@ -432,11 +434,11 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(ResponseNginxStatus.serializer)
       ..add(ResponseNodeModule.serializer)
       ..add(ResponsePHPConfig.serializer)
-      ..add(ResponsePHPExtensionsDTO.serializer)
       ..add(ResponsePackageScripts.serializer)
       ..add(ResponseProcessStatus.serializer)
       ..add(ResponseRuntimeDTO.serializer)
       ..add(ResponseSupervisorProcessConfig.serializer)
+      ..add(ResponseTagDTO.serializer)
       ..add(ResponseWebsiteAcmeAccountDTO.serializer)
       ..add(ResponseWebsiteCADTO.serializer)
       ..add(ResponseWebsiteDNSRes.serializer)
@@ -528,12 +530,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(ModelTag)]),
-          () => new ListBuilder<ModelTag>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>())
-      ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(ModelWebsite)]),
           () => new ListBuilder<ModelWebsite>())
       ..addBuilderFactory(
@@ -591,6 +587,12 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(ResponseProcessStatus)]),
           () => new ListBuilder<ResponseProcessStatus>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(ResponseTagDTO)]),
+          () => new ListBuilder<ResponseTagDTO>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())

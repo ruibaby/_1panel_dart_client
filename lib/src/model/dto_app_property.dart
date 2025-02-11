@@ -4,6 +4,7 @@
 
 // ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
+import 'package:one_panel_client/src/model/dto_locale.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -14,6 +15,7 @@ part 'dto_app_property.g.dart';
 /// Properties:
 /// * [required_] 
 /// * [crossVersionUpdate] 
+/// * [description] 
 /// * [document] 
 /// * [github] 
 /// * [key] 
@@ -33,6 +35,9 @@ abstract class DtoAppProperty implements Built<DtoAppProperty, DtoAppPropertyBui
 
   @BuiltValueField(wireName: r'crossVersionUpdate')
   bool? get crossVersionUpdate;
+
+  @BuiltValueField(wireName: r'description')
+  DtoLocale? get description;
 
   @BuiltValueField(wireName: r'document')
   String? get document;
@@ -105,6 +110,13 @@ class _$DtoAppPropertySerializer implements PrimitiveSerializer<DtoAppProperty> 
       yield serializers.serialize(
         object.crossVersionUpdate,
         specifiedType: const FullType(bool),
+      );
+    }
+    if (object.description != null) {
+      yield r'description';
+      yield serializers.serialize(
+        object.description,
+        specifiedType: const FullType(DtoLocale),
       );
     }
     if (object.document != null) {
@@ -227,6 +239,13 @@ class _$DtoAppPropertySerializer implements PrimitiveSerializer<DtoAppProperty> 
             specifiedType: const FullType(bool),
           ) as bool;
           result.crossVersionUpdate = valueDes;
+          break;
+        case r'description':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(DtoLocale),
+          ) as DtoLocale;
+          result.description.replace(valueDes);
           break;
         case r'document':
           final valueDes = serializers.deserialize(

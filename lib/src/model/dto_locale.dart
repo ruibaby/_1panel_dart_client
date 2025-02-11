@@ -6,88 +6,110 @@
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'response_php_extensions_dto.g.dart';
+part 'dto_locale.g.dart';
 
-/// ResponsePHPExtensionsDTO
+/// DtoLocale
 ///
 /// Properties:
-/// * [createdAt] 
-/// * [extensions] 
-/// * [id] 
-/// * [xname] 
-/// * [updatedAt] 
+/// * [en] 
+/// * [ja] 
+/// * [ms] 
+/// * [ptBr] 
+/// * [ru] 
+/// * [zh] 
+/// * [zhHant] 
 @BuiltValue()
-abstract class ResponsePHPExtensionsDTO implements Built<ResponsePHPExtensionsDTO, ResponsePHPExtensionsDTOBuilder> {
-  @BuiltValueField(wireName: r'createdAt')
-  String? get createdAt;
+abstract class DtoLocale implements Built<DtoLocale, DtoLocaleBuilder> {
+  @BuiltValueField(wireName: r'en')
+  String? get en;
 
-  @BuiltValueField(wireName: r'extensions')
-  String? get extensions;
+  @BuiltValueField(wireName: r'ja')
+  String? get ja;
 
-  @BuiltValueField(wireName: r'id')
-  int? get id;
+  @BuiltValueField(wireName: r'ms')
+  String? get ms;
 
-  @BuiltValueField(wireName: r'name')
-  String? get xname;
+  @BuiltValueField(wireName: r'pt-br')
+  String? get ptBr;
 
-  @BuiltValueField(wireName: r'updatedAt')
-  String? get updatedAt;
+  @BuiltValueField(wireName: r'ru')
+  String? get ru;
 
-  ResponsePHPExtensionsDTO._();
+  @BuiltValueField(wireName: r'zh')
+  String? get zh;
 
-  factory ResponsePHPExtensionsDTO([void updates(ResponsePHPExtensionsDTOBuilder b)]) = _$ResponsePHPExtensionsDTO;
+  @BuiltValueField(wireName: r'zh-hant')
+  String? get zhHant;
+
+  DtoLocale._();
+
+  factory DtoLocale([void updates(DtoLocaleBuilder b)]) = _$DtoLocale;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(ResponsePHPExtensionsDTOBuilder b) => b;
+  static void _defaults(DtoLocaleBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<ResponsePHPExtensionsDTO> get serializer => _$ResponsePHPExtensionsDTOSerializer();
+  static Serializer<DtoLocale> get serializer => _$DtoLocaleSerializer();
 }
 
-class _$ResponsePHPExtensionsDTOSerializer implements PrimitiveSerializer<ResponsePHPExtensionsDTO> {
+class _$DtoLocaleSerializer implements PrimitiveSerializer<DtoLocale> {
   @override
-  final Iterable<Type> types = const [ResponsePHPExtensionsDTO, _$ResponsePHPExtensionsDTO];
+  final Iterable<Type> types = const [DtoLocale, _$DtoLocale];
 
   @override
-  final String wireName = r'ResponsePHPExtensionsDTO';
+  final String wireName = r'DtoLocale';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    ResponsePHPExtensionsDTO object, {
+    DtoLocale object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.createdAt != null) {
-      yield r'createdAt';
+    if (object.en != null) {
+      yield r'en';
       yield serializers.serialize(
-        object.createdAt,
+        object.en,
         specifiedType: const FullType(String),
       );
     }
-    if (object.extensions != null) {
-      yield r'extensions';
+    if (object.ja != null) {
+      yield r'ja';
       yield serializers.serialize(
-        object.extensions,
+        object.ja,
         specifiedType: const FullType(String),
       );
     }
-    if (object.id != null) {
-      yield r'id';
+    if (object.ms != null) {
+      yield r'ms';
       yield serializers.serialize(
-        object.id,
-        specifiedType: const FullType(int),
-      );
-    }
-    if (object.xname != null) {
-      yield r'name';
-      yield serializers.serialize(
-        object.xname,
+        object.ms,
         specifiedType: const FullType(String),
       );
     }
-    if (object.updatedAt != null) {
-      yield r'updatedAt';
+    if (object.ptBr != null) {
+      yield r'pt-br';
       yield serializers.serialize(
-        object.updatedAt,
+        object.ptBr,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.ru != null) {
+      yield r'ru';
+      yield serializers.serialize(
+        object.ru,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.zh != null) {
+      yield r'zh';
+      yield serializers.serialize(
+        object.zh,
+        specifiedType: const FullType(String),
+      );
+    }
+    if (object.zhHant != null) {
+      yield r'zh-hant';
+      yield serializers.serialize(
+        object.zhHant,
         specifiedType: const FullType(String),
       );
     }
@@ -96,7 +118,7 @@ class _$ResponsePHPExtensionsDTOSerializer implements PrimitiveSerializer<Respon
   @override
   Object serialize(
     Serializers serializers,
-    ResponsePHPExtensionsDTO object, {
+    DtoLocale object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -107,47 +129,61 @@ class _$ResponsePHPExtensionsDTOSerializer implements PrimitiveSerializer<Respon
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required ResponsePHPExtensionsDTOBuilder result,
+    required DtoLocaleBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'createdAt':
+        case r'en':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.createdAt = valueDes;
+          result.en = valueDes;
           break;
-        case r'extensions':
+        case r'ja':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.extensions = valueDes;
+          result.ja = valueDes;
           break;
-        case r'id':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(int),
-          ) as int;
-          result.id = valueDes;
-          break;
-        case r'name':
+        case r'ms':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.xname = valueDes;
+          result.ms = valueDes;
           break;
-        case r'updatedAt':
+        case r'pt-br':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.updatedAt = valueDes;
+          result.ptBr = valueDes;
+          break;
+        case r'ru':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.ru = valueDes;
+          break;
+        case r'zh':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.zh = valueDes;
+          break;
+        case r'zh-hant':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.zhHant = valueDes;
           break;
         default:
           unhandled.add(key);
@@ -158,12 +194,12 @@ class _$ResponsePHPExtensionsDTOSerializer implements PrimitiveSerializer<Respon
   }
 
   @override
-  ResponsePHPExtensionsDTO deserialize(
+  DtoLocale deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = ResponsePHPExtensionsDTOBuilder();
+    final result = DtoLocaleBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

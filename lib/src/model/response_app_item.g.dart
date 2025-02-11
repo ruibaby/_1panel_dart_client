@@ -8,6 +8,8 @@ part of 'response_app_item.dart';
 
 class _$ResponseAppItem extends ResponseAppItem {
   @override
+  final String? description;
+  @override
   final String? icon;
   @override
   final int? id;
@@ -22,13 +24,9 @@ class _$ResponseAppItem extends ResponseAppItem {
   @override
   final String? resource;
   @override
-  final String? shortDescEn;
-  @override
-  final String? shortDescZh;
-  @override
   final String? status;
   @override
-  final BuiltList<ModelTag>? tags;
+  final BuiltList<ResponseTagDTO>? tags;
   @override
   final String? type;
   @override
@@ -38,15 +36,14 @@ class _$ResponseAppItem extends ResponseAppItem {
       (new ResponseAppItemBuilder()..update(updates))._build();
 
   _$ResponseAppItem._(
-      {this.icon,
+      {this.description,
+      this.icon,
       this.id,
       this.installed,
       this.key,
       this.limit,
       this.xname,
       this.resource,
-      this.shortDescEn,
-      this.shortDescZh,
       this.status,
       this.tags,
       this.type,
@@ -65,6 +62,7 @@ class _$ResponseAppItem extends ResponseAppItem {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is ResponseAppItem &&
+        description == other.description &&
         icon == other.icon &&
         id == other.id &&
         installed == other.installed &&
@@ -72,8 +70,6 @@ class _$ResponseAppItem extends ResponseAppItem {
         limit == other.limit &&
         xname == other.xname &&
         resource == other.resource &&
-        shortDescEn == other.shortDescEn &&
-        shortDescZh == other.shortDescZh &&
         status == other.status &&
         tags == other.tags &&
         type == other.type &&
@@ -83,6 +79,7 @@ class _$ResponseAppItem extends ResponseAppItem {
   @override
   int get hashCode {
     var _$hash = 0;
+    _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, icon.hashCode);
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, installed.hashCode);
@@ -90,8 +87,6 @@ class _$ResponseAppItem extends ResponseAppItem {
     _$hash = $jc(_$hash, limit.hashCode);
     _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, resource.hashCode);
-    _$hash = $jc(_$hash, shortDescEn.hashCode);
-    _$hash = $jc(_$hash, shortDescZh.hashCode);
     _$hash = $jc(_$hash, status.hashCode);
     _$hash = $jc(_$hash, tags.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
@@ -103,6 +98,7 @@ class _$ResponseAppItem extends ResponseAppItem {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'ResponseAppItem')
+          ..add('description', description)
           ..add('icon', icon)
           ..add('id', id)
           ..add('installed', installed)
@@ -110,8 +106,6 @@ class _$ResponseAppItem extends ResponseAppItem {
           ..add('limit', limit)
           ..add('xname', xname)
           ..add('resource', resource)
-          ..add('shortDescEn', shortDescEn)
-          ..add('shortDescZh', shortDescZh)
           ..add('status', status)
           ..add('tags', tags)
           ..add('type', type)
@@ -123,6 +117,10 @@ class _$ResponseAppItem extends ResponseAppItem {
 class ResponseAppItemBuilder
     implements Builder<ResponseAppItem, ResponseAppItemBuilder> {
   _$ResponseAppItem? _$v;
+
+  String? _description;
+  String? get description => _$this._description;
+  set description(String? description) => _$this._description = description;
 
   String? _icon;
   String? get icon => _$this._icon;
@@ -152,22 +150,14 @@ class ResponseAppItemBuilder
   String? get resource => _$this._resource;
   set resource(String? resource) => _$this._resource = resource;
 
-  String? _shortDescEn;
-  String? get shortDescEn => _$this._shortDescEn;
-  set shortDescEn(String? shortDescEn) => _$this._shortDescEn = shortDescEn;
-
-  String? _shortDescZh;
-  String? get shortDescZh => _$this._shortDescZh;
-  set shortDescZh(String? shortDescZh) => _$this._shortDescZh = shortDescZh;
-
   String? _status;
   String? get status => _$this._status;
   set status(String? status) => _$this._status = status;
 
-  ListBuilder<ModelTag>? _tags;
-  ListBuilder<ModelTag> get tags =>
-      _$this._tags ??= new ListBuilder<ModelTag>();
-  set tags(ListBuilder<ModelTag>? tags) => _$this._tags = tags;
+  ListBuilder<ResponseTagDTO>? _tags;
+  ListBuilder<ResponseTagDTO> get tags =>
+      _$this._tags ??= new ListBuilder<ResponseTagDTO>();
+  set tags(ListBuilder<ResponseTagDTO>? tags) => _$this._tags = tags;
 
   String? _type;
   String? get type => _$this._type;
@@ -185,6 +175,7 @@ class ResponseAppItemBuilder
   ResponseAppItemBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
+      _description = $v.description;
       _icon = $v.icon;
       _id = $v.id;
       _installed = $v.installed;
@@ -192,8 +183,6 @@ class ResponseAppItemBuilder
       _limit = $v.limit;
       _xname = $v.xname;
       _resource = $v.resource;
-      _shortDescEn = $v.shortDescEn;
-      _shortDescZh = $v.shortDescZh;
       _status = $v.status;
       _tags = $v.tags?.toBuilder();
       _type = $v.type;
@@ -222,6 +211,7 @@ class ResponseAppItemBuilder
     try {
       _$result = _$v ??
           new _$ResponseAppItem._(
+            description: description,
             icon: icon,
             id: id,
             installed: installed,
@@ -229,8 +219,6 @@ class ResponseAppItemBuilder
             limit: limit,
             xname: xname,
             resource: resource,
-            shortDescEn: shortDescEn,
-            shortDescZh: shortDescZh,
             status: status,
             tags: _tags?.build(),
             type: type,

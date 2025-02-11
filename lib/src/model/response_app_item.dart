@@ -4,7 +4,7 @@
 
 // ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
-import 'package:one_panel_client/src/model/model_tag.dart';
+import 'package:one_panel_client/src/model/response_tag_dto.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -13,6 +13,7 @@ part 'response_app_item.g.dart';
 /// ResponseAppItem
 ///
 /// Properties:
+/// * [description] 
 /// * [icon] 
 /// * [id] 
 /// * [installed] 
@@ -20,14 +21,15 @@ part 'response_app_item.g.dart';
 /// * [limit] 
 /// * [xname] 
 /// * [resource] 
-/// * [shortDescEn] 
-/// * [shortDescZh] 
 /// * [status] 
 /// * [tags] 
 /// * [type] 
 /// * [versions] 
 @BuiltValue()
 abstract class ResponseAppItem implements Built<ResponseAppItem, ResponseAppItemBuilder> {
+  @BuiltValueField(wireName: r'description')
+  String? get description;
+
   @BuiltValueField(wireName: r'icon')
   String? get icon;
 
@@ -49,17 +51,11 @@ abstract class ResponseAppItem implements Built<ResponseAppItem, ResponseAppItem
   @BuiltValueField(wireName: r'resource')
   String? get resource;
 
-  @BuiltValueField(wireName: r'shortDescEn')
-  String? get shortDescEn;
-
-  @BuiltValueField(wireName: r'shortDescZh')
-  String? get shortDescZh;
-
   @BuiltValueField(wireName: r'status')
   String? get status;
 
   @BuiltValueField(wireName: r'tags')
-  BuiltList<ModelTag>? get tags;
+  BuiltList<ResponseTagDTO>? get tags;
 
   @BuiltValueField(wireName: r'type')
   String? get type;
@@ -90,6 +86,13 @@ class _$ResponseAppItemSerializer implements PrimitiveSerializer<ResponseAppItem
     ResponseAppItem object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
+    if (object.description != null) {
+      yield r'description';
+      yield serializers.serialize(
+        object.description,
+        specifiedType: const FullType(String),
+      );
+    }
     if (object.icon != null) {
       yield r'icon';
       yield serializers.serialize(
@@ -139,20 +142,6 @@ class _$ResponseAppItemSerializer implements PrimitiveSerializer<ResponseAppItem
         specifiedType: const FullType(String),
       );
     }
-    if (object.shortDescEn != null) {
-      yield r'shortDescEn';
-      yield serializers.serialize(
-        object.shortDescEn,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.shortDescZh != null) {
-      yield r'shortDescZh';
-      yield serializers.serialize(
-        object.shortDescZh,
-        specifiedType: const FullType(String),
-      );
-    }
     if (object.status != null) {
       yield r'status';
       yield serializers.serialize(
@@ -164,7 +153,7 @@ class _$ResponseAppItemSerializer implements PrimitiveSerializer<ResponseAppItem
       yield r'tags';
       yield serializers.serialize(
         object.tags,
-        specifiedType: const FullType(BuiltList, [FullType(ModelTag)]),
+        specifiedType: const FullType(BuiltList, [FullType(ResponseTagDTO)]),
       );
     }
     if (object.type != null) {
@@ -204,6 +193,13 @@ class _$ResponseAppItemSerializer implements PrimitiveSerializer<ResponseAppItem
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
+        case r'description':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.description = valueDes;
+          break;
         case r'icon':
           final valueDes = serializers.deserialize(
             value,
@@ -253,20 +249,6 @@ class _$ResponseAppItemSerializer implements PrimitiveSerializer<ResponseAppItem
           ) as String;
           result.resource = valueDes;
           break;
-        case r'shortDescEn':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.shortDescEn = valueDes;
-          break;
-        case r'shortDescZh':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.shortDescZh = valueDes;
-          break;
         case r'status':
           final valueDes = serializers.deserialize(
             value,
@@ -277,8 +259,8 @@ class _$ResponseAppItemSerializer implements PrimitiveSerializer<ResponseAppItem
         case r'tags':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(ModelTag)]),
-          ) as BuiltList<ModelTag>;
+            specifiedType: const FullType(BuiltList, [FullType(ResponseTagDTO)]),
+          ) as BuiltList<ResponseTagDTO>;
           result.tags.replace(valueDes);
           break;
         case r'type':

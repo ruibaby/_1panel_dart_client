@@ -12,6 +12,8 @@ class _$ModelApp extends ModelApp {
   @override
   final bool? crossVersionUpdate;
   @override
+  final String? description;
+  @override
   final String? document;
   @override
   final String? github;
@@ -56,6 +58,7 @@ class _$ModelApp extends ModelApp {
   _$ModelApp._(
       {this.createdAt,
       this.crossVersionUpdate,
+      this.description,
       this.document,
       this.github,
       this.icon,
@@ -90,6 +93,7 @@ class _$ModelApp extends ModelApp {
     return other is ModelApp &&
         createdAt == other.createdAt &&
         crossVersionUpdate == other.crossVersionUpdate &&
+        description == other.description &&
         document == other.document &&
         github == other.github &&
         icon == other.icon &&
@@ -116,6 +120,7 @@ class _$ModelApp extends ModelApp {
     var _$hash = 0;
     _$hash = $jc(_$hash, createdAt.hashCode);
     _$hash = $jc(_$hash, crossVersionUpdate.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, document.hashCode);
     _$hash = $jc(_$hash, github.hashCode);
     _$hash = $jc(_$hash, icon.hashCode);
@@ -144,6 +149,7 @@ class _$ModelApp extends ModelApp {
     return (newBuiltValueToStringHelper(r'ModelApp')
           ..add('createdAt', createdAt)
           ..add('crossVersionUpdate', crossVersionUpdate)
+          ..add('description', description)
           ..add('document', document)
           ..add('github', github)
           ..add('icon', icon)
@@ -178,6 +184,10 @@ class ModelAppBuilder implements Builder<ModelApp, ModelAppBuilder> {
   bool? get crossVersionUpdate => _$this._crossVersionUpdate;
   set crossVersionUpdate(bool? crossVersionUpdate) =>
       _$this._crossVersionUpdate = crossVersionUpdate;
+
+  String? _description;
+  String? get description => _$this._description;
+  set description(String? description) => _$this._description = description;
 
   String? _document;
   String? get document => _$this._document;
@@ -264,6 +274,7 @@ class ModelAppBuilder implements Builder<ModelApp, ModelAppBuilder> {
     if ($v != null) {
       _createdAt = $v.createdAt;
       _crossVersionUpdate = $v.crossVersionUpdate;
+      _description = $v.description;
       _document = $v.document;
       _github = $v.github;
       _icon = $v.icon;
@@ -309,6 +320,7 @@ class ModelAppBuilder implements Builder<ModelApp, ModelAppBuilder> {
           new _$ModelApp._(
             createdAt: createdAt,
             crossVersionUpdate: crossVersionUpdate,
+            description: description,
             document: document,
             github: github,
             icon: icon,

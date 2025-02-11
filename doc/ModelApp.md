@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **createdAt** | **String** |  | [optional] 
 **crossVersionUpdate** | **bool** |  | [optional] 
+**description** | **String** |  | [optional] 
 **document** | **String** |  | [optional] 
 **github** | **String** |  | [optional] 
 **icon** | **String** |  | [optional] 

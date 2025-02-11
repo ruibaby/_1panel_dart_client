@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:one_panel_client/src/model/dto_locale.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -12,12 +13,16 @@ part 'dto_tag.g.dart';
 ///
 /// Properties:
 /// * [key] 
+/// * [locales] 
 /// * [xname] 
 /// * [sort] 
 @BuiltValue()
 abstract class DtoTag implements Built<DtoTag, DtoTagBuilder> {
   @BuiltValueField(wireName: r'key')
   String? get key;
+
+  @BuiltValueField(wireName: r'locales')
+  DtoLocale? get locales;
 
   @BuiltValueField(wireName: r'name')
   String? get xname;
@@ -53,6 +58,13 @@ class _$DtoTagSerializer implements PrimitiveSerializer<DtoTag> {
       yield serializers.serialize(
         object.key,
         specifiedType: const FullType(String),
+      );
+    }
+    if (object.locales != null) {
+      yield r'locales';
+      yield serializers.serialize(
+        object.locales,
+        specifiedType: const FullType(DtoLocale),
       );
     }
     if (object.xname != null) {
@@ -98,6 +110,13 @@ class _$DtoTagSerializer implements PrimitiveSerializer<DtoTag> {
             specifiedType: const FullType(String),
           ) as String;
           result.key = valueDes;
+          break;
+        case r'locales':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(DtoLocale),
+          ) as DtoLocale;
+          result.locales.replace(valueDes);
           break;
         case r'name':
           final valueDes = serializers.deserialize(

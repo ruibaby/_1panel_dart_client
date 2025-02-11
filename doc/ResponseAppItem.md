@@ -8,6 +8,7 @@ import 'package:one_panel_client/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**description** | **String** |  | [optional] 
 **icon** | **String** |  | [optional] 
 **id** | **int** |  | [optional] 
 **installed** | **bool** |  | [optional] 
@@ -15,10 +16,8 @@ Name | Type | Description | Notes
 **limit** | **int** |  | [optional] 
 **xname** | **String** |  | [optional] 
 **resource** | **String** |  | [optional] 
-**shortDescEn** | **String** |  | [optional] 
-**shortDescZh** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 
-**tags** | [**BuiltList&lt;ModelTag&gt;**](ModelTag.md) |  | [optional] 
+**tags** | [**BuiltList&lt;ResponseTagDTO&gt;**](ResponseTagDTO.md) |  | [optional] 
 **type** | **String** |  | [optional] 
 **versions** | **BuiltList&lt;String&gt;** |  | [optional] 
 

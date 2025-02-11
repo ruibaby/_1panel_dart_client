@@ -1,4 +1,4 @@
-# one_panel_client.model.DtoTag
+# one_panel_client.model.RequestWebsiteProxyDel
 
 ## Load the model package
 ```dart
@@ -8,10 +8,8 @@ import 'package:one_panel_client/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**key** | **String** |  | [optional] 
-**locales** | [**DtoLocale**](DtoLocale.md) |  | [optional] 
-**xname** | **String** |  | [optional] 
-**sort** | **int** |  | [optional] 
+**id** | **int** |  | 
+**xname** | **String** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

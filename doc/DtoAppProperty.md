@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **required_** | **BuiltList&lt;String&gt;** |  | [optional] 
 **crossVersionUpdate** | **bool** |  | [optional] 
+**description** | [**DtoLocale**](DtoLocale.md) |  | [optional] 
 **document** | **String** |  | [optional] 
 **github** | **String** |  | [optional] 
 **key** | **String** |  | [optional] 

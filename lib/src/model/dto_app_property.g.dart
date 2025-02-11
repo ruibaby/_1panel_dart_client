@@ -12,6 +12,8 @@ class _$DtoAppProperty extends DtoAppProperty {
   @override
   final bool? crossVersionUpdate;
   @override
+  final DtoLocale? description;
+  @override
   final String? document;
   @override
   final String? github;
@@ -42,6 +44,7 @@ class _$DtoAppProperty extends DtoAppProperty {
   _$DtoAppProperty._(
       {this.required_,
       this.crossVersionUpdate,
+      this.description,
       this.document,
       this.github,
       this.key,
@@ -70,6 +73,7 @@ class _$DtoAppProperty extends DtoAppProperty {
     return other is DtoAppProperty &&
         required_ == other.required_ &&
         crossVersionUpdate == other.crossVersionUpdate &&
+        description == other.description &&
         document == other.document &&
         github == other.github &&
         key == other.key &&
@@ -89,6 +93,7 @@ class _$DtoAppProperty extends DtoAppProperty {
     var _$hash = 0;
     _$hash = $jc(_$hash, required_.hashCode);
     _$hash = $jc(_$hash, crossVersionUpdate.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, document.hashCode);
     _$hash = $jc(_$hash, github.hashCode);
     _$hash = $jc(_$hash, key.hashCode);
@@ -110,6 +115,7 @@ class _$DtoAppProperty extends DtoAppProperty {
     return (newBuiltValueToStringHelper(r'DtoAppProperty')
           ..add('required_', required_)
           ..add('crossVersionUpdate', crossVersionUpdate)
+          ..add('description', description)
           ..add('document', document)
           ..add('github', github)
           ..add('key', key)
@@ -140,6 +146,12 @@ class DtoAppPropertyBuilder
   bool? get crossVersionUpdate => _$this._crossVersionUpdate;
   set crossVersionUpdate(bool? crossVersionUpdate) =>
       _$this._crossVersionUpdate = crossVersionUpdate;
+
+  DtoLocaleBuilder? _description;
+  DtoLocaleBuilder get description =>
+      _$this._description ??= new DtoLocaleBuilder();
+  set description(DtoLocaleBuilder? description) =>
+      _$this._description = description;
 
   String? _document;
   String? get document => _$this._document;
@@ -198,6 +210,7 @@ class DtoAppPropertyBuilder
     if ($v != null) {
       _required_ = $v.required_?.toBuilder();
       _crossVersionUpdate = $v.crossVersionUpdate;
+      _description = $v.description?.toBuilder();
       _document = $v.document;
       _github = $v.github;
       _key = $v.key;
@@ -236,6 +249,7 @@ class DtoAppPropertyBuilder
           new _$DtoAppProperty._(
             required_: _required_?.build(),
             crossVersionUpdate: crossVersionUpdate,
+            description: _description?.build(),
             document: document,
             github: github,
             key: key,
@@ -254,6 +268,9 @@ class DtoAppPropertyBuilder
       try {
         _$failedField = 'required_';
         _required_?.build();
+
+        _$failedField = 'description';
+        _description?.build();
 
         _$failedField = 'tags';
         _tags?.build();

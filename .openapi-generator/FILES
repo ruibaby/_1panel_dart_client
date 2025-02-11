@@ -140,6 +140,7 @@ doc/DtoImageRepoUpdate.md
 doc/DtoImageSave.md
 doc/DtoImageTag.md
 doc/DtoInspectReq.md
+doc/DtoLocale.md
 doc/DtoLogOption.md
 doc/DtoLogin.md
 doc/DtoMFALogin.md
@@ -338,6 +339,7 @@ doc/RequestWebsitePHPConfigUpdate.md
 doc/RequestWebsitePHPFileUpdate.md
 doc/RequestWebsitePHPVersionReq.md
 doc/RequestWebsiteProxyConfig.md
+doc/RequestWebsiteProxyDel.md
 doc/RequestWebsiteProxyReq.md
 doc/RequestWebsiteResourceReq.md
 doc/RequestWebsiteSSLApply.md
@@ -376,11 +378,11 @@ doc/ResponseNginxRewriteRes.md
 doc/ResponseNginxStatus.md
 doc/ResponseNodeModule.md
 doc/ResponsePHPConfig.md
-doc/ResponsePHPExtensionsDTO.md
 doc/ResponsePackageScripts.md
 doc/ResponseProcessStatus.md
 doc/ResponseRuntimeDTO.md
 doc/ResponseSupervisorProcessConfig.md
+doc/ResponseTagDTO.md
 doc/ResponseWebsiteAcmeAccountDTO.md
 doc/ResponseWebsiteCADTO.md
 doc/ResponseWebsiteDNSRes.md
@@ -580,6 +582,7 @@ lib/src/model/dto_image_repo_update.dart
 lib/src/model/dto_image_save.dart
 lib/src/model/dto_image_tag.dart
 lib/src/model/dto_inspect_req.dart
+lib/src/model/dto_locale.dart
 lib/src/model/dto_log_option.dart
 lib/src/model/dto_login.dart
 lib/src/model/dto_mfa_credential.dart
@@ -766,6 +769,7 @@ lib/src/model/request_website_php_config_update.dart
 lib/src/model/request_website_php_file_update.dart
 lib/src/model/request_website_php_version_req.dart
 lib/src/model/request_website_proxy_config.dart
+lib/src/model/request_website_proxy_del.dart
 lib/src/model/request_website_proxy_req.dart
 lib/src/model/request_website_resource_req.dart
 lib/src/model/request_website_search.dart
@@ -805,10 +809,10 @@ lib/src/model/response_nginx_status.dart
 lib/src/model/response_node_module.dart
 lib/src/model/response_package_scripts.dart
 lib/src/model/response_php_config.dart
-lib/src/model/response_php_extensions_dto.dart
 lib/src/model/response_process_status.dart
 lib/src/model/response_runtime_dto.dart
 lib/src/model/response_supervisor_process_config.dart
+lib/src/model/response_tag_dto.dart
 lib/src/model/response_website_acme_account_dto.dart
 lib/src/model/response_website_cadto.dart
 lib/src/model/response_website_dir_config.dart
@@ -823,3 +827,6 @@ lib/src/model/response_website_pre_install_check.dart
 lib/src/model/response_website_ssldto.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/dto_locale_test.dart
+test/request_website_proxy_del_test.dart
+test/response_tag_dto_test.dart

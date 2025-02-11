@@ -36,6 +36,8 @@ const DtoLoginLanguageEnum _$dtoLoginLanguageEnum_tw =
     const DtoLoginLanguageEnum._('tw');
 const DtoLoginLanguageEnum _$dtoLoginLanguageEnum_ja =
     const DtoLoginLanguageEnum._('ja');
+const DtoLoginLanguageEnum _$dtoLoginLanguageEnum_ko =
+    const DtoLoginLanguageEnum._('ko');
 const DtoLoginLanguageEnum _$dtoLoginLanguageEnum_ru =
     const DtoLoginLanguageEnum._('ru');
 const DtoLoginLanguageEnum _$dtoLoginLanguageEnum_ms =
@@ -53,6 +55,8 @@ DtoLoginLanguageEnum _$dtoLoginLanguageEnumValueOf(String name) {
       return _$dtoLoginLanguageEnum_tw;
     case 'ja':
       return _$dtoLoginLanguageEnum_ja;
+    case 'ko':
+      return _$dtoLoginLanguageEnum_ko;
     case 'ru':
       return _$dtoLoginLanguageEnum_ru;
     case 'ms':
@@ -70,6 +74,7 @@ final BuiltSet<DtoLoginLanguageEnum> _$dtoLoginLanguageEnumValues =
   _$dtoLoginLanguageEnum_en,
   _$dtoLoginLanguageEnum_tw,
   _$dtoLoginLanguageEnum_ja,
+  _$dtoLoginLanguageEnum_ko,
   _$dtoLoginLanguageEnum_ru,
   _$dtoLoginLanguageEnum_ms,
   _$dtoLoginLanguageEnum_ptBR,
@@ -115,6 +120,7 @@ class _$DtoLoginLanguageEnumSerializer
     'en': 'en',
     'tw': 'tw',
     'ja': 'ja',
+    'ko': 'ko',
     'ru': 'ru',
     'ms': 'ms',
     'ptBR': 'pt-BR',
@@ -124,6 +130,7 @@ class _$DtoLoginLanguageEnumSerializer
     'en': 'en',
     'tw': 'tw',
     'ja': 'ja',
+    'ko': 'ko',
     'ru': 'ru',
     'ms': 'ms',
     'pt-BR': 'ptBR',

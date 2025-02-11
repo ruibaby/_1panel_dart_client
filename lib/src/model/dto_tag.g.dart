@@ -10,6 +10,8 @@ class _$DtoTag extends DtoTag {
   @override
   final String? key;
   @override
+  final DtoLocale? locales;
+  @override
   final String? xname;
   @override
   final int? sort;
@@ -17,7 +19,7 @@ class _$DtoTag extends DtoTag {
   factory _$DtoTag([void Function(DtoTagBuilder)? updates]) =>
       (new DtoTagBuilder()..update(updates))._build();
 
-  _$DtoTag._({this.key, this.xname, this.sort}) : super._();
+  _$DtoTag._({this.key, this.locales, this.xname, this.sort}) : super._();
 
   @override
   DtoTag rebuild(void Function(DtoTagBuilder) updates) =>
@@ -31,6 +33,7 @@ class _$DtoTag extends DtoTag {
     if (identical(other, this)) return true;
     return other is DtoTag &&
         key == other.key &&
+        locales == other.locales &&
         xname == other.xname &&
         sort == other.sort;
   }
@@ -39,6 +42,7 @@ class _$DtoTag extends DtoTag {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, key.hashCode);
+    _$hash = $jc(_$hash, locales.hashCode);
     _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, sort.hashCode);
     _$hash = $jf(_$hash);
@@ -49,6 +53,7 @@ class _$DtoTag extends DtoTag {
   String toString() {
     return (newBuiltValueToStringHelper(r'DtoTag')
           ..add('key', key)
+          ..add('locales', locales)
           ..add('xname', xname)
           ..add('sort', sort))
         .toString();
@@ -61,6 +66,10 @@ class DtoTagBuilder implements Builder<DtoTag, DtoTagBuilder> {
   String? _key;
   String? get key => _$this._key;
   set key(String? key) => _$this._key = key;
+
+  DtoLocaleBuilder? _locales;
+  DtoLocaleBuilder get locales => _$this._locales ??= new DtoLocaleBuilder();
+  set locales(DtoLocaleBuilder? locales) => _$this._locales = locales;
 
   String? _xname;
   String? get xname => _$this._xname;
@@ -78,6 +87,7 @@ class DtoTagBuilder implements Builder<DtoTag, DtoTagBuilder> {
     final $v = _$v;
     if ($v != null) {
       _key = $v.key;
+      _locales = $v.locales?.toBuilder();
       _xname = $v.xname;
       _sort = $v.sort;
       _$v = null;
@@ -100,12 +110,26 @@ class DtoTagBuilder implements Builder<DtoTag, DtoTagBuilder> {
   DtoTag build() => _build();
 
   _$DtoTag _build() {
-    final _$result = _$v ??
-        new _$DtoTag._(
-          key: key,
-          xname: xname,
-          sort: sort,
-        );
+    _$DtoTag _$result;
+    try {
+      _$result = _$v ??
+          new _$DtoTag._(
+            key: key,
+            locales: _locales?.build(),
+            xname: xname,
+            sort: sort,
+          );
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'locales';
+        _locales?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'DtoTag', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }

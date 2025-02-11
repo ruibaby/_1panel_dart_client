@@ -8,12 +8,11 @@ import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:built_collection/built_collection.dart';
+import 'package:one_panel_client/src/model/dto_page_result.dart';
 import 'package:one_panel_client/src/model/request_php_extensions_create.dart';
 import 'package:one_panel_client/src/model/request_php_extensions_delete.dart';
 import 'package:one_panel_client/src/model/request_php_extensions_search.dart';
 import 'package:one_panel_client/src/model/request_php_extensions_update.dart';
-import 'package:one_panel_client/src/model/response_php_extensions_dto.dart';
 
 class PHPExtensionsApi {
 
@@ -193,9 +192,9 @@ class PHPExtensionsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<ResponsePHPExtensionsDTO>] as data
+  /// Returns a [Future] containing a [Response] with a [DtoPageResult] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<BuiltList<ResponsePHPExtensionsDTO>>> runtimesPhpExtensionsSearchPost({ 
+  Future<Response<DtoPageResult>> runtimesPhpExtensionsSearchPost({ 
     required RequestPHPExtensionsSearch request,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -257,14 +256,14 @@ class PHPExtensionsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<ResponsePHPExtensionsDTO>? _responseData;
+    DtoPageResult? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(BuiltList, [FullType(ResponsePHPExtensionsDTO)]),
-      ) as BuiltList<ResponsePHPExtensionsDTO>;
+        specifiedType: const FullType(DtoPageResult),
+      ) as DtoPageResult;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -276,7 +275,7 @@ class PHPExtensionsApi {
       );
     }
 
-    return Response<BuiltList<ResponsePHPExtensionsDTO>>(
+    return Response<DtoPageResult>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

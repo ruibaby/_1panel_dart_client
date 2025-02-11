@@ -18,6 +18,8 @@ class _$ModelTag extends ModelTag {
   @override
   final int? sort;
   @override
+  final String? translations;
+  @override
   final String? updatedAt;
 
   factory _$ModelTag([void Function(ModelTagBuilder)? updates]) =>
@@ -29,6 +31,7 @@ class _$ModelTag extends ModelTag {
       this.key,
       this.xname,
       this.sort,
+      this.translations,
       this.updatedAt})
       : super._();
 
@@ -48,6 +51,7 @@ class _$ModelTag extends ModelTag {
         key == other.key &&
         xname == other.xname &&
         sort == other.sort &&
+        translations == other.translations &&
         updatedAt == other.updatedAt;
   }
 
@@ -59,6 +63,7 @@ class _$ModelTag extends ModelTag {
     _$hash = $jc(_$hash, key.hashCode);
     _$hash = $jc(_$hash, xname.hashCode);
     _$hash = $jc(_$hash, sort.hashCode);
+    _$hash = $jc(_$hash, translations.hashCode);
     _$hash = $jc(_$hash, updatedAt.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -72,6 +77,7 @@ class _$ModelTag extends ModelTag {
           ..add('key', key)
           ..add('xname', xname)
           ..add('sort', sort)
+          ..add('translations', translations)
           ..add('updatedAt', updatedAt))
         .toString();
   }
@@ -100,6 +106,10 @@ class ModelTagBuilder implements Builder<ModelTag, ModelTagBuilder> {
   int? get sort => _$this._sort;
   set sort(int? sort) => _$this._sort = sort;
 
+  String? _translations;
+  String? get translations => _$this._translations;
+  set translations(String? translations) => _$this._translations = translations;
+
   String? _updatedAt;
   String? get updatedAt => _$this._updatedAt;
   set updatedAt(String? updatedAt) => _$this._updatedAt = updatedAt;
@@ -116,6 +126,7 @@ class ModelTagBuilder implements Builder<ModelTag, ModelTagBuilder> {
       _key = $v.key;
       _xname = $v.xname;
       _sort = $v.sort;
+      _translations = $v.translations;
       _updatedAt = $v.updatedAt;
       _$v = null;
     }
@@ -144,6 +155,7 @@ class ModelTagBuilder implements Builder<ModelTag, ModelTagBuilder> {
           key: key,
           xname: xname,
           sort: sort,
+          translations: translations,
           updatedAt: updatedAt,
         );
     replace(_$result);
